@@ -9,10 +9,11 @@ const Nav = () => {
           <div className="outer-box">
             <div className="header-top__left">
               <div className="main-logo-box">
-                <a href="index.html">
+                <a href="/">
                   <img
-                    src="assets/images/resources/logo.png"
+                    src="assets/images/resources/logo2.png"
                     alt="Awesome Logo"
+                    className="w-[50%]"
                     title
                   />
                 </a>
@@ -40,7 +41,7 @@ const Nav = () => {
                       <p>Write email</p>
                       <h5>
                         <a href="mailto:yourmail@email.com">
-                          needhelp@company.com
+                          inquiry@rescuetap.com
                         </a>
                       </h5>
                     </div>
@@ -88,20 +89,15 @@ const Nav = () => {
                       <li className="dropdown">
                         <a href="#">Services</a>
                         <ul>
-                        
                           <li>
                             <a href="/Ambulance">Ambulance Car</a>
                           </li>
 
                           <li>
-                            <a href="/ALS">
-                              Advance Life Support
-                            </a>
+                            <a href="/ALS">Advance Life Support</a>
                           </li>
                           <li>
-                            <a href="/App">
-                              Emergency Response App
-                            </a>
+                            <a href="/App">Emergency Response App</a>
                           </li>
                         </ul>
                       </li>
@@ -171,7 +167,12 @@ const Nav = () => {
             {/*Logo*/}
             <div className="logo float-left">
               <a href="index.html" className="img-responsive">
-                <img src="assets/images/resources/sticky-logo.png" alt title />
+                <img
+                  src="/assets/images/resources/sticky-logo.png"
+                  alt
+                  title
+                  className="w-[50%]"
+                />
               </a>
             </div>
             {/*Right Col*/}
@@ -195,7 +196,7 @@ const Nav = () => {
           <div className="nav-logo">
             <a href="index.html">
               <img
-                src="assets/images/resources/mobilemenu-logo.png"
+                src="/assets/images/resources/mobilemenu-logo.png"
                 alt
                 title
               />

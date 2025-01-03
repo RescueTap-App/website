@@ -22,6 +22,7 @@ const Footer = () => {
                           src="assets/images/footer/footer-logo.png"
                           alt="Awesome Logo"
                           title
+                          className="w-[50%]"
                         />
                       </a>
                     </div>
@@ -38,7 +39,7 @@ const Footer = () => {
                             <div className="text">
                               <p>
                                 <a href="mailto:yourmail@email.com">
-                                  needhelp@company.com
+                                  inquiry@rescuetap.com
                                 </a>
                               </p>
                             </div>
@@ -51,7 +52,7 @@ const Footer = () => {
                             </div>
                             <div className="text">
                               <p>
-                                <a href="tel:123456789">+1-(246) 333-0089</a>
+                                <a href="tel:+2348147806378">+234 814 780 6378</a>
                               </p>
                             </div>
                           </div>
