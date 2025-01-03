@@ -159,7 +159,7 @@ const Footer = () => {
             <div className="bottom-inner">
               <div className="copyright">
                 <p>
-                  Copyright © 2022 <a href="index.html">Ambons</a> All Rights
+                  Copyright © 2024 <a href="index.html">Rescuetap</a> All Rights
                   Reserved.
                 </p>
               </div>
