@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
     <head>
     <meta charset="UTF-8"/>
-    <title>Ambons - Responsive HTML 5 Template - shared on themelock.com</title>
+    <title>RescueTap - One Tap, Save Lives</title>
 
     
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
