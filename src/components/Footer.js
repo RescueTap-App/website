@@ -39,7 +39,7 @@ const Footer = () => {
                             <div className="text">
                               <p>
                                 <a href="mailto:yourmail@email.com">
-                                  inquiry@rescuetap.com
+                                  info@rescuetap.com
                                 </a>
                               </p>
                             </div>
@@ -52,7 +52,9 @@ const Footer = () => {
                             </div>
                             <div className="text">
                               <p>
-                                <a href="tel:+2348147806378">+234 814 780 6378</a>
+                                <a href="tel:+2348147806378">
+                                  +234 814 780 6378
+                                </a>
                               </p>
                             </div>
                           </div>
@@ -63,7 +65,10 @@ const Footer = () => {
                               <span className="icon-pin" />
                             </div>
                             <div className="text">
-                              <p>zone 7, Fairtrade Complex, 22 Bambari Cres, Wuse, Abuja 900287, Federal Capital Territory</p>
+                              <p>
+                                zone 7, Fairtrade Complex, 22 Bambari Cres,
+                                Wuse, Abuja 900287, Federal Capital Territory
+                              </p>
                             </div>
                           </div>
                         </li>
