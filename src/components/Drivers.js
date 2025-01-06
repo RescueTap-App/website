@@ -31,7 +31,7 @@ const Drivers = () => {
                       <li>
                         <a href="services.html">Services</a>
                       </li>
-                      <li className="active">Ambulance Car</li>
+                      <li className="active">Driver Registration and Ride Verification</li>
                     </ul>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ const Drivers = () => {
                     />
                   </div>
                   <div className="text-box1">
-                    <h2>Ambulance Car</h2>
+                    <h2>Driver Registration and Ride Verification</h2>
                     <p>
                       Lorem ipsum is simply free text used by copytyping
                       refreshing. Neque porro est qui dolorem ipsum quia quaed
