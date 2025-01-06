@@ -75,15 +75,14 @@ const Contact = () => {
                     </div>
                     <h3>Contact Details</h3>
                     <p>
-                    zone 7, Fairtrade Complex, 22 Bambari Cres, Wuse, Abuja 900287, Federal Capital Territory
+                      zone 7, Fairtrade Complex, 22 Bambari Cres, Wuse, Abuja
+                      900287, Federal Capital Territory
                     </p>
                     <h2>
                       <a href="tel:123456789">+234 814 780 6378</a>
                     </h2>
                     <h4>
-                      <a href="mailto:yourmail@email.com">
-                        inquiry@rescuetap.com
-                      </a>
+                      <a href="mailto:yourmail@email.com">info@rescuetap.com</a>
                     </h4>
                   </div>
                 </div>

@@ -41,7 +41,7 @@ const Nav = () => {
                       <p>Write email</p>
                       <h5>
                         <a href="mailto:yourmail@email.com">
-                          inquiry@rescuetap.com
+                          info@rescuetap.com
                         </a>
                       </h5>
                     </div>
