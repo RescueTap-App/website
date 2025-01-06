@@ -40,10 +40,10 @@ const Blog = () => {
               <div className="meta-info">
                 <p><span className="icon-calendar" /> 20 Sep, 2021</p>
               </div>
-              <h3><a href="blog-single.html">Trusted, International Air Ambulance Company</a></h3>
+              <h3><a href="/BlogDetails">Trusted, International Air Ambulance Company</a></h3>
               <p>Lorem ipsum dolor sit amet, coned sectetur notte elit sed do.</p>
               <div className="btn-box">
-                <a href="blog-single.html">Read More</a>
+                <a href="/BlogDetails">Read More</a>
               </div>
             </div>
           </div>
@@ -59,11 +59,11 @@ const Blog = () => {
               <div className="meta-info">
                 <p><span className="icon-calendar" /> 20 Sep, 2021</p>
               </div>
-              <h3><a href="blog-single.html">Working for the ambulance service is much more
+              <h3><a href="/BlogDetails">Working for the ambulance service is much more
                   than...</a></h3>
               <p>Lorem ipsum dolor sit amet, coned sectetur notte elit sed do.</p>
               <div className="btn-box">
-                <a href="blog-single.html">Read More</a>
+                <a href="/BlogDetails">Read More</a>
               </div>
             </div>
           </div>
@@ -79,10 +79,10 @@ const Blog = () => {
               <div className="meta-info">
                 <p><span className="icon-calendar" /> 20 Sep, 2021</p>
               </div>
-              <h3><a href="blog-single.html">A Non-Emergency Trusted Ambulance services</a></h3>
+              <h3><a href="/BlogDetails">A Non-Emergency Trusted Ambulance services</a></h3>
               <p>Lorem ipsum dolor sit amet, coned sectetur notte elit sed do.</p>
               <div className="btn-box">
-                <a href="blog-single.html">Read More</a>
+                <a href="/BlogDetails">Read More</a>
               </div>
             </div>
           </div>
@@ -98,10 +98,10 @@ const Blog = () => {
               <div className="meta-info">
                 <p><span className="icon-calendar" /> 20 Sep, 2021</p>
               </div>
-              <h3><a href="blog-single.html">Trusted, International Air Ambulance Company</a></h3>
+              <h3><a href="/BlogDetails">Trusted, International Air Ambulance Company</a></h3>
               <p>Lorem ipsum dolor sit amet, coned sectetur notte elit sed do.</p>
               <div className="btn-box">
-                <a href="blog-single.html">Read More</a>
+                <a href="/BlogDetails">Read More</a>
               </div>
             </div>
           </div>
@@ -117,11 +117,11 @@ const Blog = () => {
               <div className="meta-info">
                 <p><span className="icon-calendar" /> 20 Sep, 2021</p>
               </div>
-              <h3><a href="blog-single.html">Working for the ambulance service is much more
+              <h3><a href="/BlogDetails">Working for the ambulance service is much more
                   than...</a></h3>
               <p>Lorem ipsum dolor sit amet, coned sectetur notte elit sed do.</p>
               <div className="btn-box">
-                <a href="blog-single.html">Read More</a>
+                <a href="/BlogDetails">Read More</a>
               </div>
             </div>
           </div>
@@ -137,10 +137,10 @@ const Blog = () => {
               <div className="meta-info">
                 <p><span className="icon-calendar" /> 20 Sep, 2021</p>
               </div>
-              <h3><a href="blog-single.html">A Non-Emergency Trusted Ambulance services</a></h3>
+              <h3><a href="/BlogDetails">A Non-Emergency Trusted Ambulance services</a></h3>
               <p>Lorem ipsum dolor sit amet, coned sectetur notte elit sed do.</p>
               <div className="btn-box">
-                <a href="blog-single.html">Read More</a>
+                <a href="/BlogDetails">Read More</a>
               </div>
             </div>
           </div>
