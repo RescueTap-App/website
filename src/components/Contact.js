@@ -75,8 +75,7 @@ const Contact = () => {
                     </div>
                     <h3>Contact Details</h3>
                     <p>
-                      66 Broklyn Golden Street.
-                      <br /> New York United States of America
+                    zone 7, Fairtrade Complex, 22 Bambari Cres, Wuse, Abuja 900287, Federal Capital Territory
                     </p>
                     <h2>
                       <a href="tel:123456789">+234 814 780 6378</a>
