@@ -71,6 +71,13 @@ const App = () => {
                           <span className="icon-next-1" />
                         </a>
                       </li>
+                      <li>
+                        <a href="/Drivers">
+                        Driver Registration and Ride Verification
+                          <span className="icon-next-1" />
+                        </a>
+                      </li>
+                      
                     </ul>
                   </div>
                   <div

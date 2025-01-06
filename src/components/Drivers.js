@@ -1,6 +1,6 @@
 import React from "react";
 
-const ALS = () => {
+const Drivers = () => {
   return (
     <>
       <div>
@@ -21,7 +21,7 @@ const ALS = () => {
                     data-aos-easing="linear"
                     data-aos-duration={1500}
                   >
-                    <h2>Advanced Life Support</h2>
+                    <h2>Driver Registration and Ride Verification</h2>
                   </div>
                   <div className="breadcrumb-menu">
                     <ul>
@@ -31,7 +31,7 @@ const ALS = () => {
                       <li>
                         <a href="services.html">Services</a>
                       </li>
-                      <li className="active">Advanced Life Support</li>
+                      <li className="active">Ambulance Car</li>
                     </ul>
                   </div>
                 </div>
@@ -53,7 +53,7 @@ const ALS = () => {
                     data-aos-easing="linear"
                     data-aos-duration={1000}
                   >
-                     <ul className="service-pages">
+                    <ul className="service-pages">
                       <li className="active">
                         <a href="/Ambulance">
                           Ambulance Car <span className="icon-next-1" />
@@ -72,7 +72,7 @@ const ALS = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="/Drivers">
+                        <a href="/App">
                         Driver Registration and Ride Verification
                           <span className="icon-next-1" />
                         </a>
@@ -130,12 +130,12 @@ const ALS = () => {
                 <div className="service-details__content">
                   <div className="img-box1">
                     <img
-                      src="assets/images/services/service-details-5-img1.jpg"
+                      src="assets/images/services/service-details-1-img1.jpg"
                       alt
                     />
                   </div>
                   <div className="text-box1">
-                    <h2>Advanced Life Support</h2>
+                    <h2>Ambulance Car</h2>
                     <p>
                       Lorem ipsum is simply free text used by copytyping
                       refreshing. Neque porro est qui dolorem ipsum quia quaed
@@ -299,4 +299,4 @@ const ALS = () => {
   );
 };
 
-export default ALS;
+export default Drivers;
