@@ -63,7 +63,7 @@ const Footer = () => {
                               <span className="icon-pin" />
                             </div>
                             <div className="text">
-                              <p>88 broklyn silver street, USA</p>
+                              <p>zone 7, Fairtrade Complex, 22 Bambari Cres, Wuse, Abuja 900287, Federal Capital Territory</p>
                             </div>
                           </div>
                         </li>
