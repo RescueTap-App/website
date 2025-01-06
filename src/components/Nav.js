@@ -99,6 +99,9 @@ const Nav = () => {
                           <li>
                             <a href="/App">Emergency Response App</a>
                           </li>
+                          <li>
+                            <a href="/Drivers">Driver Registration and Ride Verification</a>
+                          </li>
                         </ul>
                       </li>
                       <li className="dropdown">

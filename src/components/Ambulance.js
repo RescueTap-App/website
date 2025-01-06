@@ -53,7 +53,7 @@ const Ambulance = () => {
                     data-aos-easing="linear"
                     data-aos-duration={1000}
                   >
-                    <ul className="service-pages">
+                     <ul className="service-pages">
                       <li className="active">
                         <a href="/Ambulance">
                           Ambulance Car <span className="icon-next-1" />
@@ -71,6 +71,13 @@ const Ambulance = () => {
                           <span className="icon-next-1" />
                         </a>
                       </li>
+                      <li>
+                        <a href="/Drivers">
+                        Driver Registration and Ride Verification
+                          <span className="icon-next-1" />
+                        </a>
+                      </li>
+                      
                     </ul>
                   </div>
                   <div
