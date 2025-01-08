@@ -48,7 +48,7 @@ const Index = () => {
                   </div>
                   <div className="big-title">
                     <h2>
-                      Emergency
+                      Emergency 
                       <br /> Medical Services
                     </h2>
                   </div>
@@ -74,18 +74,19 @@ const Index = () => {
               <div className="auto-container">
                 <div className="content">
                   <div className="sub-title">
-                    <h3>Your Health is our Priority</h3>
+                    <h3>Emergencies Happen — Help is Just a Tap Away!</h3>
                   </div>
                   <div className="big-title">
                     <h2>
-                      The Preferred Air
-                      <br /> Ambulance Company
+                      {/* The Preferred Air */}
+                      RescueTap
+                      <br /> your trusted emergency response platform
                     </h2>
                   </div>
                   <div className="btns-box">
                     <a className="btn-one" href="about.html">
                       <span className="txt">
-                        discover more
+                        Get Help Now
                         <i className="icon-refresh arrow" />
                       </span>
                     </a>
@@ -104,7 +105,8 @@ const Index = () => {
               <div className="auto-container">
                 <div className="content">
                   <div className="sub-title">
-                    <h3>Your Health is our Priority</h3>
+                    <h3>Emergency Help at Your Fingertips—Instant, Reliable, and Life-Saving!
+                    </h3>
                   </div>
                   <div className="big-title">
                     <h2>
@@ -115,7 +117,7 @@ const Index = () => {
                   <div className="btns-box">
                     <a className="btn-one" href="about.html">
                       <span className="txt">
-                        discover more
+                      Get Help Now
                         <i className="icon-refresh arrow" />
                       </span>
                     </a>
@@ -199,7 +201,7 @@ const Index = () => {
                   <div className="btns-box">
                     <a className="btn-one" href="about.html">
                       <span className="txt">
-                        Discover About More
+                        Learn More
                         <i className="icon-refresh arrow" />
                       </span>
                     </a>
