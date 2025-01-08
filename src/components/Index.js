@@ -25,7 +25,7 @@ const Index = () => {
                   <a href="tel:123456789">+ 1 (246) 333-0088</a>
                 </h2>
                 <p>
-                  Need help? Call anytime for
+                  Need an ambulance? Call anytime for
                   <br /> ambulance services
                 </p>
               </div>

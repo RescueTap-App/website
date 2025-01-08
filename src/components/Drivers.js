@@ -31,7 +31,9 @@ const Drivers = () => {
                       <li>
                         <a href="services.html">Services</a>
                       </li>
-                      <li className="active">Driver Registration and Ride Verification</li>
+                      <li className="active">
+                        Driver Registration and Ride Verification
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -73,11 +75,10 @@ const Drivers = () => {
                       </li>
                       <li>
                         <a href="/App">
-                        Driver Registration and Ride Verification
+                          Driver Registration and Ride Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>
-                      
                     </ul>
                   </div>
                   <div
@@ -93,11 +94,10 @@ const Drivers = () => {
                           "url(assets/images/sidebar/sidebar-info-box-bg.jpg)",
                       }}
                     />
-                    <h3>Need Help?</h3>
+                    <h3>Need an ambulance?</h3>
                     <p>
-                      Speak with a human to filling out a form? call corporate
-                      office and we will connect you with a team member who can
-                      help.
+                      Download our online Brouchure to get detailed informaion
+                      on our vehcle registration and ambulance services.
                     </p>
                     <h2>
                       <a href="tel:+2348147806378">+234 814 780 6378</a>

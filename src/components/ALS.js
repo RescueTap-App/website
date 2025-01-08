@@ -53,7 +53,7 @@ const ALS = () => {
                     data-aos-easing="linear"
                     data-aos-duration={1000}
                   >
-                     <ul className="service-pages">
+                    <ul className="service-pages">
                       <li className="active">
                         <a href="/Ambulance">
                           Ambulance Car <span className="icon-next-1" />
@@ -73,11 +73,10 @@ const ALS = () => {
                       </li>
                       <li>
                         <a href="/Drivers">
-                        Driver Registration and Ride Verification
+                          Driver Registration and Ride Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>
-                      
                     </ul>
                   </div>
                   <div
@@ -93,11 +92,10 @@ const ALS = () => {
                           "url(assets/images/sidebar/sidebar-info-box-bg.jpg)",
                       }}
                     />
-                    <h3>Need Help?</h3>
+                    <h3>Need an ambulance?</h3>
                     <p>
-                      Speak with a human to filling out a form? call corporate
-                      office and we will connect you with a team member who can
-                      help.
+                      Download our online Brouchure to get detailed informaion
+                      on our vehcle registration and ambulance services.
                     </p>
                     <h2>
                       <a href="tel:+2348147806378">+234 814 780 6378</a>
@@ -135,24 +133,12 @@ const ALS = () => {
                     />
                   </div>
                   <div className="text-box1">
-                    <h2>Advanced Life Support</h2>
+                    <h2>Critical Care, Delivered Fast!</h2>
                     <p>
-                      Lorem ipsum is simply free text used by copytyping
-                      refreshing. Neque porro est qui dolorem ipsum quia quaed
-                      inventore veritatis et quasi architecto beatae vitae dicta
-                      sunt explicabo. Aelltes port lacus quis enim var sed
-                      efficitur turpis gilla sed sit amet finibus eros. Lorem
-                      Ipsum is simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the ndustry standard dummy
-                      text ever since the 1500s.
-                    </p>
-                    <p>
-                      It has survived not only five centuries. Lorem Ipsum is
-                      simply dummy text of the new design printng and type
-                      setting Ipsum take a look at our round. When an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book. It has survived not only five
-                      centuries, but also the leap into electronic typesetting.
+                      Our ambulances come with Advanced Life Support (ALS)
+                      systems designed for emergencies requiring specialized
+                      care. From trauma care to cardiac support, we ensure every
+                      second counts.
                     </p>
                   </div>
                   <div className="text-box2">
@@ -204,27 +190,20 @@ const ALS = () => {
                     <div className="row">
                       <div className="col-xl-6">
                         <div className="content-box">
-                          <h2>Service Benefits</h2>
-                          <p>
-                            Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum.
-                          </p>
+                          <h2>Services</h2>
+                          <p>Our ambulances come equipped with</p>
                           <ul>
                             <li>
-                              <span className="icon-checked" /> In id diam nec
-                              nisi congue tincidunt
+                              <span className="icon-checked" /> Onboard
+                              defibrillators and oxygen supplies
                             </li>
                             <li>
-                              <span className="icon-checked" /> Pn malesuada
-                              purus a ligula dapibus
+                              <span className="icon-checked" /> Certified
+                              paramedics and medical staff
                             </li>
                             <li>
-                              <span className="icon-checked" /> Vestibulum
-                              tincidunt arcu vel nisl
-                            </li>
-                            <li>
-                              <span className="icon-checked" /> Sed tristique
-                              lorem non tesque
+                              <span className="icon-checked" /> Real-time
+                              monitoring systems
                             </li>
                           </ul>
                         </div>
@@ -239,7 +218,7 @@ const ALS = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="faq-style1__content">
+                  {/* <div className="faq-style1__content">
                     <ul className="accordion-box">
                       <li className="accordion block active-block">
                         <div className="acc-btn active">
@@ -287,7 +266,7 @@ const ALS = () => {
                         </div>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               {/*End Service Details Content */}

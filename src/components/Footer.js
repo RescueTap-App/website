@@ -27,7 +27,7 @@ const Footer = () => {
                       </a>
                     </div>
                     <div className="text-box">
-                      <p>There are many variatio of lorem ipsum available.</p>
+                      <p>One Tap, Save Lives</p>
                     </div>
                     <div className="footer-widget-contact-info">
                       <ul>
@@ -147,8 +147,8 @@ const Footer = () => {
                       <br /> price quotes.
                     </p>
                     <div className="btn-box">
-                      <a className="btn-one" href="contact.html">
-                        <span className="txt">Get a Free Quote</span>
+                      <a className="btn-one" href="/Contact">
+                        <span className="txt">Contact Us</span>
                       </a>
                     </div>
                   </div>
