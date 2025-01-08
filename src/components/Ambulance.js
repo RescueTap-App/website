@@ -53,7 +53,7 @@ const Ambulance = () => {
                     data-aos-easing="linear"
                     data-aos-duration={1000}
                   >
-                     <ul className="service-pages">
+                    <ul className="service-pages">
                       <li className="active">
                         <a href="/Ambulance">
                           Ambulance Car <span className="icon-next-1" />
@@ -73,11 +73,10 @@ const Ambulance = () => {
                       </li>
                       <li>
                         <a href="/Drivers">
-                        Driver Registration and Ride Verification
+                          Driver Registration and Ride Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>
-                      
                     </ul>
                   </div>
                   <div
@@ -93,11 +92,10 @@ const Ambulance = () => {
                           "url(assets/images/sidebar/sidebar-info-box-bg.jpg)",
                       }}
                     />
-                    <h3>Need Help?</h3>
+                    <h3>Need an ambulance?</h3>
                     <p>
-                      Speak with a human to filling out a form? call corporate
-                      office and we will connect you with a team member who can
-                      help.
+                      Download our online Brouchure to get detailed informaion
+                      on our vehcle registration and ambulance services.
                     </p>
                     <h2>
                       <a href="tel:+2348147806378">+234 814 780 6378</a>
