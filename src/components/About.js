@@ -67,9 +67,10 @@ const About = () => {
                 <div className="inner-content">
                   <div className="text">
                     <p>
-                      Lorem ipsum is simply free text dolor sit am adipi we help
+                      {/* Lorem ipsum is simply free text dolor sit am adipi we help
                       you ensure everyone is in the right jobs sicing elit, sed
-                      do consulting firms Et leggings across the nation tempor.
+                      do consulting firms Et leggings across the nation tempor. */}
+                      
                     </p>
                   </div>
                   <div className="row">
@@ -78,11 +79,11 @@ const About = () => {
                         <ul>
                           <li>
                             <span className="icon-checked" />
-                            Nsectetur cing elit.
+                            Quick Response Times
                           </li>
                           <li>
                             <span className="icon-checked" />
-                            Nsectetur cing elit.
+                            Real-Time Tracking
                           </li>
                         </ul>
                       </div>
@@ -92,11 +93,12 @@ const About = () => {
                         <ul>
                           <li>
                             <span className="icon-checked" />
-                            Suspe ndisse suscipit leo.
+                            24/7 Availability
+
                           </li>
                           <li>
                             <span className="icon-checked" />
-                            If you are to a passage.
+                            Always Reliable
                           </li>
                         </ul>
                       </div>
@@ -167,15 +169,13 @@ const About = () => {
                     <h3>Our Benefits List</h3>
                   </div>
                   <h2>
-                    Our Company Formola
+                    Our Company Formula
                     <br /> for Success
                   </h2>
                 </div>
                 <div className="text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur notted adipisi cing
-                    elit sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                  At RescueTap, our success lies in a seamless blend of innovation, reliability, and compassion. We prioritize rapid response by leveraging cutting-edge technology to ensure help reaches you when it matters most.
                   </p>
                 </div>
               </div>
@@ -197,11 +197,11 @@ const About = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                        Longstanding
-                        <br /> Service
+                      User-Centric Approach
+                        <br />
                       </a>
                     </h3>
-                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                    <p> Our focus is on making emergency response accessible, intuitive, and stress-free for everyone.</p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
@@ -218,11 +218,11 @@ const About = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                        High Standard
-                        <br /> of Safety
+                      Technology-Driven
+                        <br />
                       </a>
                     </h3>
-                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                    <p>Leveraging innovative solutions, we simplify access to ambulances, paramedics, and emergency assistance.</p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
@@ -239,11 +239,11 @@ const About = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                        Bedside to
-                        <br /> Bedside Care
+                      Speed
+                        <br /> 
                       </a>
                     </h3>
-                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                    <p>Time is critical in emergencies, and our platform is designed to connect you to life-saving services instantly.</p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
@@ -260,11 +260,11 @@ const About = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                        Affordable and
-                        <br /> Effective
+                      Compassion
+                        <br /> 
                       </a>
                     </h3>
-                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                    <p> At the heart of RescueTap is a dedication to saving lives and providing peace of mind to those in need.</p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
