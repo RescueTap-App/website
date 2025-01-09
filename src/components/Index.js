@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "./form";
 import Nav from "./Nav";
 import Footer from "./Footer";
 
@@ -185,7 +186,7 @@ const Index = () => {
                           Help us Save a Life
                         </h3>
                         <p>
-                          Nullam mollis elit quis dusto is lacinia efficitur
+                          {/* Nullam mollis elit quis dusto is lacinia efficitur */}
                         </p>
                       </div>
                     </div>
@@ -196,19 +197,20 @@ const Index = () => {
                           Join our Big Family
                         </h3>
                         <p>
-                          Nullam mollis elit quis dusto is lacinia efficitur
+                          {/* Nullam mollis elit quis dusto is lacinia efficitur */}
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="btns-box">
-                    <a className="btn-one" href="about.html">
+                    <a className="btn-one" href="/About">
                       <span className="txt">
                         Learn More
                         <i className="icon-refresh arrow" />
                       </span>
                     </a>
                   </div>
+                  <Form></Form>
                 </div>
               </div>
             </div>
