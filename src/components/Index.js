@@ -1,7 +1,6 @@
 import React from "react";
-import Form from "./form";
-import Nav from "./Nav";
-import Footer from "./Footer";
+import Form from "./Form";
+
 
 const Index = () => {
   return (
