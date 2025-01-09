@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "./form";
 import Nav from "./Nav";
 import Footer from "./Footer";
 
@@ -48,14 +49,14 @@ const Index = () => {
                   </div>
                   <div className="big-title">
                     <h2>
-                      Emergency
+                      Emergency 
                       <br /> Medical Services
                     </h2>
                   </div>
                   <div className="btns-box">
-                    <a className="btn-one" href="about.html">
+                    <a className="btn-one" href="/About">
                       <span className="txt">
-                        discover more
+                        Get Help Now
                         <i className="icon-refresh arrow" />
                       </span>
                     </a>
@@ -74,18 +75,19 @@ const Index = () => {
               <div className="auto-container">
                 <div className="content">
                   <div className="sub-title">
-                    <h3>Your Health is our Priority</h3>
+                    <h3>Emergencies Happen — Help is Just a Tap Away!</h3>
                   </div>
                   <div className="big-title">
                     <h2>
-                      The Preferred Air
-                      <br /> Ambulance Company
+                      {/* The Preferred Air */}
+                      RescueTap
+                      <br /> your trusted emergency response platform
                     </h2>
                   </div>
                   <div className="btns-box">
-                    <a className="btn-one" href="about.html">
+                    <a className="btn-one" href="/About">
                       <span className="txt">
-                        discover more
+                        Get Help Now
                         <i className="icon-refresh arrow" />
                       </span>
                     </a>
@@ -104,7 +106,8 @@ const Index = () => {
               <div className="auto-container">
                 <div className="content">
                   <div className="sub-title">
-                    <h3>Your Health is our Priority</h3>
+                    <h3>Emergency Help at Your Fingertips—Instant, Reliable, and Life-Saving!
+                    </h3>
                   </div>
                   <div className="big-title">
                     <h2>
@@ -113,9 +116,9 @@ const Index = () => {
                     </h2>
                   </div>
                   <div className="btns-box">
-                    <a className="btn-one" href="about.html">
+                    <a className="btn-one" href="/About">
                       <span className="txt">
-                        discover more
+                      Get Help Now
                         <i className="icon-refresh arrow" />
                       </span>
                     </a>
@@ -145,7 +148,7 @@ const Index = () => {
                   </div>
                   <div className="text">
                     <p>Established in</p>
-                    <h2>1987</h2>
+                    <h2>2024</h2>
                   </div>
                 </div>
               </div>
@@ -160,16 +163,19 @@ const Index = () => {
                     <h3>Our Introductions</h3>
                   </div>
                   <h2>
-                    A Leading Medical Service
-                    <br /> Provider
+                    {/* A Leading Medical Service
+                    <br /> Provider */}
+                    
                   </h2>
                 </div>
                 <div className="inner-content">
                   <div className="text">
                     <p>
-                      Lorem ipsum is simply free text dolor sit am adipi we help
+                      {/* Lorem ipsum is simply free text dolor sit am adipi we help
                       you ensure everyone is in the right jobs sicing elit, sed
-                      do consulting firms Et leggings across the nation tempor.
+                      do consulting firms Et leggings across the nation tempor. */}
+                      Welcome to RescueTap , your trusted emergency response platform designed to connect you to life-saving services when every second matters. With just one tap, access ambulances, paramedics, and emergency assistance anytime, anywhere.
+
                     </p>
                   </div>
                   <div className="row">
@@ -180,7 +186,7 @@ const Index = () => {
                           Help us Save a Life
                         </h3>
                         <p>
-                          Nullam mollis elit quis dusto is lacinia efficitur
+                          {/* Nullam mollis elit quis dusto is lacinia efficitur */}
                         </p>
                       </div>
                     </div>
@@ -191,19 +197,20 @@ const Index = () => {
                           Join our Big Family
                         </h3>
                         <p>
-                          Nullam mollis elit quis dusto is lacinia efficitur
+                          {/* Nullam mollis elit quis dusto is lacinia efficitur */}
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="btns-box">
-                    <a className="btn-one" href="about.html">
+                    <a className="btn-one" href="/About">
                       <span className="txt">
-                        Discover About More
+                        Learn More
                         <i className="icon-refresh arrow" />
                       </span>
                     </a>
                   </div>
+                  <Form></Form>
                 </div>
               </div>
             </div>
@@ -226,9 +233,13 @@ const Index = () => {
                       </div>
                       <div className="text-holder">
                         <h3>
-                          <a href="#">Impeccable Safety</a>
+                          <a href="#">
+                            {/* Impeccable Safety */}
+                            Quick Response Times
+                          </a>
                         </h3>
-                        <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                        <p>Instant, Reliable, and Life-Saving!
+                        </p>
                       </div>
                     </div>
                   </li>
@@ -240,9 +251,10 @@ const Index = () => {
                       </div>
                       <div className="text-holder">
                         <h3>
-                          <a href="#">Fully Licensed</a>
+                          <a href="#">Real-Time Tracking
+                          </a>
                         </h3>
-                        <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                        <p>Stay Informed and Ready</p>
                       </div>
                     </div>
                   </li>
@@ -256,7 +268,7 @@ const Index = () => {
                         <h3>
                           <a href="#">Available 24/7</a>
                         </h3>
-                        <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                        <p>Because Time Matters.</p>
                       </div>
                     </div>
                   </li>
@@ -295,12 +307,11 @@ const Index = () => {
                     <a href="services-single-1.html">Ambulance Car</a>
                   </h3>
                   <p>
-                    Lorem ipsum is simply dolor sit am adipi we help you ensure
-                    everyone.
+                  Get fast and reliable ambulances in minutes
                   </p>
                   <div className="btn-box">
                     <a href="services-single-1.html">
-                      Read More <span className="icon-right-arrow" />
+                    Book an Ambulance Now <span className="icon-right-arrow" />
                     </a>
                   </div>
                 </div>
@@ -319,15 +330,14 @@ const Index = () => {
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="services-single-2.html">Medical Flight Services</a>
+                    <a href="services-single-2.html">Advanced Life Support</a>
                   </h3>
                   <p>
-                    Lorem ipsum is simply dolor sit am adipi we help you ensure
-                    everyone.
+                  Critical Care, Delivered Fast!
                   </p>
                   <div className="btn-box">
                     <a href="services-single-2.html">
-                      Read More <span className="icon-right-arrow" />
+                    Request Advanced Care <span className="icon-right-arrow" />
                     </a>
                   </div>
                 </div>
@@ -346,15 +356,15 @@ const Index = () => {
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="services-single-3.html">Medical Escort</a>
+                    <a href="services-single-3.html">Emergency Response App 
+                    </a>
                   </h3>
                   <p>
-                    Lorem ipsum is simply dolor sit am adipi we help you ensure
-                    everyone.
+                  Emergency Help Is Just a Tap Away!
                   </p>
                   <div className="btn-box">
                     <a href="services-single-3.html">
-                      Read More <span className="icon-right-arrow" />
+                    Download the App <span className="icon-right-arrow" />
                     </a>
                   </div>
                 </div>
@@ -537,15 +547,13 @@ const Index = () => {
                     <h3>Our Benefits List</h3>
                   </div>
                   <h2>
-                    Our Company Formola
+                    Our Company Formula
                     <br /> for Success
                   </h2>
                 </div>
                 <div className="text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur notted adipisi cing
-                    elit sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                  At RescueTap, our success lies in a seamless blend of innovation, reliability, and compassion. We prioritize rapid response by leveraging cutting-edge technology to ensure help reaches you when it matters most.
                   </p>
                 </div>
               </div>
@@ -777,12 +785,13 @@ const Index = () => {
                   </div>
                   <h3>
                     <a href="blog-single.html">
-                      Trusted, International Air Ambulance Company
+                      {/* Trusted, International Air Ambulance Company */}
+                      Stay Safe, Stay Informed—Your Source for Health and Emergency Tips!"
+
                     </a>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, coned sectetur notte elit sed
-                    do.
+                    Explore insightful articles, safety tips, and inspiring rescue stories. Learn how to handle emergencies and protect yourself and your loved ones.
                   </p>
                   <div className="btn-box">
                     <a href="blog-single.html">Read More</a>
