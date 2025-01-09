@@ -1,6 +1,9 @@
 import React from "react";
 import Form from "./Form";
 
+// import Form from "./form";
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 const Index = () => {
   return (
@@ -209,7 +212,7 @@ const Index = () => {
                       </span>
                     </a>
                   </div>
-                  <Form></Form>
+                  {/* <Form></Form> */}
                 </div>
               </div>
             </div>
@@ -563,7 +566,7 @@ const Index = () => {
               <ul className="features-style2__content">
                 {/*Start single Features Style2*/}
                 <li
-                  className="single-features-style2"
+                  className="single-features-style2 white-bg"
                   data-aos="fade-left"
                   data-aos-easing="linear"
                   data-aos-duration={1500}
@@ -574,17 +577,17 @@ const Index = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                        Longstanding
-                        <br /> Service
+                      User-Centric Approach
+                        <br />
                       </a>
                     </h3>
-                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                    <p> Our focus is on making emergency response accessible, intuitive, and stress-free for everyone.</p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
                 {/*Start single Features Style2*/}
                 <li
-                  className="single-features-style2"
+                  className="single-features-style2 white-bg"
                   data-aos="fade-right"
                   data-aos-easing="linear"
                   data-aos-duration={1500}
@@ -595,17 +598,17 @@ const Index = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                        High Standard
-                        <br /> of Safety
+                      Technology-Driven
+                        <br />
                       </a>
                     </h3>
-                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                    <p>Leveraging innovative solutions, we simplify access to ambulances, paramedics, and emergency assistance.</p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
                 {/*Start single Features Style2*/}
                 <li
-                  className="single-features-style2"
+                  className="single-features-style2 white-bg"
                   data-aos="fade-left"
                   data-aos-easing="linear"
                   data-aos-duration={1500}
@@ -616,17 +619,17 @@ const Index = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                        Bedside to
-                        <br /> Bedside Care
+                      Speed
+                        <br /> 
                       </a>
                     </h3>
-                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                    <p>Time is critical in emergencies, and our platform is designed to connect you to life-saving services instantly.</p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
                 {/*Start single Features Style2*/}
                 <li
-                  className="single-features-style2"
+                  className="single-features-style2 white-bg"
                   data-aos="fade-right"
                   data-aos-easing="linear"
                   data-aos-duration={1500}
@@ -637,11 +640,11 @@ const Index = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                        Affordable and
-                        <br /> Effective
+                      Compassion
+                        <br /> 
                       </a>
                     </h3>
-                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                    <p> At the heart of RescueTap is a dedication to saving lives and providing peace of mind to those in need.</p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
@@ -743,7 +746,7 @@ const Index = () => {
             <div className="col-xl-2 col-lg-12">
               <div className="slogan-btn-box">
                 <a className="btn-one" href="contact.html">
-                  <span className="txt">Contact with Us</span>
+                  <span className="txt">Contact Us</span>
                 </a>
               </div>
             </div>
@@ -779,7 +782,7 @@ const Index = () => {
                 <div className="text-holder">
                   <div className="meta-info">
                     <p>
-                      <span className="icon-calendar" /> 20 Sep, 2021
+                      <span className="icon-calendar" /> 19 Sep, 2024
                     </p>
                   </div>
                   <h3>
@@ -790,7 +793,8 @@ const Index = () => {
                     </a>
                   </h3>
                   <p>
-                    Explore insightful articles, safety tips, and inspiring rescue stories. Learn how to handle emergencies and protect yourself and your loved ones.
+                    Explore insightful articles, safety tips, and inspiring rescue stories. 
+                    {/* Learn how to handle emergencies and protect yourself and your loved ones. */}
                   </p>
                   <div className="btn-box">
                     <a href="blog-single.html">Read More</a>
@@ -813,17 +817,16 @@ const Index = () => {
                 <div className="text-holder">
                   <div className="meta-info">
                     <p>
-                      <span className="icon-calendar" /> 20 Sep, 2021
+                      <span className="icon-calendar" /> 20 Sep, 2024
                     </p>
                   </div>
                   <h3>
                     <a href="blog-single.html">
-                      Working for the ambulance service is much more than...
+                      How to Respond to Cardiac Arrest
                     </a>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, coned sectetur notte elit sed
-                    do.
+                  Cardiac arrest is a life-threatening emergency that requires immediate action.
                   </p>
                   <div className="btn-box">
                     <a href="blog-single.html">Read More</a>
@@ -846,17 +849,16 @@ const Index = () => {
                 <div className="text-holder">
                   <div className="meta-info">
                     <p>
-                      <span className="icon-calendar" /> 20 Sep, 2021
+                      <span className="icon-calendar" /> 21 Sep, 2021
                     </p>
                   </div>
                   <h3>
                     <a href="blog-single.html">
-                      A Non-Emergency Trusted Ambulance services
+                    10 First Aid Tips Everyone Should Know
                     </a>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, coned sectetur notte elit sed
-                    do.
+                    Staying Calm always, at every step of the way.
                   </p>
                   <div className="btn-box">
                     <a href="blog-single.html">Read More</a>
