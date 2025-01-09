@@ -53,7 +53,7 @@ const Index = () => {
                     </h2>
                   </div>
                   <div className="btns-box">
-                    <a className="btn-one" href="about.html">
+                    <a className="btn-one" href="/About">
                       <span className="txt">
                         Get Help Now
                         <i className="icon-refresh arrow" />
@@ -84,7 +84,7 @@ const Index = () => {
                     </h2>
                   </div>
                   <div className="btns-box">
-                    <a className="btn-one" href="about.html">
+                    <a className="btn-one" href="/About">
                       <span className="txt">
                         Get Help Now
                         <i className="icon-refresh arrow" />
@@ -115,7 +115,7 @@ const Index = () => {
                     </h2>
                   </div>
                   <div className="btns-box">
-                    <a className="btn-one" href="about.html">
+                    <a className="btn-one" href="/About">
                       <span className="txt">
                       Get Help Now
                         <i className="icon-refresh arrow" />
@@ -545,15 +545,13 @@ const Index = () => {
                     <h3>Our Benefits List</h3>
                   </div>
                   <h2>
-                    Our Company Formola
+                    Our Company Formula
                     <br /> for Success
                   </h2>
                 </div>
                 <div className="text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur notted adipisi cing
-                    elit sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                  At RescueTap, our success lies in a seamless blend of innovation, reliability, and compassion. We prioritize rapid response by leveraging cutting-edge technology to ensure help reaches you when it matters most.
                   </p>
                 </div>
               </div>
