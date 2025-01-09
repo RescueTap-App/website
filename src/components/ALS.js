@@ -54,13 +54,13 @@ const ALS = () => {
                     data-aos-duration={1000}
                   >
                     <ul className="service-pages">
-                      <li className="active">
+                      <li >
                         <a href="/Ambulance">
                           Ambulance Car <span className="icon-next-1" />
                         </a>
                       </li>
 
-                      <li>
+                      <li className="active">
                         <a href="/ALS">
                           Advanced Life Support <span className="icon-next-1" />
                         </a>
@@ -134,11 +134,9 @@ const ALS = () => {
                   </div>
                   <div className="text-box1">
                     <h2>Critical Care, Delivered Fast!</h2>
+                    <p>Critical Care on Wheels—Expert Support When It Matters Most!</p>
                     <p>
-                      Our ambulances come with Advanced Life Support (ALS)
-                      systems designed for emergencies requiring specialized
-                      care. From trauma care to cardiac support, we ensure every
-                      second counts.
+                    Our Advanced Life Support (ALS) ambulances are equipped to handle complex medical emergencies that require immediate intervention. Whether it’s trauma, cardiac arrest, or respiratory distress, we bring the hospital to you.
                     </p>
                   </div>
                   <div className="text-box2">
@@ -151,11 +149,10 @@ const ALS = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Help us Save a
-                            Life
+                            <span className="icon-right-arrow" /> Defibrillators and Cardiac Monitors
                           </h4>
                           <p>
-                            Nullam mollis elit quis dusto is lacinia efficitur
+                          Monitor and stabilize critical patients
                           </p>
                         </div>
                       </div>
@@ -167,43 +164,71 @@ const ALS = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Join our Big
-                            Family
+                            <span className="icon-right-arrow" /> Advanced Airway Equipment
                           </h4>
                           <p>
-                            Nullam mollis elit quis dusto is lacinia efficitur
+                          Including ventilators and intubation tools
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="text-box3">
-                    <p>
-                      When an unknown printer took a galley of type and
-                      scrambled it to make a type specimen book. It has survived
-                      not only five centuries, but also the leap into electronic
-                      typesetting. Lorem Ipsum has been the ndustry standard
-                      dummy text ever since the 1500s.
-                    </p>
+                  <div className="text-box2">
+                    <div className="row">
+                      <div className="col-xl-6">
+                        <div
+                          className="text-box2-single"
+                          data-aos="fade-right"
+                          data-aos-easing="linear"
+                          data-aos-duration={2500}
+                        >
+                          <h4>
+                            <span className="icon-right-arrow" /> Continuous Monitoring Systems
+                          </h4>
+                          <p>
+                          Track vital signs in real time.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="col-xl-6">
+                        <div
+                          className="text-box2-single"
+                          data-aos="fade-left"
+                          data-aos-easing="linear"
+                          data-aos-duration={2500}
+                        >
+                          <h4>
+                            <span className="icon-right-arrow" /> Certified Medical Staff
+                          </h4>
+                          <p>
+                          Paramedics and emergency physicians available onboard.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                 
                   <div className="text-box4">
                     <div className="row">
                       <div className="col-xl-6">
                         <div className="content-box">
-                          <h2>Services</h2>
-                          <p>Our ambulances come equipped with</p>
+                          <h2>Additional Equipment Includes</h2>
+                          {/* <p>Our ambulances come equipped with</p> */}
                           <ul>
                             <li>
-                              <span className="icon-checked" /> Onboard
-                              defibrillators and oxygen supplies
+                              <span className="icon-checked" /> Portable Ventilators
                             </li>
                             <li>
-                              <span className="icon-checked" /> Certified
-                              paramedics and medical staff
+                              <span className="icon-checked" /> Infusion Pumps
                             </li>
                             <li>
-                              <span className="icon-checked" /> Real-time
-                              monitoring systems
+                              <span className="icon-checked" /> Nebulizers for Respiratory Support
+                            </li>
+                            <li>
+                              <span className="icon-checked" /> ECG Monitors
+                            </li>
+                            <li>
+                              <span className="icon-checked" /> Advanced Medication and Pain Relief Kits
                             </li>
                           </ul>
                         </div>
