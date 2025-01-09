@@ -31,7 +31,7 @@ const App = () => {
                       <li>
                         <a href="services.html">Services</a>
                       </li>
-                      <li className="active">General Services</li>
+                      <li className="active">Emergency App</li>
                     </ul>
                   </div>
                 </div>
@@ -54,7 +54,7 @@ const App = () => {
                     data-aos-duration={1000}
                   >
                     <ul className="service-pages">
-                      <li className="active">
+                      <li >
                         <a href="/Ambulance">
                           Ambulance Car <span className="icon-next-1" />
                         </a>
@@ -65,7 +65,7 @@ const App = () => {
                           Advanced Life Support <span className="icon-next-1" />
                         </a>
                       </li>
-                      <li>
+                      <li  className="active">
                         <a href="/App">
                           Emergency App Services{" "}
                           <span className="icon-next-1" />
@@ -138,79 +138,29 @@ const App = () => {
                     RescueTap is more than just an app—it’s your lifeline during emergencies. Whether you need an ambulance, a paramedic, or assistance reaching the nearest hospital, we’ve got you covered.
                     </p>
                     <p>
-                      It has survived not only five centuries. Lorem Ipsum is
-                      simply dummy text of the new design printng and type
-                      setting Ipsum take a look at our round. When an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book. It has survived not only five
-                      centuries, but also the leap into electronic typesetting.
+                    The RescueTap App transforms your smartphone into a personal emergency assistant. Whether you need urgent medical help, an ambulance, or instant alerts to your loved ones, we’re here to keep you safe.  
                     </p>
                   </div>
-                  <div className="text-box2">
-                    <div className="row">
-                      <div className="col-xl-6">
-                        <div
-                          className="text-box2-single"
-                          data-aos="fade-right"
-                          data-aos-easing="linear"
-                          data-aos-duration={2500}
-                        >
-                          <h4>
-                            <span className="icon-right-arrow" /> Help us Save a
-                            Life
-                          </h4>
-                          <p>
-                            Nullam mollis elit quis dusto is lacinia efficitur
-                          </p>
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div
-                          className="text-box2-single"
-                          data-aos="fade-left"
-                          data-aos-easing="linear"
-                          data-aos-duration={2500}
-                        >
-                          <h4>
-                            <span className="icon-right-arrow" /> Join our Big
-                            Family
-                          </h4>
-                          <p>
-                            Nullam mollis elit quis dusto is lacinia efficitur
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-box3">
-                    <p>
-                      When an unknown printer took a galley of type and
-                      scrambled it to make a type specimen book. It has survived
-                      not only five centuries, but also the leap into electronic
-                      typesetting. Lorem Ipsum has been the ndustry standard
-                      dummy text ever since the 1500s.
-                    </p>
-                  </div>
+                 
+                 
                   <div className="text-box4">
                     <div className="row">
                       <div className="col-xl-6">
                         <div className="content-box">
                           <h2>App Features</h2>
-                          <p>
-                            Get exclusive access to all our app features as a verified user
-                          </p>
+                         
                           <ul>
                             <li>
-                              <span className="icon-checked" /> User-Friendly Interface
+                              <span className="icon-checked" /> User-Friendly Interface: Easy navigation for all age groups
                             </li>
                             <li>
-                              <span className="icon-checked" /> Location-Based Services
+                              <span className="icon-checked" />Real-Time Tracking: Track loved ones during emergencies.
                             </li>
                             <li>
-                              <span className="icon-checked" /> Real-Time Tracking – Monitor loved ones’ locations during emergencies
+                              <span className="icon-checked" /> Emergency Alerts: Notify family or emergency contact instantly.
                             </li>
                             <li>
-                              <span className="icon-checked" />Emergency Alerts – Notify family and responders for quick help.
+                              <span className="icon-checked" />Push Notifications: Receive updates and reminders to stay prepared.
                             </li>
                           </ul>
                         </div>
