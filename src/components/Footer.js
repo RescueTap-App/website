@@ -170,11 +170,11 @@ const Footer = () => {
               </div>
               <div className="footer-social-link">
                 <ul className="clearfix">
-                  <li>
+                  {/* <li>
                     <a href="#">
                       <i className="icon-twitter" />
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a href="#">
                       <i className="icon-facebook" />
@@ -182,7 +182,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a href="#">
-                      <i className="icon-pinterest" />
+                      <i className="icon-linkedin" />
                     </a>
                   </li>
                   <li>
