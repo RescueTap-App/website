@@ -108,7 +108,7 @@ const About = () => {
                     {/*Skill Box*/}
                     <div className="progress-box wow">
                       <div className="inner count-box">
-                        <div className="text">Air Ambulance</div>
+                        <div className="text">Ambulance</div>
                         <div className="bar">
                           <div className="bar-innner">
                             <div className="skill-percent">
@@ -129,7 +129,7 @@ const About = () => {
                     {/*Skill Box*/}
                     <div className="progress-box last-child wow">
                       <div className="inner count-box">
-                        <div className="text">Car Ambulance</div>
+                        <div className="text">Response App</div>
                         <div className="bar">
                           <div className="bar-innner">
                             <div className="skill-percent">
@@ -142,7 +142,7 @@ const About = () => {
                               </span>
                               <span className="percent">%</span>
                             </div>
-                            <div className="bar-fill" data-percent={70} />
+                            <div className="bar-fill" data-percent={100} />
                           </div>
                         </div>
                       </div>
@@ -359,12 +359,11 @@ const About = () => {
                       </div>
                       <div className="text">
                         <p>
-                          This is due to their excellent service, competitive
-                          pricing and customer support. It’s throughly refresing
-                          to get such a personal touch.
+                          RescueTap’s quick response saved my sister’s life
+                          during a medical emergency!
                         </p>
                         <h3>
-                          Kevin Martin <span>- Customer</span>
+                          Precious Adeniyi <span>- Customer</span>
                         </h3>
                       </div>
                     </div>
@@ -374,7 +373,7 @@ const About = () => {
                   <div className="single-testimonial-style1">
                     <div className="img-holder">
                       <img
-                        src="assets/images/testimonial/testimonial-v1-1.jpg"
+                        src="assets/images/testimonial/testimonial-v1-2.jpg"
                         alt
                       />
                       <div className="overlay-content">
@@ -414,12 +413,11 @@ const About = () => {
                       </div>
                       <div className="text">
                         <p>
-                          This is due to their excellent service, competitive
-                          pricing and customer support. It’s throughly refresing
-                          to get such a personal touch.
+                          The app is so easy to use, and knowing help is just a
+                          tap away gives me peace of mind.
                         </p>
                         <h3>
-                          Kevin Martin <span>- Customer</span>
+                          Prisca Okafor <span>- Customer</span>
                         </h3>
                       </div>
                     </div>
@@ -433,217 +431,7 @@ const About = () => {
       </section>
       {/*End Testimonial Style1 Area*/}
       {/*Start Team Style1 Area*/}
-      <section className="team-style1-area">
-        <div className="auto-container">
-          <div className="sec-title text-center">
-            <div className="icon">
-              <span className="icon-heartbeat" />
-            </div>
-            <div className="sub-title">
-              <h3>Professional Team</h3>
-            </div>
-            <h2>Medical Flight Staff</h2>
-          </div>
-          <div className="row">
-            {/*Start Single Team Style1*/}
-            <div className="col-xl-3 col-lg-6 col-md-6">
-              <div
-                className="single-team-style1 wow fadeInUp"
-                data-wow-delay="100ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="img-holder">
-                  <div className="inner">
-                    <img src="assets/images/team/team-v1-1.jpg" alt />
-                  </div>
-                  <div className="title-holder text-center">
-                    <h2>
-                      <a href="#">Jessica Brown</a>
-                    </h2>
-                    <h3>Member</h3>
-                    <div className="overlay-title">
-                      <h2>
-                        <a href="#">Jessica Brown</a>
-                      </h2>
-                      <h3>Member</h3>
-                      <ul className="social-links">
-                        <li>
-                          <a href="#">
-                            <i className="icon-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-facebook" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-instagram" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-pinterest" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single Team Style1*/}
-            {/*Start Single Team Style1*/}
-            <div className="col-xl-3 col-lg-6 col-md-6">
-              <div
-                className="single-team-style1 wow fadeInDown"
-                data-wow-delay="200ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="img-holder">
-                  <div className="inner">
-                    <img src="assets/images/team/team-v1-2.jpg" alt />
-                  </div>
-                  <div className="title-holder text-center">
-                    <h2>
-                      <a href="#">Kevin Martin</a>
-                    </h2>
-                    <h3>Member</h3>
-                    <div className="overlay-title">
-                      <h2>
-                        <a href="#">Kevin Martin</a>
-                      </h2>
-                      <h3>Member</h3>
-                      <ul className="social-links">
-                        <li>
-                          <a href="#">
-                            <i className="icon-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-facebook" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-instagram" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-pinterest" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single Team Style1*/}
-            {/*Start Single Team Style1*/}
-            <div className="col-xl-3 col-lg-6 col-md-6">
-              <div
-                className="single-team-style1 wow fadeInUp"
-                data-wow-delay="300ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="img-holder">
-                  <div className="inner">
-                    <img src="assets/images/team/team-v1-3.jpg" alt />
-                  </div>
-                  <div className="title-holder text-center">
-                    <h2>
-                      <a href="#">Sarah Albert</a>
-                    </h2>
-                    <h3>Member</h3>
-                    <div className="overlay-title">
-                      <h2>
-                        <a href="#">Sarah Albert</a>
-                      </h2>
-                      <h3>Member</h3>
-                      <ul className="social-links">
-                        <li>
-                          <a href="#">
-                            <i className="icon-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-facebook" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-instagram" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-pinterest" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single Team Style1*/}
-            {/*Start Single Team Style1*/}
-            <div className="col-xl-3 col-lg-6 col-md-6">
-              <div
-                className="single-team-style1 wow fadeInDown"
-                data-wow-delay="400ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="img-holder">
-                  <div className="inner">
-                    <img src="assets/images/team/team-v1-4.jpg" alt />
-                  </div>
-                  <div className="title-holder text-center">
-                    <h2>
-                      <a href="#">David Cooper</a>
-                    </h2>
-                    <h3>Member</h3>
-                    <div className="overlay-title">
-                      <h2>
-                        <a href="#">David Cooper</a>
-                      </h2>
-                      <h3>Member</h3>
-                      <ul className="social-links">
-                        <li>
-                          <a href="#">
-                            <i className="icon-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-facebook" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-instagram" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-pinterest" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single Team Style1*/}
-          </div>
-        </div>
-      </section>
+     
       {/*End Team Style1 Area*/}
       {/*Start Partner Area*/}
       <section className="partner-area">
