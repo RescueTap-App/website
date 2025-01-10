@@ -4,7 +4,7 @@ import React from "react";
 const Form = ()=>{
     return (
         <>
-            {/* <section>
+            <section>
                 <form>
                     <label>Name</label>
                     <input type="text" className="mb-3"/>
@@ -15,7 +15,7 @@ const Form = ()=>{
                     </select>
                     <textarea placeholder="drop comments here"></textarea>
                 </form>   
-            </section> */}
+            </section>
 
             {/* <section>
             <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -49,6 +49,101 @@ const Form = ()=>{
             </div>
 
             </section> */}
+
+            {/* 
+            
+            <div className="row">
+            <div className="col-xl-12">
+              <ul className="features-style2__content">
+                {/*Start single Features Style2*/}
+                {/* <li
+                  className="single-features-style2"
+                  data-aos="fade-left"
+                  data-aos-easing="linear"
+                  data-aos-duration={1500}
+                >
+                  <div className="icon-holder">
+                    <span className="icon-medal" />
+                  </div>
+                  <div className="text-holder">
+                    <h3>
+                      <a href="#">
+                        Longstanding
+                        <br /> Service
+                      </a>
+                    </h3>
+                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                  </div>
+                </li> */}
+                {/*End single Features Style2*/}
+                {/*Start single Features Style2*/}
+                {/* <li
+                  className="single-features-style2"
+                  data-aos="fade-right"
+                  data-aos-easing="linear"
+                  data-aos-duration={1500}
+                >
+                  <div className="icon-holder">
+                    <span className="icon-safety" />
+                  </div>
+                  <div className="text-holder">
+                    <h3>
+                      <a href="#">
+                        High Standard
+                        <br /> of Safety
+                      </a>
+                    </h3>
+                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                  </div>
+                </li> */}
+                {/*End single Features Style2*/}
+                {/*Start single Features Style2*/}
+                {/* <li
+                  className="single-features-style2"
+                  data-aos="fade-left"
+                  data-aos-easing="linear"
+                  data-aos-duration={1500}
+                >
+                  <div className="icon-holder">
+                    <span className="icon-health-insurance" />
+                  </div>
+                  <div className="text-holder">
+                    <h3>
+                      <a href="#">
+                        Bedside to
+                        <br /> Bedside Care
+                      </a>
+                    </h3>
+                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                  </div>
+                </li> */}
+                {/*End single Features Style2*/}
+                {/*Start single Features Style2*/}
+                {/* <li
+                  className="single-features-style2"
+                  data-aos="fade-right"
+                  data-aos-easing="linear"
+                  data-aos-duration={1500}
+                >
+                  <div className="icon-holder">
+                    <span className="icon-money-exchange" />
+                  </div>
+                  <div className="text-holder">
+                    <h3>
+                      <a href="#">
+                        Affordable and
+                        <br /> Effective
+                      </a>
+                    </h3>
+                    <p>Lorem ipsum is simply dolor sit am adipi we help.</p>
+                  </div>
+                </li> */}
+                {/*End single Features Style2*/}
+              {/* </ul>
+            </div>
+          </div>
+            
+            */} 
         </>
     )
 }
