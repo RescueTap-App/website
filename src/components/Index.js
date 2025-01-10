@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "./form";
+// import Form from "./form";
 import Nav from "./Nav";
 import Footer from "./Footer";
 
@@ -210,7 +210,7 @@ const Index = () => {
                       </span>
                     </a>
                   </div>
-                  <Form></Form>
+                  {/* <Form></Form> */}
                 </div>
               </div>
             </div>
