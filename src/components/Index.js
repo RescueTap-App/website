@@ -856,8 +856,7 @@ const Index = () => {
                     </a>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, coned sectetur notte elit sed
-                    do.
+                    Staying Calm always, at every step of the way.
                   </p>
                   <div className="btn-box">
                     <a href="blog-single.html">Read More</a>
