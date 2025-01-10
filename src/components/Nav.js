@@ -141,17 +141,17 @@ const Nav = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/share/1AvuLxWwaS/?mibextid=qi2Omg">
                       <i className="icon-facebook" />
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i className="icon-pinterest" />
+                      <i className="icon-linkedin" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/rescuetap_app?igsh=MTNpdjJjZGtwd211dQ==">
                       <i className="icon-instagram" />
                     </a>
                   </li>
