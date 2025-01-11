@@ -307,9 +307,16 @@ const Index = () => {
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="/Ambulance">Ambulance Car</a>
+                    <a href="services-single-1.html">Ambulance Car Services</a>
                   </h3>
-                  <p>Get fast and reliable ambulances in minutes</p>
+                  <p>
+                  Our ambulance fleet is not just for medical emergencies—it’s also a trusted ally for personal safety.
+                  </p>
+                  <ul>
+                    <li className=""><span className="icon-right-arrow" /> Quick Dispatch</li>
+                    <li className=""><span className="icon-right-arrow" /> 24/7 Availability</li>
+                    <li className=""><span className="icon-right-arrow" /> Secure Transportation</li>
+                  </ul>
                   <div className="btn-box">
                     <a href="/Ambulance">
                       Book an Ambulance Now{" "}
@@ -334,7 +341,14 @@ const Index = () => {
                   <h3>
                     <a href="/ALS">Advanced Life Support</a>
                   </h3>
-                  <p>Critical Care, Delivered Fast!</p>
+                  <p>
+                    In cases where incidents escalate into health emergencies, our Advanced Life Support services provide critical care.
+                  </p>
+                  <ul>
+                    <li className=""><span className="icon-right-arrow" /> Immediate Medical Attention</li>
+                    <li className=""><span className="icon-right-arrow" /> Certified Paramedics</li>
+                    <li className=""><span className="icon-right-arrow" /> State-of-the-Art Equipment</li>
+                  </ul>
                   <div className="btn-box">
                     <a href="/ALS">
                       Request Advanced Care{" "}
@@ -359,7 +373,14 @@ const Index = () => {
                   <h3>
                     <a href="/App">Emergency Response App</a>
                   </h3>
-                  <p>Emergency Help Is Just a Tap Away!</p>
+                  <p>
+                  Our RescueTap App serves as a digital lifeline for anyone who feels unsafe during their journey.
+                  </p>
+                  <ul>
+                    <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
+                    <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
+                    <li className=""><span className="icon-right-arrow" /> SOS Button</li>
+                  </ul>
                   <div className="btn-box">
                     <a href="/App">
                       Download the App <span className="icon-right-arrow" />
