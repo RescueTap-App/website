@@ -31,7 +31,9 @@ const Drivers = () => {
                       <li>
                         <a href="services.html">Services</a>
                       </li>
-                      <li className="active">Driver Registration and Ride Verification</li>
+                      <li className="active">
+                        Driver Registration and Ride Verification
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -54,7 +56,7 @@ const Drivers = () => {
                     data-aos-duration={1000}
                   >
                     <ul className="service-pages">
-                      <li className="active">
+                      <li >
                         <a href="/Ambulance">
                           Ambulance Car <span className="icon-next-1" />
                         </a>
@@ -71,13 +73,12 @@ const Drivers = () => {
                           <span className="icon-next-1" />
                         </a>
                       </li>
-                      <li>
-                        <a href="/App">
-                        Driver Registration and Ride Verification
+                      <li className="active">
+                        <a href="/Drivers">
+                          Driver Registration and Ride Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>
-                      
                     </ul>
                   </div>
                   <div
@@ -93,11 +94,10 @@ const Drivers = () => {
                           "url(assets/images/sidebar/sidebar-info-box-bg.jpg)",
                       }}
                     />
-                    <h3>Need Help?</h3>
+                    <h3>Need an ambulance?</h3>
                     <p>
-                      Speak with a human to filling out a form? call corporate
-                      office and we will connect you with a team member who can
-                      help.
+                      Download our online Brouchure to get detailed informaion
+                      on our vehcle registration and ambulance services.
                     </p>
                     <h2>
                       <a href="tel:+2348147806378">+234 814 780 6378</a>
@@ -137,94 +137,38 @@ const Drivers = () => {
                   <div className="text-box1">
                     <h2>Driver Registration and Ride Verification</h2>
                     <p>
-                      Lorem ipsum is simply free text used by copytyping
-                      refreshing. Neque porro est qui dolorem ipsum quia quaed
-                      inventore veritatis et quasi architecto beatae vitae dicta
-                      sunt explicabo. Aelltes port lacus quis enim var sed
-                      efficitur turpis gilla sed sit amet finibus eros. Lorem
-                      Ipsum is simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the ndustry standard dummy
-                      text ever since the 1500s.
+                    Safe Rides, Trusted Drivers—Your Safety Comes First!
                     </p>
                     <p>
-                      It has survived not only five centuries. Lorem Ipsum is
-                      simply dummy text of the new design printng and type
-                      setting Ipsum take a look at our round. When an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book. It has survived not only five
-                      centuries, but also the leap into electronic typesetting.
+                    At RescueTap, we prioritize safety and reliability by carefully vetting every driver before they join our network. Our streamlined yet comprehensive registration process ensures only qualified and verified drivers operate under RescueTap.  
                     </p>
                   </div>
-                  <div className="text-box2">
-                    <div className="row">
-                      <div className="col-xl-6">
-                        <div
-                          className="text-box2-single"
-                          data-aos="fade-right"
-                          data-aos-easing="linear"
-                          data-aos-duration={2500}
-                        >
-                          <h4>
-                            <span className="icon-right-arrow" /> Help us Save a
-                            Life
-                          </h4>
-                          <p>
-                            Nullam mollis elit quis dusto is lacinia efficitur
-                          </p>
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div
-                          className="text-box2-single"
-                          data-aos="fade-left"
-                          data-aos-easing="linear"
-                          data-aos-duration={2500}
-                        >
-                          <h4>
-                            <span className="icon-right-arrow" /> Join our Big
-                            Family
-                          </h4>
-                          <p>
-                            Nullam mollis elit quis dusto is lacinia efficitur
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-box3">
-                    <p>
-                      When an unknown printer took a galley of type and
-                      scrambled it to make a type specimen book. It has survived
-                      not only five centuries, but also the leap into electronic
-                      typesetting. Lorem Ipsum has been the ndustry standard
-                      dummy text ever since the 1500s.
-                    </p>
-                  </div>
+                
+                 
                   <div className="text-box4">
                     <div className="row">
                       <div className="col-xl-6">
                         <div className="content-box">
-                          <h2>Service Benefits</h2>
-                          <p>
-                            Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum.
-                          </p>
+                          <h2>Steps to Register</h2>
+                          
                           <ul>
                             <li>
-                              <span className="icon-checked" /> In id diam nec
-                              nisi congue tincidunt
+                              <span className="icon-checked" /> Verify each driver's identity for accountability and transparency 
                             </li>
                             <li>
-                              <span className="icon-checked" /> Pn malesuada
-                              purus a ligula dapibus
+                              <span className="icon-checked" /> Record the date the driver officially joins RescueTap for tracking and updates.
                             </li>
                             <li>
-                              <span className="icon-checked" /> Vestibulum
-                              tincidunt arcu vel nisl
+                              <span className="icon-checked" /> Capture vehicle identification to ensure easy monitoring and security.
                             </li>
                             <li>
-                              <span className="icon-checked" /> Sed tristique
-                              lorem non tesque
+                              <span className="icon-checked" /> Document the type, model, and condition of the vehicle to meet safety and operational standards.
+                            </li>
+                            <li>
+                              <span className="icon-checked" /> Perform security and license checks to verify credibility and compliance with legal standards.
+                            </li>
+                            <li>
+                              <span className="icon-checked" /> Ensure drivers are equipped with the necessary first-aid and emergency response training.
                             </li>
                           </ul>
                         </div>
@@ -239,55 +183,189 @@ const Drivers = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="faq-style1__content">
-                    <ul className="accordion-box">
-                      <li className="accordion block active-block">
-                        <div className="acc-btn active">
-                          <div className="icon-outer">
-                            <i className="icon-down-arrow" />
+                  <div className="container">
+            <div className="sec-title text-center">
+              <div className="icon">
+                <span className="icon-heartbeat" />
+              </div>
+              <div className="sub-title">
+                <h3>
+                  Fill out the form below to book an ambulance for an event, and
+                  we’ll respond promptly.
+                </h3>
+              </div>
+              <h2>Registration as a Driver</h2>
+            </div>
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="contact-form">
+                  <form
+                    id="contact-form"
+                    name="contact_form"
+                    className="default-form2"
+                    action="assets/inc/sendmail.php"
+                    method="post"
+                  >
+                    <div className="row">
+                      <div className="col-xl-6">
+                        <div className="form-group">
+                          <div className="input-box">
+                            <input
+                              type="text"
+                              name="form_name"
+                              id="formName"
+                              placeholder="Full Name"
+                              required
+                            />
                           </div>
-                          <h3>Interdum et malesuada fames ac ante ipsum</h3>
                         </div>
-                        <div className="acc-content current">
-                          <p>
-                            Suspendisse finibus urna mauris, vitae consequat
-                            quam vel. Vestibulum leo ligula, vit commodo nisl
-                            Sed luctus venenatis pellentesque.
-                          </p>
-                        </div>
-                      </li>
-                      <li className="accordion block">
-                        <div className="acc-btn">
-                          <div className="icon-outer">
-                            <i className="icon-down-arrow" />
+                      </div>
+                      <div className="col-xl-6">
+                        <div className="form-group">
+                          <div className="input-box">
+                            <input
+                              type="email"
+                              name="form_email"
+                              id="formEmail"
+                              placeholder="Email Address"
+                              required
+                            />
                           </div>
-                          <h3>Maecenas condimentum sollicitudin ligula.</h3>
                         </div>
-                        <div className="acc-content">
-                          <p>
-                            Suspendisse finibus urna mauris, vitae consequat
-                            quam vel. Vestibulum leo ligula, vit commodo nisl
-                            Sed luctus venenatis pellentesque.
-                          </p>
-                        </div>
-                      </li>
-                      <li className="accordion block">
-                        <div className="acc-btn">
-                          <div className="icon-outer">
-                            <i className="icon-down-arrow" />
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-xl-6">
+                        <div className="form-group">
+                          <div className="input-box">
+                            <input
+                              type="text"
+                              name="form_event"
+                              id="formEvent"
+                              placeholder="Event Name"
+                            />
                           </div>
-                          <h3>Duis rhoncus orci ut metus rhoncus.</h3>
                         </div>
-                        <div className="acc-content">
-                          <p>
-                            Suspendisse finibus urna mauris, vitae consequat
-                            quam vel. Vestibulum leo ligula, vit commodo nisl
-                            Sed luctus venenatis pellentesque.
-                          </p>
+                      </div>
+                      <div className="col-xl-6">
+                        <div className="form-group">
+                          <div className="input-box">
+                            <input
+                              type="text"
+                              name="form_address"
+                              id="formAddress"
+                              placeholder="Address"
+                            />
+                          </div>
                         </div>
-                      </li>
-                    </ul>
-                  </div>
+                      </div>
+                    </div>
+                    {/* New date, time, and dropdown fields */}
+                    <div className="row">
+                      <div className="col-xl-6 ">
+                        <div className="form-group bg-[#F2F3FA] p-1 pl-4 pt-1 font-medium">
+                          <div className="input-box ">
+                            {/* <label htmlFor="formDate">Date:</label> */}
+                            <input
+                              type="date"
+                              name="form_date"
+                              id="formDate"
+                              required
+                              className="bg-[#F2F3FA]"
+                              placeholder="Date"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-xl-6">
+                        <div className="form-group bg-[#F2F3FA] p-1 pl-4">
+                          <div className="input-box">
+                            <input
+                              type="time"
+                              name="form_time"
+                              id="formTime"
+                              className="bg-[#F2F3FA]"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row ">
+                      <div className="w-[100%] bg-[#F2F3FA]">
+                        <div className=" w-[100%] bg-black">
+                          <div className=" w-[100%]">
+                            {/* <label htmlFor="formService">Service Type:</label> */}
+                            <select
+                              name="form_service"
+                              id="formService"
+                              required
+                              className=" w-[100%] bg-black"
+                            >
+                              <option className="w-[100%] bg-black" value="">
+                                Select Service Type{" "}
+                              </option>
+                              <option value="basic">
+                                Fully kiited bus with paramedics (VVIP)-
+                                N200,000
+                              </option>
+                              <option value="advanced" className="bg-[#F2F3FA]">
+                                Fully kiited bus without Paramedics (VIP) -
+                                N160,000
+                              </option>
+                              <option value="event-standby">
+                                Fully kiited Sienna with Paramedics (Advanced) -
+                                N150,000
+                              </option>
+                              <option value="event-standby">
+                                Fully kiited Sienna without Paramedics (Basic)-
+                                N130,000
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Message field */}
+                    {/* <div className="row">
+                      <div className="col-xl-12">
+                        <div className="form-group">
+                          <div className="input-box">
+                            <textarea
+                              name="form_message"
+                              id="formMessage"
+                              placeholder="Write a Message"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div> */}
+                    {/* Submit button */}
+                    <div className="row">
+                      <div className="col-xl-12 text-center">
+                        <div className="button-box">
+                          <input
+                            id="form_botcheck"
+                            name="form_botcheck"
+                            className="form-control"
+                            type="hidden"
+                          />
+                          <button
+                            className="btn-one"
+                            type="submit"
+                            data-loading-text="Please wait..."
+                          >
+                            <span className="txt">Send a Message</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
                 </div>
               </div>
               {/*End Service Details Content */}

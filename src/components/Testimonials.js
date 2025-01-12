@@ -37,12 +37,10 @@ const Testimonials = () => {
               <img src="assets/images/testimonial/testimonial-v2-1.jpg" alt />
             </div>
             <div className="text-holder">
-              <p>This is due to their best service, pricing and customer support. It’s throughly
-                refresing to get such a personal touch. Duis aute irure lupsum istect
-                reprehenderit.</p>
+              <p>RescueTap’s quick response saved my sister’s life during a medical emergency!</p>
               <div className="border-box" />
               <div className="client-info">
-                <h3>Sarah Albert</h3>
+                <h3>Precious Adeniyi</h3>
                 <span>Customers</span>
               </div>
             </div>
@@ -56,12 +54,10 @@ const Testimonials = () => {
               <img src="assets/images/testimonial/testimonial-v2-2.jpg" alt />
             </div>
             <div className="text-holder">
-              <p>This is due to their best service, pricing and customer support. It’s throughly
-                refresing to get such a personal touch. Duis aute irure lupsum istect
-                reprehenderit.</p>
+              <p>The app is so easy to use, and knowing help is just a tap away gives me peace of mind.</p>
               <div className="border-box" />
               <div className="client-info">
-                <h3>Salena Smith</h3>
+                <h3>Prisca Okafor</h3>
                 <span>Customers</span>
               </div>
             </div>
@@ -69,80 +65,7 @@ const Testimonials = () => {
         </div>
         {/*End Testimonial Style2 Single*/}
         {/*Start Testimonial Style2 Single*/}
-        <div className="col-xl-4 col-lg-6 col-md-6">
-          <div className="testimonial-style2__single text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration={1500}>
-            <div className="img-holder">
-              <img src="assets/images/testimonial/testimonial-v2-3.jpg" alt />
-            </div>
-            <div className="text-holder">
-              <p>This is due to their best service, pricing and customer support. It’s throughly
-                refresing to get such a personal touch. Duis aute irure lupsum istect
-                reprehenderit.</p>
-              <div className="border-box" />
-              <div className="client-info">
-                <h3>Sarah Albert</h3>
-                <span>Customers</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*End Testimonial Style2 Single*/}
-        {/*Start Testimonial Style2 Single*/}
-        <div className="col-xl-4 col-lg-6 col-md-6">
-          <div className="testimonial-style2__single text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration={1500}>
-            <div className="img-holder">
-              <img src="assets/images/testimonial/testimonial-v2-4.jpg" alt />
-            </div>
-            <div className="text-holder">
-              <p>This is due to their best service, pricing and customer support. It’s throughly
-                refresing to get such a personal touch. Duis aute irure lupsum istect
-                reprehenderit.</p>
-              <div className="border-box" />
-              <div className="client-info">
-                <h3>Sarah Albert</h3>
-                <span>Customers</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*End Testimonial Style2 Single*/}
-        {/*Start Testimonial Style2 Single*/}
-        <div className="col-xl-4 col-lg-6 col-md-6">
-          <div className="testimonial-style2__single text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration={1500}>
-            <div className="img-holder">
-              <img src="assets/images/testimonial/testimonial-v2-5.jpg" alt />
-            </div>
-            <div className="text-holder">
-              <p>This is due to their best service, pricing and customer support. It’s throughly
-                refresing to get such a personal touch. Duis aute irure lupsum istect
-                reprehenderit.</p>
-              <div className="border-box" />
-              <div className="client-info">
-                <h3>Sarah Albert</h3>
-                <span>Customers</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*End Testimonial Style2 Single*/}
-        {/*Start Testimonial Style2 Single*/}
-        <div className="col-xl-4 col-lg-6 col-md-6">
-          <div className="testimonial-style2__single text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration={1500}>
-            <div className="img-holder">
-              <img src="assets/images/testimonial/testimonial-v2-2.jpg" alt />
-            </div>
-            <div className="text-holder">
-              <p>This is due to their best service, pricing and customer support. It’s throughly
-                refresing to get such a personal touch. Duis aute irure lupsum istect
-                reprehenderit.</p>
-              <div className="border-box" />
-              <div className="client-info">
-                <h3>Sarah Albert</h3>
-                <span>Customers</span>
-              </div>
-            </div>
-          </div>
-        </div>
+       
         {/*End Testimonial Style2 Single*/}
       </div>
     </div>

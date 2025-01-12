@@ -53,7 +53,7 @@ const Ambulance = () => {
                     data-aos-easing="linear"
                     data-aos-duration={1000}
                   >
-                     <ul className="service-pages">
+                    <ul className="service-pages">
                       <li className="active">
                         <a href="/Ambulance">
                           Ambulance Car <span className="icon-next-1" />
@@ -73,11 +73,10 @@ const Ambulance = () => {
                       </li>
                       <li>
                         <a href="/Drivers">
-                        Driver Registration and Ride Verification
+                          Driver Registration and Ride Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>
-                      
                     </ul>
                   </div>
                   <div
@@ -93,11 +92,10 @@ const Ambulance = () => {
                           "url(assets/images/sidebar/sidebar-info-box-bg.jpg)",
                       }}
                     />
-                    <h3>Need Help?</h3>
+                    <h3>Need an ambulance?</h3>
                     <p>
-                      Speak with a human to filling out a form? call corporate
-                      office and we will connect you with a team member who can
-                      help.
+                      Download our online Brouchure to get detailed informaion
+                      on our vehcle registration and ambulance services.
                     </p>
                     <h2>
                       <a href="tel:+2348147806378">+234 814 780 6378</a>
@@ -137,22 +135,10 @@ const Ambulance = () => {
                   <div className="text-box1">
                     <h2>Ambulance Car</h2>
                     <p>
-                      Lorem ipsum is simply free text used by copytyping
-                      refreshing. Neque porro est qui dolorem ipsum quia quaed
-                      inventore veritatis et quasi architecto beatae vitae dicta
-                      sunt explicabo. Aelltes port lacus quis enim var sed
-                      efficitur turpis gilla sed sit amet finibus eros. Lorem
-                      Ipsum is simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the ndustry standard dummy
-                      text ever since the 1500s.
+                    “Fast and Reliable Ambulance Services—Because Every Second Counts!” 
                     </p>
                     <p>
-                      It has survived not only five centuries. Lorem Ipsum is
-                      simply dummy text of the new design printng and type
-                      setting Ipsum take a look at our round. When an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book. It has survived not only five
-                      centuries, but also the leap into electronic typesetting.
+                    We provide 24/7 access to fully equipped ambulances designed to handle medical emergencies with speed and efficiency. Our vehicles are strategically positioned to ensure faster response times, no matter where you are.  
                     </p>
                   </div>
                   <div className="text-box2">
@@ -165,11 +151,10 @@ const Ambulance = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Help us Save a
-                            Life
+                            <span className="icon-right-arrow" /> Quick Dispatch
                           </h4>
                           <p>
-                            Nullam mollis elit quis dusto is lacinia efficitur
+                          Get an ambulance at your location within minutes.
                           </p>
                         </div>
                       </div>
@@ -181,50 +166,71 @@ const Ambulance = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Join our Big
-                            Family
+                            <span className="icon-right-arrow" /> Certified EMTs and Paramedics
                           </h4>
                           <p>
-                            Nullam mollis elit quis dusto is lacinia efficitur
+                          Skilled professionals ready to handle emergencies.
                           </p>
                         </div>
                       </div>
+                     
                     </div>
                   </div>
-                  <div className="text-box3">
-                    <p>
-                      When an unknown printer took a galley of type and
-                      scrambled it to make a type specimen book. It has survived
-                      not only five centuries, but also the leap into electronic
-                      typesetting. Lorem Ipsum has been the ndustry standard
-                      dummy text ever since the 1500s.
-                    </p>
-                  </div>
+                  <div className="text-box2">
+                    <div className="row">
+                  <div className="col-xl-6">
+                        <div
+                          className="text-box2-single"
+                          data-aos="fade-left"
+                          data-aos-easing="linear"
+                          data-aos-duration={2500}
+                        >
+                          <h4>
+                            <span className="icon-right-arrow" /> Spacious and Hygienic Interiors
+                          </h4>
+                          <p>
+                          Safe and comfortable transport for patients.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="col-xl-6">
+                        <div
+                          className="text-box2-single"
+                          data-aos="fade-left"
+                          data-aos-easing="linear"
+                          data-aos-duration={2500}
+                        >
+                          <h4>
+                            <span className="icon-right-arrow" /> GPS-Enabled Navigation
+                          </h4>
+                          <p>
+                          Faster routes to hospitals and care centers.
+                          </p>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
                   <div className="text-box4">
                     <div className="row">
                       <div className="col-xl-6">
                         <div className="content-box">
-                          <h2>Service Benefits</h2>
-                          <p>
-                            Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum.
-                          </p>
+                          <h2>Equipment Includes</h2>
+                         
                           <ul>
                             <li>
-                              <span className="icon-checked" /> In id diam nec
-                              nisi congue tincidunt
+                              <span className="icon-checked" /> Stretcher and Spine Board
                             </li>
                             <li>
-                              <span className="icon-checked" /> Pn malesuada
-                              purus a ligula dapibus
+                              <span className="icon-checked" /> Oxygen Tanks and Masks
                             </li>
                             <li>
-                              <span className="icon-checked" /> Vestibulum
-                              tincidunt arcu vel nisl
+                              <span className="icon-checked" /> Suction Machines
                             </li>
                             <li>
-                              <span className="icon-checked" /> Sed tristique
-                              lorem non tesque
+                              <span className="icon-checked" /> IV Kits and Medication Storage
+                            </li>
+                            <li>
+                              <span className="icon-checked" /> Trauma Kits and First Aid Supplies
                             </li>
                           </ul>
                         </div>
@@ -239,55 +245,7 @@ const Ambulance = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="faq-style1__content">
-                    <ul className="accordion-box">
-                      <li className="accordion block active-block">
-                        <div className="acc-btn active">
-                          <div className="icon-outer">
-                            <i className="icon-down-arrow" />
-                          </div>
-                          <h3>Interdum et malesuada fames ac ante ipsum</h3>
-                        </div>
-                        <div className="acc-content current">
-                          <p>
-                            Suspendisse finibus urna mauris, vitae consequat
-                            quam vel. Vestibulum leo ligula, vit commodo nisl
-                            Sed luctus venenatis pellentesque.
-                          </p>
-                        </div>
-                      </li>
-                      <li className="accordion block">
-                        <div className="acc-btn">
-                          <div className="icon-outer">
-                            <i className="icon-down-arrow" />
-                          </div>
-                          <h3>Maecenas condimentum sollicitudin ligula.</h3>
-                        </div>
-                        <div className="acc-content">
-                          <p>
-                            Suspendisse finibus urna mauris, vitae consequat
-                            quam vel. Vestibulum leo ligula, vit commodo nisl
-                            Sed luctus venenatis pellentesque.
-                          </p>
-                        </div>
-                      </li>
-                      <li className="accordion block">
-                        <div className="acc-btn">
-                          <div className="icon-outer">
-                            <i className="icon-down-arrow" />
-                          </div>
-                          <h3>Duis rhoncus orci ut metus rhoncus.</h3>
-                        </div>
-                        <div className="acc-content">
-                          <p>
-                            Suspendisse finibus urna mauris, vitae consequat
-                            quam vel. Vestibulum leo ligula, vit commodo nisl
-                            Sed luctus venenatis pellentesque.
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                
                 </div>
               </div>
               {/*End Service Details Content */}

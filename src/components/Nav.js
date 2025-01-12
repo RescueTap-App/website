@@ -50,7 +50,7 @@ const Nav = () => {
               </div>
               <div className="header-button-style1">
                 <a className="btn-one" href="contact.html">
-                  <span className="txt">Get a Free Quote</span>
+                  <span className="txt">Download the App</span>
                 </a>
               </div>
             </div>
@@ -100,7 +100,9 @@ const Nav = () => {
                             <a href="/App">Emergency Response App</a>
                           </li>
                           <li>
-                            <a href="/Drivers">Driver Registration and Ride Verification</a>
+                            <a href="/Drivers">
+                              Driver Registration and Ride Verification
+                            </a>
                           </li>
                         </ul>
                       </li>
@@ -135,23 +137,23 @@ const Nav = () => {
             <div className="header-right">
               <div className="header-social-link">
                 <ul className="clearfix">
-                  <li>
+                  {/* <li>
                     <a href="#">
                       <i className="icon-twitter" />
                     </a>
-                  </li>
+                  </li> */}
                   <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/share/1AvuLxWwaS/?mibextid=qi2Omg">
                       <i className="icon-facebook" />
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i className="icon-pinterest" />
+                      <i className="icon-linkedin" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/rescuetap_app?igsh=MTNpdjJjZGtwd211dQ==">
                       <i className="icon-instagram" />
                     </a>
                   </li>
@@ -217,14 +219,10 @@ const Nav = () => {
 f
                 </a>
               </li>
+
               <li>
                 <a href="#">
-                  <span className="fab fa fa-twitter-square" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span className="fab fa fa-pinterest-square" />
+                  <span className="fab fa fa-linkedin-square" />
                 </a>
               </li>
               <li>

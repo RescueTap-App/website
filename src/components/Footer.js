@@ -27,7 +27,7 @@ const Footer = () => {
                       </a>
                     </div>
                     <div className="text-box">
-                      <p>There are many variatio of lorem ipsum available.</p>
+                      <p>One Tap, Save Lives</p>
                     </div>
                     <div className="footer-widget-contact-info">
                       <ul>
@@ -147,8 +147,8 @@ const Footer = () => {
                       <br /> price quotes.
                     </p>
                     <div className="btn-box">
-                      <a className="btn-one" href="contact.html">
-                        <span className="txt">Get a Free Quote</span>
+                      <a className="btn-one" href="/Contact">
+                        <span className="txt">Contact Us</span>
                       </a>
                     </div>
                   </div>
@@ -170,11 +170,11 @@ const Footer = () => {
               </div>
               <div className="footer-social-link">
                 <ul className="clearfix">
-                  <li>
+                  {/* <li>
                     <a href="#">
                       <i className="icon-twitter" />
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a href="#">
                       <i className="icon-facebook" />
@@ -182,7 +182,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a href="#">
-                      <i className="icon-pinterest" />
+                      <i className="icon-linkedin" />
                     </a>
                   </li>
                   <li>

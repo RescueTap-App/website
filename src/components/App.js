@@ -31,7 +31,7 @@ const App = () => {
                       <li>
                         <a href="services.html">Services</a>
                       </li>
-                      <li className="active">General Services</li>
+                      <li className="active">Emergency App</li>
                     </ul>
                   </div>
                 </div>
@@ -54,7 +54,7 @@ const App = () => {
                     data-aos-duration={1000}
                   >
                     <ul className="service-pages">
-                      <li className="active">
+                      <li >
                         <a href="/Ambulance">
                           Ambulance Car <span className="icon-next-1" />
                         </a>
@@ -65,7 +65,7 @@ const App = () => {
                           Advanced Life Support <span className="icon-next-1" />
                         </a>
                       </li>
-                      <li>
+                      <li  className="active">
                         <a href="/App">
                           Emergency App Services{" "}
                           <span className="icon-next-1" />
@@ -73,11 +73,10 @@ const App = () => {
                       </li>
                       <li>
                         <a href="/Drivers">
-                        Driver Registration and Ride Verification
+                          Driver Registration and Ride Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>
-                      
                     </ul>
                   </div>
                   <div
@@ -93,11 +92,10 @@ const App = () => {
                           "url(assets/images/sidebar/sidebar-info-box-bg.jpg)",
                       }}
                     />
-                    <h3>Need Help?</h3>
+                    <h3>Need an ambulance?</h3>
                     <p>
-                      Speak with a human to filling out a form? call corporate
-                      office and we will connect you with a team member who can
-                      help.
+                      Download our online Brouchure to get detailed informaion
+                      on our vehcle registration and ambulance services.
                     </p>
                     <h2>
                       <a href="tel:+2348147806378">+234 814 780 6378</a>
@@ -135,96 +133,34 @@ const App = () => {
                     />
                   </div>
                   <div className="text-box1">
-                    <h2>General Services</h2>
+                    <h2>Emergency Help Is Just a Tap Away!</h2>
                     <p>
-                      Lorem ipsum is simply free text used by copytyping
-                      refreshing. Neque porro est qui dolorem ipsum quia quaed
-                      inventore veritatis et quasi architecto beatae vitae dicta
-                      sunt explicabo. Aelltes port lacus quis enim var sed
-                      efficitur turpis gilla sed sit amet finibus eros. Lorem
-                      Ipsum is simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the ndustry standard dummy
-                      text ever since the 1500s.
+                    RescueTap is more than just an app—it’s your lifeline during emergencies. Whether you need an ambulance, a paramedic, or assistance reaching the nearest hospital, we’ve got you covered.
                     </p>
                     <p>
-                      It has survived not only five centuries. Lorem Ipsum is
-                      simply dummy text of the new design printng and type
-                      setting Ipsum take a look at our round. When an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book. It has survived not only five
-                      centuries, but also the leap into electronic typesetting.
+                    The RescueTap App transforms your smartphone into a personal emergency assistant. Whether you need urgent medical help, an ambulance, or instant alerts to your loved ones, we’re here to keep you safe.  
                     </p>
                   </div>
-                  <div className="text-box2">
-                    <div className="row">
-                      <div className="col-xl-6">
-                        <div
-                          className="text-box2-single"
-                          data-aos="fade-right"
-                          data-aos-easing="linear"
-                          data-aos-duration={2500}
-                        >
-                          <h4>
-                            <span className="icon-right-arrow" /> Help us Save a
-                            Life
-                          </h4>
-                          <p>
-                            Nullam mollis elit quis dusto is lacinia efficitur
-                          </p>
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div
-                          className="text-box2-single"
-                          data-aos="fade-left"
-                          data-aos-easing="linear"
-                          data-aos-duration={2500}
-                        >
-                          <h4>
-                            <span className="icon-right-arrow" /> Join our Big
-                            Family
-                          </h4>
-                          <p>
-                            Nullam mollis elit quis dusto is lacinia efficitur
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-box3">
-                    <p>
-                      When an unknown printer took a galley of type and
-                      scrambled it to make a type specimen book. It has survived
-                      not only five centuries, but also the leap into electronic
-                      typesetting. Lorem Ipsum has been the ndustry standard
-                      dummy text ever since the 1500s.
-                    </p>
-                  </div>
+                 
+                 
                   <div className="text-box4">
                     <div className="row">
                       <div className="col-xl-6">
                         <div className="content-box">
-                          <h2>Service Benefits</h2>
-                          <p>
-                            Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum.
-                          </p>
+                          <h2>App Features</h2>
+                         
                           <ul>
                             <li>
-                              <span className="icon-checked" /> In id diam nec
-                              nisi congue tincidunt
+                              <span className="icon-checked" /> User-Friendly Interface: Easy navigation for all age groups
                             </li>
                             <li>
-                              <span className="icon-checked" /> Pn malesuada
-                              purus a ligula dapibus
+                              <span className="icon-checked" />Real-Time Tracking: Track loved ones during emergencies.
                             </li>
                             <li>
-                              <span className="icon-checked" /> Vestibulum
-                              tincidunt arcu vel nisl
+                              <span className="icon-checked" /> Emergency Alerts: Notify family or emergency contact instantly.
                             </li>
                             <li>
-                              <span className="icon-checked" /> Sed tristique
-                              lorem non tesque
+                              <span className="icon-checked" />Push Notifications: Receive updates and reminders to stay prepared.
                             </li>
                           </ul>
                         </div>
@@ -239,7 +175,7 @@ const App = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="faq-style1__content">
+                  {/* <div className="faq-style1__content">
                     <ul className="accordion-box">
                       <li className="accordion block active-block">
                         <div className="acc-btn active">
@@ -287,7 +223,7 @@ const App = () => {
                         </div>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               {/*End Service Details Content */}

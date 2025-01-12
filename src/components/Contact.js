@@ -46,7 +46,7 @@ const Contact = () => {
                   <div className="inner">
                     <img
                       src="assets/images/resources/contact-info-style2__image.jpg"
-                      alt
+                      alt="contact info"
                     />
                   </div>
                 </div>
@@ -60,30 +60,57 @@ const Contact = () => {
                     <div className="sub-title">
                       <h3>Contact us</h3>
                     </div>
-                    <h2>
-                      Feel Free to Get in
-                      <br /> Touch with us
-                    </h2>
+                    <h3>
+                      Need an ambulance?
+                      <br />
+                      Reach Out to Us Anytime!
+                    </h3>
                   </div>
                   <div className="inner-content">
                     <div className="text">
                       <p>
-                        Nulla quis commodo ligula. Curabitur bibendum ante at
-                        nibh lobortis, nec volutpat mauris faucibus. Praesent
-                        malesuada et tellus sed efficitur.
+                        We’re here to assist you. Whether you have questions,
+                        need support, or want to partner with us, feel free to
+                        get in touch.
                       </p>
                     </div>
-                    <h3>Contact Details</h3>
-                    <p>
-                      zone 7, Fairtrade Complex, 22 Bambari Cres, Wuse, Abuja
-                      900287, Federal Capital Territory
-                    </p>
-                    <h2>
-                      <a href="tel:123456789">+234 814 780 6378</a>
-                    </h2>
-                    <h4>
-                      <a href="mailto:yourmail@email.com">info@rescuetap.com</a>
-                    </h4>
+                    <h3>Emails:</h3>
+                    <div className="text">
+                      <p>
+                        For Support from RescueTap reach out to
+                        <br />
+                        <a href="mailto:support@rescuetap.com">
+                          support@rescuetap.com
+                        </a>
+                      </p>
+                      <p>
+                        For more information reach out to
+                        <br />
+                        <a href="mailto:info@rescuetap.com">
+                          info@rescuetap.com
+                        </a>
+                      </p>
+                      <p>
+                        For emergencies reach out to
+                        <br />
+                        <a href="mailto:emergency@rescuetap.com">
+                          emergency@rescuetap.com
+                        </a>
+                      </p>
+                    </div>
+                    <h3>
+                      <br /> <br />
+                      Phone Numbers
+                    </h3>
+                    <div className="text">
+                      <p>
+                        Abuja: <a href="tel:+2347025692629">+2347025692629</a>
+                      </p>
+                      <p>
+                        Lagos: <a href="tel:+2348147806378">+2348147806378</a>
+                      </p>
+                    </div>
+                    Office Hours: 24/7
                   </div>
                 </div>
               </div>
@@ -99,9 +126,12 @@ const Contact = () => {
                 <span className="icon-heartbeat" />
               </div>
               <div className="sub-title">
-                <h3>Send us Message</h3>
+                <h3>
+                  Fill out the form below to book an ambulance for an event, and
+                  we’ll respond promptly.
+                </h3>
               </div>
-              <h2>Write us Anytime</h2>
+              <h2>Book an Ambulance</h2>
             </div>
             <div className="row">
               <div className="col-xl-12">
@@ -147,10 +177,9 @@ const Contact = () => {
                           <div className="input-box">
                             <input
                               type="text"
-                              name="form_phone"
-                              defaultValue
-                              id="formPhone"
-                              placeholder="Phone"
+                              name="form_event"
+                              id="formEvent"
+                              placeholder="Event Name"
                             />
                           </div>
                         </div>
@@ -160,16 +189,82 @@ const Contact = () => {
                           <div className="input-box">
                             <input
                               type="text"
-                              name="form_subject"
-                              defaultValue
-                              id="formSubject"
-                              placeholder="Subject"
+                              name="form_address"
+                              id="formAddress"
+                              placeholder="Address"
                             />
                           </div>
                         </div>
                       </div>
                     </div>
+                    {/* New date, time, and dropdown fields */}
                     <div className="row">
+                      <div className="col-xl-6 ">
+                        <div className="form-group bg-[#F2F3FA] p-1 pl-4 pt-1 font-medium">
+                          <div className="input-box ">
+                            {/* <label htmlFor="formDate">Date:</label> */}
+                            <input
+                              type="date"
+                              name="form_date"
+                              id="formDate"
+                              required
+                              className="bg-[#F2F3FA]"
+                              placeholder="Date"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-xl-6">
+                        <div className="form-group bg-[#F2F3FA] p-1 pl-4">
+                          <div className="input-box">
+                            <input
+                              type="time"
+                              name="form_time"
+                              id="formTime"
+                              className="bg-[#F2F3FA]"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row ">
+                      <div className="w-[100%] bg-[#F2F3FA]">
+                        <div className=" w-[100%] bg-black">
+                          <div className=" w-[100%]">
+                            {/* <label htmlFor="formService">Service Type:</label> */}
+                            <select
+                              name="form_service"
+                              id="formService"
+                              required
+                              className=" w-[100%] bg-black"
+                            >
+                              <option className="w-[100%] bg-black" value="">
+                                Select Service Type{" "}
+                              </option>
+                              <option value="basic">
+                                Fully kiited bus with paramedics (VVIP)-
+                                N200,000
+                              </option>
+                              <option value="advanced" className="bg-[#F2F3FA]">
+                                Fully kiited bus without Paramedics (VIP) -
+                                N160,000
+                              </option>
+                              <option value="event-standby">
+                                Fully kiited Sienna with Paramedics (Advanced) -
+                                N150,000
+                              </option>
+                              <option value="event-standby">
+                                Fully kiited Sienna without Paramedics (Basic)-
+                                N130,000
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Message field */}
+                    {/* <div className="row">
                       <div className="col-xl-12">
                         <div className="form-group">
                           <div className="input-box">
@@ -178,12 +273,12 @@ const Contact = () => {
                               id="formMessage"
                               placeholder="Write a Message"
                               required
-                              defaultValue={""}
                             />
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
+                    {/* Submit button */}
                     <div className="row">
                       <div className="col-xl-12 text-center">
                         <div className="button-box">
@@ -192,14 +287,13 @@ const Contact = () => {
                             name="form_botcheck"
                             className="form-control"
                             type="hidden"
-                            defaultValue
                           />
                           <button
                             className="btn-one"
                             type="submit"
                             data-loading-text="Please wait..."
                           >
-                            <span className="txt">send a message</span>
+                            <span className="txt">Send a Message</span>
                           </button>
                         </div>
                       </div>
@@ -215,7 +309,6 @@ const Contact = () => {
         <section className="google-map-area">
           <div className="auto-container">
             <div className="contact-page-map-outer">
-              {/*Map Canvas*/}
               <div
                 className="map-canvas"
                 data-zoom={12}
