@@ -26,7 +26,7 @@ const ALS = () => {
                   <div className="breadcrumb-menu">
                     <ul>
                       <li>
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                       </li>
                       <li>
                         <a href="services.html">Services</a>
@@ -54,7 +54,7 @@ const ALS = () => {
                     data-aos-duration={1000}
                   >
                     <ul className="service-pages">
-                      <li >
+                      <li>
                         <a href="/Ambulance">
                           Ambulance Car <span className="icon-next-1" />
                         </a>
@@ -134,9 +134,15 @@ const ALS = () => {
                   </div>
                   <div className="text-box1">
                     <h2>Critical Care, Delivered Fast!</h2>
-                    <p>Critical Care on Wheels—Expert Support When It Matters Most!</p>
                     <p>
-                    Our Advanced Life Support (ALS) ambulances are equipped to handle complex medical emergencies that require immediate intervention. Whether it’s trauma, cardiac arrest, or respiratory distress, we bring the hospital to you.
+                      Critical Care on Wheels—Expert Support When It Matters
+                      Most!
+                    </p>
+                    <p>
+                      Our Advanced Life Support (ALS) ambulances are equipped to
+                      handle complex medical emergencies that require immediate
+                      intervention. Whether it’s trauma, cardiac arrest, or
+                      respiratory distress, we bring the hospital to you.
                     </p>
                   </div>
                   <div className="text-box2">
@@ -149,11 +155,10 @@ const ALS = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Defibrillators and Cardiac Monitors
+                            <span className="icon-right-arrow" /> Defibrillators
+                            and Cardiac Monitors
                           </h4>
-                          <p>
-                          Monitor and stabilize critical patients
-                          </p>
+                          <p>Monitor and stabilize critical patients</p>
                         </div>
                       </div>
                       <div className="col-xl-6">
@@ -164,11 +169,10 @@ const ALS = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Advanced Airway Equipment
+                            <span className="icon-right-arrow" /> Advanced
+                            Airway Equipment
                           </h4>
-                          <p>
-                          Including ventilators and intubation tools
-                          </p>
+                          <p>Including ventilators and intubation tools</p>
                         </div>
                       </div>
                     </div>
@@ -183,11 +187,10 @@ const ALS = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Continuous Monitoring Systems
+                            <span className="icon-right-arrow" /> Continuous
+                            Monitoring Systems
                           </h4>
-                          <p>
-                          Track vital signs in real time.
-                          </p>
+                          <p>Track vital signs in real time.</p>
                         </div>
                       </div>
                       <div className="col-xl-6">
@@ -198,16 +201,18 @@ const ALS = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Certified Medical Staff
+                            <span className="icon-right-arrow" /> Certified
+                            Medical Staff
                           </h4>
                           <p>
-                          Paramedics and emergency physicians available onboard.
+                            Paramedics and emergency physicians available
+                            onboard.
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
-                 
+
                   <div className="text-box4">
                     <div className="row">
                       <div className="col-xl-6">
@@ -216,19 +221,22 @@ const ALS = () => {
                           {/* <p>Our ambulances come equipped with</p> */}
                           <ul>
                             <li>
-                              <span className="icon-checked" /> Portable Ventilators
+                              <span className="icon-checked" /> Portable
+                              Ventilators
                             </li>
                             <li>
                               <span className="icon-checked" /> Infusion Pumps
                             </li>
                             <li>
-                              <span className="icon-checked" /> Nebulizers for Respiratory Support
+                              <span className="icon-checked" /> Nebulizers for
+                              Respiratory Support
                             </li>
                             <li>
                               <span className="icon-checked" /> ECG Monitors
                             </li>
                             <li>
-                              <span className="icon-checked" /> Advanced Medication and Pain Relief Kits
+                              <span className="icon-checked" /> Advanced
+                              Medication and Pain Relief Kits
                             </li>
                           </ul>
                         </div>

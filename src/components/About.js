@@ -25,7 +25,7 @@ const About = () => {
                 <div className="breadcrumb-menu">
                   <ul>
                     <li>
-                      <a href="index.html">Home</a>
+                      <a href="/">Home</a>
                     </li>
                     <li className="active">About Us</li>
                   </ul>
@@ -70,7 +70,6 @@ const About = () => {
                       {/* Lorem ipsum is simply free text dolor sit am adipi we help
                       you ensure everyone is in the right jobs sicing elit, sed
                       do consulting firms Et leggings across the nation tempor. */}
-                      
                     </p>
                   </div>
                   <div className="row">
@@ -94,7 +93,6 @@ const About = () => {
                           <li>
                             <span className="icon-checked" />
                             24/7 Availability
-
                           </li>
                           <li>
                             <span className="icon-checked" />
@@ -175,7 +173,10 @@ const About = () => {
                 </div>
                 <div className="text">
                   <p>
-                  At RescueTap, our success lies in a seamless blend of innovation, reliability, and compassion. We prioritize rapid response by leveraging cutting-edge technology to ensure help reaches you when it matters most.
+                    At RescueTap, our success lies in a seamless blend of
+                    innovation, reliability, and compassion. We prioritize rapid
+                    response by leveraging cutting-edge technology to ensure
+                    help reaches you when it matters most.
                   </p>
                 </div>
               </div>
@@ -197,11 +198,15 @@ const About = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                      User-Centric Approach
+                        User-Centric Approach
                         <br />
                       </a>
                     </h3>
-                    <p> Our focus is on making emergency response accessible, intuitive, and stress-free for everyone.</p>
+                    <p>
+                      {" "}
+                      Our focus is on making emergency response accessible,
+                      intuitive, and stress-free for everyone.
+                    </p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
@@ -218,11 +223,14 @@ const About = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                      Technology-Driven
+                        Technology-Driven
                         <br />
                       </a>
                     </h3>
-                    <p>Leveraging innovative solutions, we simplify access to ambulances, paramedics, and emergency assistance.</p>
+                    <p>
+                      Leveraging innovative solutions, we simplify access to
+                      ambulances, paramedics, and emergency assistance.
+                    </p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
@@ -239,11 +247,14 @@ const About = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                      Speed
-                        <br /> 
+                        Speed
+                        <br />
                       </a>
                     </h3>
-                    <p>Time is critical in emergencies, and our platform is designed to connect you to life-saving services instantly.</p>
+                    <p>
+                      Time is critical in emergencies, and our platform is
+                      designed to connect you to life-saving services instantly.
+                    </p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
@@ -260,11 +271,15 @@ const About = () => {
                   <div className="text-holder">
                     <h3>
                       <a href="#">
-                      Compassion
-                        <br /> 
+                        Compassion
+                        <br />
                       </a>
                     </h3>
-                    <p> At the heart of RescueTap is a dedication to saving lives and providing peace of mind to those in need.</p>
+                    <p>
+                      {" "}
+                      At the heart of RescueTap is a dedication to saving lives
+                      and providing peace of mind to those in need.
+                    </p>
                   </div>
                 </li>
                 {/*End single Features Style2*/}
@@ -431,7 +446,7 @@ const About = () => {
       </section>
       {/*End Testimonial Style1 Area*/}
       {/*Start Team Style1 Area*/}
-     
+
       {/*End Team Style1 Area*/}
       {/*Start Partner Area*/}
       <section className="partner-area">
