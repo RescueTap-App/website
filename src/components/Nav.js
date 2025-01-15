@@ -11,7 +11,7 @@ const Nav = () => {
               <div className="main-logo-box">
                 <a href="/">
                   <img
-                    src="assets/images/resources/logo2.png"
+                    src="assets/images/resources/logo.svg"
                     alt="Awesome Logo"
                     className="w-[50%]"
                     title
@@ -171,9 +171,9 @@ const Nav = () => {
           <div className="clearfix">
             {/*Logo*/}
             <div className="logo float-left">
-              <a href="index.html" className="img-responsive">
+              <a href="/" className="img-responsive">
                 <img
-                  src="/assets/images/resources/sticky-logo.png"
+                  src="/assets/images/resources/sticky-logo.svg"
                   alt
                   title
                   className="w-[50%]"
@@ -199,9 +199,9 @@ const Nav = () => {
         </div>
         <nav className="menu-box">
           <div className="nav-logo">
-            <a href="index.html">
+            <a href="/">
               <img
-                src="/assets/images/resources/mobilemenu-logo.png"
+                src="/assets/images/resources/mobilemenu-logo.svg"
                 alt
                 title
               />

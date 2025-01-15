@@ -26,7 +26,7 @@ const App = () => {
                   <div className="breadcrumb-menu">
                     <ul>
                       <li>
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                       </li>
                       <li>
                         <a href="services.html">Services</a>
@@ -54,7 +54,7 @@ const App = () => {
                     data-aos-duration={1000}
                   >
                     <ul className="service-pages">
-                      <li >
+                      <li>
                         <a href="/Ambulance">
                           Ambulance Car <span className="icon-next-1" />
                         </a>
@@ -65,7 +65,7 @@ const App = () => {
                           Advanced Life Support <span className="icon-next-1" />
                         </a>
                       </li>
-                      <li  className="active">
+                      <li className="active">
                         <a href="/App">
                           Emergency App Services{" "}
                           <span className="icon-next-1" />
@@ -135,32 +135,44 @@ const App = () => {
                   <div className="text-box1">
                     <h2>Emergency Help Is Just a Tap Away!</h2>
                     <p>
-                    RescueTap is more than just an app—it’s your lifeline during emergencies. Whether you need an ambulance, a paramedic, or assistance reaching the nearest hospital, we’ve got you covered.
+                      RescueTap is more than just an app—it’s your lifeline
+                      during emergencies. Whether you need an ambulance, a
+                      paramedic, or assistance reaching the nearest hospital,
+                      we’ve got you covered.
                     </p>
                     <p>
-                    The RescueTap App transforms your smartphone into a personal emergency assistant. Whether you need urgent medical help, an ambulance, or instant alerts to your loved ones, we’re here to keep you safe.  
+                      The RescueTap App transforms your smartphone into a
+                      personal emergency assistant. Whether you need urgent
+                      medical help, an ambulance, or instant alerts to your
+                      loved ones, we’re here to keep you safe.
                     </p>
                   </div>
-                 
-                 
+
                   <div className="text-box4">
                     <div className="row">
                       <div className="col-xl-6">
                         <div className="content-box">
                           <h2>App Features</h2>
-                         
+
                           <ul>
                             <li>
-                              <span className="icon-checked" /> User-Friendly Interface: Easy navigation for all age groups
+                              <span className="icon-checked" /> User-Friendly
+                              Interface: Easy navigation for all age groups
                             </li>
                             <li>
-                              <span className="icon-checked" />Real-Time Tracking: Track loved ones during emergencies.
+                              <span className="icon-checked" />
+                              Real-Time Tracking: Track loved ones during
+                              emergencies.
                             </li>
                             <li>
-                              <span className="icon-checked" /> Emergency Alerts: Notify family or emergency contact instantly.
+                              <span className="icon-checked" /> Emergency
+                              Alerts: Notify family or emergency contact
+                              instantly.
                             </li>
                             <li>
-                              <span className="icon-checked" />Push Notifications: Receive updates and reminders to stay prepared.
+                              <span className="icon-checked" />
+                              Push Notifications: Receive updates and reminders
+                              to stay prepared.
                             </li>
                           </ul>
                         </div>
