@@ -85,7 +85,8 @@ const Index = () => {
                       Help is Just a Tap Away!
                     </h2>
                   </div>
-                  <div className = "flex flex-row w-[50%]"><div className="btns-box">
+                  <div className = "flex flex-col md:flex-row md:w-[50%] w-[100%]">
+                  <div className="btns-box">
                     <a className="btn-one" href="/About">
                       <span className="txt">
                         Download on iOS
