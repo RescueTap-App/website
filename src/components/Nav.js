@@ -106,7 +106,7 @@ const Nav = () => {
                           </li>
                         </ul>
                       </li>
-                      <li className="dropdown">
+                      {/* <li className="dropdown">
                         <a href="#">Pages</a>
                         <ul>
                           <li>
@@ -119,9 +119,12 @@ const Nav = () => {
                             <a href="/FAQ">FAQ’s</a>
                           </li>
                         </ul>
-                      </li>
+                      </li> */}
                       <li>
                         <a href="/Blog">Blog</a>
+                      </li>
+                      <li className="">
+                        <a href="/FAQ">FAQ’s</a>
                       </li>
                       <li>
                         <a href="/Contact">Contact</a>
@@ -149,7 +152,7 @@ const Nav = () => {
                   </li>
                   <li>
                     <a href="#">
-                      <i className="icon-linkedin" />
+                      <i className="icon-twitter" />
                     </a>
                   </li>
                   <li>
