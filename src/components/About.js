@@ -57,23 +57,23 @@ const About = () => {
                     <span className="icon-heartbeat" />
                   </div>
                   <div className="sub-title">
-                    <h3>Read More About us</h3>
+                    {/* <h3>Read More About us</h3> */}
+                    <h2>Vision</h2>
                   </div>
                   <h2>
-                    Let’s Get to Know About
-                    <br /> Ambulance Services
+                    {/* Let’s Get to Know About
+                    <br /> Ambulance Services */}
                   </h2>
                 </div>
                 <div className="inner-content">
                   <div className="text">
                     <p>
-                      {/* Lorem ipsum is simply free text dolor sit am adipi we help
+                      Lorem ipsum is simply free text dolor sit am adipi we help
                       you ensure everyone is in the right jobs sicing elit, sed
-                      do consulting firms Et leggings across the nation tempor. */}
-                      
+                      do consulting firms Et leggings across the nation tempor.
                     </p>
                   </div>
-                  <div className="row">
+                  {/* <div className="row">
                     <div className="col-xl-6">
                       <div className="single-box">
                         <ul>
@@ -103,10 +103,10 @@ const About = () => {
                         </ul>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="progress-levels">
                     {/*Skill Box*/}
-                    <div className="progress-box wow">
+                    {/* <div className="progress-box wow">
                       <div className="inner count-box">
                         <div className="text">Ambulance</div>
                         <div className="bar">
@@ -125,9 +125,9 @@ const About = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                     {/*Skill Box*/}
-                    <div className="progress-box last-child wow">
+                    {/* <div className="progress-box last-child wow">
                       <div className="inner count-box">
                         <div className="text">Response App</div>
                         <div className="bar">
@@ -146,7 +146,7 @@ const About = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -154,6 +154,125 @@ const About = () => {
           </div>
         </div>
       </section>
+      {/* Mission Section */}
+      <section className="about-style1-area">
+        <div className="container">
+          <div className="row text-right-rtl">
+          <div className="col-xl-6">
+              <div className="about-style3__content">
+                <div className="sec-title">
+                  <div className="icon">
+                    <span className="icon-heartbeat" />
+                  </div>
+                  <div className="sub-title">
+                    {/* <h3>Read More About us</h3> */}
+                    <h2>Mission</h2>
+                  </div>
+                  <h2>
+                    {/* Let’s Get to Know About
+                    <br /> Ambulance Services */}
+                  </h2>
+                </div>
+                <div className="inner-content">
+                  <div className="text">
+                    <p>
+                      Lorem ipsum is simply free text dolor sit am adipi we help
+                      you ensure everyone is in the right jobs sicing elit, sed
+                      do consulting firms Et leggings across the nation tempor. 
+                    </p>
+                  </div>
+                  {/* <div className="row">
+                    <div className="col-xl-6">
+                      <div className="single-box">
+                        <ul>
+                          <li>
+                            <span className="icon-checked" />
+                            Quick Response Times
+                          </li>
+                          <li>
+                            <span className="icon-checked" />
+                            Real-Time Tracking
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="col-xl-6">
+                      <div className="single-box">
+                        <ul>
+                          <li>
+                            <span className="icon-checked" />
+                            24/7 Availability
+
+                          </li>
+                          <li>
+                            <span className="icon-checked" />
+                            Always Reliable
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> */}
+                  <div className="progress-levels">
+                    {/*Skill Box*/}
+                    {/* <div className="progress-box wow">
+                      <div className="inner count-box">
+                        <div className="text">Ambulance</div>
+                        <div className="bar">
+                          <div className="bar-innner">
+                            <div className="skill-percent">
+                              <span
+                                className="count-text"
+                                data-speed={3000}
+                                data-stop={95}
+                              >
+                                0
+                              </span>
+                              <span className="percent">%</span>
+                            </div>
+                            <div className="bar-fill" data-percent={95} />
+                          </div>
+                        </div>
+                      </div>
+                    </div> */}
+                    {/*Skill Box*/}
+                    {/* <div className="progress-box last-child wow">
+                      <div className="inner count-box">
+                        <div className="text">Response App</div>
+                        <div className="bar">
+                          <div className="bar-innner">
+                            <div className="skill-percent">
+                              <span
+                                className="count-text"
+                                data-speed={3000}
+                                data-stop={70}
+                              >
+                                0
+                              </span>
+                              <span className="percent">%</span>
+                            </div>
+                            <div className="bar-fill" data-percent={100} />
+                          </div>
+                        </div>
+                      </div>
+                    </div> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-6">
+              <div className="about-style3__image">
+                <div className="inner">
+                  <img
+                    src="assets/images/about/about-style3__image-1.jpg"
+                    alt
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* End Mission Section */}
       {/*End About Style3 Area*/}
       {/*Start Features Style2 Area*/}
       <section className="features-style2-area gray-bg">
@@ -166,7 +285,8 @@ const About = () => {
                     <span className="icon-heartbeat" />
                   </div>
                   <div className="sub-title">
-                    <h3>Our Benefits List</h3>
+                    {/* <h3>Our Benefits List</h3> */}
+                    <h3>Company Culture</h3>
                   </div>
                   <h2>
                     Our Company Formula
@@ -275,7 +395,7 @@ const About = () => {
       </section>
       {/*End Features Style2 Area*/}
       {/*Start Testimonial Style1 Area*/}
-      <section className="testimonial-style1-area">
+      {/* <section className="testimonial-style1-area">
         <div
           className="shape wow slideInRight"
           data-wow-delay="400ms"
@@ -315,7 +435,8 @@ const About = () => {
                           }
                       }'
                 >
-                  {/*Start Single Testimonial Style1*/}
+                  //Start Single Testimonial Style1
+
                   <div className="single-testimonial-style1">
                     <div className="img-holder">
                       <img
@@ -368,8 +489,8 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                  {/*End Single Testimonial Style1*/}
-                  {/*Start Single Testimonial Style1*/}
+                 // End Single Testimonial Style1
+                 // Start Single Testimonial Style1
                   <div className="single-testimonial-style1">
                     <div className="img-holder">
                       <img
@@ -422,19 +543,18 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                  {/*End Single Testimonial Style1*/}
+                  //End Single Testimonial Style1
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*End Testimonial Style1 Area*/}
-      {/*Start Team Style1 Area*/}
-     
-      {/*End Team Style1 Area*/}
+
+      
       {/*Start Partner Area*/}
-      <section className="partner-area">
+      {/* <section className="partner-area">
         <div className="container">
           <div className="brand-content">
             <div
@@ -444,7 +564,7 @@ const About = () => {
               data-aos-duration={1000}
             >
               <ul className="partner-box partner-carousel owl-carousel owl-theme owl-dot-style1 rtl-carousel">
-                {/*Start Single Partner Logo Box*/}
+                // Start Single Partner Logo Box
                 <li className="single-partner-logo-box">
                   <a href="#">
                     <img
@@ -453,8 +573,8 @@ const About = () => {
                     />
                   </a>
                 </li>
-                {/*End Single Partner Logo Box*/}
-                {/*Start Single Partner Logo Box*/}
+               // End Single Partner Logo Box
+               // Start Single Partner Logo Box
                 <li className="single-partner-logo-box">
                   <a href="#">
                     <img
@@ -463,8 +583,8 @@ const About = () => {
                     />
                   </a>
                 </li>
-                {/*End Single Partner Logo Box*/}
-                {/*Start Single Partner Logo Box*/}
+                // End Single Partner Logo Box
+                // Start Single Partner Logo Box
                 <li className="single-partner-logo-box">
                   <a href="#">
                     <img
@@ -473,8 +593,8 @@ const About = () => {
                     />
                   </a>
                 </li>
-                {/*End Single Partner Logo Box*/}
-                {/*Start Single Partner Logo Box*/}
+                // End Single Partner Logo Box
+                // Start Single Partner Logo Box
                 <li className="single-partner-logo-box">
                   <a href="#">
                     <img
@@ -483,12 +603,12 @@ const About = () => {
                     />
                   </a>
                 </li>
-                {/*End Single Partner Logo Box*/}
+                // End Single Partner Logo Box
               </ul>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
