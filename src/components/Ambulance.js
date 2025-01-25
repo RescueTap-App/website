@@ -26,7 +26,7 @@ const Ambulance = () => {
                   <div className="breadcrumb-menu">
                     <ul>
                       <li>
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                       </li>
                       <li>
                         <a href="services.html">Services</a>
@@ -135,10 +135,14 @@ const Ambulance = () => {
                   <div className="text-box1">
                     <h2>Ambulance Car</h2>
                     <p>
-                    “Fast and Reliable Ambulance Services—Because Every Second Counts!” 
+                      “Fast and Reliable Ambulance Services—Because Every Second
+                      Counts!”
                     </p>
                     <p>
-                    We provide 24/7 access to fully equipped ambulances designed to handle medical emergencies with speed and efficiency. Our vehicles are strategically positioned to ensure faster response times, no matter where you are.  
+                      We provide 24/7 access to fully equipped ambulances
+                      designed to handle medical emergencies with speed and
+                      efficiency. Our vehicles are strategically positioned to
+                      ensure faster response times, no matter where you are.
                     </p>
                   </div>
                   <div className="text-box2">
@@ -154,7 +158,7 @@ const Ambulance = () => {
                             <span className="icon-right-arrow" /> Quick Dispatch
                           </h4>
                           <p>
-                          Get an ambulance at your location within minutes.
+                            Get an ambulance at your location within minutes.
                           </p>
                         </div>
                       </div>
@@ -166,19 +170,19 @@ const Ambulance = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Certified EMTs and Paramedics
+                            <span className="icon-right-arrow" /> Certified EMTs
+                            and Paramedics
                           </h4>
                           <p>
-                          Skilled professionals ready to handle emergencies.
+                            Skilled professionals ready to handle emergencies.
                           </p>
                         </div>
                       </div>
-                     
                     </div>
                   </div>
                   <div className="text-box2">
                     <div className="row">
-                  <div className="col-xl-6">
+                      <div className="col-xl-6">
                         <div
                           className="text-box2-single"
                           data-aos="fade-left"
@@ -186,11 +190,10 @@ const Ambulance = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Spacious and Hygienic Interiors
+                            <span className="icon-right-arrow" /> Spacious and
+                            Hygienic Interiors
                           </h4>
-                          <p>
-                          Safe and comfortable transport for patients.
-                          </p>
+                          <p>Safe and comfortable transport for patients.</p>
                         </div>
                       </div>
                       <div className="col-xl-6">
@@ -201,36 +204,39 @@ const Ambulance = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> GPS-Enabled Navigation
+                            <span className="icon-right-arrow" /> GPS-Enabled
+                            Navigation
                           </h4>
-                          <p>
-                          Faster routes to hospitals and care centers.
-                          </p>
+                          <p>Faster routes to hospitals and care centers.</p>
                         </div>
                       </div>
-                      </div>
-                      </div>
+                    </div>
+                  </div>
                   <div className="text-box4">
                     <div className="row">
                       <div className="col-xl-6">
                         <div className="content-box">
                           <h2>Equipment Includes</h2>
-                         
+
                           <ul>
                             <li>
-                              <span className="icon-checked" /> Stretcher and Spine Board
+                              <span className="icon-checked" /> Stretcher and
+                              Spine Board
                             </li>
                             <li>
-                              <span className="icon-checked" /> Oxygen Tanks and Masks
+                              <span className="icon-checked" /> Oxygen Tanks and
+                              Masks
                             </li>
                             <li>
                               <span className="icon-checked" /> Suction Machines
                             </li>
                             <li>
-                              <span className="icon-checked" /> IV Kits and Medication Storage
+                              <span className="icon-checked" /> IV Kits and
+                              Medication Storage
                             </li>
                             <li>
-                              <span className="icon-checked" /> Trauma Kits and First Aid Supplies
+                              <span className="icon-checked" /> Trauma Kits and
+                              First Aid Supplies
                             </li>
                           </ul>
                         </div>
@@ -245,7 +251,6 @@ const Ambulance = () => {
                       </div>
                     </div>
                   </div>
-                
                 </div>
               </div>
               {/*End Service Details Content */}

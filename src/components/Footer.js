@@ -17,7 +17,7 @@ const Footer = () => {
                 <div className="single-footer-widget marbtm50">
                   <div className="our-company-info">
                     <div className="footer-logo">
-                      <a href="index.html">
+                      <a href="/">
                         <img
                           src="assets/images/footer/footer-logo.png"
                           alt="Awesome Logo"
@@ -164,7 +164,7 @@ const Footer = () => {
             <div className="bottom-inner">
               <div className="copyright">
                 <p>
-                  Copyright © 2024 <a href="index.html">Rescuetap</a> All Rights
+                  Copyright © 2024 <a href="/">Rescuetap</a> All Rights
                   Reserved.
                 </p>
               </div>

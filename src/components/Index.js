@@ -85,14 +85,24 @@ const Index = () => {
                       Help is Just a Tap Away!
                     </h2>
                   </div>
+                  <div className = "flex flex-col md:flex-row md:w-[50%] w-[100%]">
                   <div className="btns-box">
                     <a className="btn-one" href="/About">
                       <span className="txt">
-                        Download the App
+                        Download on iOS
                         <i className="icon-refresh arrow" />
                       </span>
                     </a>
                   </div>
+                  <div className="btns-box">
+                    <a className="btn-one" href="/About">
+                      <span className="txt">
+                        Download on Android
+                        <i className="icon-refresh arrow" />
+                      </span>
+                    </a>
+                  </div></div>
+                  
                 </div>
               </div>
             </div>
