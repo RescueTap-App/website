@@ -151,7 +151,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-6">
+            {/* <div className="col-xl-6">
               <div className="about-style3__image">
                 <div className="inner">
                   <img
@@ -160,7 +160,7 @@ const About = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -418,8 +418,59 @@ const About = () => {
               </ul>
             </div>
           </div>
+          {/* <div className="row mt-5">
+              <div className="col-xl-12">
+                <div>
+                  <h2>About the CEO</h2>
+                </div>
+                  <div>
+                    <p>Lorem ipsum is simply free text dolor sit am adipi we help
+                      you ensure everyone is in the right jobs sicing elit, sed
+                      do consulting firms Et leggings across the nation tempor. </p>
+                  </div>
+              </div>
+          </div> */}
         </div>
       </section>
+
+      {/* Section About the CEO */}
+        <section className="testimonial-style1-area">
+          <div className="container">
+          <div className="row mt-5">
+              <div className="col-xl-12">
+                <div>
+                  <h2>About the CEO</h2>
+                </div>
+                  <div>
+                    <p>Lorem ipsum is simply free text dolor sit am adipi we help
+                      you ensure everyone is in the right jobs sicing elit, sed
+                      do consulting firms Et leggings across the nation tempor. </p>
+                  </div>
+              </div>
+          </div>
+          </div>
+        </section>
+      {/* End CEO section  */}
+
+      {/* Start Teams Section */}
+          <section className="features-style2-area gray-bg">
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-12">
+                  <div>
+                    <h2 className="">
+                      Teams
+                    </h2>
+                    <p>Lorem ipsum is simply free text dolor sit am adipi we help
+                      you ensure everyone is in the right jobs sicing elit, sed
+                      do consulting firms Et leggings across the nation tempor. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+            {/* End Teams Section */}
+
       {/*End Features Style2 Area*/}
       {/*Start Testimonial Style1 Area*/}
       {/* <section className="testimonial-style1-area">
