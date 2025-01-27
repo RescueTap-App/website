@@ -152,7 +152,8 @@ const Nav = () => {
                   </li>
                   <li>
                     <a href="#">
-                      <i className="icon-twitter" />
+                      {/* <i className="icon-twitter" /> */}
+                      <i class="icon-linkedin-square"></i>
                     </a>
                   </li>
                   <li>
