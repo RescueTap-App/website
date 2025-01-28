@@ -152,7 +152,9 @@ const Nav = () => {
                   </li>
                   <li>
                     <a href="#">
-                      <i className="icon-twitter" />
+                      {/* <i className="icon-twitter" /> */}
+                      <i className="icon-linkedin "></i>
+                      &#xf08c;
                     </a>
                   </li>
                   <li>

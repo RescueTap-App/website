@@ -96,6 +96,9 @@ const Footer = () => {
                         <a href="/Testimonials">Testimonials</a>
                       </li> */}
                       <li>
+                        <a href="/TC">Terms and Condition</a>
+                      </li>
+                      <li>
                         <a href="/FAQ">FAQs</a>
                       </li>
                       <li>
@@ -103,6 +106,12 @@ const Footer = () => {
                       </li>
                       <li>
                         <a href="/Contact">Contact</a>
+                      </li>
+                      <li>
+                        <a href="/Privacy">Privacy and Policy</a>
+                      </li>
+                      <li>
+                        <a href="/AccountDelete">Account Deletion</a>
                       </li>
                     </ul>
                   </div>
