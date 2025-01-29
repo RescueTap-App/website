@@ -21,14 +21,14 @@ const Account = ()=>{
                     data-aos-easing="linear"
                     data-aos-duration={1500}
                   >
-                    <h2>RescueTap - Terms and Condition Page ! </h2>
+                    <h2>RescueTap - Account Deletion! </h2>
                   </div>
                   <div className="breadcrumb-menu">
                     <ul>
                       <li>
                         <a href="/">Home</a>
                       </li>
-                      <li className="active">Terms and Condition</li>
+                      <li className="active">Account Deletion</li>
                     </ul>
                   </div>
                 </div>
