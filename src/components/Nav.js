@@ -146,16 +146,23 @@ const Nav = () => {
                     </a>
                   </li> */}
                   <li>
-                    <a href="https://www.facebook.com/share/1AvuLxWwaS/?mibextid=qi2Omg" target="_blank">
+                    <a
+                      href="https://www.facebook.com/share/1AvuLxWwaS/?mibextid=qi2Omg"
+                      target="_blank"
+                    >
                       <i className="icon-facebook" />
                     </a>
                   </li>
-                  <li>
-                    <a href="https://www.linkedin.com/company/rescuetap/" target="_blank">
+                  <li className="flex items-center justify-center ">
+                    <a
+                      href="https://www.linkedin.com/company/rescuetap/"
+                      target="_blank"
+                      className="flex pt-[10px] px-[10px] items-center justify-center mx-0"
+                    >
                       {/* <i className="icon-twitter" /> */}
                       <svg
-                        width="168"
-                        height="168"
+                        width="18"
+                        height="18"
                         viewBox="0 0 168 168"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -173,11 +180,13 @@ const Nav = () => {
                           fill="black"
                         />
                       </svg>
-                      &#xf08c;
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/rescuetap_app?igsh=MTNpdjJjZGtwd211dQ==" target="_blank">
+                    <a
+                      href="https://www.instagram.com/rescuetap_app?igsh=MTNpdjJjZGtwd211dQ=="
+                      target="_blank"
+                    >
                       <i className="icon-instagram" />
                     </a>
                   </li>
@@ -238,24 +247,20 @@ const Nav = () => {
           <div className="social-links">
             <ul className="clearfix">
               <li>
-                <a href="#">
+                <a
+                  href="https://www.facebook.com/share/1AvuLxWwaS/?mibextid=qi2Omg"
+                  target="_blank"
+                >
                   <span className="fab fa fa-facebook-square" />f
                 </a>
               </li>
 
               <li>
-                <a href="#">
+                <a
+                  href="https://www.linkedin.com/company/rescuetap/"
+                  target="_blank"
+                >
                   <span className="fab fa fa-linkedin-square" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span className="fab fa fa-google-plus-square" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span className="fab fa fa-youtube-square" />
                 </a>
               </li>
             </ul>
