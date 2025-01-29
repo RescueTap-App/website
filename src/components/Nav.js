@@ -153,17 +153,12 @@ const Nav = () => {
                       <i className="icon-facebook" />
                     </a>
                   </li>
-<<<<<<< HEAD
-                  <li>
-                    <a href="https://www.linkedin.com/company/rescuetap/">
-=======
                   <li className="flex items-center justify-center ">
                     <a
                       href="https://www.linkedin.com/company/rescuetap/"
                       target="_blank"
                       className="flex pt-[10px] px-[10px] items-center justify-center mx-0"
                     >
->>>>>>> 9d9c408a928106ca554f15c019d727c80f251e0f
                       {/* <i className="icon-twitter" /> */}
                       <svg
                         width="18"

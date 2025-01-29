@@ -185,21 +185,6 @@ const Footer = () => {
                     </a>
                   </li> */}
                   <li>
-<<<<<<< HEAD
-                  <a href="https://www.facebook.com/share/1AvuLxWwaS/?mibextid=qi2Omg">
-                      <i className="icon-facebook" />
-                    </a>
-                  </li>
-                  <li>
-                  <a href="https://www.linkedin.com/company/rescuetap/">
-                      {/* <i className="icon-linkedin" /> */}
-                       &#xf08c;
-                    </a>
-                  </li>
-                  <li>
-                  <a href="https://www.instagram.com/rescuetap_app?igsh=MTNpdjJjZGtwd211dQ==">
-                  <i className="icon-instagram" />
-=======
                     <a
                       href="https://www.facebook.com/share/1AvuLxWwaS/?mibextid=qi2Omg"
                       target="_blank"
@@ -242,7 +227,6 @@ const Footer = () => {
                       target="_blank"
                     >
                       <i className="icon-instagram" />
->>>>>>> 9d9c408a928106ca554f15c019d727c80f251e0f
                     </a>
                   </li>
                 </ul>
