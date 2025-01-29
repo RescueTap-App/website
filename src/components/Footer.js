@@ -96,6 +96,9 @@ const Footer = () => {
                         <a href="/Testimonials">Testimonials</a>
                       </li> */}
                       <li>
+                        <a href="/TC">Terms and Condition</a>
+                      </li>
+                      <li>
                         <a href="/FAQ">FAQs</a>
                       </li>
                       <li>
