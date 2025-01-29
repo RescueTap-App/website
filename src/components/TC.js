@@ -35,7 +35,7 @@ const TC = () =>{
               </div>
             </div>
           </div>
-        </section>
+            </section>
         {/*End breadcrumb area*/}
         {/*Start Team Style1 Area*/}
         <section className="team-style1-area">
