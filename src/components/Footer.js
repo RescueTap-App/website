@@ -185,18 +185,19 @@ const Footer = () => {
                     </a>
                   </li> */}
                   <li>
-                    <a href="#">
+                  <a href="https://www.facebook.com/share/1AvuLxWwaS/?mibextid=qi2Omg">
                       <i className="icon-facebook" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="icon-linkedin" />
+                  <a href="https://www.linkedin.com/company/rescuetap/">
+                      {/* <i className="icon-linkedin" /> */}
+                       &#xf08c;
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="icon-instagram" />
+                  <a href="https://www.instagram.com/rescuetap_app?igsh=MTNpdjJjZGtwd211dQ==">
+                  <i className="icon-instagram" />
                     </a>
                   </li>
                 </ul>

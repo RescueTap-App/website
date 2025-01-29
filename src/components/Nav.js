@@ -151,7 +151,7 @@ const Nav = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/company/rescuetap/">
                       {/* <i className="icon-twitter" /> */}
                       <i className="icon-linkedin "></i>
                       &#xf08c;
