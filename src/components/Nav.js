@@ -146,19 +146,38 @@ const Nav = () => {
                     </a>
                   </li> */}
                   <li>
-                    <a href="https://www.facebook.com/share/1AvuLxWwaS/?mibextid=qi2Omg">
+                    <a href="https://www.facebook.com/share/1AvuLxWwaS/?mibextid=qi2Omg" target="_blank">
                       <i className="icon-facebook" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/company/rescuetap/" target="_blank">
                       {/* <i className="icon-twitter" /> */}
-                      <i className="icon-linkedin "></i>
+                      <svg
+                        width="168"
+                        height="168"
+                        viewBox="0 0 168 168"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.1059 54.0472H5.3796C3.88277 54.0472 2.66992 55.2606 2.66992 56.7569V165.105C2.66992 166.602 3.88277 167.815 5.3796 167.815H39.1059C40.6027 167.815 41.8156 166.602 41.8156 165.105V56.7569C41.8156 55.2606 40.6027 54.0472 39.1059 54.0472Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M22.2551 0.184814C9.98354 0.184814 0 10.1575 0 22.4156C0 34.679 9.98354 44.6555 22.2551 44.6555C34.517 44.6555 44.4924 34.6785 44.4924 22.4156C44.4929 10.1575 34.517 0.184814 22.2551 0.184814Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M124.891 51.3544C111.346 51.3544 101.332 57.1775 95.2587 63.794V56.7569C95.2587 55.2606 94.0458 54.0472 92.549 54.0472H60.2502C58.7534 54.0472 57.5405 55.2606 57.5405 56.7569V165.105C57.5405 166.602 58.7534 167.815 60.2502 167.815H93.9028C95.3996 167.815 96.6124 166.602 96.6124 165.105V111.498C96.6124 93.4335 101.519 86.3959 114.112 86.3959C127.826 86.3959 128.916 97.6779 128.916 112.427V165.106C128.916 166.602 130.128 167.815 131.625 167.815H165.29C166.787 167.815 168 166.602 168 165.106V105.675C168 78.8137 162.878 51.3544 124.891 51.3544Z"
+                          fill="black"
+                        />
+                      </svg>
                       &#xf08c;
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/rescuetap_app?igsh=MTNpdjJjZGtwd211dQ==">
+                    <a href="https://www.instagram.com/rescuetap_app?igsh=MTNpdjJjZGtwd211dQ==" target="_blank">
                       <i className="icon-instagram" />
                     </a>
                   </li>
@@ -220,8 +239,7 @@ const Nav = () => {
             <ul className="clearfix">
               <li>
                 <a href="#">
-                  <span className="fab fa fa-facebook-square" />
-f
+                  <span className="fab fa fa-facebook-square" />f
                 </a>
               </li>
 
