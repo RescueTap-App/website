@@ -4,9 +4,11 @@ import React from "react"
 const Account = ()=>{
     return(
         <>
-            <div>
-                
-            </div>
+            <section>
+                <div>
+                    
+                </div>
+            </section>
         </>
     )
 }
