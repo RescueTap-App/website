@@ -119,7 +119,7 @@ const Ambulance = () => {
                         <div className="title">
                           <h5>
                             <a
-                              href="RescueTap_Brochure.pdf"
+                              href="/RescueTap_Brochure.pdf"
                               download="RescueTap_Brochure.pdf"
                             >
                               Download our Broucher
