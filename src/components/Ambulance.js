@@ -1,5 +1,9 @@
 import React from "react";
 
+// function downloadPdf(){
+//   document.getElementById('')
+// }
+document.getElementById('')
 const Ambulance = () => {
   return (
     <>
@@ -115,6 +119,7 @@ const Ambulance = () => {
                         <div className="title">
                           <h5>
                             <a href="#">Download our Broucher</a>
+                            {/* <button onClick={} >Download our Broucher</button> */}
                           </h5>
                         </div>
                       </li>
