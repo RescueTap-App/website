@@ -3,7 +3,7 @@ import React from "react";
 // function downloadPdf(){
 //   document.getElementById('')
 // }
-document.getElementById('')
+// document.getElementById('')
 const Ambulance = () => {
   return (
     <>
@@ -118,7 +118,12 @@ const Ambulance = () => {
                         </div>
                         <div className="title">
                           <h5>
-                            <a href="#">Download our Broucher</a>
+                            <a
+                              href="RescueTap_Brochure.pdf"
+                              download="RescueTap_Brochure.pdf"
+                            >
+                              Download our Broucher
+                            </a>
                             {/* <button onClick={} >Download our Broucher</button> */}
                           </h5>
                         </div>
