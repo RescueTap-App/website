@@ -8,7 +8,7 @@ const ALS = () => {
           <div
             className="breadcrumb-area-bg"
             style={{
-              backgroundImage: "url(assets/images/breadcrumb/breadcrumb-1.jpg)",
+              backgroundImage: "url(assets/images/breadcrumb/breadcrumb-3.jpg)",
             }}
           ></div>
           <div className="container">
@@ -89,7 +89,7 @@ const ALS = () => {
                       className="sidebar-info-box-bg"
                       style={{
                         backgroundImage:
-                          "url(assets/images/sidebar/sidebar-info-box-bg.jpg)",
+                          "url(assets/images/sidebar/sidebar-info-box-bg1.jpg)",
                       }}
                     />
                     <h3>Need an ambulance?</h3>
@@ -133,7 +133,7 @@ const ALS = () => {
                 <div className="service-details__content">
                   <div className="img-box1">
                     <img
-                      src="assets/images/services/service-details-5-img1.jpg"
+                      src="assets/images/sidebar/sidebar-info-box-bg1.jpg"
                       alt
                     />
                   </div>
@@ -160,8 +160,7 @@ const ALS = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Defibrillators
-                            and Cardiac Monitors
+                            <span className="icon-right-arrow" />Cardiac Monitors
                           </h4>
                           <p>Monitor and stabilize critical patients</p>
                         </div>
@@ -174,7 +173,7 @@ const ALS = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Advanced
+                            <span className="icon-right-arrow" />
                             Airway Equipment
                           </h4>
                           <p>Including ventilators and intubation tools</p>
