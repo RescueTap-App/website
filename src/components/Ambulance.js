@@ -253,7 +253,7 @@ const Ambulance = () => {
                       <div className="col-xl-6">
                         <div className="img-box">
                           <img
-                            src="assets/images/services/service-details-img2.jpg"
+                            src="assets/images/services/service-details-img5.jpg"
                             alt
                           />
                         </div>
