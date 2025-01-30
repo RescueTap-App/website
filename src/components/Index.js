@@ -41,7 +41,7 @@ const Index = () => {
               <div
                 className="image-layer"
                 style={{
-                  backgroundImage: "url(assets/images/slides/slide-v1-1.jpg)",
+                  backgroundImage: "url(assets/images/slides/slide-v1-1.svg)",
                 }}
               ></div>
               <div className="auto-container">
@@ -313,7 +313,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-1.jpg" alt />
+                  <img src="assets/images/services/service-v1-1.svg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -322,11 +322,11 @@ const Index = () => {
                   <p>
                   Our ambulance fleet is not just for medical emergencies—it’s also a trusted ally for personal safety.
                   </p>
-                  <ul>
+                  {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Quick Dispatch</li>
                     <li className=""><span className="icon-right-arrow" /> 24/7 Availability</li>
                     <li className=""><span className="icon-right-arrow" /> Secure Transportation</li>
-                  </ul>
+                  </ul> */}
                   <div className="btn-box">
                     <a href="/Ambulance">
                       Book an Ambulance Now{" "}
@@ -345,20 +345,20 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-2.jpg" alt />
+                  <img src="assets/images/services/service-v1-2.svg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
                     <a href="/ALS">Advanced Life Support</a>
                   </h3>
                   <p>
-                    In cases where incidents escalate into health emergencies, our Advanced Life Support services provide critical care.
+                    In cases where incidents escalate into health emergencies, our ALS services provide critical care.
                   </p>
-                  <ul>
+                  {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Immediate Medical Attention</li>
                     <li className=""><span className="icon-right-arrow" /> Certified Paramedics</li>
                     <li className=""><span className="icon-right-arrow" /> State-of-the-Art Equipment</li>
-                  </ul>
+                  </ul> */}
                   <div className="btn-box">
                     <a href="/ALS">
                       Request Advanced Care{" "}
@@ -377,7 +377,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                  <img src="assets/images/services/service-v1-3.svg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -386,11 +386,11 @@ const Index = () => {
                   <p>
                   Our RescueTap App serves as a digital lifeline for anyone who feels unsafe during their journey.
                   </p>
-                  <ul>
+                  {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
                     <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
                     <li className=""><span className="icon-right-arrow" /> SOS Button</li>
-                  </ul>
+                  </ul> */}
                   <div className="btn-box">
                     <a href="/App">
                       Download the App <span className="icon-right-arrow" />
