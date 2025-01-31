@@ -5,10 +5,10 @@ import Nav from "@/components/Nav";
 export default function Home() {
   return (
     <div className="boxed_wrapper ltr">
-    <Nav />
-       <BlogDetail />
-       <Footer />
-      </div>
-     
+      <Nav />
+      <BlogDetail />
+      <Footer />
+    </div>
   );
 }
+

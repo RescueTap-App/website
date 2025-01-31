@@ -5,7 +5,7 @@ import axios from "axios";
 import { BLOGS_API } from "../constants/api";
 import Link from "next/link";
 
-const Blog = () => {
+const News = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -28,33 +28,7 @@ const Blog = () => {
 
   return (
     <div>
-      <section className="breadcrumb-area">
-        <div
-          className="breadcrumb-area-bg"
-          style={{
-            backgroundImage: "url(assets/images/breadcrumb/breadcrumb-5.jpg)",
-          }}
-        ></div>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="inner-content">
-                <div className="title">
-                  <h2>Blog 01</h2>
-                </div>
-                <div className="breadcrumb-menu">
-                  <ul>
-                    <li>
-                      <a href="/">Home</a>
-                    </li>
-                    <li className="active">Blog 01</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       <section className="blog-page-one">
         <div className="container">
@@ -89,18 +63,13 @@ const Blog = () => {
                         </p>
                       </div>
                       <h3>
-                        <Link>
-                          {" "}
-                          {/* Use Link here */}
-                          {/* href={`/Blogs/${blog._id}`} */}
+                      <Link href={`/Blogs/${blog._id}`}> {/* Use Link here */}
                           {blog.title}
                         </Link>
                       </h3>
                       <p>{sanitizeContent(blog.content).substring(0, 30)}...</p>
                       <div className="btn-box">
-                        <Link>
-                          {" "}
-                          {/* Use Link here */}
+                      <Link href={`/Blogs/${blog._id}`}> {/* Use Link here */}
                           Read More
                         </Link>
                       </div>
@@ -115,4 +84,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default News;
