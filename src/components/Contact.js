@@ -8,7 +8,7 @@ const Contact = () => {
           <div
             className="breadcrumb-area-bg"
             style={{
-              backgroundImage: "url(assets/images/breadcrumb/breadcrumb-1.jpg)",
+              backgroundImage: "url(assets/images/breadcrumb/breadcrumb-7.jpg)",
             }}
           ></div>
           <div className="container">
