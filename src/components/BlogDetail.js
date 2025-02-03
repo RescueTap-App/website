@@ -1,4 +1,126 @@
+"use client"
 import React from "react";
+
+// const fetchresource = ()=>{
+//   fetch('https://plankton-app-nj7zb.ondigitalocean.app/blogs')
+//   .then(response =>{ response.json()
+//     console.log(response.json())
+//     // const reader = response.body.getReader().read
+//     // console.log(reader)
+//     console.log('read out')
+//   })
+// }
+async function fetchresource (){
+  const url = "https://plankton-app-nj7zb.ondigitalocean.app/drivers"
+  fetch(url)
+  .then((response) =>{
+
+    return(response.body.getReader().read())
+  })
+  .then(({value, done}) =>{
+    console.log(value)
+  })
+}
+
+
+ // BlogData.array.forEach(element => {
+      //   console.log(element)
+      // });
+async function processStream() {
+  const url = "https://plankton-app-nj7zb.ondigitalocean.app/blogs"
+  const BlogParent = document.getElementById('BlogContentParent')
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    try {
+      const jsonData = await response.json();
+      console.log("JSON Data:", jsonData);
+      localStorage.setItem = jsonData
+
+      updateContent(jsonData)
+      const blogContent = document.createElement('p')
+      const BlogData = JSON.parse(jsonData)
+     
+      console.log(BlogData)
+      
+      return jsonData;
+    } catch (jsonError) {
+       console.error("Response is not valid JSON:", jsonError);
+
+      const reader = response.body.getReader();
+      let chunks = '';
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) {
+          break;
+        }
+        chunks += new TextDecoder().decode(value);
+      }
+      try {
+        const parsedData = JSON.parse(chunks);  // Try parsing
+        console.log("Parsed Data (if JSON):", parsedData);
+        return parsedData;
+      } catch (parseError) {
+        console.error("Data is not JSON:", parseError);
+        console.log("Raw Data:", chunks); // Process the 'chunks' string as needed if it's not JSON
+        return chunks;// or process it as needed
+      }
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
+}
+
+function updateContent(data){
+  const BlogData = document.getElementById('BlogContentParent')
+  
+  BlogData.innerHTML = ''
+  return data.map((s)=>{
+    console.log(s)
+    const Blogcontent = document.createElement('div')
+    Blogcontent.innerHTML = `<div classname="text">
+      <p>${s.content}<p>
+    </div>`
+    BlogData.appendChild(Blogcontent) 
+  })
+  
+}
+
+// Example usage (in a browser context):
+// const apiUrl = 'YOUR_API_ENDPOINT';
+// processStream(apiUrl)
+// .then(data => {
+//   console.log("Data received:", data);
+//   // Use the data (e.g., update the DOM) here
+// })
+// .catch(error => {
+//   console.error("An error occurred:", error);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const BlogDetail = () => {
   return (
@@ -71,7 +193,7 @@ const BlogDetail = () => {
                           The Largest Solid Waste Management Company
                         </h3>
                       </div>
-                      <div className="text">
+                      <div className="text" id="BlogContentParent" onLoad={processStream()}>
                         <p>
                           There are not many of passages of lorem ipsum
                           available alteration in some form. Donec scelerisque
@@ -90,7 +212,7 @@ const BlogDetail = () => {
                           ut ullamcorper. Fusce consequat lectus nec ligula
                           laoreet pretium ac nec libero. Nullam ut tempor urna.
                         </p>
-                        <p>
+                        <p id="Blog">
                           Ut gravida felis vitae mauris suscipit, at facilisis
                           mauris varius. Curabitur interdum malesuada
                           vestibulum. Phasellus augue sapien, euismod ut
@@ -101,6 +223,10 @@ const BlogDetail = () => {
                           pharetra, nisi purus dignissim velit, sed lobortis
                           sapien ante vitae risus.
                         </p>
+
+                        <button onClick={processStream}>Check fetch</button>
+                        <button onClick={fetchresource} className="ps-5">Check</button>
+
                       </div>
                     </div>
                   </div>

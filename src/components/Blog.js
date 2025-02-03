@@ -1,4 +1,70 @@
+"use client"
 import React from "react";
+
+async function processStream() {
+  const url = "https://plankton-app-nj7zb.ondigitalocean.app/blogs"
+  const BlogParent = document.getElementById('BlogContentParent')
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    try {
+      const jsonData = await response.json();
+      console.log("JSON Data:", jsonData);
+      localStorage.setItem(key, jsonData)
+
+      updateBlog(jsonData)
+      const blogContent = document.createElement('p')
+      const BlogData = JSON.parse(jsonData)
+     
+      console.log(BlogData)
+      
+      return jsonData;
+    } catch (jsonError) {
+       console.error("Response is not valid JSON:", jsonError);
+
+      // const reader = response.body.getReader();
+      // let chunks = '';
+
+      // while (true) {
+      //   const { done, value } = await reader.read();
+      //   if (done) {
+      //     break;
+      //   }
+      //   chunks += new TextDecoder().decode(value);
+      // }
+      // try {
+      //   const parsedData = JSON.parse(chunks);  // Try parsing
+      //   console.log("Parsed Data (if JSON):", parsedData);
+      //   return parsedData;
+      // } catch (parseError) {
+      //   console.error("Data is not JSON:", parseError);
+      //   console.log("Raw Data:", chunks); // Process the 'chunks' string as needed if it's not JSON
+      //   return chunks;// or process it as needed
+      // }
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
+}
+
+function updateBlog(data){
+  const BlogData = document.getElementById('BlogContentParent')
+  
+  BlogData.innerHTML = ''
+  return data.map((s)=>{
+    console.log(s)
+    const Blogcontent = document.createElement('div')
+    Blogcontent.innerHTML = `<div classname="text">
+      <p>${s.content}<p>
+    </div>`
+    BlogData.appendChild(Blogcontent) 
+  })
+}
 
 const Blog = () => {
   return (
@@ -264,6 +330,9 @@ const Blog = () => {
                   </li>
                 </ul>
               </div>
+            </div>
+            <div>
+            <button onClick={processStream} className="ps-5">Read Now</button>
             </div>
           </div>
         </section>

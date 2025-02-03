@@ -3,7 +3,7 @@ import React from "react";
 // function downloadPdf(){
 //   document.getElementById('')
 // }
-document.getElementById('')
+// document.getElementById('')
 const Ambulance = () => {
   return (
     <>
