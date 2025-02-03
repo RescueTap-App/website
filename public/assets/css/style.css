@@ -461,6 +461,10 @@ li {
   opacity: 1;
 }
 
+.checked-box3 input[type="checkbox"]{
+  display: inline;
+}
+
 .thm-social-link1 {
   position: relative;
   display: block;

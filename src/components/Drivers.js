@@ -5,45 +5,57 @@ async function registerDriver(){
   const response = await fetch("https://plankton-app-nj7zb.ondigitalocean.app/drivers")
   .then(response =>{
     console.log(response.json)
-
-
-
   })
-
-
-
-
-
-  async function sendData(data) {
-    // Construct a FormData instance
-    const formData = new FormData();
-  
-    // Add a text field
-    formData.append("name", "Pomegranate");
-  
-    // Add a file
-    const selection = await window.showOpenFilePicker();
-    if (selection.length > 0) {
-      const file = await selection[0].getFile();
-      formData.append("file", file);
-    }
-  
-    try {
-      const response = await fetch("https://example.org/post", {
-        method: "POST",
-        // Set the FormData instance as the request body
-        body: formData,
-      });
-      console.log(await response.json());
-    } catch (e) {
-      console.error(e);
-    }
-  }
-  
-  const send = document.querySelector("#send");
-  send.addEventListener("click", sendData);
-   
 }
+
+
+
+async function sendFile(){
+
+}
+
+
+async function sendData(data) {
+  // Construct a FormData instance
+  const formData = new FormData();
+
+  // Add a file
+  // const selection = await window.showOpenFilePicker();
+  // if (selection.length > 0) {
+  //   const file = await selection[0].getFile();
+  //   formData.append("file", file);
+  // }
+  const driverData = {
+    firstName: document.getElementById('firstName').value,
+    lastName: document.getElementById('lastName').value,
+    email: document.getElementById('email').value,
+    phoneNumber: document.getElementById('phoneNumber').value,
+    plateNumber: document.getElementById('plateNumber').value,
+    regNumber: document.getElementById('regNumber').value,
+    address: document.getElementById('address').value,
+    vehicleModel: document.getElementById('vehicleModel').value,
+    profileImage: profileImageUrl,
+    vehicleImage: vehicleImageUrl,
+    termsAndConditionsAgreement: document.getElementById('termsAndConditions').checked
+};
+
+
+
+  try {
+    const response = await fetch("https://plankton-app-nj7zb.ondigitalocean.app/drivers", {
+      method: "POST",
+      body: formData,
+    });
+    console.log(await response.json());
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+const send = document.getElementById("send");
+send.addEventListener("click", sendData);
+ 
+
 async function fetchresource (){
   const url = "https://plankton-app-nj7zb.ondigitalocean.app/drivers"
   fetch(url)
@@ -557,13 +569,17 @@ const Drivers = () => {
                           </div>
                         
                       </div>
-                      <div className="row">
-                        <div className="form-group">
-                          <div className="checked-box1">
+                      <div className="row gap-2">
+                        <div className="mx-2">
+                          <div className="checked-box3">
                           <input 
                           type="checkbox"
-                          
+                          name="form_terms"
+                          className="pe-3"
+                          id="Termsandcondition"
+                          required
                           />
+                          <label>Terms and Condition</label>
                           </div>
                         </div>
                       </div>
@@ -581,7 +597,8 @@ const Drivers = () => {
                                     className="btn-one"
                                     type="submit"
                                     data-loading-text="Please wait..."
-                                    onClick={registerDriver}
+                                    // onClick={registerDriver}
+                                    id="send"
                                   >
                                     <span className="txt">Create Driver</span>
                                   </button>

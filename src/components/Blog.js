@@ -90,16 +90,16 @@ const Blog = () => {
                         </p>
                       </div>
                       <h3>
-                        {/* <Link href={`/Blogs`}> */}
+                        <Link href={`/Blogs/${blog._id}`}>
                           {/* {" "} */}
                           {/* Use Link here */}
                           {/* href={`/Blogs/${blog._id}`} */}
-                          {/* {blog.title} */}
-                        {/* </Link> */}
+                          {blog.title}
+                        </Link>
                       </h3>
                       <p>{sanitizeContent(blog.content).substring(0, 30)}...</p>
                       <div className="btn-box">
-                        <Link>
+                        <Link href={``}>
                           {" "}
                           {/* Use Link here */}
                           Read More
