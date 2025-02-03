@@ -294,8 +294,24 @@ function Drivers() {
                                 required
                               />
                             </div>
-
-                            <button type="submit">Register Driver</button>
+                            <div
+                              className="info-download-box mt-[5%]"
+                              data-aos="slide-up"
+                              data-aos-easing="linear"
+                              data-aos-duration={1000}
+                            >
+                              <ul>
+                                <li>
+                                  <div className="title">
+                                    <h5 className="flex items-center justify-center">
+                                      <button type="submit">
+                                        Register Driver
+                                      </button>
+                                    </h5>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
                           </form>
                         </div>
                       </div>
