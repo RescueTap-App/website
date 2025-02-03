@@ -10,17 +10,6 @@ import React from "react";
 //     console.log('read out')
 //   })
 // }
-async function fetchresource (){
-  const url = "https://plankton-app-nj7zb.ondigitalocean.app/drivers"
-  fetch(url)
-  .then((response) =>{
-
-    return(response.body.getReader().read())
-  })
-  .then(({value, done}) =>{
-    console.log(value)
-  })
-}
 
 
  // BlogData.array.forEach(element => {

@@ -1,4 +1,21 @@
+"use client"
 import React from "react";
+
+function registerDriver(){
+  
+}
+async function fetchresource (){
+  const url = "https://plankton-app-nj7zb.ondigitalocean.app/drivers"
+  fetch(url)
+  .then((response) =>{
+
+    return(response.body.getReader().read())
+  })
+  .then(({value, done}) =>{
+    console.log(value)
+  })
+}
+
 
 const Drivers = () => {
   return (
@@ -116,7 +133,7 @@ const Drivers = () => {
                         </div>
                         <div className="title">
                           <h5>
-                            <a href="#">Download our Broucher</a>
+                            <a href="#" ty>Download our Broucher</a>
                           </h5>
                         </div>
                       </li>

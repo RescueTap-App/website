@@ -14,37 +14,54 @@ async function processStream() {
     try {
       const jsonData = await response.json();
       console.log("JSON Data:", jsonData);
-      localStorage.setItem(key, jsonData)
-
       updateBlog(jsonData)
-      const blogContent = document.createElement('p')
-      const BlogData = JSON.parse(jsonData)
+      console.log("After the updateBlog function")
+
+      // localStorage.setItem(key, jsonData)
+
+      
+      // //Set Data to Local Stroage
+      // localStorage.setItem('Blog', JSON.stringify(jsonData))
+
+
+
+      // //Retrieve Data from Local Storge
+      // const storedUserData = localStorage.getItem('Blog')
+
+      // if (storedUserData) {
+      //   const BloggingData = JSON.parse(storedUserData)
+      //   console.log(BloggingData)
+      //   // You can use userData here...
+      // } else {
+      //   console.log('User data not found in local storage')
+      // }
+      // const BlogData = JSON.parse(jsonData)
      
-      console.log(BlogData)
+      // console.log(BlogData)
       
       return jsonData;
     } catch (jsonError) {
        console.error("Response is not valid JSON:", jsonError);
 
-      // const reader = response.body.getReader();
-      // let chunks = '';
+      const reader = response.body.getReader();
+      let chunks = '';
 
-      // while (true) {
-      //   const { done, value } = await reader.read();
-      //   if (done) {
-      //     break;
-      //   }
-      //   chunks += new TextDecoder().decode(value);
-      // }
-      // try {
-      //   const parsedData = JSON.parse(chunks);  // Try parsing
-      //   console.log("Parsed Data (if JSON):", parsedData);
-      //   return parsedData;
-      // } catch (parseError) {
-      //   console.error("Data is not JSON:", parseError);
-      //   console.log("Raw Data:", chunks); // Process the 'chunks' string as needed if it's not JSON
-      //   return chunks;// or process it as needed
-      // }
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) {
+          break;
+        }
+        chunks += new TextDecoder().decode(value);
+      }
+      try {
+        const parsedData = JSON.parse(chunks);  // Try parsing
+        console.log("Parsed Data (if JSON):", parsedData);
+        return parsedData;
+      } catch (parseError) {
+        console.error("Data is not JSON:", parseError);
+        console.log("Raw Data:", chunks); // Process the 'chunks' string as needed if it's not JSON
+        return chunks;// or process it as needed
+      }
     }
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -53,16 +70,62 @@ async function processStream() {
 }
 
 function updateBlog(data){
-  const BlogData = document.getElementById('BlogContentParent')
+  const TheBlog = document.getElementById('BlogPageParent')
   
-  BlogData.innerHTML = ''
+  TheBlog.innerHTML = ''
   return data.map((s)=>{
     console.log(s)
+    const value = 1000
+    const id = s.id
+    console.log(id)
     const Blogcontent = document.createElement('div')
-    Blogcontent.innerHTML = `<div classname="text">
-      <p>${s.content}<p>
-    </div>`
-    BlogData.appendChild(Blogcontent) 
+    const BlogAnimation = document.createElement('div')
+    const BlogImgHolder = document.createElement('div')
+    BlogImgHolder.innerHTML = `<div className="img-holder">
+              <img src=${s.featureImage} alt />
+              </div>`
+    BlogImgHolder.className = 'img-holder'
+    BlogAnimation.className = 'single-blog-style1'
+    BlogAnimation.setAttribute('data-aos', 'fade-down')
+    BlogAnimation.setAttribute('data-aos-easing', 'linear')
+    BlogAnimation.setAttribute('data-aos-duration', value)
+    // Blogcontent.appendChild(BlogAnimation)
+    Blogcontent.appendChild(BlogImgHolder)
+    BlogAnimation.innerHTML = `<div>Save my soul</div>`
+    Blogcontent.className = 'col-xl-4 col-lg-4 col-md-6'
+    // Blogcontent.innerHTML = `
+    //             <div
+    //               className="single-blog-style1"
+    //               data-aos="fade-down"
+    //               data-aos-easing="linear"
+    //               data-aos-duration={1000}
+    //             >
+    //               <div className="img-holder">
+    //                 <img src=${s.featureImage} alt />
+    //               </div>
+    //               <div className="text-holder">
+    //                 <div className="meta-info">
+    //                   <p>
+    //                     <span className="icon-calendar" /> 20 Sep, 2021
+    //                   </p>
+    //                 </div>
+    //                 <h3>
+    //                   <a href="/BlogDetails">
+    //                     Trusted, International Air Ambulance Company
+    //                   </a>
+    //                 </h3>
+    //                 <p>
+    //                   Lorem ipsum dolor sit amet, coned sectetur notte elit sed
+    //                   do.
+    //                 </p>
+    //                 <div className="btn-box">
+    //                   <a href="/BlogDetails">Read More</a>
+    //                 </div>
+    //               </div>
+    //             </div>
+    //           `
+    console.log("After the newly created DIV")
+    TheBlog.appendChild(Blogcontent) 
   })
 }
 
@@ -104,9 +167,9 @@ const Blog = () => {
         </section>
         {/*End breadcrumb area*/}
         {/*Start Blog Page One*/}
-        <section className="blog-page-one">
+        <section className="blog-page-one" onLoad={processStream}>
           <div className="container">
-            <div className="row">
+            <div className="row" id="BlogPageParent">
               {/*Start Single Blog Style1*/}
               <div className="col-xl-4 col-lg-4 col-md-6">
                 <div
