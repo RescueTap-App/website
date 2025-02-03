@@ -15,72 +15,76 @@ import React from "react";
  // BlogData.array.forEach(element => {
       //   console.log(element)
       // });
-async function processStream() {
-  const url = "https://plankton-app-nj7zb.ondigitalocean.app/blogs"
-  const BlogParent = document.getElementById('BlogContentParent')
-  try {
-    const response = await fetch(url);
+// async function processStream() {
+//   const url = "https://plankton-app-nj7zb.ondigitalocean.app/blogs"
+//   const BlogParent = document.getElementById('BlogContentParent')
+//   try {
+//     const response = await fetch(url);
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! status: ${response.status}`);
+//     }
 
-    try {
-      const jsonData = await response.json();
-      console.log("JSON Data:", jsonData);
-      localStorage.setItem = jsonData
+//     try {
+//       const jsonData = await response.json();
+//       console.log("JSON Data:", jsonData);
+//       localStorage.setItem = jsonData
 
-      updateContent(jsonData)
-      const blogContent = document.createElement('p')
-      const BlogData = JSON.parse(jsonData)
+//       updateContent(jsonData)
+//       const blogContent = document.createElement('p')
+//       const BlogData = JSON.parse(jsonData)
      
-      console.log(BlogData)
+//       console.log(BlogData)
       
-      return jsonData;
-    } catch (jsonError) {
-       console.error("Response is not valid JSON:", jsonError);
+//       return jsonData;
+//     } catch (jsonError) {
+//        console.error("Response is not valid JSON:", jsonError);
 
-      const reader = response.body.getReader();
-      let chunks = '';
+//       const reader = response.body.getReader();
+//       let chunks = '';
 
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) {
-          break;
-        }
-        chunks += new TextDecoder().decode(value);
-      }
-      try {
-        const parsedData = JSON.parse(chunks);  // Try parsing
-        console.log("Parsed Data (if JSON):", parsedData);
-        return parsedData;
-      } catch (parseError) {
-        console.error("Data is not JSON:", parseError);
-        console.log("Raw Data:", chunks); // Process the 'chunks' string as needed if it's not JSON
-        return chunks;// or process it as needed
-      }
-    }
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
-  }
-}
+//       while (true) {
+//         const { done, value } = await reader.read();
+//         if (done) {
+//           break;
+//         }
+//         chunks += new TextDecoder().decode(value);
+//       }
+//       try {
+//         const parsedData = JSON.parse(chunks);  // Try parsing
+//         console.log("Parsed Data (if JSON):", parsedData);
+//         return parsedData;
+//       } catch (parseError) {
+//         console.error("Data is not JSON:", parseError);
+//         console.log("Raw Data:", chunks); // Process the 'chunks' string as needed if it's not JSON
+//         return chunks;// or process it as needed
+//       }
+//     }
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//     throw error;
+//   }
+// }
 
-function updateContent(data){
-  const BlogData = document.getElementById('BlogContentParent')
+// function updateContent(data){
+//   const BlogData = document.getElementById('BlogContentParent')
   
-  BlogData.innerHTML = ''
-  return data.map((s)=>{
-    console.log(s)
-    const Blogcontent = document.createElement('div')
-    Blogcontent.innerHTML = `<div classname="text">
-      <p>${s.content}<p>
-    </div>`
-    BlogData.appendChild(Blogcontent) 
+//   BlogData.innerHTML = ''
+//   return data.map((s)=>{
+//     console.log(s)
+//     const Blogcontent = document.createElement('div')
+//     Blogcontent.innerHTML = `<div classname="text">
+//       <p>${s.content}<p>
+//     </div>`
+//     BlogData.appendChild(Blogcontent) 
+//   })
+  
+// }
+document.addEventListener('DOMContentLoaded', () => { // Wait for the DOM to be fully loaded
+  const urlParams = new URLSearchParams(window.location.search);
+  const blogPostId = urlParams.get('id');
+  console.log(blogPostId)
   })
-  
-}
-
 // Example usage (in a browser context):
 // const apiUrl = 'YOUR_API_ENDPOINT';
 // processStream(apiUrl)
