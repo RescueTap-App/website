@@ -21,13 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
     <head>
-<<<<<<< HEAD
-    {/* <meta charset="UTF-8"/> */}
     <meta charSet="UTF-8"/>
-
-=======
-    <meta charSet="UTF-8"/>
->>>>>>> 37ccd49af61bffa1ec9f1f39a9f13db51f21be18
     <title>RescueTap - One Tap, Save Lives</title>
 
     <meta name="description" content="My page description" />
@@ -40,10 +34,6 @@ export default function RootLayout({ children }) {
         <meta name="twitter:image" content="/assets/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
    
-<<<<<<< HEAD
-    {/* <meta http-equiv="X-UA-Compatible" content="IE=edge"/> */}
-=======
->>>>>>> 37ccd49af61bffa1ec9f1f39a9f13db51f21be18
     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
     
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800;900&display=swap"
