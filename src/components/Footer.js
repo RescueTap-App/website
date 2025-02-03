@@ -19,7 +19,7 @@ const Footer = () => {
                     <div className="footer-logo">
                       <a href="/">
                         <img
-                          src="assets/images/footer/footer-logo.png"
+                          src="/assets/images/footer/footer-logo.png"
                           alt="Awesome Logo"
                           title
                           className="w-[50%]"

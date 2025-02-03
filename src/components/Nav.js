@@ -11,7 +11,7 @@ const Nav = () => {
               <div className="main-logo-box">
                 <a href="/">
                   <img
-                    src="assets/images/resources/logo.svg"
+                    src="/assets/images/resources/logo.svg"
                     alt="Awesome Logo"
                     className="w-[50%]"
                     title
