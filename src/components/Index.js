@@ -4,6 +4,8 @@ import Form from "./Form";
 // import Form from "./form";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import Blog from "./Blog";
+import News from "./News";
 
 const Index = () => {
   return (
@@ -41,7 +43,7 @@ const Index = () => {
               <div
                 className="image-layer"
                 style={{
-                  backgroundImage: "url(assets/images/slides/slide-v1-1.jpg)",
+                  backgroundImage: "url(assets/images/slides/slide-v1-1.svg)",
                 }}
               ></div>
               <div className="auto-container">
@@ -85,24 +87,24 @@ const Index = () => {
                       Help is Just a Tap Away!
                     </h2>
                   </div>
-                  <div className = "flex flex-col md:flex-row md:w-[50%] w-[100%]">
-                  <div className="btns-box">
-                    <a className="btn-one" href="/About">
-                      <span className="txt">
-                        Download on iOS
-                        <i className="icon-refresh arrow" />
-                      </span>
-                    </a>
+                  <div className="flex flex-col md:flex-row md:w-[50%] w-[100%]">
+                    <div className="btns-box">
+                      <a className="btn-one" href="/About">
+                        <span className="txt">
+                          Download on iOS
+                          <i className="icon-refresh arrow" />
+                        </span>
+                      </a>
+                    </div>
+                    <div className="btns-box">
+                      <a className="btn-one" href="/About">
+                        <span className="txt">
+                          Download on Android
+                          <i className="icon-refresh arrow" />
+                        </span>
+                      </a>
+                    </div>
                   </div>
-                  <div className="btns-box">
-                    <a className="btn-one" href="/About">
-                      <span className="txt">
-                        Download on Android
-                        <i className="icon-refresh arrow" />
-                      </span>
-                    </a>
-                  </div></div>
-                  
                 </div>
               </div>
             </div>
@@ -313,20 +315,21 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-1.jpg" alt />
+                  <img src="assets/images/services/service-v1-1.svg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
                     <a href="services-single-1.html">Ambulance Car Services</a>
                   </h3>
                   <p>
-                  Our ambulance fleet is not just for medical emergencies—it’s also a trusted ally for personal safety.
+                    Our ambulance fleet is not just for medical emergencies—it’s
+                    also a trusted ally for personal safety.
                   </p>
-                  <ul>
+                  {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Quick Dispatch</li>
                     <li className=""><span className="icon-right-arrow" /> 24/7 Availability</li>
                     <li className=""><span className="icon-right-arrow" /> Secure Transportation</li>
-                  </ul>
+                  </ul> */}
                   <div className="btn-box">
                     <a href="/Ambulance">
                       Book an Ambulance Now{" "}
@@ -345,20 +348,21 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-2.jpg" alt />
+                  <img src="assets/images/services/service-v1-2.svg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
                     <a href="/ALS">Advanced Life Support</a>
                   </h3>
                   <p>
-                    In cases where incidents escalate into health emergencies, our Advanced Life Support services provide critical care.
+                    In cases where incidents escalate into health emergencies,
+                    our ALS services provide critical care.
                   </p>
-                  <ul>
+                  {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Immediate Medical Attention</li>
                     <li className=""><span className="icon-right-arrow" /> Certified Paramedics</li>
                     <li className=""><span className="icon-right-arrow" /> State-of-the-Art Equipment</li>
-                  </ul>
+                  </ul> */}
                   <div className="btn-box">
                     <a href="/ALS">
                       Request Advanced Care{" "}
@@ -377,20 +381,21 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                  <img src="assets/images/services/service-v1-3.svg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
                     <a href="/App">Emergency Response App</a>
                   </h3>
                   <p>
-                  Our RescueTap App serves as a digital lifeline for anyone who feels unsafe during their journey.
+                    Our RescueTap App serves as a digital lifeline for anyone
+                    who feels unsafe during their journey.
                   </p>
-                  <ul>
+                  {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
                     <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
                     <li className=""><span className="icon-right-arrow" /> SOS Button</li>
-                  </ul>
+                  </ul> */}
                   <div className="btn-box">
                     <a href="/App">
                       Download the App <span className="icon-right-arrow" />
@@ -809,107 +814,7 @@ const Index = () => {
             </div>
             <h2>News &amp; Articles</h2>
           </div>
-          <div className="row">
-            {/*Start Single Blog Style1*/}
-            <div className="col-xl-4 col-lg-4">
-              <div
-                className="single-blog-style1"
-                data-aos="fade-down"
-                data-aos-easing="linear"
-                data-aos-duration={1000}
-              >
-                <div className="img-holder">
-                  <img src="assets/images/blog/blog-v1-1.jpg" alt />
-                </div>
-                <div className="text-holder">
-                  <div className="meta-info">
-                    <p>
-                      <span className="icon-calendar" /> 19 Sep, 2024
-                    </p>
-                  </div>
-                  <h3>
-                    <a href="blog-single.html">
-                      {/* Trusted, International Air Ambulance Company */}
-                      Stay Safe, Stay Informed—Your Source for Health and
-                      Emergency Tips!"
-                    </a>
-                  </h3>
-                  <p>
-                    Explore insightful articles, safety tips, and inspiring
-                    rescue stories.
-                    {/* Learn how to handle emergencies and protect yourself and your loved ones. */}
-                  </p>
-                  <div className="btn-box">
-                    <a href="blog-single.html">Read More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single Blog Style1*/}
-            {/*Start Single Blog Style1*/}
-            <div className="col-xl-4 col-lg-4">
-              <div
-                className="single-blog-style1"
-                data-aos="fade-up"
-                data-aos-easing="linear"
-                data-aos-duration={1500}
-              >
-                <div className="img-holder">
-                  <img src="assets/images/blog/blog-v1-2.jpg" alt />
-                </div>
-                <div className="text-holder">
-                  <div className="meta-info">
-                    <p>
-                      <span className="icon-calendar" /> 20 Sep, 2024
-                    </p>
-                  </div>
-                  <h3>
-                    <a href="blog-single.html">
-                      How to Respond to Cardiac Arrest
-                    </a>
-                  </h3>
-                  <p>
-                    Cardiac arrest is a life-threatening emergency that requires
-                    immediate action.
-                  </p>
-                  <div className="btn-box">
-                    <a href="blog-single.html">Read More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single Blog Style1*/}
-            {/*Start Single Blog Style1*/}
-            <div className="col-xl-4 col-lg-4">
-              <div
-                className="single-blog-style1"
-                data-aos="fade-down"
-                data-aos-easing="linear"
-                data-aos-duration={1000}
-              >
-                <div className="img-holder">
-                  <img src="assets/images/blog/blog-v1-3.jpg" alt />
-                </div>
-                <div className="text-holder">
-                  <div className="meta-info">
-                    <p>
-                      <span className="icon-calendar" /> 21 Sep, 2021
-                    </p>
-                  </div>
-                  <h3>
-                    <a href="blog-single.html">
-                      10 First Aid Tips Everyone Should Know
-                    </a>
-                  </h3>
-                  <p>Staying Calm always, at every step of the way.</p>
-                  <div className="btn-box">
-                    <a href="blog-single.html">Read More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single Blog Style1*/}
-          </div>
+          <News />
         </div>
       </section>
       {/*End Blog Style1 Area*/}

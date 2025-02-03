@@ -12,7 +12,7 @@ const Ambulance = () => {
           <div
             className="breadcrumb-area-bg"
             style={{
-              backgroundImage: "url(assets/images/breadcrumb/breadcrumb-1.jpg)",
+              backgroundImage: "url(assets/images/breadcrumb/breadcrumb-2.jpg)",
             }}
           ></div>
           <div className="container">
@@ -118,7 +118,12 @@ const Ambulance = () => {
                         </div>
                         <div className="title">
                           <h5>
-                            <a href="#">Download our Broucher</a>
+                            <a
+                              href="/RescueTap_Brochure.pdf"
+                              download="RescueTap_Brochure.pdf"
+                            >
+                              Download our Broucher
+                            </a>
                             {/* <button onClick={} >Download our Broucher</button> */}
                           </h5>
                         </div>
@@ -176,7 +181,6 @@ const Ambulance = () => {
                         >
                           <h4>
                             <span className="icon-right-arrow" /> Certified EMTs
-                            and Paramedics
                           </h4>
                           <p>
                             Skilled professionals ready to handle emergencies.
@@ -195,7 +199,7 @@ const Ambulance = () => {
                           data-aos-duration={2500}
                         >
                           <h4>
-                            <span className="icon-right-arrow" /> Spacious and
+                            <span className="icon-right-arrow" />
                             Hygienic Interiors
                           </h4>
                           <p>Safe and comfortable transport for patients.</p>
@@ -249,7 +253,7 @@ const Ambulance = () => {
                       <div className="col-xl-6">
                         <div className="img-box">
                           <img
-                            src="assets/images/services/service-details-img2.jpg"
+                            src="assets/images/services/service-details-img5.jpg"
                             alt
                           />
                         </div>

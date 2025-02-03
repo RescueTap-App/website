@@ -133,7 +133,12 @@ const Drivers = () => {
                         </div>
                         <div className="title">
                           <h5>
-                            <a href="#" ty>Download our Broucher</a>
+                            <a
+                              download="RescueTap_Brochure.pdf"
+                              href="RescueTap_Brochure.pdf"
+                            >
+                              Download our Broucher
+                            </a>
                           </h5>
                         </div>
                       </li>

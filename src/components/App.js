@@ -8,7 +8,7 @@ const App = () => {
           <div
             className="breadcrumb-area-bg"
             style={{
-              backgroundImage: "url(assets/images/breadcrumb/breadcrumb-1.jpg)",
+              backgroundImage: "url(assets/images/breadcrumb/breadcrumb-4.jpg)",
             }}
           ></div>
           <div className="container">
@@ -89,7 +89,7 @@ const App = () => {
                       className="sidebar-info-box-bg"
                       style={{
                         backgroundImage:
-                          "url(assets/images/sidebar/sidebar-info-box-bg.jpg)",
+                          "url(assets/images/services/service-details-3.jpg)",
                       }}
                     />
                     <h3>Need an ambulance?</h3>
@@ -114,7 +114,12 @@ const App = () => {
                         </div>
                         <div className="title">
                           <h5>
-                            <a href="#">Download our Broucher</a>
+                            <a
+                              download="RescueTap_Brochure.pdf"
+                              href="RescueTap_Brochure.pdf"
+                            >
+                              Download our Broucher
+                            </a>
                           </h5>
                         </div>
                       </li>
@@ -128,7 +133,7 @@ const App = () => {
                 <div className="service-details__content">
                   <div className="img-box1">
                     <img
-                      src="assets/images/services/service-details-6-img1.jpg"
+                      src="assets/images/services/service-details-3.jpg"
                       alt
                     />
                   </div>
@@ -180,7 +185,7 @@ const App = () => {
                       <div className="col-xl-6">
                         <div className="img-box">
                           <img
-                            src="assets/images/services/service-details-img2.jpg"
+                            src="assets/images/services/service-details-4.jpg"
                             alt
                           />
                         </div>
