@@ -2037,6 +2037,7 @@ select:focus {
 
 .xs-sidebar-group .content-inner .form-inner .form-group input[type="text"],
 .xs-sidebar-group .content-inner .form-inner .form-group input[type="email"],
+.xs-sidebar-group .content-inner .form-inner .form-group input[type="tel"],
 .xs-sidebar-group .content-inner .form-inner .form-group textarea {
   position: relative;
   display: block;
@@ -2987,6 +2988,7 @@ select:focus {
 
 .form-style1-box form input[type="text"],
 .form-style1-box form input[type="email"],
+.form-style1-box form input[type="tel"],
 .form-style1-box form textarea {
   position: relative;
   display: block;
@@ -3049,6 +3051,19 @@ select:focus {
   color: #797989;
 }
 
+.form-style1-box form input[type="tel"]::-webkit-input-placeholder {
+  color: #797989;
+}
+
+.form-style1-box form input[type="tel"]:-moz-placeholder {
+  color: #797989;
+}
+.form-style1-box form input[type="tel"]::-moz-placeholder {
+  color: #797989;
+}
+.form-style1-box form input[type="tel"]:-ms-input-placeholder {
+  color: #797989;
+}
 .form-style1-box form textarea:-moz-placeholder {
   color: #797989;
 }

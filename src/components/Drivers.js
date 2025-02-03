@@ -1,8 +1,48 @@
 "use client"
 import React from "react";
 
-function registerDriver(){
+async function registerDriver(){
+  const response = await fetch("https://plankton-app-nj7zb.ondigitalocean.app/drivers")
+  .then(response =>{
+    console.log(response.json)
+
+
+
+  })
+
+
+
+
+
+  async function sendData(data) {
+    // Construct a FormData instance
+    const formData = new FormData();
   
+    // Add a text field
+    formData.append("name", "Pomegranate");
+  
+    // Add a file
+    const selection = await window.showOpenFilePicker();
+    if (selection.length > 0) {
+      const file = await selection[0].getFile();
+      formData.append("file", file);
+    }
+  
+    try {
+      const response = await fetch("https://example.org/post", {
+        method: "POST",
+        // Set the FormData instance as the request body
+        body: formData,
+      });
+      console.log(await response.json());
+    } catch (e) {
+      console.error(e);
+    }
+  }
+  
+  const send = document.querySelector("#send");
+  send.addEventListener("click", sendData);
+   
 }
 async function fetchresource (){
   const url = "https://plankton-app-nj7zb.ondigitalocean.app/drivers"
@@ -224,12 +264,14 @@ const Drivers = () => {
                         <span className="icon-heartbeat" />
                       </div>
                       <div className="sub-title">
-                        <h3>
+                        {/* <h3>
                           Fill out the form below to book an ambulance for an
                           event, and we’ll respond promptly.
-                        </h3>
+                        </h3> */}
+                        <h3>Fill out the form below to register as a driver</h3>
                       </div>
                       <h2>Registration as a Driver</h2>
+                      {/* <h2>Book An Ambulance</h2> */}
                     </div>
                     <div className="row">
                       <div className="col-xl-12">
@@ -247,9 +289,22 @@ const Drivers = () => {
                                   <div className="input-box">
                                     <input
                                       type="text"
-                                      name="form_name"
-                                      id="formName"
-                                      placeholder="Full Name"
+                                      name="form_firstname"
+                                      id="firstName"
+                                      placeholder="First Name"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="text"
+                                      name="form_lastname"
+                                      id="lastName"
+                                      placeholder="Last Name"
                                       required
                                     />
                                   </div>
@@ -268,6 +323,73 @@ const Drivers = () => {
                                   </div>
                                 </div>
                               </div>
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="text"
+                                      name="form_platenumber"
+                                      id="formPlatenumber"
+                                      placeholder="Plate Number"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="row">
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="file"
+                                      name="form_vehicleImage"
+                                      id="vehicleImage"
+                                      placeholder="Vehicle Image"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="file"
+                                      name="form_profileImage"
+                                      id="profileImage"
+                                      placeholder="Profile Image"
+                                      
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="number"
+                                      name="form_totaltrips"
+                                      id="totalTrips"
+                                      placeholder="Total Trips"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="password"
+                                      name="form_password"
+                                      id="formpassword"
+                                      placeholder="Password"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                             <div className="row">
                               <div className="col-xl-6">
@@ -275,9 +397,9 @@ const Drivers = () => {
                                   <div className="input-box">
                                     <input
                                       type="text"
-                                      name="form_event"
-                                      id="formEvent"
-                                      placeholder="Event Name"
+                                      name="form_regNumber"
+                                      id="formRegnumber"
+                                      placeholder="Registration Number"
                                     />
                                   </div>
                                 </div>
@@ -295,9 +417,35 @@ const Drivers = () => {
                                 </div>
                               </div>
                             </div>
+                            <div className="row">
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="text"
+                                      name="form_vehicleModel"
+                                      id="formVehiclemodel"
+                                      placeholder="Vehicle Model"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="tel"
+                                      name="form_phone"
+                                      id="formPhone"
+                                      placeholder="Phone Number"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                             {/* New date, time, and dropdown fields */}
                             <div className="row">
-                              <div className="col-xl-6 ">
+                              <div className="col-xl-6">
                                 <div className="form-group bg-[#F2F3FA] p-1 pl-4 pt-1 font-medium">
                                   <div className="input-box ">
                                     {/* <label htmlFor="formDate">Date:</label> */}
@@ -326,11 +474,11 @@ const Drivers = () => {
                                 </div>
                               </div>
                             </div>
-                            <div className="row ">
+                            {/* <div className="row ">
                               <div className="w-[100%] bg-[#F2F3FA]">
                                 <div className=" w-[100%] bg-black">
                                   <div className=" w-[100%]">
-                                    {/* <label htmlFor="formService">Service Type:</label> */}
+                                   
                                     <select
                                       name="form_service"
                                       id="formService"
@@ -366,7 +514,7 @@ const Drivers = () => {
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </div> */}
                             {/* Message field */}
                             {/* <div className="row">
                       <div className="col-xl-12">
@@ -382,6 +530,43 @@ const Drivers = () => {
                         </div>
                       </div>
                     </div> */}
+                      <div className="row">
+                        
+                          <div className="w-[100%] bg-[#F2F3FA] mx-2">
+                            <div className=" w-[100%] bg-black">
+                              <div className=" w-[100%]">
+                                {/* <label htmlFor="formService">Service Type:</label> */}
+                                <select
+                                  name="form_service"
+                                  id="formService"
+                                  required
+                                  className=" w-[100%] bg-black"
+                                >
+                                  <option
+                                    className="w-[100%] bg-black"
+                                    value=""
+                                  >
+                                    Status{" "}
+                                  </option>
+                                  <option value="event-standby">
+                                    Pending
+                                  </option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        
+                      </div>
+                      <div className="row">
+                        <div className="form-group">
+                          <div className="checked-box1">
+                          <input 
+                          type="checkbox"
+                          
+                          />
+                          </div>
+                        </div>
+                      </div>
                             {/* Submit button */}
                             <div className="row">
                               <div className="col-xl-12 text-center">
@@ -396,8 +581,9 @@ const Drivers = () => {
                                     className="btn-one"
                                     type="submit"
                                     data-loading-text="Please wait..."
+                                    onClick={registerDriver}
                                   >
-                                    <span className="txt">Send a Message</span>
+                                    <span className="txt">Create Driver</span>
                                   </button>
                                 </div>
                               </div>

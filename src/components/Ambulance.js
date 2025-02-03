@@ -264,6 +264,194 @@ const Ambulance = () => {
               </div>
               {/*End Service Details Content */}
             </div>
+            <div className="sec-title text-center">
+                      <div className="icon">
+                        <span className="icon-heartbeat" />
+                      </div>
+                      <div className="sub-title">
+                        <h3>
+                          Fill out the form below to book an ambulance for an
+                          event, and we’ll respond promptly.
+                        </h3>
+                      </div>
+                      {/* <h2>Registration as a Driver</h2> */}
+                      <h2>Book An Ambulance</h2>
+                    </div>
+                    <div className="row">
+                      <div className="col-xl-12">
+                        <div className="contact-form">
+                          <form
+                            id="contact-form"
+                            name="contact_form"
+                            className="default-form2"
+                            action="assets/inc/sendmail.php"
+                            method="post"
+                          >
+                            <div className="row">
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="text"
+                                      name="form_name"
+                                      id="formName"
+                                      placeholder="Full Name"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="email"
+                                      name="form_email"
+                                      id="formEmail"
+                                      placeholder="Email Address"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="row">
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="text"
+                                      name="form_event"
+                                      id="formEvent"
+                                      placeholder="Event Name"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="text"
+                                      name="form_address"
+                                      id="formAddress"
+                                      placeholder="Address"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* New date, time, and dropdown fields */}
+                            <div className="row">
+                              <div className="col-xl-6 ">
+                                <div className="form-group bg-[#F2F3FA] p-1 pl-4 pt-1 font-medium">
+                                  <div className="input-box ">
+                                    {/* <label htmlFor="formDate">Date:</label> */}
+                                    <input
+                                      type="date"
+                                      name="form_date"
+                                      id="formDate"
+                                      required
+                                      className="bg-[#F2F3FA]"
+                                      placeholder="Date"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group bg-[#F2F3FA] p-1 pl-4">
+                                  <div className="input-box">
+                                    <input
+                                      type="time"
+                                      name="form_time"
+                                      id="formTime"
+                                      className="bg-[#F2F3FA]"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="row ">
+                              <div className="w-[100%] bg-[#F2F3FA]">
+                                <div className=" w-[100%] bg-black">
+                                  <div className=" w-[100%]">
+                                    {/* <label htmlFor="formService">Service Type:</label> */}
+                                    <select
+                                      name="form_service"
+                                      id="formService"
+                                      required
+                                      className=" w-[100%] bg-black"
+                                    >
+                                      <option
+                                        className="w-[100%] bg-black"
+                                        value=""
+                                      >
+                                        Select Service Type{" "}
+                                      </option>
+                                      <option value="basic">
+                                        Fully kiited bus with paramedics (VVIP)-
+                                        N200,000
+                                      </option>
+                                      <option
+                                        value="advanced"
+                                        className="bg-[#F2F3FA]"
+                                      >
+                                        Fully kiited bus without Paramedics
+                                        (VIP) - N160,000
+                                      </option>
+                                      <option value="event-standby">
+                                        Fully kiited Sienna with Paramedics
+                                        (Advanced) - N150,000
+                                      </option>
+                                      <option value="event-standby">
+                                        Fully kiited Sienna without Paramedics
+                                        (Basic)- N130,000
+                                      </option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Message field */}
+                            {/* <div className="row">
+                      <div className="col-xl-12">
+                        <div className="form-group">
+                          <div className="input-box">
+                            <textarea
+                              name="form_message"
+                              id="formMessage"
+                              placeholder="Write a Message"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div> */}
+                            {/* Submit button */}
+                            <div className="row">
+                              <div className="col-xl-12 text-center">
+                                <div className="button-box">
+                                  <input
+                                    id="form_botcheck"
+                                    name="form_botcheck"
+                                    className="form-control"
+                                    type="hidden"
+                                  />
+                                  <button
+                                    className="btn-one"
+                                    type="submit"
+                                    data-loading-text="Please wait..."
+                                  >
+                                    <span className="txt">Send a Message</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
           </div>
         </section>
       </div>

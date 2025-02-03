@@ -15,6 +15,7 @@ const Blog = () => {
       try {
         const response = await axios.get(BLOGS_API);
         setBlogs(response.data);
+        console.log(response.data)
       } catch (err) {
         setError("Failed to fetch blogs. Please try again later.");
       } finally {
@@ -89,12 +90,12 @@ const Blog = () => {
                         </p>
                       </div>
                       <h3>
-                        <Link>
-                          {" "}
+                        {/* <Link href={`/Blogs`}> */}
+                          {/* {" "} */}
                           {/* Use Link here */}
                           {/* href={`/Blogs/${blog._id}`} */}
-                          {blog.title}
-                        </Link>
+                          {/* {blog.title} */}
+                        {/* </Link> */}
                       </h3>
                       <p>{sanitizeContent(blog.content).substring(0, 30)}...</p>
                       <div className="btn-box">
