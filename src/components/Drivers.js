@@ -1,6 +1,62 @@
-import React from "react";
+"use client";
 
-const Drivers = () => {
+import { getDrivers, registerDriver } from "@/service/driverService";
+import React, { useEffect, useState } from "react";
+
+function Drivers() {
+  const [drivers, setDrivers] = useState([]);
+  const [newDriver, setNewDriver] = useState({
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    email: "",
+    vehicleModel: "",
+    plateNumber: "",
+    licenseNumber: "",
+  });
+
+  // Fetch drivers on component load
+  useEffect(() => {
+    async function fetchDrivers() {
+      try {
+        const data = await getDrivers();
+        setDrivers(data);
+      } catch (error) {
+        console.error("Error fetching drivers:", error);
+      }
+    }
+    fetchDrivers();
+  }, []);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewDriver((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await registerDriver(newDriver);
+      alert("Driver registered successfully!");
+      setNewDriver({
+        firstName: "",
+        lastName: "",
+        phoneNumber: "",
+        email: "",
+        vehicleModel: "",
+        plateNumber: "",
+        licenseNumber: "",
+      });
+      const updatedDrivers = await getDrivers();
+      setDrivers(updatedDrivers);
+    } catch (error) {
+      alert("Failed to register driver");
+    }
+  };
+
   return (
     <>
       <div>
@@ -151,56 +207,6 @@ const Drivers = () => {
                     </p>
                   </div>
 
-                  <div className="text-box4">
-                    <div className="row">
-                      <div className="col-xl-6">
-                        <div className="content-box">
-                          <h2>Steps to Register</h2>
-
-                          <ul>
-                            <li>
-                              <span className="icon-checked" /> Verify each
-                              driver's identity for accountability and
-                              transparency
-                            </li>
-                            <li>
-                              <span className="icon-checked" /> Record the date
-                              the driver officially joins RescueTap for tracking
-                              and updates.
-                            </li>
-                            <li>
-                              <span className="icon-checked" /> Capture vehicle
-                              identification to ensure easy monitoring and
-                              security.
-                            </li>
-                            <li>
-                              <span className="icon-checked" /> Document the
-                              type, model, and condition of the vehicle to meet
-                              safety and operational standards.
-                            </li>
-                            <li>
-                              <span className="icon-checked" /> Perform security
-                              and license checks to verify credibility and
-                              compliance with legal standards.
-                            </li>
-                            <li>
-                              <span className="icon-checked" /> Ensure drivers
-                              are equipped with the necessary first-aid and
-                              emergency response training.
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="img-box">
-                          <img
-                            src="assets/images/services/service-details-img2.jpg"
-                            alt
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   <div className="container">
                     <div className="sec-title text-center">
                       <div className="icon">
@@ -208,183 +214,88 @@ const Drivers = () => {
                       </div>
                       <div className="sub-title">
                         <h3>
-                          Fill out the form below to book an ambulance for an
-                          event, and we’ll respond promptly.
+                          Fill out the form below to register as a driver, and
+                          we’ll respond promptly.
                         </h3>
                       </div>
-                      <h2>Registration as a Driver</h2>
+                      <h2>Driver Registration Form</h2>
                     </div>
                     <div className="row">
                       <div className="col-xl-12">
                         <div className="contact-form">
-                          <form
-                            id="contact-form"
-                            name="contact_form"
-                            className="default-form2"
-                            action="assets/inc/sendmail.php"
-                            method="post"
-                          >
-                            <div className="row">
-                              <div className="col-xl-6">
-                                <div className="form-group">
-                                  <div className="input-box">
-                                    <input
-                                      type="text"
-                                      name="form_name"
-                                      id="formName"
-                                      placeholder="Full Name"
-                                      required
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="col-xl-6">
-                                <div className="form-group">
-                                  <div className="input-box">
-                                    <input
-                                      type="email"
-                                      name="form_email"
-                                      id="formEmail"
-                                      placeholder="Email Address"
-                                      required
-                                    />
-                                  </div>
-                                </div>
-                              </div>
+                          <form onSubmit={handleSubmit}>
+                            <div>
+                              <input
+                                type="text"
+                                name="firstName"
+                                placeholder="First Name"
+                                value={newDriver.firstName}
+                                onChange={handleInputChange}
+                                required
+                              />
                             </div>
-                            <div className="row">
-                              <div className="col-xl-6">
-                                <div className="form-group">
-                                  <div className="input-box">
-                                    <input
-                                      type="text"
-                                      name="form_event"
-                                      id="formEvent"
-                                      placeholder="Event Name"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="col-xl-6">
-                                <div className="form-group">
-                                  <div className="input-box">
-                                    <input
-                                      type="text"
-                                      name="form_address"
-                                      id="formAddress"
-                                      placeholder="Address"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="lastName"
+                                placeholder="Last Name"
+                                value={newDriver.lastName}
+                                onChange={handleInputChange}
+                                required
+                              />
                             </div>
-                            {/* New date, time, and dropdown fields */}
-                            <div className="row">
-                              <div className="col-xl-6 ">
-                                <div className="form-group bg-[#F2F3FA] p-1 pl-4 pt-1 font-medium">
-                                  <div className="input-box ">
-                                    {/* <label htmlFor="formDate">Date:</label> */}
-                                    <input
-                                      type="date"
-                                      name="form_date"
-                                      id="formDate"
-                                      required
-                                      className="bg-[#F2F3FA]"
-                                      placeholder="Date"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="col-xl-6">
-                                <div className="form-group bg-[#F2F3FA] p-1 pl-4">
-                                  <div className="input-box">
-                                    <input
-                                      type="time"
-                                      name="form_time"
-                                      id="formTime"
-                                      className="bg-[#F2F3FA]"
-                                      required
-                                    />
-                                  </div>
-                                </div>
-                              </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="phoneNumber"
+                                placeholder="Phone Number"
+                                value={newDriver.phoneNumber}
+                                onChange={handleInputChange}
+                                required
+                              />
                             </div>
-                            <div className="row ">
-                              <div className="w-[100%] bg-[#F2F3FA]">
-                                <div className=" w-[100%] bg-black">
-                                  <div className=" w-[100%]">
-                                    {/* <label htmlFor="formService">Service Type:</label> */}
-                                    <select
-                                      name="form_service"
-                                      id="formService"
-                                      required
-                                      className=" w-[100%] bg-black"
-                                    >
-                                      <option
-                                        className="w-[100%] bg-black"
-                                        value=""
-                                      >
-                                        Select Service Type{" "}
-                                      </option>
-                                      <option value="basic">
-                                        Fully kiited bus with paramedics (VVIP)-
-                                        N200,000
-                                      </option>
-                                      <option
-                                        value="advanced"
-                                        className="bg-[#F2F3FA]"
-                                      >
-                                        Fully kiited bus without Paramedics
-                                        (VIP) - N160,000
-                                      </option>
-                                      <option value="event-standby">
-                                        Fully kiited Sienna with Paramedics
-                                        (Advanced) - N150,000
-                                      </option>
-                                      <option value="event-standby">
-                                        Fully kiited Sienna without Paramedics
-                                        (Basic)- N130,000
-                                      </option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
+                            <div>
+                              <input
+                                type="email"
+                                name="email"
+                                placeholder="Email Address"
+                                value={newDriver.email}
+                                onChange={handleInputChange}
+                                required
+                              />
                             </div>
-                            {/* Message field */}
-                            {/* <div className="row">
-                      <div className="col-xl-12">
-                        <div className="form-group">
-                          <div className="input-box">
-                            <textarea
-                              name="form_message"
-                              id="formMessage"
-                              placeholder="Write a Message"
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
-                            {/* Submit button */}
-                            <div className="row">
-                              <div className="col-xl-12 text-center">
-                                <div className="button-box">
-                                  <input
-                                    id="form_botcheck"
-                                    name="form_botcheck"
-                                    className="form-control"
-                                    type="hidden"
-                                  />
-                                  <button
-                                    className="btn-one"
-                                    type="submit"
-                                    data-loading-text="Please wait..."
-                                  >
-                                    <span className="txt">Send a Message</span>
-                                  </button>
-                                </div>
-                              </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="vehicleModel"
+                                placeholder="Vehicle Model"
+                                value={newDriver.vehicleModel}
+                                onChange={handleInputChange}
+                                required
+                              />
                             </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="plateNumber"
+                                placeholder="Plate Number"
+                                value={newDriver.plateNumber}
+                                onChange={handleInputChange}
+                                required
+                              />
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="licenseNumber"
+                                placeholder="License Number"
+                                value={newDriver.licenseNumber}
+                                onChange={handleInputChange}
+                                required
+                              />
+                            </div>
+
+                            <button type="submit">Register Driver</button>
                           </form>
                         </div>
                       </div>
@@ -399,6 +310,6 @@ const Drivers = () => {
       </div>
     </>
   );
-};
+}
 
 export default Drivers;
