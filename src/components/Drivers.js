@@ -64,7 +64,7 @@ function Drivers() {
           <div
             className="breadcrumb-area-bg"
             style={{
-              backgroundImage: "url(assets/images/breadcrumb/breadcrumb-1.jpg)",
+              backgroundImage: "url(assets/images/breadcrumb/breadcrumb-11.jpg)",
             }}
           ></div>
           <div className="container">
@@ -147,7 +147,7 @@ function Drivers() {
                       className="sidebar-info-box-bg"
                       style={{
                         backgroundImage:
-                          "url(assets/images/sidebar/sidebar-info-box-bg.jpg)",
+                          "url(assets/images/sidebar/sidebar-info-box-bg2.jpg)",
                       }}
                     />
                     <h3>Need an ambulance?</h3>
@@ -191,7 +191,7 @@ function Drivers() {
                 <div className="service-details__content">
                   <div className="img-box1">
                     <img
-                      src="assets/images/services/service-details-1-img1.jpg"
+                      src="assets/images/services/service-details-3-img4.jpg"
                       alt
                     />
                   </div>
