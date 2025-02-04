@@ -702,12 +702,12 @@ const Index = () => {
       </section>
       {/*End Features Style2 Area*/}
       {/*Start Partner Area*/}
-      <section className="partner-area">
+      {/*<section className="partner-area">
         <div className="container">
           <div className="brand-content">
             <div className="inner">
               <ul className="partner-box partner-carousel owl-carousel owl-theme owl-dot-style1 rtl-carousel">
-                {/*Start Single Partner Logo Box*/}
+               
                 <li className="single-partner-logo-box">
                   <a href="#">
                     <img
@@ -716,8 +716,7 @@ const Index = () => {
                     />
                   </a>
                 </li>
-                {/*End Single Partner Logo Box*/}
-                {/*Start Single Partner Logo Box*/}
+               
                 <li className="single-partner-logo-box">
                   <a href="#">
                     <img
@@ -726,8 +725,7 @@ const Index = () => {
                     />
                   </a>
                 </li>
-                {/*End Single Partner Logo Box*/}
-                {/*Start Single Partner Logo Box*/}
+               
                 <li className="single-partner-logo-box">
                   <a href="#">
                     <img
@@ -736,8 +734,7 @@ const Index = () => {
                     />
                   </a>
                 </li>
-                {/*End Single Partner Logo Box*/}
-                {/*Start Single Partner Logo Box*/}
+              
                 <li className="single-partner-logo-box">
                   <a href="#">
                     <img
@@ -746,14 +743,12 @@ const Index = () => {
                     />
                   </a>
                 </li>
-                {/*End Single Partner Logo Box*/}
               </ul>
             </div>
           </div>
         </div>
-      </section>
-      {/*End Partner Area*/}
-      {/*Start slogan area*/}
+      </section>*/}
+    
       <section className="slogan-area">
         <div
           className="map-box wow slideInRight"
