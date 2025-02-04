@@ -581,12 +581,12 @@ const About = () => {
                             </div>
                             <div className="title-holder text-center">
                               <h2>
-                                <a href="#"> ⁠Benjamin Bitrus</a>
+                                <a href="#"> ⁠Samuel Wojuola</a>
                               </h2>
                               <h3>Product Designer</h3>
                               <div className="overlay-title">
                                 <h2>
-                                  <a href="#"> ⁠Benjamin Bitrus</a>
+                                  <a href="#"> ⁠Samuel Wojuola</a>
                                 </h2>
                                 <h3>Product Designer</h3>
                                 {/* <ul className="social-links">
@@ -680,18 +680,18 @@ const About = () => {
                         >
                           <div className="img-holder">
                             <div className="inner">
-                              <img src="assets/images/team/team-v1-6.jpg" alt />
+                              <img src="assets/images/team/victor.svg" alt />
                             </div>
                             <div className="title-holder text-center">
                               <h2>
-                                <a href="#"> Elvis Ike </a>
+                                <a href="#"> Victor Okon </a>
                               </h2>
-                              <h3>Software Developer</h3>
+                              <h3>Frontend Developer</h3>
                               <div className="overlay-title">
                                 <h2>
-                                  <a href="#"> Elvis Ike </a>
+                                  <a href="#"> Victor Okon </a>
                                 </h2>
-                                <h3>Software Developer</h3>
+                                <h3>Frontend Developer</h3>
                               </div>
                             </div>
                           </div>

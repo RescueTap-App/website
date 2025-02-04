@@ -42,7 +42,7 @@ const Testimonials = () => {
           <div className="container">
             <div className="row">
               {/*Start Testimonial Style2 Single*/}
-              <div className="col-xl-4 col-lg-6 col-md-6">
+              {/* <div className="col-xl-4 col-lg-6 col-md-6">
                 <div
                   className="testimonial-style2__single text-center"
                   data-aos="fade-up"
@@ -67,7 +67,7 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/*End Testimonial Style2 Single*/}
               {/*Start Testimonial Style2 Single*/}
               <div className="col-xl-4 col-lg-6 col-md-6">
@@ -90,7 +90,7 @@ const Testimonials = () => {
                     </p>
                     <div className="border-box" />
                     <div className="client-info">
-                      <h3>Prisca Okafor</h3>
+                      <h3>Tochi Edoka</h3>
                       <span>Customers</span>
                     </div>
                   </div>
