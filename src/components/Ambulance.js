@@ -1,9 +1,69 @@
-import React from "react";
+"use client"
 
-// function downloadPdf(){
-//   document.getElementById('')
-// }
-// document.getElementById('')
+
+import React from "react";
+// import PaystackPop from '@paystack/inline-js'
+
+const https = require('https')
+
+const params = JSON.stringify({
+  "email": "customer@email.com",
+  "amount": "500000"
+})
+
+const options = {
+  hostname: 'api.paystack.co',
+  port: 443,
+  path: '/transaction/initialize',
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer sk_test_9749ce6a96efc0405098b98a5b9766ce35641fad',
+    'Content-Type': 'application/json'
+  }
+}
+
+const req = https.request(options, res => {
+  let data = ''
+
+  res.on('data', (chunk) => {
+    data += chunk
+  });
+
+  res.on('end', () => {
+    console.log(JSON.parse(data))
+  })
+}).on('error', error => {
+  console.error(error)
+})
+
+req.write(params)
+req.end()
+
+
+async function bookAmbulance(){
+  
+  const driverData = {
+    fullname: document.getElementById('formName').value,
+    email: document.getElementById('email').value,
+    formEvent: document.getElementById('formEvent').value,
+    formAddress: document.getElementById('formAddress').value,
+    formDate: document.getElementById('formDate').value,
+    formTime: document.getElementById('formTime').value,
+    formService: document.getElementById('formService').value,
+};
+
+
+   // Book an Ambulance
+   const response = await fetch(DRIVER_API, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        // 'Authorization': `Bearer ${getAuthToken()}`
+    },
+    body: JSON.stringify(driverData)
+});
+
+}
 const Ambulance = () => {
   return (
     <>
@@ -265,9 +325,251 @@ const Ambulance = () => {
               </div>
               {/*End Service Details Content */}
             </div>
+            <div className="sec-title text-center">
+                      <div className="icon">
+                        <span className="icon-heartbeat" />
+                      </div>
+                      <div className="sub-title">
+                        <h3>
+                          Fill out the form below to book an ambulance for an
+                          event, and we’ll respond promptly.
+                        </h3>
+                      </div>
+                      {/* <h2>Registration as a Driver</h2> */}
+                      <h2>Book An Ambulance</h2>
+                    </div>
+                    <div className="row">
+                      <div className="col-xl-12">
+                        <div className="contact-form">
+                          <form
+                            id="contact-form"
+                            name="contact_form"
+                            className="default-form2"
+                            action="assets/inc/sendmail.php"
+                            method="post"
+                          >
+                            <div className="row">
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="text"
+                                      name="form_name"
+                                      id="formName"
+                                      placeholder="Full Name"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="email"
+                                      name="form_email"
+                                      id="formEmail"
+                                      placeholder="Email Address"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="row">
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="text"
+                                      name="form_event"
+                                      id="formEvent"
+                                      placeholder="Event Name"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="text"
+                                      name="form_address"
+                                      id="formAddress"
+                                      placeholder="Address"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* New date, time, and dropdown fields */}
+                            <div className="row">
+                              <div className="col-xl-6 ">
+                                <div className="form-group bg-[#F2F3FA] p-1 pl-4 pt-1 font-medium">
+                                  <div className="input-box ">
+                                    {/* <label htmlFor="formDate">Date:</label> */}
+                                    <input
+                                      type="date"
+                                      name="form_date"
+                                      id="formDate"
+                                      required
+                                      className="bg-[#F2F3FA]"
+                                      placeholder="Date"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group bg-[#F2F3FA] p-1 pl-4">
+                                  <div className="input-box">
+                                    <input
+                                      type="time"
+                                      name="form_time"
+                                      id="formTime"
+                                      className="bg-[#F2F3FA]"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="row ">
+                              <div className="w-[100%] bg-[#F2F3FA]">
+                                <div className=" w-[100%] bg-black">
+                                  <div className=" w-[100%]">
+                                    {/* <label htmlFor="formService">Service Type:</label> */}
+                                    <select
+                                      name="form_service"
+                                      id="formService"
+                                      required
+                                      className=" w-[100%] bg-black"
+                                      
+                                    >
+                                      <option
+                                        className="w-[100%] bg-black"
+                                        value=""
+                                      >
+                                        Select Service Type{" "}
+                                      </option>
+                                      <option value="basic">
+                                        Fully kiited bus with paramedics (VVIP)-
+                                        N200,000
+                                      </option>
+                                      <option
+                                        value="advanced"
+                                        className="bg-[#F2F3FA]"
+                                      >
+                                        Fully kiited bus without Paramedics
+                                        (VIP) - N160,000
+                                      </option>
+                                      <option value="event-standby">
+                                        Fully kiited Sienna with Paramedics
+                                        (Advanced) - N150,000
+                                      </option>
+                                      <option value="event-standby">
+                                        Fully kiited Sienna without Paramedics
+                                        (Basic)- N130,000
+                                      </option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Message field */}
+                            {/* <div className="row">
+                      <div className="col-xl-12">
+                        <div className="form-group">
+                          <div className="input-box">
+                            <textarea
+                              name="form_message"
+                              id="formMessage"
+                              placeholder="Write a Message"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div> */}
+                            {/* Submit button */}
+                            <div className="row">
+                              <div className="col-xl-12 text-center">
+                                <div className="button-box">
+                                  <input
+                                    id="form_botcheck"
+                                    name="form_botcheck"
+                                    className="form-control"
+                                    type="hidden"
+                                  />
+                                  <button
+                                    className="btn-one"
+                                    // type="submit"
+                                    type="button"
+                                    data-loading-text="Please wait..."
+                                    // onClick={bookAmbulance}
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#exampleModal"
+                                  >
+                                    <span className="txt">Send a Message</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
           </div>
         </section>
       </div>
+
+
+      {/* Kept the modal away */}
+     
+{/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> */}
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Card Payment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
+        {/* <button type="button" class="btn btn-primary">Pay</button> */}
+        <div className="button-box">
+                                  <input
+                                    id="form_botcheck"
+                                    name="form_botcheck"
+                                    className="form-control"
+                                    type="hidden"
+                                  />
+                                  <button
+                                    className="btn-one"
+                                    type="submit"
+                                    // type="button"
+                                    data-loading-text="Please wait..."
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#exampleModal"
+                                  >
+                                    <span className="txt">Pay</span>
+                                  </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     </>
   );
 };
