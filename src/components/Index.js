@@ -326,7 +326,7 @@ const Index = () => {
                     <li className=""><span className="icon-right-arrow" /> Secure Transportation</li>
                   </ul> */}
                   <div className="btn-box">
-                    <a href="/Ambulance">
+                    <a href="/Contact">
                       Book an Ambulance Now{" "}
                       <span className="icon-right-arrow" />
                     </a>
@@ -359,7 +359,7 @@ const Index = () => {
                     <li className=""><span className="icon-right-arrow" /> State-of-the-Art Equipment</li>
                   </ul> */}
                   <div className="btn-box">
-                    <a href="/ALS">
+                    <a href="/Contact">
                       Request Advanced Care{" "}
                       <span className="icon-right-arrow" />
                     </a>
