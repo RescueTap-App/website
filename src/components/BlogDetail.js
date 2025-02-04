@@ -20,10 +20,10 @@ export default function Blog() {
       fetchBlogDetails(id);
     }
 
-    async function fetchBlogDetails(blogId) {
+    async function fetchBlogDetails(id) {
       try {
         setLoading(true);
-        const response = await axios.get(`${BLOGS_API}/${blogId}`);
+        const response = await axios.get(`${BLOGS_API}/${id}`);
         setBlog(response.data);
       } catch (err) {
         setError("Failed to load the blog post. Please try again.");
