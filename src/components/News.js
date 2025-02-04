@@ -63,15 +63,11 @@ const News = () => {
                         </p>
                       </div>
                       <h3>
-                      <Link href={`/Blogs/${blog._id}`}> {/* Use Link here */}
-                          {blog.title}
-                        </Link>
+                        <Link href={`/Blog/${blog._id}`}>{blog.title}</Link>
                       </h3>
                       <p>{sanitizeContent(blog.content).substring(0, 30)}...</p>
                       <div className="btn-box">
-                      <Link href={`/Blogs/${blog._id}`}> {/* Use Link here */}
-                          Read More
-                        </Link>
+                        <Link href={`/Blog/${blog._id}`}>Read More</Link>
                       </div>
                     </div>
                   </div>
