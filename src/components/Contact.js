@@ -1,8 +1,81 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import { BASE_URL } from "@/constants/api";
+import "react-toastify/dist/ReactToastify.css";
+
+const AMB = `${BASE_URL}/ambulance-booking`;
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phoneNumber: "", // Added phone number field
+    event: "",
+    serviceType: "",
+    address: "",
+    date: "", // Added date field
+    time: "", // Added time field
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.serviceType) {
+      toast.error("Please select a service type.");
+      return;
+    }
+
+    if (!formData.date || !formData.time) {
+      toast.error("Please provide a date and time for the booking.");
+      return;
+    }
+
+    try {
+      const response = await axios.post(AMB, formData, {
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (response.status === 200 || response.status === 201) {
+        toast.success("Ambulance booked successfully!");
+        setFormData({
+          fullName: "",
+          email: "",
+          phoneNumber: "",
+          event: "",
+          serviceType: "",
+          address: "",
+          date: "",
+          time: "",
+        });
+      }
+    } catch (error) {
+      if (error.response) {
+        // Server responded with a status outside 2xx
+        console.error("Server Error:", error.response);
+        toast.error(error.response.data?.message || "Failed to book ambulance. Please try again.");
+      } else if (error.request) {
+        // No response received from server
+        console.error("Network Error:", error.request);
+        toast.error("Network error. Please check your connection.");
+      } else {
+        // Error setting up the request
+        console.error("Error:", error.message);
+        toast.error("An unexpected error occurred.");
+      }
+    }
+  };
+
   return (
     <>
+      <ToastContainer />
       <div>
         <section className="breadcrumb-area">
           <div
@@ -119,189 +192,116 @@ const Contact = () => {
         </section>
         {/*End Contact Info Style2 Area*/}
         {/*Start Main Contact Form Area*/}
-        <section className="main-contact-form-area">
-          <div className="container">
-            <div className="sec-title text-center">
-              <div className="icon">
-                <span className="icon-heartbeat" />
+        <section className="main-contact-form-area py-12">
+          <div className="container mx-auto max-w-4xl">
+            <div className="sec-title text-center mb-8">
+              <div className="icon mb-4">
+                <span className="icon-heartbeat text-red-600 text-4xl" />
               </div>
-              <div className="sub-title">
-                <h3>
-                  Fill out the form below to book an ambulance for an event, and
-                  we’ll respond promptly.
-                </h3>
-              </div>
-              <h2>Book an Ambulance</h2>
+              <h3 className="text-gray-600 text-lg">
+                Fill out the form below to book an ambulance for an event, and
+                we’ll respond promptly.
+              </h3>
+              <h2 className="text-3xl font-bold text-gray-800 mt-4">
+                Book an Ambulance
+              </h2>
             </div>
-            <div className="row">
-              <div className="col-xl-12">
-                <div className="contact-form">
-                  <form
-                    id="contact-form"
-                    name="contact_form"
-                    className="default-form2"
-                    action="assets/inc/sendmail.php"
-                    method="post"
-                  >
-                    <div className="row">
-                      <div className="col-xl-6">
-                        <div className="form-group">
-                          <div className="input-box">
-                            <input
-                              type="text"
-                              name="form_name"
-                              id="formName"
-                              placeholder="Full Name"
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="form-group">
-                          <div className="input-box">
-                            <input
-                              type="email"
-                              name="form_email"
-                              id="formEmail"
-                              placeholder="Email Address"
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-xl-6">
-                        <div className="form-group">
-                          <div className="input-box">
-                            <input
-                              type="text"
-                              name="form_event"
-                              id="formEvent"
-                              placeholder="Event Name"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="form-group">
-                          <div className="input-box">
-                            <input
-                              type="text"
-                              name="form_address"
-                              id="formAddress"
-                              placeholder="Address"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* New date, time, and dropdown fields */}
-                    <div className="row">
-                      <div className="col-xl-6 ">
-                        <div className="form-group bg-[#F2F3FA] p-1 pl-4 pt-1 font-medium">
-                          <div className="input-box ">
-                            {/* <label htmlFor="formDate">Date:</label> */}
-                            <input
-                              type="date"
-                              name="form_date"
-                              id="formDate"
-                              required
-                              className="bg-[#F2F3FA]"
-                              placeholder="Date"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="form-group bg-[#F2F3FA] p-1 pl-4">
-                          <div className="input-box">
-                            <input
-                              type="time"
-                              name="form_time"
-                              id="formTime"
-                              className="bg-[#F2F3FA]"
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row ">
-                      <div className="w-[100%] bg-[#F2F3FA]">
-                        <div className=" w-[100%] bg-black">
-                          <div className=" w-[100%]">
-                            {/* <label htmlFor="formService">Service Type:</label> */}
-                            <select
-                              name="form_service"
-                              id="formService"
-                              required
-                              className=" w-[100%] bg-black"
-                            >
-                              <option className="w-[100%] bg-black" value="">
-                                Select Service Type{" "}
-                              </option>
-                              <option value="basic">
-                                Fully kiited bus with paramedics (VVIP)-
-                                N200,000
-                              </option>
-                              <option value="advanced" className="bg-[#F2F3FA]">
-                                Fully kiited bus without Paramedics (VIP) -
-                                N160,000
-                              </option>
-                              <option value="event-standby">
-                                Fully kiited Sienna with Paramedics (Advanced) -
-                                N150,000
-                              </option>
-                              <option value="event-standby">
-                                Fully kiited Sienna without Paramedics (Basic)-
-                                N130,000
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Message field */}
-                    {/* <div className="row">
-                      <div className="col-xl-12">
-                        <div className="form-group">
-                          <div className="input-box">
-                            <textarea
-                              name="form_message"
-                              id="formMessage"
-                              placeholder="Write a Message"
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
-                    {/* Submit button */}
-                    <div className="row">
-                      <div className="col-xl-12 text-center">
-                        <div className="button-box">
-                          <input
-                            id="form_botcheck"
-                            name="form_botcheck"
-                            className="form-control"
-                            type="hidden"
-                          />
-                          <button
-                            className="btn-one"
-                            type="submit"
-                            data-loading-text="Please wait..."
-                          >
-                            <span className="txt">Send a Message</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white p-8 shadow-lg rounded-xl"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  placeholder="Full Name"
+                  required
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Email Address"
+                  required
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                />
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  placeholder="Phone Number"
+                  required
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                />
+                <input
+                  type="text"
+                  name="event"
+                  value={formData.event}
+                  onChange={handleChange}
+                  placeholder="Event Name"
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                />
+                <input
+                  type="text"
+                  name="address"
+                  value={formData.address}
+                  onChange={handleChange}
+                  placeholder="Address"
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                />
+                <select
+                  name="serviceType"
+                  value={formData.serviceType}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:cursor-pointer"
+                >
+                  <option value="">Select Service Type</option>
+                  <option value="basic">
+                    Fully kitted bus with paramedics (VVIP) - N200,000
+                  </option>
+                  <option value="advanced">
+                    Fully kitted bus without paramedics (VIP) - N160,000
+                  </option>
+                  <option value="event-standby">
+                    Fully kitted Sienna with paramedics (Advanced) - N150,000
+                  </option>
+                  <option value="basic-standby">
+                    Fully kitted Sienna without paramedics (Basic) - N130,000
+                  </option>
+                </select>
+                <input
+                  type="date"
+                  name="date"
+                  value={formData.date}
+                  onChange={handleChange}
+                  placeholder="Date"
+                  required
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                />
+                <input
+                  type="time"
+                  name="time"
+                  value={formData.time}
+                  onChange={handleChange}
+                  placeholder="Time"
+                  required
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                />
               </div>
-            </div>
+              <div className="text-center mt-8">
+                <button
+                  type="submit"
+                  className="bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black"
+                >
+                  Book Ambulance
+                </button>
+              </div>
+            </form>
           </div>
         </section>
         {/*End Main Contact Form Area*/}
