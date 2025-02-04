@@ -1,9 +1,69 @@
-import React from "react";
+"use client"
 
-// function downloadPdf(){
-//   document.getElementById('')
-// }
-// document.getElementById('')
+
+import React from "react";
+// import PaystackPop from '@paystack/inline-js'
+
+const https = require('https')
+
+const params = JSON.stringify({
+  "email": "customer@email.com",
+  "amount": "500000"
+})
+
+const options = {
+  hostname: 'api.paystack.co',
+  port: 443,
+  path: '/transaction/initialize',
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer sk_test_9749ce6a96efc0405098b98a5b9766ce35641fad',
+    'Content-Type': 'application/json'
+  }
+}
+
+const req = https.request(options, res => {
+  let data = ''
+
+  res.on('data', (chunk) => {
+    data += chunk
+  });
+
+  res.on('end', () => {
+    console.log(JSON.parse(data))
+  })
+}).on('error', error => {
+  console.error(error)
+})
+
+req.write(params)
+req.end()
+
+
+async function bookAmbulance(){
+  
+  const driverData = {
+    fullname: document.getElementById('formName').value,
+    email: document.getElementById('email').value,
+    formEvent: document.getElementById('formEvent').value,
+    formAddress: document.getElementById('formAddress').value,
+    formDate: document.getElementById('formDate').value,
+    formTime: document.getElementById('formTime').value,
+    formService: document.getElementById('formService').value,
+};
+
+
+   // Book an Ambulance
+   const response = await fetch(DRIVER_API, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        // 'Authorization': `Bearer ${getAuthToken()}`
+    },
+    body: JSON.stringify(driverData)
+});
+
+}
 const Ambulance = () => {
   return (
     <>
@@ -336,6 +396,7 @@ const Ambulance = () => {
                                       name="form_address"
                                       id="formAddress"
                                       placeholder="Address"
+                                      required
                                     />
                                   </div>
                                 </div>
@@ -382,6 +443,7 @@ const Ambulance = () => {
                                       id="formService"
                                       required
                                       className=" w-[100%] bg-black"
+                                      
                                     >
                                       <option
                                         className="w-[100%] bg-black"
@@ -440,8 +502,12 @@ const Ambulance = () => {
                                   />
                                   <button
                                     className="btn-one"
-                                    type="submit"
+                                    // type="submit"
+                                    type="button"
                                     data-loading-text="Please wait..."
+                                    // onClick={bookAmbulance}
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#exampleModal"
                                   >
                                     <span className="txt">Send a Message</span>
                                   </button>
@@ -455,6 +521,54 @@ const Ambulance = () => {
           </div>
         </section>
       </div>
+
+
+      {/* Kept the modal away */}
+     
+{/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> */}
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Card Payment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
+        {/* <button type="button" class="btn btn-primary">Pay</button> */}
+        <div className="button-box">
+                                  <input
+                                    id="form_botcheck"
+                                    name="form_botcheck"
+                                    className="form-control"
+                                    type="hidden"
+                                  />
+                                  <button
+                                    className="btn-one"
+                                    type="submit"
+                                    // type="button"
+                                    data-loading-text="Please wait..."
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#exampleModal"
+                                  >
+                                    <span className="txt">Pay</span>
+                                  </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     </>
   );
 };

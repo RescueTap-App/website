@@ -82,12 +82,12 @@ export default function RootLayout({ children }) {
     <link href="assets/css/color/theme-color.css" id="jssDefault" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/style.css"/>
     <link rel="stylesheet" href="assets/css/responsive.css"/>
- 
+    {/* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"/> */}
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon-32x32.png" sizes="32x32"/>
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon-16x16.png" sizes="16x16"/>
     <Script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></Script>
-        <Script src="/assets/js/html5shiv.js"></Script>
+    <Script src="/assets/js/html5shiv.js"></Script>
     
        
 {/* //testing */}
@@ -122,6 +122,9 @@ export default function RootLayout({ children }) {
     <Script src="/assets/js/TweenMax.min.js"></Script>
     <Script src="/assets/js/validation.js"></Script>
     <Script src="/assets/js/wow.js"></Script>
+    <Script src="https://js.paystack.co/v2/inline.js"></Script>
+    <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></Script>
+
 
     <Script src="/assets/js/jquery-1color-switcher.min.js"></Script>
 
