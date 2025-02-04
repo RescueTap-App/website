@@ -678,8 +678,8 @@ const About = () => {
                           data-wow-delay="300ms"
                           data-wow-duration="1500ms"
                         >
-                          <div className="img-holder">
-                            <div className="inner">
+                          <div className="img-holder rounded-full">
+                            <div className="inner rounded-full">
                               <img src="assets/images/team/victor.svg" alt />
                             </div>
                             <div className="title-holder text-center">
