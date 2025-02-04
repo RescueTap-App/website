@@ -108,39 +108,34 @@ const Index = () => {
                 </div>
               </div>
             </div>
+
             {/* Slide */}
-            {/* <div className="slide">
+            <div className="slide">
               <div
                 className="image-layer"
                 style={{
-                  backgroundImage: "url(assets/images/slides/slide-v1-3.jpg)",
+                  backgroundImage: "url(assets/images/slides/slide-v1-3.svg)",
                 }}
               ></div>
               <div className="auto-container">
                 <div className="content">
                   <div className="sub-title">
-                    <h3>
-                      Emergency Help at Your Fingertips—Instant, Reliable, and
-                      Life-Saving!
-                    </h3>
+                    <h3>Verified Driver</h3>
                   </div>
                   <div className="big-title">
-                    <h2>
-                      Emergency
-                      <br /> Medical Services
-                    </h2>
+                    <h2>Register to be a verified RescueTap Driver</h2>
                   </div>
                   <div className="btns-box">
-                    <a className="btn-one" href="/About">
+                    <a className="btn-one" href="/Drivers">
                       <span className="txt">
-                        Get Help Now
+                        Register Now
                         <i className="icon-refresh arrow" />
                       </span>
                     </a>
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
@@ -451,7 +446,7 @@ const Index = () => {
                       }'
                 >
                   {/*Start Single Testimonial Style1*/}
-                  <div className="single-testimonial-style1">
+                  {/* <div className="single-testimonial-style1">
                     <div className="img-holder">
                       <img
                         src="assets/images/testimonial/testimonial-v1-1.jpg"
@@ -502,39 +497,15 @@ const Index = () => {
                         </h3>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   {/*End Single Testimonial Style1*/}
                   {/*Start Single Testimonial Style1*/}
                   <div className="single-testimonial-style1">
                     <div className="img-holder">
                       <img
-                        src="assets/images/testimonial/testimonial-v1-2.jpg"
+                        src="assets/images/testimonial/testimonial-v2-2.jpg"
                         alt
                       />
-                      <div className="overlay-content">
-                        <div className="quote-icon">
-                          <img src="assets/images/icon/quote.png" alt />
-                        </div>
-                      </div>
-                      <div className="review-box">
-                        <ul>
-                          <li>
-                            <i className="fa fa-star" />
-                          </li>
-                          <li>
-                            <i className="fa fa-star" />
-                          </li>
-                          <li>
-                            <i className="fa fa-star" />
-                          </li>
-                          <li>
-                            <i className="fa fa-star" />
-                          </li>
-                          <li>
-                            <i className="fa fa-star" />
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                     <div className="text-holder">
                       <div className="sec-title sec-title--style2">
@@ -552,7 +523,7 @@ const Index = () => {
                           tap away gives me peace of mind.
                         </p>
                         <h3>
-                          Prisca Okafor <span>- Customer</span>
+                          Tochi Edoka <span>- Customer</span>
                         </h3>
                       </div>
                     </div>
@@ -748,7 +719,7 @@ const Index = () => {
           </div>
         </div>
       </section>*/}
-    
+
       <section className="slogan-area">
         <div
           className="map-box wow slideInRight"

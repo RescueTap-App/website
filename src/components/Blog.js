@@ -40,14 +40,14 @@ const Blog = () => {
             <div className="col-xl-12">
               <div className="inner-content">
                 <div className="title">
-                  <h2>Blog 01</h2>
+                  <h2>Blog</h2>
                 </div>
                 <div className="breadcrumb-menu">
                   <ul>
                     <li>
                       <a href="/">Home</a>
                     </li>
-                    <li className="active">Blog 01</li>
+                    <li className="active">Blog</li>
                   </ul>
                 </div>
               </div>

@@ -118,11 +118,12 @@ const Ambulance = () => {
                         </div>
                         <div className="title">
                           <h5>
-                            <a
-                              href="/RescueTap_Brochure.pdf"
+                          <a
                               download="RescueTap_Brochure.pdf"
+                              href="https://www.canva.com/design/DAGdeL6msb4/AHUvdPTymRiO6eUWQw9C2A/view?utm_content=DAGdeL6msb4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he59a8aab9e"
+                           target="_blank"
                             >
-                              Download our Broucher
+                              View our Broucher
                             </a>
                             {/* <button onClick={} >Download our Broucher</button> */}
                           </h5>
