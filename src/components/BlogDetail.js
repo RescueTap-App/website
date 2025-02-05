@@ -81,9 +81,7 @@ export default function BlogDetail() {
                     <div className="text-inner">
                       <h3 className="blog-title">{blog.title}</h3>
                     </div>
-                    <div className="text">
-                      <p>{blog.content}</p>
-                    </div>
+                    <div dangerouslySetInnerHTML={{ __html: blog.content }} />
                   </div>
                 </div>
               </div>

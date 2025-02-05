@@ -28,8 +28,6 @@ const News = () => {
 
   return (
     <div>
-     
-
       <section className="blog-page-one">
         <div className="container">
           {loading && <p>Loading blogs...</p>}
@@ -65,7 +63,14 @@ const News = () => {
                       <h3>
                         <Link href={`/Blog/${blog._id}`}>{blog.title}</Link>
                       </h3>
-                      <p>{sanitizeContent(blog.content).substring(0, 30)}...</p>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            blog.content.length > 30
+                              ? `${blog.content.slice(0, 30)}...`
+                              : blog.content,
+                        }}
+                      />
                       <div className="btn-box">
                         <Link href={`/Blog/${blog._id}`}>Read More</Link>
                       </div>
