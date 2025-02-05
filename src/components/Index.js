@@ -446,36 +446,14 @@ const Index = () => {
                       }'
                 >
                   {/*Start Single Testimonial Style1*/}
-                  {/* <div className="single-testimonial-style1">
+                  <div className="single-testimonial-style1">
                     <div className="img-holder">
                       <img
                         src="assets/images/testimonial/testimonial-v1-1.jpg"
                         alt
                       />
-                      <div className="overlay-content">
-                        <div className="quote-icon">
-                          <img src="assets/images/icon/quote.png" alt />
-                        </div>
-                      </div>
-                      <div className="review-box">
-                        <ul>
-                          <li>
-                            <i className="fa fa-star" />
-                          </li>
-                          <li>
-                            <i className="fa fa-star" />
-                          </li>
-                          <li>
-                            <i className="fa fa-star" />
-                          </li>
-                          <li>
-                            <i className="fa fa-star" />
-                          </li>
-                          <li>
-                            <i className="fa fa-star" />
-                          </li>
-                        </ul>
-                      </div>
+                     
+                      
                     </div>
                     <div className="text-holder">
                       <div className="sec-title sec-title--style2">
@@ -493,11 +471,11 @@ const Index = () => {
                           during a medical emergency!
                         </p>
                         <h3>
-                          Precious Adeniyi <span>- Customer</span>
+                          Pamela Williams <span>- Customer</span>
                         </h3>
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                   {/*End Single Testimonial Style1*/}
                   {/*Start Single Testimonial Style1*/}
                   <div className="single-testimonial-style1">

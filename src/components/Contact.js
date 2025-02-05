@@ -12,13 +12,15 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    phoneNumber: "", // Added phone number field
+    phoneNumber: "",
     event: "",
-    serviceType: "",
     address: "",
-    date: "", // Added date field
-    time: "", // Added time field
+    serviceType: "",
+    eventDate: "",
+    eventTime: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,12 +30,15 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.serviceType) {
+    // Debug form data
+    console.log("Submitting data:", formData);
+
+    if (!formData.serviceType.trim()) {
       toast.error("Please select a service type.");
       return;
     }
 
-    if (!formData.date || !formData.time) {
+    if (!formData.eventDate || !formData.eventTime) {
       toast.error("Please provide a date and time for the booking.");
       return;
     }
@@ -52,21 +57,21 @@ const Contact = () => {
           event: "",
           serviceType: "",
           address: "",
-          date: "",
-          time: "",
+          eventDate: "",
+          eventTime: "",
         });
       }
     } catch (error) {
       if (error.response) {
-        // Server responded with a status outside 2xx
         console.error("Server Error:", error.response);
-        toast.error(error.response.data?.message || "Failed to book ambulance. Please try again.");
+        toast.error(
+          error.response.data?.message ||
+            "Failed to book ambulance. Please try again."
+        );
       } else if (error.request) {
-        // No response received from server
         console.error("Network Error:", error.request);
         toast.error("Network error. Please check your connection.");
       } else {
-        // Error setting up the request
         console.error("Error:", error.message);
         toast.error("An unexpected error occurred.");
       }
@@ -218,7 +223,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Full Name"
                   required
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
                 />
                 <input
                   type="email"
@@ -227,7 +232,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Email Address"
                   required
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
                 />
                 <input
                   type="tel"
@@ -236,7 +241,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Phone Number"
                   required
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
                 />
                 <input
                   type="text"
@@ -244,7 +249,7 @@ const Contact = () => {
                   value={formData.event}
                   onChange={handleChange}
                   placeholder="Event Name"
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
                 />
                 <input
                   type="text"
@@ -252,53 +257,84 @@ const Contact = () => {
                   value={formData.address}
                   onChange={handleChange}
                   placeholder="Address"
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
                 />
-                <select
-                  name="serviceType"
-                  value={formData.serviceType}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:cursor-pointer"
-                >
-                  <option value="">Select Service Type</option>
-                  <option value="basic">
-                    Fully kitted bus with paramedics (VVIP) - N200,000
-                  </option>
-                  <option value="advanced">
-                    Fully kitted bus without paramedics (VIP) - N160,000
-                  </option>
-                  <option value="event-standby">
-                    Fully kitted Sienna with paramedics (Advanced) - N150,000
-                  </option>
-                  <option value="basic-standby">
-                    Fully kitted Sienna without paramedics (Basic) - N130,000
-                  </option>
-                </select>
+                <div>
+                  <p className="font-semibold">Select Service Type:</p>
+                  <div className="flex flex-col space-y-2">
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="basic"
+                        checked={formData.serviceType === "basic"}
+                        onChange={handleChange}
+                        className="mr-2"
+                      />
+                      Fully kitted bus with paramedics (VVIP)
+                    </label>
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="advanced"
+                        checked={formData.serviceType === "advanced"}
+                        onChange={handleChange}
+                        className="mr-2"
+                      />
+                      Fully kitted bus without paramedics (VIP)
+                    </label>
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="event-standby"
+                        checked={formData.serviceType === "event-standby"}
+                        onChange={handleChange}
+                        className="mr-2"
+                      />
+                      Sienna with paramedics (Advanced)
+                    </label>
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="basic-standby"
+                        checked={formData.serviceType === "basic-standby"}
+                        onChange={handleChange}
+                        className="mr-2"
+                      />
+                      Sienna without paramedics (Basic)
+                    </label>
+                  </div>
+                </div>
+
                 <input
                   type="date"
-                  name="date"
-                  value={formData.date}
+                  name="eventDate"
+                  value={formData.eventDate}
                   onChange={handleChange}
-                  placeholder="Date"
                   required
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
                 />
                 <input
                   type="time"
-                  name="time"
-                  value={formData.time}
+                  name="eventTime"
+                  value={formData.eventTime}
                   onChange={handleChange}
-                  placeholder="Time"
                   required
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg focus:outline-none"
+                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
                 />
               </div>
               <div className="text-center mt-8">
                 <button
                   type="submit"
-                  className="bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black"
+                  disabled={loading}
+                  className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
+                    loading ? "cursor-not-allowed opacity-70" : ""
+                  }`}
                 >
-                  Book Ambulance
+                  {loading ? "Booking..." : "Book Ambulance"}
                 </button>
               </div>
             </form>
