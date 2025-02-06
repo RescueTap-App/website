@@ -47,16 +47,16 @@ req.end()
 
 async function bookAmbulance(){
   
-  const driverData = {
-    fullname: document.getElementById('formName').value,
-    email: document.getElementById('formEmail').value,
-    formEvent: document.getElementById('formEvent').value,
-    formAddress: document.getElementById('formAddress').value,
-    formDate: document.getElementById('formDate').value,
-    formTime: document.getElementById('formTime').value,
-    formService: document.getElementById('formService').value,
+//   const driverData = {
+//     fullname: document.getElementById('formName').value,
+//     email: document.getElementById('formEmail').value,
+//     formEvent: document.getElementById('formEvent').value,
+//     formAddress: document.getElementById('formAddress').value,
+//     formDate: document.getElementById('formDate').value,
+//     formTime: document.getElementById('formTime').value,
+//     formService: document.getElementById('formService').value,
 
-};
+// };
 
 
    // Book an Ambulance
@@ -69,20 +69,54 @@ async function bookAmbulance(){
 //     body: JSON.stringify(driverData)
 // });
 
-var requestOptions = {
+// var requestOptions = {
+//   method: 'POST',
+//   body: driverData,
+//   redirect: 'follow'
+// };
+
+// fetch(AMBULANCE_API, requestOptions)
+//   .then(response => response.text())
+//   .then(result => console.log(result))
+//   .catch(error => console.log('error', error));
+
+const driverData = {
+  fullname: document.getElementById('formName').value,
+  email: document.getElementById('formEmail').value,
+  formEvent: document.getElementById('formEvent').value,
+  formAddress: document.getElementById('formAddress').value,
+  formDate: document.getElementById('formDate').value,
+  formTime: document.getElementById('formTime').value,
+  formService: document.getElementById('formService').value,
+};
+
+const requestOptions = {
   method: 'POST',
-  body: driverData,
-  redirect: 'follow'
+  headers: {  // Add the Content-Type header
+      'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(driverData), // Convert to JSON string
+  // redirect: 'follow'
 };
 
 fetch(AMBULANCE_API, requestOptions)
-  .then(response => response.text())
+  .then(response => {
+      if (!response.ok) { // Check for HTTP errors (like 400)
+          return response.text().then(err => {throw new Error(err)}); // Throw error with response text
+      }
+      return response.json(); // or response.text() if the response is not JSON
+  })
   .then(result => console.log(result))
-  .catch(error => console.log('error', error));
-
-
+  .catch(error => console.error('Error:', error)); // More descriptive error logging
 
 }
+
+
+
+
+
+
+
 const Ambulance = () => {
   return (
     <>
@@ -364,8 +398,8 @@ const Ambulance = () => {
                             id="contact-form"
                             name="contact_form"
                             className="default-form2"
-                            action="assets/inc/sendmail.php"
-                            method="post"
+                            // action="assets/inc/sendmail.php"
+                            // method="post"
                           >
                             <div className="row">
                               <div className="col-xl-6">
@@ -522,9 +556,9 @@ const Ambulance = () => {
                                   />
                                   <button
                                     className="btn-one"
-                                    type="submit"
-                                    // type="button"
-                                    data-loading-text="Please wait..."
+                                    // type="submit"
+                                    type="button"
+                                    // data-loading-text="Please wait..."
                                     // onClick={bookAmbulance}
                                     data-bs-toggle="modal" 
                                     data-bs-target="#exampleModal"
