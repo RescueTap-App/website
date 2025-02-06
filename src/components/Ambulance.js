@@ -1,16 +1,16 @@
 "use client"
 
-
 import React from "react";
+import { AMBULANCE_API } from "@/constants/api";
 // import PaystackPop from '@paystack/inline-js'
 
-const https = require('https')
+function payAmbulance(){
+  const https = require('https')
 
 const params = JSON.stringify({
   "email": "customer@email.com",
   "amount": "500000"
 })
-
 const options = {
   hostname: 'api.paystack.co',
   port: 443,
@@ -21,47 +21,66 @@ const options = {
     'Content-Type': 'application/json'
   }
 }
-
 const req = https.request(options, res => {
   let data = ''
 
   res.on('data', (chunk) => {
     data += chunk
   });
-
   res.on('end', () => {
     console.log(JSON.parse(data))
+    const response = JSON.parse(data)
+    const popup = new PaystackPop()
+    popup.resumeTransaction(response.access_code)
   })
 }).on('error', error => {
   console.error(error)
 })
 
+
 req.write(params)
 req.end()
+
+
+}
 
 
 async function bookAmbulance(){
   
   const driverData = {
     fullname: document.getElementById('formName').value,
-    email: document.getElementById('email').value,
+    email: document.getElementById('formEmail').value,
     formEvent: document.getElementById('formEvent').value,
     formAddress: document.getElementById('formAddress').value,
     formDate: document.getElementById('formDate').value,
     formTime: document.getElementById('formTime').value,
     formService: document.getElementById('formService').value,
+
 };
 
 
    // Book an Ambulance
-   const response = await fetch(DRIVER_API, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        // 'Authorization': `Bearer ${getAuthToken()}`
-    },
-    body: JSON.stringify(driverData)
-});
+//    const response = await fetch(AMBULANCE_API, {
+//     method: 'POST',
+//     headers: {
+//         'Content-Type': 'application/json',
+//         // 'Authorization': `Bearer ${getAuthToken()}`
+//     },
+//     body: JSON.stringify(driverData)
+// });
+
+var requestOptions = {
+  method: 'POST',
+  body: driverData,
+  redirect: 'follow'
+};
+
+fetch(AMBULANCE_API, requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
 
 }
 const Ambulance = () => {
@@ -443,7 +462,7 @@ const Ambulance = () => {
                                       id="formService"
                                       required
                                       className=" w-[100%] bg-black"
-                                      
+                                      aria-required
                                     >
                                       <option
                                         className="w-[100%] bg-black"
@@ -502,8 +521,8 @@ const Ambulance = () => {
                                   />
                                   <button
                                     className="btn-one"
-                                    // type="submit"
-                                    type="button"
+                                    type="submit"
+                                    // type="button"
                                     data-loading-text="Please wait..."
                                     // onClick={bookAmbulance}
                                     data-bs-toggle="modal" 
@@ -538,32 +557,40 @@ const Ambulance = () => {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
-          <div>
-
-          </div>
+       
+          
+          <form 
+          id=""
+          action="" 
+          method="POST"
+          > 
+          <input type="hidden" name="user_email" value="<?php echo $email; ?>" /> 
+          <input type="hidden" name="amount" value="<?php echo $amount; ?>" /> 
+          <input type="hidden" name="cartid" value="<?php echo $cartid; ?>" />         
+         
         </form>
       </div>
       <div class="modal-footer">
         {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
         {/* <button type="button" class="btn btn-primary">Pay</button> */}
         <div className="button-box">
-                                  <input
-                                    id="form_botcheck"
-                                    name="form_botcheck"
-                                    className="form-control"
-                                    type="hidden"
-                                  />
-                                  <button
-                                    className="btn-one"
-                                    type="submit"
-                                    // type="button"
-                                    data-loading-text="Please wait..."
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#exampleModal"
-                                  >
-                                    <span className="txt">Pay</span>
-                                  </button>
+          <input
+            id="form_botcheck"
+            name="form_botcheck"
+            className="form-control"
+            type="hidden"
+          />
+          <button
+            className="btn-one"
+            // type="submit"
+            // type="button"
+            onClick={bookAmbulance}
+            data-loading-text="Please wait..."
+            data-bs-toggle="modal" 
+            data-bs-target="#exampleModal"
+          >
+            <span className="txt">Pay</span>
+          </button>
         </div>
       </div>
     </div>
