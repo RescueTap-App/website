@@ -41,14 +41,14 @@ const Blog = () => {
             <div className="col-xl-12">
               <div className="inner-content">
                 <div className="title">
-                  <h2>Blog 01</h2>
+                  <h2>Blog</h2>
                 </div>
                 <div className="breadcrumb-menu">
                   <ul>
                     <li>
                       <a href="/">Home</a>
                     </li>
-                    <li className="active">Blog 01</li>
+                    <li className="active">Blog</li>
                   </ul>
                 </div>
               </div>
@@ -92,7 +92,14 @@ const Blog = () => {
                       <h3>
                         <Link href={`/Blog/${blog._id}`}>{blog.title}</Link>
                       </h3>
-                      <p>{sanitizeContent(blog.content).substring(0, 30)}...</p>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            blog.content.length > 30
+                              ? `${blog.content.slice(0, 30)}...`
+                              : blog.content,
+                        }}
+                      />
                       <div className="btn-box">
                         <Link href={`/Blog/${blog._id}`}>Read More</Link>
                       </div>

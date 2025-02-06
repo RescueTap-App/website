@@ -1,0 +1,172 @@
+import BlogDetail from "@/components/BlogDetail";
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
+import "../../globals.css";
+import Script from "next/script";
+
+export default function Home() {
+  return (
+    <>
+      <head>
+        <meta charSet="UTF-8" />
+        <title>RescueTap - One Tap, Save Lives</title>
+
+        <meta name="description" content="My page description" />
+        <meta property="og:title" content="Rescue Tap" />
+        <meta property="og:description" content="One Tap, Save Lives" />
+        <meta property="og:image" content="/assets/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/assets/logo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="/assets/css/animate.css" />
+        <link rel="stylesheet" href="/assets/css/aos.css" />
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/custom-animate.css" />
+        <link rel="stylesheet" href="/assets/css/fancybox.min.css" />
+        <link rel="stylesheet" href="/assets/css/flaticon.css" />
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="/assets/css/icomoon.css" />
+        <link rel="stylesheet" href="/assets/css/imp.css" />
+        <link
+          rel="stylesheet"
+          href="/assets/css/jquery.bootstrap-touchspin.css"
+        />
+        <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
+        <link rel="stylesheet" href="/assets/css/nice-select.css" />
+        <link rel="stylesheet" href="/assets/css/owl.css" />
+        <link rel="stylesheet" href="/assets/css/rtl.css" />
+        <link rel="stylesheet" href="/assets/css/scrollbar.css" />
+        <link rel="stylesheet" href="/assets/css/swiper.min.css" />
+
+        <link
+          rel="stylesheet"
+          href="/assets/css/module-css/header-section.css"
+        />
+        <link
+          rel="stylesheet"
+          href="/assets/css/module-css/banner-section.css"
+        />
+        <link rel="stylesheet" href="/assets/css/module-css/about-section.css" />
+        <link rel="stylesheet" href="/assets/css/module-css/blog-section.css" />
+        <link
+          rel="stylesheet"
+          href="/assets/css/module-css/fact-counter-section.css"
+        />
+        <link rel="stylesheet" href="/assets/css/module-css/faq-section.css" />
+        <link rel="stylesheet" href="/assets/css/module-css/contact-page.css" />
+        <link
+          rel="stylesheet"
+          href="/assets/css/module-css/breadcrumb-section.css"
+        />
+        <link rel="stylesheet" href="/assets/css/module-css/team-section.css" />
+        <link
+          rel="stylesheet"
+          href="/assets/css/module-css/partner-section.css"
+        />
+        <link
+          rel="stylesheet"
+          href="/assets/css/module-css/testimonial-section.css"
+        />
+        <link
+          rel="stylesheet"
+          href="/assets/css/module-css/services-section.css"
+        />
+        <link
+          rel="stylesheet"
+          href="/assets/css/module-css/footer-section.css"
+        />
+
+        <link
+          href="/assets/css/color/theme-color.css"
+          id="jssDefault"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/responsive.css" />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/assets/images/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/assets/images/favicon/favicon-32x32.png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/assets/images/favicon/favicon-16x16.png"
+          sizes="16x16"
+        />
+        <Script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></Script>
+        <Script src="/assets/js/html5shiv.js"></Script>
+
+        {/* //testing */}
+      </head>
+      <div className="boxed_wrapper ltr">
+        <Nav />
+        <BlogDetail />
+        <Footer />
+      </div>
+      
+    <Script src="/assets/js/jquery.js"></Script>
+    <Script src="/assets/js/aos.js"></Script>
+    <Script src="/assets/js/appear.js"></Script>
+    <Script src="/assets/js/bootstrap.bundle.min.js"></Script>
+    <Script src="/assets/js/isotope.js"></Script>
+    <Script src="/assets/js/jquery.bootstrap-touchspin.js"></Script>
+    <Script src="/assets/js/jquery.countTo.js"></Script>
+    <Script src="/assets/js/jquery.easing.min.js"></Script>
+    <Script src="/assets/js/jquery.event.move.js"></Script>
+    <Script src="/assets/js/jquery.fancybox.js"></Script>
+    <Script src="/assets/js/jquery.magnific-popup.min.js"></Script>
+    <Script src="/assets/js/jquery.nice-select.min.js"></Script>
+    <Script src="/assets/js/jquery.paroller.min.js"></Script>
+    <Script src="/assets/js/jquery-sidebar-content.js"></Script>
+    <Script src="/assets/js/knob.js"></Script>
+    <Script src="/assets/js/map-Script.js"></Script>
+    <Script src="/assets/js/owl.js"></Script>
+    <Script src="/assets/js/pagenav.js"></Script>
+    <Script src="/assets/js/scrollbar.js"></Script>
+    <Script src="/assets/js/swiper.min.js"></Script>
+    <Script src="/assets/js/tilt.jquery.js"></Script>
+    <Script src="/assets/js/TweenMax.min.js"></Script>
+    <Script src="/assets/js/validation.js"></Script>
+    <Script src="/assets/js/wow.js"></Script>
+
+    <Script src="/assets/js/jquery-1color-switcher.min.js"></Script>
+
+    <Script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM&callback=initMap">
+    </Script>
+
+    <Script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></Script>
+        <Script src="/assets/js/html5shiv.js"></Script>
+  
+    <Script src="/assets/js/custom.js"></Script>
+    </>
+  );
+}
+

@@ -52,7 +52,12 @@ const FAQ = () => {
                         <h3>How does RescueTap work?</h3>
                       </div>
                       <div className="acc-content current">
-                        <p>....</p>
+                        <p>
+                          RescueTap is a mobile app for real-time medical and
+                          security assistance. Users can request help with one
+                          tap, access vetted transport, notify next of kin and
+                          get optimized ambulance care.
+                        </p>
                       </div>
                     </li>
                     <li className="accordion block">
@@ -64,8 +69,10 @@ const FAQ = () => {
                       </div>
                       <div className="acc-content">
                         <p>
-                          We operate in Abuja and Lagos cities and are expanding
-                          rapidly.
+                          The app is currently expanding its reach and services
+                          to cover multiple regions across Nigeria. Coverage may
+                          vary depending on partnerships with service providers
+                          in different areas.
                         </p>
                       </div>
                     </li>
@@ -78,8 +85,10 @@ const FAQ = () => {
                       </div>
                       <div className="acc-content">
                         <p>
-                          Payments can be made via the app using various payment
-                          methods.
+                          Payment methods depend on the service requested and
+                          include secure online payment options. In-app payment
+                          solutions may support debit cards, bank transfers, and
+                          mobile wallet options.
                         </p>
                       </div>
                     </li>
@@ -97,7 +106,11 @@ const FAQ = () => {
                         <h3>Is RescueTap a Health or Security Company?</h3>
                       </div>
                       <div className="acc-content current">
-                        <p>..</p>
+                        <p>
+                          RescueTap is a technology-driven service platform that
+                          partners with healthcare and security organizations to
+                          deliver emergency response services.
+                        </p>
                       </div>
                     </li>
                     <li className="accordion block">
@@ -105,10 +118,15 @@ const FAQ = () => {
                         <div className="icon-outer">
                           <i className="flaticon-down-arrow-2" />
                         </div>
-                        <h3>How do I book an ambulance?</h3>
+                        <h3>How do I book an ambulance for an event?</h3>
                       </div>
                       <div className="acc-content">
-                        <p>....</p>
+                        <p>
+                          Open the RescueTap website. Tap on book ambulance or
+                          the contact page. Confirm your details and location.
+                          Fill in your payment details. An ambulance will be
+                          dispatched to your location.
+                        </p>
                       </div>
                     </li>
                     <li className="accordion block">
@@ -119,7 +137,12 @@ const FAQ = () => {
                         <h3>Where is your office located?</h3>
                       </div>
                       <div className="acc-content">
-                        <p>...</p>
+                        <p>
+                          RescueTap operates primarily in Abuja and Lagos, for
+                          partnerships or official inquiries, please contact
+                          their customer support for office details or visit
+                          their website for more information.
+                        </p>
                       </div>
                     </li>
                   </ul>
