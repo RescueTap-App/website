@@ -266,8 +266,8 @@ const Contact = () => {
                       <input
                         type="radio"
                         name="serviceType"
-                        value="basic"
-                        checked={formData.serviceType === "basic"}
+                        value="vvip"
+                        checked={formData.serviceType === "vvip"}
                         onChange={handleChange}
                         className="mr-2"
                       />
@@ -277,8 +277,8 @@ const Contact = () => {
                       <input
                         type="radio"
                         name="serviceType"
-                        value="advanced"
-                        checked={formData.serviceType === "advanced"}
+                        value="vip"
+                        checked={formData.serviceType === "vip"}
                         onChange={handleChange}
                         className="mr-2"
                       />
@@ -288,8 +288,8 @@ const Contact = () => {
                       <input
                         type="radio"
                         name="serviceType"
-                        value="event-standby"
-                        checked={formData.serviceType === "event-standby"}
+                        value="advance"
+                        checked={formData.serviceType === "advance"}
                         onChange={handleChange}
                         className="mr-2"
                       />
@@ -299,8 +299,8 @@ const Contact = () => {
                       <input
                         type="radio"
                         name="serviceType"
-                        value="basic-standby"
-                        checked={formData.serviceType === "basic-standby"}
+                        value="basic"
+                        checked={formData.serviceType === "basic"}
                         onChange={handleChange}
                         className="mr-2"
                       />
