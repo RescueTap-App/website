@@ -500,6 +500,54 @@ const Ambulance = () => {
 
         </section>
       </div>
+
+
+      {/* Kept the modal away */}
+     
+{/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> */}
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Card Payment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
+        {/* <button type="button" class="btn btn-primary">Pay</button> */}
+        <div className="button-box">
+                                  <input
+                                    id="form_botcheck"
+                                    name="form_botcheck"
+                                    className="form-control"
+                                    type="hidden"
+                                  />
+                                  <button
+                                    className="btn-one"
+                                    type="submit"
+                                    // type="button"
+                                    data-loading-text="Please wait..."
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#exampleModal"
+                                  >
+                                    <span className="txt">Pay</span>
+                                  </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     </>
   );
 };

@@ -15,6 +15,7 @@ const Blog = () => {
       try {
         const response = await axios.get(BLOGS_API);
         setBlogs(response.data);
+        console.log(response.data)
       } catch (err) {
         setError("Failed to fetch blogs. Please try again later.");
       } finally {
