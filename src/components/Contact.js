@@ -43,6 +43,8 @@ const Contact = () => {
       return;
     }
 
+    setLoading(true);
+
     try {
       const response = await axios.post(AMB, formData, {
         headers: { "Content-Type": "application/json" },
@@ -75,6 +77,8 @@ const Contact = () => {
         console.error("Error:", error.message);
         toast.error("An unexpected error occurred.");
       }
+    } finally {
+      setLoading(false);
     }
   };
 
