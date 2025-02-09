@@ -127,7 +127,7 @@ const Footer = () => {
                   <div className="footer-widget-links">
                     <ul>
                       <li>
-                        <a href="/Ambulance">Ambulance Car</a>
+                        <a href="/Ambulance">Ambulance Dispatch Services</a>
                       </li>
 
                       <li>
@@ -145,15 +145,10 @@ const Footer = () => {
               <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                 <div className="single-footer-widget margintop pdtop20">
                   <div className="footer-widget-quote-box">
-                    <h3>
-                      We can help,
-                      <br /> today.
-                    </h3>
+                    <h3>We're here to help, 24/7.</h3>
                     <p>
-                      24 hours a day,
-                      <br /> 7 days a week support.
-                      <br /> Free, no obligation
-                      <br /> price quotes.
+                      Get round-the-clock support and assistance whenever you
+                      need it for a free, <br /> no-obligation quote!
                     </p>
                     <div className="btn-box">
                       <a className="btn-one" href="/Contact">
