@@ -56,7 +56,7 @@ const FAQ = () => {
                           RescueTap is a mobile app for real-time medical and
                           security assistance. Users can request help with one
                           tap, access vetted transport, notify next of kin and
-                          get optimized ambulance care.
+                          get optimized Ambulance Dispatch Servicese.
                         </p>
                       </div>
                     </li>
@@ -121,12 +121,26 @@ const FAQ = () => {
                         <h3>How do I book an ambulance for an event?</h3>
                       </div>
                       <div className="acc-content">
-                        <p>
-                          Open the RescueTap website. Tap on book ambulance or
-                          the contact page. Confirm your details and location.
-                          Fill in your payment details. An ambulance will be
-                          dispatched to your location.
+                        <p class=" font-bold pb-2">
+                          How to Book an Ambulance for an Event
                         </p>
+                        <ol class="list-decimal ">
+                          <li>
+                            - Open the RescueTap website and click on{" "}
+                            <strong>"Book an Ambulance"</strong> or navigate to
+                            the <strong>"Contact"</strong> page.
+                          </li>
+                          <li>- Confirm your details and event location.</li>
+                          <li>- Fill in your payment information.</li>
+                          <li>
+                            - Once confirmed, an ambulance will be dispatched to
+                            your event location.
+                          </li>
+                          <li>
+                            For further assistance, feel free to contact our
+                            support team.
+                          </li>
+                        </ol>
                       </div>
                     </li>
                     <li className="accordion block">
@@ -138,10 +152,10 @@ const FAQ = () => {
                       </div>
                       <div className="acc-content">
                         <p>
-                          RescueTap operates primarily in Abuja and Lagos, for
-                          partnerships or official inquiries, please contact
-                          their customer support for office details or visit
-                          their website for more information.
+                          RescueTap operates primarily in Abuja and Lagos. For
+                          specific office details, please contact our customer
+                          support team or visit us at 22 Bambari crescent, wuse
+                          zone 3.
                         </p>
                       </div>
                     </li>

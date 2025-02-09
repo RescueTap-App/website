@@ -82,7 +82,6 @@ const Ambulance = () => {
     }
   };
 
-
   return (
     <>
       <div>
@@ -103,7 +102,7 @@ const Ambulance = () => {
                     data-aos-easing="linear"
                     data-aos-duration={1500}
                   >
-                    <h2>Ambulance Car</h2>
+                    <h2>Ambulance Dispatch Services</h2>
                   </div>
                   <div className="breadcrumb-menu">
                     <ul>
@@ -113,7 +112,7 @@ const Ambulance = () => {
                       <li>
                         <a href="services.html">Services</a>
                       </li>
-                      <li className="active">Ambulance Car</li>
+                      <li className="active">Ambulance Dispatch Services</li>
                     </ul>
                   </div>
                 </div>
@@ -121,7 +120,7 @@ const Ambulance = () => {
             </div>
           </div>
         </section>
-       
+
         <section className="service-details-area">
           <div className="container">
             <div className="row">
@@ -137,13 +136,15 @@ const Ambulance = () => {
                     <ul className="service-pages">
                       <li className="active">
                         <a href="/Ambulance">
-                          Ambulance Car <span className="icon-next-1" />
+                          Ambulance Dispatch Services{" "}
+                          <span className="icon-next-1" />
                         </a>
                       </li>
 
                       <li>
                         <a href="/ALS">
-                          Advanced Life Support <span className="icon-next-1" />
+                          Advanced Life Support (ALS){" "}
+                          <span className="icon-next-1" />
                         </a>
                       </li>
                       <li>
@@ -154,7 +155,7 @@ const Ambulance = () => {
                       </li>
                       <li>
                         <a href="/Drivers">
-                          Driver Registration and Ride Verification
+                          Driver Registration & Ride Safety Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>
@@ -175,8 +176,8 @@ const Ambulance = () => {
                     />
                     <h3>Need an ambulance?</h3>
                     <p>
-                      Download our online Brouchure to get detailed informaion
-                      on our vehcle registration and ambulance services.
+                      Download our online Brochure to get detailed information
+                      on our vehicle registration and ambulance services.
                     </p>
                     <h2>
                       <a href="tel:+2348147806378">+234 814 780 6378</a>
@@ -195,14 +196,14 @@ const Ambulance = () => {
                         </div>
                         <div className="title">
                           <h5>
-                          <a
+                            <a
                               download="RescueTap_Brochure.pdf"
                               href="https://www.canva.com/design/DAGdeL6msb4/AHUvdPTymRiO6eUWQw9C2A/view?utm_content=DAGdeL6msb4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he59a8aab9e"
-                           target="_blank"
+                              target="_blank"
                             >
-                              View our Broucher
+                              View our Brochure
                             </a>
-                            {/* <button onClick={} >Download our Broucher</button> */}
+                            {/* <button onClick={} >Download our Brochure</button> */}
                           </h5>
                         </div>
                       </li>
@@ -221,7 +222,7 @@ const Ambulance = () => {
                     />
                   </div>
                   <div className="text-box1">
-                    <h2>Ambulance Car</h2>
+                    <h2>Ambulance Dispatch Services</h2>
                     <p>
                       “Fast and Reliable Ambulance Services—Because Every Second
                       Counts!”
@@ -343,211 +344,211 @@ const Ambulance = () => {
               {/*End Service Details Content */}
             </div>
 
+            <ToastContainer />
 
-  
-      <ToastContainer />
-     
-        <section className="main-contact-form-area py-12">
-          <div className="container mx-auto max-w-4xl">
-            <div className="sec-title text-center mb-8">
-              <div className="icon mb-4">
-                <span className="icon-heartbeat text-red-600 text-4xl" />
-              </div>
-              <h3 className="text-gray-600 text-lg">
-                Fill out the form below to book an ambulance for an event, and
-                we’ll respond promptly.
-              </h3>
-              <h2 className="text-3xl font-bold text-gray-800 mt-4">
-                Book an Ambulance
-              </h2>
-            </div>
-            <form
-              onSubmit={handleSubmit}
-              className="bg-white p-8 shadow-lg rounded-xl"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input
-                  type="text"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  placeholder="Full Name"
-                  required
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Email Address"
-                  required
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
-                />
-                <input
-                  type="tel"
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  placeholder="Phone Number"
-                  required
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
-                />
-                <input
-                  type="text"
-                  name="event"
-                  value={formData.event}
-                  onChange={handleChange}
-                  placeholder="Event Name"
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
-                />
-                <input
-                  type="text"
-                  name="address"
-                  value={formData.address}
-                  onChange={handleChange}
-                  placeholder="Address"
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
-                />
-                <div>
-                  <p className="font-semibold">Select Service Type:</p>
-                  <div className="flex flex-col space-y-2">
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="serviceType"
-                        value="vvip"
-                        checked={formData.serviceType === "vvip"}
-                        onChange={handleChange}
-                        className="mr-2"
-                      />
-                      Fully kitted bus with paramedics (VVIP)
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="serviceType"
-                        value="vip"
-                        checked={formData.serviceType === "vip"}
-                        onChange={handleChange}
-                        className="mr-2"
-                      />
-                      Fully kitted bus without paramedics (VIP)
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="serviceType"
-                        value="advance"
-                        checked={formData.serviceType === "advance"}
-                        onChange={handleChange}
-                        className="mr-2"
-                      />
-                      Sienna with paramedics (Advanced)
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="serviceType"
-                        value="basic"
-                        checked={formData.serviceType === "basic"}
-                        onChange={handleChange}
-                        className="mr-2"
-                      />
-                      Sienna without paramedics (Basic)
-                    </label>
+            <section className="main-contact-form-area py-12">
+              <div className="container mx-auto max-w-4xl">
+                <div className="sec-title text-center mb-8">
+                  <div className="icon mb-4">
+                    <span className="icon-heartbeat text-red-600 text-4xl" />
                   </div>
+                  <h3 className="text-gray-600 text-lg">
+                    Fill out the form below to book an ambulance for an event,
+                    and we’ll respond promptly.
+                  </h3>
+                  <h2 className="text-3xl font-bold text-gray-800 mt-4">
+                    Book an Ambulance
+                  </h2>
                 </div>
-
-                <input
-                  type="date"
-                  name="eventDate"
-                  value={formData.eventDate}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
-                />
-                <input
-                  type="time"
-                  name="eventTime"
-                  value={formData.eventTime}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
-                />
-              </div>
-              <div className="text-center mt-8">
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
-                    loading ? "cursor-not-allowed opacity-70" : ""
-                  }`}
+                <form
+                  onSubmit={handleSubmit}
+                  className="bg-white p-8 shadow-lg rounded-xl"
                 >
-                  {loading ? "Booking..." : "Book Ambulance"}
-                </button>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input
+                      type="text"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      placeholder="Full Name"
+                      required
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Email Address"
+                      required
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <input
+                      type="tel"
+                      name="phoneNumber"
+                      value={formData.phoneNumber}
+                      onChange={handleChange}
+                      placeholder="Phone Number"
+                      required
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <input
+                      type="text"
+                      name="event"
+                      value={formData.event}
+                      onChange={handleChange}
+                      placeholder="Event Name"
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <input
+                      type="text"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleChange}
+                      placeholder="Address"
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <div>
+                      <p className="font-semibold">Select Service Type:</p>
+                      <div className="flex flex-col space-y-2">
+                        <label className="flex items-center">
+                          <input
+                            type="radio"
+                            name="serviceType"
+                            value="vvip"
+                            checked={formData.serviceType === "vvip"}
+                            onChange={handleChange}
+                            className="mr-2"
+                          />
+                          Fully kitted bus with paramedics (VVIP)
+                        </label>
+                        <label className="flex items-center">
+                          <input
+                            type="radio"
+                            name="serviceType"
+                            value="vip"
+                            checked={formData.serviceType === "vip"}
+                            onChange={handleChange}
+                            className="mr-2"
+                          />
+                          Fully kitted bus without paramedics (VIP)
+                        </label>
+                        <label className="flex items-center">
+                          <input
+                            type="radio"
+                            name="serviceType"
+                            value="advance"
+                            checked={formData.serviceType === "advance"}
+                            onChange={handleChange}
+                            className="mr-2"
+                          />
+                          Sienna with paramedics (Advanced)
+                        </label>
+                        <label className="flex items-center">
+                          <input
+                            type="radio"
+                            name="serviceType"
+                            value="basic"
+                            checked={formData.serviceType === "basic"}
+                            onChange={handleChange}
+                            className="mr-2"
+                          />
+                          Sienna without paramedics (Basic)
+                        </label>
+                      </div>
+                    </div>
+
+                    <input
+                      type="date"
+                      name="eventDate"
+                      value={formData.eventDate}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <input
+                      type="time"
+                      name="eventTime"
+                      value={formData.eventTime}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                  </div>
+                  <div className="text-center mt-8">
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
+                        loading ? "cursor-not-allowed opacity-70" : ""
+                      }`}
+                    >
+                      {loading ? "Booking..." : "Book Ambulance"}
+                    </button>
+                  </div>
+                </form>
               </div>
-            </form>
+            </section>
           </div>
-        </section>
-        {/*End Main Contact Form Area*/}
-        {/*Start Google Map Style2 Area*/}
-       
-     
- 
-
-          </div>
-
         </section>
       </div>
 
-
       {/* Kept the modal away */}
-     
-{/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+      {/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
 </button> */}
 
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Card Payment</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div>
-
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Card Payment
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div></div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
+              {/* <button type="button" class="btn btn-primary">Pay</button> */}
+              <div className="button-box">
+                <input
+                  id="form_botcheck"
+                  name="form_botcheck"
+                  className="form-control"
+                  type="hidden"
+                />
+                <button
+                  className="btn-one"
+                  type="submit"
+                  // type="button"
+                  data-loading-text="Please wait..."
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <span className="txt">Pay</span>
+                </button>
+              </div>
+            </div>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
-        {/* <button type="button" class="btn btn-primary">Pay</button> */}
-        <div className="button-box">
-                                  <input
-                                    id="form_botcheck"
-                                    name="form_botcheck"
-                                    className="form-control"
-                                    type="hidden"
-                                  />
-                                  <button
-                                    className="btn-one"
-                                    type="submit"
-                                    // type="button"
-                                    data-loading-text="Please wait..."
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#exampleModal"
-                                  >
-                                    <span className="txt">Pay</span>
-                                  </button>
         </div>
       </div>
-    </div>
-  </div>
-</div>
     </>
   );
 };
