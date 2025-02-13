@@ -292,8 +292,8 @@ const Contact = () => {
                       <input
                         type="radio"
                         name="serviceType"
-                        value="advance"
-                        checked={formData.serviceType === "advance"}
+                        value="advanced"
+                        checked={formData.serviceType === "advanced"}
                         onChange={handleChange}
                         className="mr-2"
                       />
