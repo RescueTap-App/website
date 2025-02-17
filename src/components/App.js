@@ -56,13 +56,15 @@ const App = () => {
                     <ul className="service-pages">
                       <li>
                         <a href="/Ambulance">
-                          Ambulance Car <span className="icon-next-1" />
+                          Ambulance Dispatch Services{" "}
+                          <span className="icon-next-1" />
                         </a>
                       </li>
 
                       <li>
                         <a href="/ALS">
-                          Advanced Life Support <span className="icon-next-1" />
+                          Advanced Life Support (ALS){" "}
+                          <span className="icon-next-1" />
                         </a>
                       </li>
                       <li className="active">
@@ -73,7 +75,7 @@ const App = () => {
                       </li>
                       <li>
                         <a href="/Drivers">
-                          Driver Registration and Ride Verification
+                          Driver Registration & Ride Safety Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>
@@ -94,8 +96,8 @@ const App = () => {
                     />
                     <h3>Need an ambulance?</h3>
                     <p>
-                      Download our online Brouchure to get detailed informaion
-                      on our vehcle registration and ambulance services.
+                      Download our online Brochure to get detailed information
+                      on our vehicle registration and ambulance services.
                     </p>
                     <h2>
                       <a href="tel:+2348147806378">+234 814 780 6378</a>
@@ -114,12 +116,12 @@ const App = () => {
                         </div>
                         <div className="title">
                           <h5>
-                          <a
+                            <a
                               download="RescueTap_Brochure.pdf"
                               href="https://www.canva.com/design/DAGdeL6msb4/AHUvdPTymRiO6eUWQw9C2A/view?utm_content=DAGdeL6msb4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he59a8aab9e"
-                            target="_blank"
+                              target="_blank"
                             >
-                              View our Broucher
+                              View our Brochure
                             </a>
                           </h5>
                         </div>
@@ -140,17 +142,12 @@ const App = () => {
                   </div>
                   <div className="text-box1">
                     <h2>Emergency Help Is Just a Tap Away!</h2>
-                    <p>
-                      RescueTap is more than just an app—it’s your lifeline
-                      during emergencies. Whether you need an ambulance, a
-                      paramedic, or assistance reaching the nearest hospital,
-                      we’ve got you covered.
-                    </p>
+
                     <p>
                       The RescueTap App transforms your smartphone into a
-                      personal emergency assistant. Whether you need urgent
-                      medical help, an ambulance, or instant alerts to your
-                      loved ones, we’re here to keep you safe.
+                      personal emergency assistant. From requesting medical
+                      support to sending instant alerts to your loved ones, we
+                      are here to ensure your safety during critical moments.
                     </p>
                   </div>
 
@@ -163,22 +160,23 @@ const App = () => {
                           <ul>
                             <li>
                               <span className="icon-checked" /> User-Friendly
-                              Interface: Easy navigation for all age groups
+                              Interface: Simple navigation designed for all age
+                              groups.
                             </li>
                             <li>
                               <span className="icon-checked" />
-                              Real-Time Tracking: Track loved ones during
-                              emergencies.
+                              Real-Time Tracking: Monitor your location or track
+                              loved ones during emergencies.
                             </li>
                             <li>
                               <span className="icon-checked" /> Emergency
-                              Alerts: Notify family or emergency contact
-                              instantly.
+                              Alerts: Instantly notify family members or your
+                              emergency contacts.
                             </li>
                             <li>
                               <span className="icon-checked" />
-                              Push Notifications: Receive updates and reminders
-                              to stay prepared.
+                              Push Notifications: Receive timely updates and
+                              reminders to stay prepared and informed.
                             </li>
                           </ul>
                         </div>

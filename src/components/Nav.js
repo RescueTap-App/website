@@ -90,7 +90,7 @@ const Nav = () => {
                         <a href="#">Services</a>
                         <ul>
                           <li>
-                            <a href="/Ambulance">Ambulance Car</a>
+                            <a href="/Ambulance">Ambulance Dispatch Services</a>
                           </li>
 
                           <li>
@@ -101,7 +101,7 @@ const Nav = () => {
                           </li>
                           <li>
                             <a href="/Drivers">
-                              Driver Registration and Ride Verification
+                              Driver Registration & Ride Safety Verification
                             </a>
                           </li>
                         </ul>

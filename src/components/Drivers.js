@@ -64,7 +64,8 @@ function Drivers() {
           <div
             className="breadcrumb-area-bg"
             style={{
-              backgroundImage: "url(assets/images/breadcrumb/breadcrumb-11.jpg)",
+              backgroundImage:
+                "url(assets/images/breadcrumb/breadcrumb-11.jpg)",
             }}
           ></div>
           <div className="container">
@@ -77,7 +78,7 @@ function Drivers() {
                     data-aos-easing="linear"
                     data-aos-duration={1500}
                   >
-                    <h2>Driver Registration and Ride Verification</h2>
+                    <h2>Driver Registration & Ride Safety Verification</h2>
                   </div>
                   <div className="breadcrumb-menu">
                     <ul>
@@ -88,7 +89,7 @@ function Drivers() {
                         <a href="services.html">Services</a>
                       </li>
                       <li className="active">
-                        Driver Registration and Ride Verification
+                        Driver Registration & Ride Safety Verification
                       </li>
                     </ul>
                   </div>
@@ -114,13 +115,15 @@ function Drivers() {
                     <ul className="service-pages">
                       <li>
                         <a href="/Ambulance">
-                          Ambulance Car <span className="icon-next-1" />
+                          Ambulance Dispatch Services{" "}
+                          <span className="icon-next-1" />
                         </a>
                       </li>
 
                       <li>
                         <a href="/ALS">
-                          Advanced Life Support <span className="icon-next-1" />
+                          Advanced Life Support (ALS){" "}
+                          <span className="icon-next-1" />
                         </a>
                       </li>
                       <li>
@@ -131,7 +134,7 @@ function Drivers() {
                       </li>
                       <li className="active">
                         <a href="/Drivers">
-                          Driver Registration and Ride Verification
+                          Driver Registration & Ride Safety Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>
@@ -152,8 +155,8 @@ function Drivers() {
                     />
                     <h3>Need an ambulance?</h3>
                     <p>
-                      Download our online Brouchure to get detailed informaion
-                      on our vehcle registration and ambulance services.
+                      Download our online Brochure to get detailed information
+                      on our vehicle registration and ambulance services.
                     </p>
                     <h2>
                       <a href="tel:+2348147806378">+234 814 780 6378</a>
@@ -175,9 +178,9 @@ function Drivers() {
                             <a
                               download="RescueTap_Brochure.pdf"
                               href="https://www.canva.com/design/DAGdeL6msb4/AHUvdPTymRiO6eUWQw9C2A/view?utm_content=DAGdeL6msb4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he59a8aab9e"
-                            target="_blank"
+                              target="_blank"
                             >
-                              View our Broucher
+                              View our Brochure
                             </a>
                           </h5>
                         </div>
@@ -197,7 +200,7 @@ function Drivers() {
                     />
                   </div>
                   <div className="text-box1">
-                    <h2>Driver Registration and Ride Verification</h2>
+                    <h2>Driver Registration & Ride Safety Verification</h2>
                     <p>Safe Rides, Trusted Drivers—Your Safety Comes First!</p>
                     <p>
                       At RescueTap, we prioritize safety and reliability by

@@ -1,123 +1,87 @@
-"use client"
+"use client";
 
-import React from "react";
-import { AMBULANCE_API } from "@/constants/api";
-// import PaystackPop from '@paystack/inline-js'
+import React, { useState } from "react";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import { BASE_URL } from "@/constants/api";
+import "react-toastify/dist/ReactToastify.css";
 
-function payAmbulance(){
-  const https = require('https')
-
-const params = JSON.stringify({
-  "email": "customer@email.com",
-  "amount": "500000"
-})
-const options = {
-  hostname: 'api.paystack.co',
-  port: 443,
-  path: '/transaction/initialize',
-  method: 'POST',
-  headers: {
-    Authorization: 'Bearer sk_test_9749ce6a96efc0405098b98a5b9766ce35641fad',
-    'Content-Type': 'application/json'
-  }
-}
-const req = https.request(options, res => {
-  let data = ''
-
-  res.on('data', (chunk) => {
-    data += chunk
-  });
-  res.on('end', () => {
-    console.log(JSON.parse(data))
-    const response = JSON.parse(data)
-    const popup = new PaystackPop()
-    popup.resumeTransaction(response.access_code)
-  })
-}).on('error', error => {
-  console.error(error)
-})
-
-
-req.write(params)
-req.end()
-
-
-}
-
-
-async function bookAmbulance(){
-  
-//   const driverData = {
-//     fullname: document.getElementById('formName').value,
-//     email: document.getElementById('formEmail').value,
-//     formEvent: document.getElementById('formEvent').value,
-//     formAddress: document.getElementById('formAddress').value,
-//     formDate: document.getElementById('formDate').value,
-//     formTime: document.getElementById('formTime').value,
-//     formService: document.getElementById('formService').value,
-
-// };
-
-
-   // Book an Ambulance
-//    const response = await fetch(AMBULANCE_API, {
-//     method: 'POST',
-//     headers: {
-//         'Content-Type': 'application/json',
-//         // 'Authorization': `Bearer ${getAuthToken()}`
-//     },
-//     body: JSON.stringify(driverData)
-// });
-
-// var requestOptions = {
-//   method: 'POST',
-//   body: driverData,
-//   redirect: 'follow'
-// };
-
-// fetch(AMBULANCE_API, requestOptions)
-//   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
-
-const driverData = {
-  fullname: document.getElementById('formName').value,
-  email: document.getElementById('formEmail').value,
-  formEvent: document.getElementById('formEvent').value,
-  formAddress: document.getElementById('formAddress').value,
-  formDate: document.getElementById('formDate').value,
-  formTime: document.getElementById('formTime').value,
-  formService: document.getElementById('formService').value,
-};
-
-const requestOptions = {
-  method: 'POST',
-  headers: {  // Add the Content-Type header
-      'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(driverData), // Convert to JSON string
-  // redirect: 'follow'
-};
-
-fetch(AMBULANCE_API, requestOptions)
-  .then(response => {
-      if (!response.ok) { // Check for HTTP errors (like 400)
-          return response.text().then(err => {throw new Error(err)}); // Throw error with response text
-      }
-      return response.json(); // or response.text() if the response is not JSON
-  })
-  .then(result => console.log(result))
-  .catch(error => console.error('Error:', error)); // More descriptive error logging
-
-}
-
-
-
-
-
-
+const AMB = `${BASE_URL}/ambulance-booking`;
 
 const Ambulance = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+    event: "",
+    address: "",
+    serviceType: "",
+    eventDate: "",
+    eventTime: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Debug form data
+    console.log("Submitting data:", formData);
+
+    if (!formData.serviceType.trim()) {
+      toast.error("Please select a service type.");
+      return;
+    }
+
+    if (!formData.eventDate || !formData.eventTime) {
+      toast.error("Please provide a date and time for the booking.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const response = await axios.post(AMB, formData, {
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (response.status === 200 || response.status === 201) {
+        toast.success("Ambulance booked successfully!");
+        setFormData({
+          fullName: "",
+          email: "",
+          phoneNumber: "",
+          event: "",
+          serviceType: "",
+          address: "",
+          eventDate: "",
+          eventTime: "",
+        });
+      }
+    } catch (error) {
+      if (error.response) {
+        console.error("Server Error:", error.response);
+        toast.error(
+          error.response.data?.message ||
+            "Failed to book ambulance. Please try again."
+        );
+      } else if (error.request) {
+        console.error("Network Error:", error.request);
+        toast.error("Network error. Please check your connection.");
+      } else {
+        console.error("Error:", error.message);
+        toast.error("An unexpected error occurred.");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <div>
@@ -138,7 +102,7 @@ const Ambulance = () => {
                     data-aos-easing="linear"
                     data-aos-duration={1500}
                   >
-                    <h2>Ambulance Car</h2>
+                    <h2>Ambulance Dispatch Services</h2>
                   </div>
                   <div className="breadcrumb-menu">
                     <ul>
@@ -148,7 +112,7 @@ const Ambulance = () => {
                       <li>
                         <a href="services.html">Services</a>
                       </li>
-                      <li className="active">Ambulance Car</li>
+                      <li className="active">Ambulance Dispatch Services</li>
                     </ul>
                   </div>
                 </div>
@@ -156,8 +120,7 @@ const Ambulance = () => {
             </div>
           </div>
         </section>
-        {/*End breadcrumb area*/}
-        {/*Start Service Details area */}
+
         <section className="service-details-area">
           <div className="container">
             <div className="row">
@@ -173,13 +136,15 @@ const Ambulance = () => {
                     <ul className="service-pages">
                       <li className="active">
                         <a href="/Ambulance">
-                          Ambulance Car <span className="icon-next-1" />
+                          Ambulance Dispatch Services{" "}
+                          <span className="icon-next-1" />
                         </a>
                       </li>
 
                       <li>
                         <a href="/ALS">
-                          Advanced Life Support <span className="icon-next-1" />
+                          Advanced Life Support (ALS){" "}
+                          <span className="icon-next-1" />
                         </a>
                       </li>
                       <li>
@@ -190,7 +155,7 @@ const Ambulance = () => {
                       </li>
                       <li>
                         <a href="/Drivers">
-                          Driver Registration and Ride Verification
+                          Driver Registration & Ride Safety Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>
@@ -211,8 +176,8 @@ const Ambulance = () => {
                     />
                     <h3>Need an ambulance?</h3>
                     <p>
-                      Download our online Brouchure to get detailed informaion
-                      on our vehcle registration and ambulance services.
+                      Download our online Brochure to get detailed information
+                      on our vehicle registration and ambulance services.
                     </p>
                     <h2>
                       <a href="tel:+2348147806378">+234 814 780 6378</a>
@@ -231,14 +196,14 @@ const Ambulance = () => {
                         </div>
                         <div className="title">
                           <h5>
-                          <a
+                            <a
                               download="RescueTap_Brochure.pdf"
                               href="https://www.canva.com/design/DAGdeL6msb4/AHUvdPTymRiO6eUWQw9C2A/view?utm_content=DAGdeL6msb4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he59a8aab9e"
-                           target="_blank"
+                              target="_blank"
                             >
-                              View our Broucher
+                              View our Brochure
                             </a>
-                            {/* <button onClick={} >Download our Broucher</button> */}
+                            {/* <button onClick={} >Download our Brochure</button> */}
                           </h5>
                         </div>
                       </li>
@@ -257,7 +222,7 @@ const Ambulance = () => {
                     />
                   </div>
                   <div className="text-box1">
-                    <h2>Ambulance Car</h2>
+                    <h2>Ambulance Dispatch Services</h2>
                     <p>
                       “Fast and Reliable Ambulance Services—Because Every Second
                       Counts!”
@@ -378,298 +343,212 @@ const Ambulance = () => {
               </div>
               {/*End Service Details Content */}
             </div>
-            <div className="sec-title text-center">
-                      <div className="icon">
-                        <span className="icon-heartbeat" />
-                      </div>
-                      <div className="sub-title">
-                        <h3>
-                          Fill out the form below to book an ambulance for an
-                          event, and we’ll respond promptly.
-                        </h3>
-                      </div>
-                      {/* <h2>Registration as a Driver</h2> */}
-                      <h2>Book An Ambulance</h2>
-                    </div>
-                    <div className="row">
-                      <div className="col-xl-12">
-                        <div className="contact-form">
-                          <form
-                            id="contact-form"
-                            name="contact_form"
-                            className="default-form2"
-                            // action="assets/inc/sendmail.php"
-                            // method="post"
-                          >
-                            <div className="row">
-                              {/* <div className="col-xl-6">
-                                <div className="form-group">
-                                  <div className="input-box">
-                                    <input
-                                      type="text"
-                                      name="form_name"
-                                      id="formName"
-                                      placeholder="Full Name"
-                                      required
-                                    />
-                                  </div>
-                                </div>
-                              </div> */}
-                              <div className="col-xl-6">
-                                <div className="form-group">
-                                  <div className="input-box">
-                                    <input
-                                      type="hidden"
-                                      name="form_id"
-                                      id="form_id"
-                                      placeholder="Full Name"
-                                      required
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="col-xl-6">
-                                <div className="form-group">
-                                  <div className="input-box">
-                                    <input
-                                      type="text"
-                                      name="form_pickuplocation"
-                                      id="formPickuplocation"
-                                      placeholder="Pickup Location"
-                                      required
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="col-xl-6">
-                                <div className="form-group">
-                                  <div className="input-box">
-                                    <input
-                                      type="text"
-                                      name="form_name"
-                                      id="formName"
-                                      placeholder="Full Name"
-                                      required
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              {/* <div className="col-xl-6">
-                                <div className="form-group">
-                                  <div className="input-box">
-                                    <input
-                                      type="email"
-                                      name="form_email"
-                                      id="formEmail"
-                                      placeholder="Email Address"
-                                      required
-                                    />
-                                  </div>
-                                </div>
-                              </div> */}
-                            </div>
-                            <div className="row">
-                              <div className="col-xl-6">
-                                <div className="form-group">
-                                  <div className="input-box">
-                                    <input
-                                      type="text"
-                                      name="form_event"
-                                      id="formEvent"
-                                      placeholder="Event Name"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="col-xl-6">
-                                <div className="form-group">
-                                  <div className="input-box">
-                                    <input
-                                      type="text"
-                                      name="form_address"
-                                      id="formAddress"
-                                      placeholder="Address"
-                                      required
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            {/* New date, time, and dropdown fields */}
-                            <div className="row">
-                              <div className="col-xl-6 ">
-                                <div className="form-group bg-[#F2F3FA] p-1 pl-4 pt-1 font-medium">
-                                  <div className="input-box ">
-                                    {/* <label htmlFor="formDate">Date:</label> */}
-                                    <input
-                                      type="date"
-                                      name="form_date"
-                                      id="formDate"
-                                      required
-                                      className="bg-[#F2F3FA]"
-                                      placeholder="Date"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="col-xl-6">
-                                <div className="form-group bg-[#F2F3FA] p-1 pl-4">
-                                  <div className="input-box">
-                                    <input
-                                      type="time"
-                                      name="form_time"
-                                      id="formTime"
-                                      className="bg-[#F2F3FA]"
-                                      required
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="row ">
-                              <div className="w-[100%] bg-[#F2F3FA]">
-                                <div className=" w-[100%] bg-black">
-                                  <div className=" w-[100%]">
-                                    {/* <label htmlFor="formService">Service Type:</label> */}
-                                    <select
-                                      name="form_service"
-                                      id="formService"
-                                      required
-                                      className=" w-[100%] bg-black"
-                                      aria-required
-                                    >
-                                      <option
-                                        className="w-[100%] bg-black"
-                                        value=""
-                                      >
-                                        Select Service Type{" "}
-                                      </option>
-                                      <option value="basic">
-                                        Fully kiited bus with paramedics (VVIP)-
-                                        N200,000
-                                      </option>
-                                      <option
-                                        value="advanced"
-                                        className="bg-[#F2F3FA]"
-                                      >
-                                        Fully kiited bus without Paramedics
-                                        (VIP) - N160,000
-                                      </option>
-                                      <option value="event-standby">
-                                        Fully kiited Sienna with Paramedics
-                                        (Advanced) - N150,000
-                                      </option>
-                                      <option value="event-standby">
-                                        Fully kiited Sienna without Paramedics
-                                        (Basic)- N130,000
-                                      </option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            {/* Message field */}
-                            {/* <div className="row">
-                      <div className="col-xl-12">
-                        <div className="form-group">
-                          <div className="input-box">
-                            <textarea
-                              name="form_message"
-                              id="formMessage"
-                              placeholder="Write a Message"
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
-                            {/* Submit button */}
-                            <div className="row">
-                              <div className="col-xl-12 text-center">
-                                <div className="button-box">
-                                  <input
-                                    id="form_botcheck"
-                                    name="form_botcheck"
-                                    className="form-control"
-                                    type="hidden"
-                                  />
-                                  <button
-                                    className="btn-one"
-                                    // type="submit"
-                                    type="button"
-                                    // data-loading-text="Please wait..."
-                                    // onClick={bookAmbulance}
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#exampleModal"
-                                  >
-                                    <span className="txt">Send a Message</span>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
+
+            <ToastContainer />
+
+            <section className="main-contact-form-area py-12">
+              <div className="container mx-auto max-w-4xl">
+                <div className="sec-title text-center mb-8">
+                  <div className="icon mb-4">
+                    <span className="icon-heartbeat text-red-600 text-4xl" />
+                  </div>
+                  <h3 className="text-gray-600 text-lg">
+                    Fill out the form below to book an ambulance for an event,
+                    and we’ll respond promptly.
+                  </h3>
+                  <h2 className="text-3xl font-bold text-gray-800 mt-4">
+                    Book an Ambulance
+                  </h2>
+                </div>
+                <form
+                  onSubmit={handleSubmit}
+                  className="bg-white p-8 shadow-lg rounded-xl"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input
+                      type="text"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      placeholder="Full Name"
+                      required
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Email Address"
+                      required
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <input
+                      type="tel"
+                      name="phoneNumber"
+                      value={formData.phoneNumber}
+                      onChange={handleChange}
+                      placeholder="Phone Number"
+                      required
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <input
+                      type="text"
+                      name="event"
+                      value={formData.event}
+                      onChange={handleChange}
+                      placeholder="Event Name"
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <input
+                      type="text"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleChange}
+                      placeholder="Address"
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <div>
+                      <p className="font-semibold">Select Service Type:</p>
+                      <div className="flex flex-col space-y-2">
+                        <label className="flex items-center">
+                          <input
+                            type="radio"
+                            name="serviceType"
+                            value="vvip"
+                            checked={formData.serviceType === "vvip"}
+                            onChange={handleChange}
+                            className="mr-2"
+                          />
+                          Fully kitted bus with paramedics (VVIP)
+                        </label>
+                        <label className="flex items-center">
+                          <input
+                            type="radio"
+                            name="serviceType"
+                            value="vip"
+                            checked={formData.serviceType === "vip"}
+                            onChange={handleChange}
+                            className="mr-2"
+                          />
+                          Fully kitted bus without paramedics (VIP)
+                        </label>
+                        <label className="flex items-center">
+                          <input
+                            type="radio"
+                            name="serviceType"
+                            value="advance"
+                            checked={formData.serviceType === "advance"}
+                            onChange={handleChange}
+                            className="mr-2"
+                          />
+                          Sienna with paramedics (Advanced)
+                        </label>
+                        <label className="flex items-center">
+                          <input
+                            type="radio"
+                            name="serviceType"
+                            value="basic"
+                            checked={formData.serviceType === "basic"}
+                            onChange={handleChange}
+                            className="mr-2"
+                          />
+                          Sienna without paramedics (Basic)
+                        </label>
                       </div>
                     </div>
+
+                    <input
+                      type="date"
+                      name="eventDate"
+                      value={formData.eventDate}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                    <input
+                      type="time"
+                      name="eventTime"
+                      value={formData.eventTime}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-2 bg-gray-100 border rounded-lg"
+                    />
+                  </div>
+                  <div className="text-center mt-8">
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
+                        loading ? "cursor-not-allowed opacity-70" : ""
+                      }`}
+                    >
+                      {loading ? "Booking..." : "Book Ambulance"}
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </section>
           </div>
         </section>
       </div>
 
-
       {/* Kept the modal away */}
-     
-{/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+      {/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
 </button> */}
 
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Card Payment</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       
-          
-          <form 
-          id=""
-          action="" 
-          method="POST"
-          > 
-          <input type="hidden" name="user_email" value="<?php echo $email; ?>" /> 
-          <input type="hidden" name="amount" value="<?php echo $amount; ?>" /> 
-          <input type="hidden" name="cartid" value="<?php echo $cartid; ?>" />         
-         
-        </form>
-      </div>
-      <div class="modal-footer">
-        {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
-        {/* <button type="button" class="btn btn-primary">Pay</button> */}
-        <div className="button-box">
-          <input
-            id="form_botcheck"
-            name="form_botcheck"
-            className="form-control"
-            type="hidden"
-          />
-          <button
-            className="btn-one"
-            // type="submit"
-            // type="button"
-            onClick={bookAmbulance}
-            data-loading-text="Please wait..."
-            data-bs-toggle="modal" 
-            data-bs-target="#exampleModal"
-          >
-            <span className="txt">Pay</span>
-          </button>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Card Payment
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div></div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
+              {/* <button type="button" class="btn btn-primary">Pay</button> */}
+              <div className="button-box">
+                <input
+                  id="form_botcheck"
+                  name="form_botcheck"
+                  className="form-control"
+                  type="hidden"
+                />
+                <button
+                  className="btn-one"
+                  type="submit"
+                  // type="button"
+                  data-loading-text="Please wait..."
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <span className="txt">Pay</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
     </>
   );
 };

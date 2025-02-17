@@ -43,6 +43,8 @@ const Contact = () => {
       return;
     }
 
+    setLoading(true);
+
     try {
       const response = await axios.post(AMB, formData, {
         headers: { "Content-Type": "application/json" },
@@ -75,6 +77,8 @@ const Contact = () => {
         console.error("Error:", error.message);
         toast.error("An unexpected error occurred.");
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -266,12 +270,23 @@ const Contact = () => {
                       <input
                         type="radio"
                         name="serviceType"
-                        value="basic"
-                        checked={formData.serviceType === "basic"}
+                        value="vvip"
+                        checked={formData.serviceType === "vvip"}
                         onChange={handleChange}
                         className="mr-2"
                       />
                       Fully kitted bus with paramedics (VVIP)
+                    </label>
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="vip"
+                        checked={formData.serviceType === "vip"}
+                        onChange={handleChange}
+                        className="mr-2"
+                      />
+                      Fully kitted bus without paramedics (VIP)
                     </label>
                     <label className="flex items-center">
                       <input
@@ -282,25 +297,14 @@ const Contact = () => {
                         onChange={handleChange}
                         className="mr-2"
                       />
-                      Fully kitted bus without paramedics (VIP)
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="serviceType"
-                        value="event-standby"
-                        checked={formData.serviceType === "event-standby"}
-                        onChange={handleChange}
-                        className="mr-2"
-                      />
                       Sienna with paramedics (Advanced)
                     </label>
                     <label className="flex items-center">
                       <input
                         type="radio"
                         name="serviceType"
-                        value="basic-standby"
-                        checked={formData.serviceType === "basic-standby"}
+                        value="basic"
+                        checked={formData.serviceType === "basic"}
                         onChange={handleChange}
                         className="mr-2"
                       />

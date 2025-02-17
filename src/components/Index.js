@@ -214,14 +214,25 @@ const Index = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="btns-box">
-                    <a className="btn-one" href="/About">
-                      <span className="txt">
-                        Learn More
-                        <i className="icon-refresh arrow" />
-                      </span>
-                    </a>
+                  <div className="flex md:flex-row flex-col gap-[20px]">
+                    <div className="btns-box ">
+                      <a className="btn-one" href="/About">
+                        <span className="txt">
+                          Download App
+                          <i className="icon-refresh arrow" />
+                        </span>
+                      </a>
+                    </div>
+                    <div className="btns-box ">
+                      <a className="btn-one" href="/Contact">
+                        <span className="txt">
+                          Book an Ambulance
+                          <i className="icon-refresh arrow" />
+                        </span>
+                      </a>
+                    </div>
                   </div>
+
                   {/* <Form></Form> */}
                 </div>
               </div>
@@ -250,7 +261,7 @@ const Index = () => {
                             Quick Response Times
                           </a>
                         </h3>
-                        <p>Instant, Reliable, and Life-Saving!</p>
+                        <p>Get help fast when every second counts.</p>
                       </div>
                     </div>
                   </li>
@@ -264,7 +275,7 @@ const Index = () => {
                         <h3>
                           <a href="#">Real-Time Tracking</a>
                         </h3>
-                        <p>Stay Informed and Ready</p>
+                        <p>Monitor your emergency services in real time.</p>
                       </div>
                     </div>
                   </li>
@@ -278,7 +289,7 @@ const Index = () => {
                         <h3>
                           <a href="#">Available 24/7</a>
                         </h3>
-                        <p>Because Time Matters.</p>
+                        <p>Emergency assistance, anytime, anywhere.</p>
                       </div>
                     </div>
                   </li>
@@ -314,7 +325,9 @@ const Index = () => {
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="services-single-1.html">Ambulance Car Services</a>
+                    <a href="services-single-1.html">
+                      Ambulance Dispatch Services
+                    </a>
                   </h3>
                   <p>
                     Our ambulance fleet is not just for medical emergencies—it’s
@@ -327,8 +340,7 @@ const Index = () => {
                   </ul> */}
                   <div className="btn-box">
                     <a href="/Contact">
-                      Book an Ambulance Now{" "}
-                      <span className="icon-right-arrow" />
+                      Book an Ambulance <span className="icon-right-arrow" />
                     </a>
                   </div>
                 </div>
@@ -347,11 +359,13 @@ const Index = () => {
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="/ALS">Advanced Life Support</a>
+                    <a href="/ALS">
+                      Driver Registration & Ride Safety Verification
+                    </a>
                   </h3>
                   <p>
-                    In cases where incidents escalate into health emergencies,
-                    our ALS services provide critical care.
+                    Our drivers are verified, trusted, and trained to ensure
+                    safe and secure rides for all RescueTap users.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Immediate Medical Attention</li>
@@ -359,9 +373,8 @@ const Index = () => {
                     <li className=""><span className="icon-right-arrow" /> State-of-the-Art Equipment</li>
                   </ul> */}
                   <div className="btn-box">
-                    <a href="/Contact">
-                      Request Advanced Care{" "}
-                      <span className="icon-right-arrow" />
+                    <a href="/Drivers">
+                      Register as a driver <span className="icon-right-arrow" />
                     </a>
                   </div>
                 </div>
@@ -380,7 +393,10 @@ const Index = () => {
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="/App">Emergency Response App</a>
+                    <a href="/App">
+                      Emergency Response <br />
+                      App
+                    </a>
                   </h3>
                   <p>
                     Our RescueTap App serves as a digital lifeline for anyone
@@ -452,8 +468,6 @@ const Index = () => {
                         src="assets/images/testimonial/testimonial-v1-1.jpg"
                         alt
                       />
-                     
-                      
                     </div>
                     <div className="text-holder">
                       <div className="sec-title sec-title--style2">
