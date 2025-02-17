@@ -402,6 +402,45 @@ const Ambulance = () => {
                             // method="post"
                           >
                             <div className="row">
+                              {/* <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="text"
+                                      name="form_name"
+                                      id="formName"
+                                      placeholder="Full Name"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div> */}
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="hidden"
+                                      name="form_id"
+                                      id="form_id"
+                                      placeholder="Full Name"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-xl-6">
+                                <div className="form-group">
+                                  <div className="input-box">
+                                    <input
+                                      type="text"
+                                      name="form_pickuplocation"
+                                      id="formPickuplocation"
+                                      placeholder="Pickup Location"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
                               <div className="col-xl-6">
                                 <div className="form-group">
                                   <div className="input-box">
@@ -415,7 +454,7 @@ const Ambulance = () => {
                                   </div>
                                 </div>
                               </div>
-                              <div className="col-xl-6">
+                              {/* <div className="col-xl-6">
                                 <div className="form-group">
                                   <div className="input-box">
                                     <input
@@ -427,7 +466,7 @@ const Ambulance = () => {
                                     />
                                   </div>
                                 </div>
-                              </div>
+                              </div> */}
                             </div>
                             <div className="row">
                               <div className="col-xl-6">
