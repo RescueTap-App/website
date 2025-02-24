@@ -437,8 +437,8 @@ const Ambulance = () => {
                           <input
                             type="radio"
                             name="serviceType"
-                            value="advance"
-                            checked={formData.serviceType === "advance"}
+                            value="advanced"
+                            checked={formData.serviceType === "advanced"}
                             onChange={handleChange}
                             className="mr-2"
                           />
@@ -500,31 +500,31 @@ const Ambulance = () => {
 </button> */}
 
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">
                 Card Payment
               </h5>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               <form>
                 <div></div>
               </form>
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
               {/* <button type="button" class="btn btn-primary">Pay</button> */}
               <div className="button-box">
