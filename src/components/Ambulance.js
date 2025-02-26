@@ -5,8 +5,16 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import { BASE_URL } from "@/constants/api";
 import "react-toastify/dist/ReactToastify.css";
+import { PaystackButton } from "react-paystack";
+import { PaystackKey } from "@/constants/paystackKey";
+// import { metadata } from "@/app/layout";
 
 const AMB = `${BASE_URL}/ambulance-booking`;
+
+// const [mail, setMail] = useState('')
+// const [amount, setA]
+
+
 
 const Ambulance = () => {
   const [formData, setFormData] = useState({
@@ -81,6 +89,30 @@ const Ambulance = () => {
       setLoading(false);
     }
   };
+
+
+  // const componentProps = {
+  //   email: formData.email,
+  //   amount: 1000,
+  //   serviceType: formData.serviceType,
+  //   onsubmit: handleSubmit(),
+  //   text: loading ? "Booking .....": "Paid and Booked",
+  //   onSuccess: ({ reference }) => {
+  //     alert(
+  //       `Your purchase was successful! Transaction reference: ${reference}`
+  //     )},
+  //     onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+  //   currency: "NGN",
+  //   publicKey: PaystackKey,
+  // //   meta: {
+  // //     name: formData.fullName,
+  // //     phone: formData.phoneNumber,
+  // //     description: `Schedule Appointment Payment at ${amount} for ${serviceType} minutes`,
+  // // },
+  // }
+
+
+
 
   return (
     <>
@@ -485,6 +517,11 @@ const Ambulance = () => {
                     >
                       {loading ? "Booking..." : "Book Ambulance"}
                     </button>
+                      {/* <PaystackButton 
+                      className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
+                        loading ? "cursor-not-allowed opacity-70" : ""
+                      }`} 
+                      {...componentProps}/> */}
                   </div>
                 </form>
               </div>
