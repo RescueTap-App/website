@@ -91,25 +91,25 @@ const Ambulance = () => {
   };
 
 
-  // const componentProps = {
-  //   email: formData.email,
-  //   amount: 1000,
-  //   serviceType: formData.serviceType,
-  //   onsubmit: handleSubmit(),
-  //   text: loading ? "Booking .....": "Paid and Booked",
-  //   onSuccess: ({ reference }) => {
-  //     alert(
-  //       `Your purchase was successful! Transaction reference: ${reference}`
-  //     )},
-  //     onClose: () => alert("Wait! You need this oil, don't go!!!!"),
-  //   currency: "NGN",
-  //   publicKey: PaystackKey,
-  // //   meta: {
-  // //     name: formData.fullName,
-  // //     phone: formData.phoneNumber,
-  // //     description: `Schedule Appointment Payment at ${amount} for ${serviceType} minutes`,
-  // // },
-  // }
+  const componentProps = {
+    email: formData.email,
+    amount: 1000,
+    serviceType: formData.serviceType,
+    onsubmit: handleSubmit(),
+    text: loading ? "Booking .....": "Paid and Booked",
+    onSuccess: ({ reference }) => {
+      alert(
+        `Your purchase was successful! Transaction reference: ${reference}`
+      )},
+      onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+    currency: "NGN",
+    publicKey: PaystackKey,
+  //   meta: {
+  //     name: formData.fullName,
+  //     phone: formData.phoneNumber,
+  //     description: `Schedule Appointment Payment at ${amount} for ${serviceType} minutes`,
+  // },
+  }
 
 
 
@@ -517,11 +517,11 @@ const Ambulance = () => {
                     >
                       {loading ? "Booking..." : "Book Ambulance"}
                     </button>
-                      {/* <PaystackButton 
+                      <PaystackButton 
                       className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
                         loading ? "cursor-not-allowed opacity-70" : ""
                       }`} 
-                      {...componentProps}/> */}
+                      {...componentProps}/>
                   </div>
                 </form>
               </div>
