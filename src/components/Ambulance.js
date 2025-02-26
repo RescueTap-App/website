@@ -508,7 +508,7 @@ const Ambulance = () => {
                     />
                   </div>
                   <div className="text-center mt-8">
-                    <button
+                    {/* <button
                       type="submit"
                       disabled={loading}
                       className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
@@ -516,7 +516,7 @@ const Ambulance = () => {
                       }`}
                     >
                       {loading ? "Booking..." : "Book Ambulance"}
-                    </button>
+                    </button> */}
                       <PaystackButton 
                       className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
                         loading ? "cursor-not-allowed opacity-70" : ""
