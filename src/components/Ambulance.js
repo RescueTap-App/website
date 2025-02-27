@@ -5,8 +5,13 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import { BASE_URL } from "@/constants/api";
 import "react-toastify/dist/ReactToastify.css";
+import { PaystackButton } from "react-paystack";
+import { PaystackKey } from "@/constants/paystackKey";
+// import { metadata } from "@/app/layout";
 
 const AMB = `${BASE_URL}/ambulance-booking`;
+
+let amount;
 
 const Ambulance = () => {
   const [formData, setFormData] = useState({
@@ -81,6 +86,40 @@ const Ambulance = () => {
       setLoading(false);
     }
   };
+
+  if (formData.serviceType === "basic"){
+    amount = 18000000
+  }else if(formData.serviceType === "advanced") {
+    amount = 20000000
+  }else if(formData.serviceType === "vip"){
+    amount = 22000000
+  }else if(formData.serviceType === "vvip"){
+    amount = 25000000
+  }
+
+  const componentProps = {
+    email: formData.email,
+    amount: amount,
+    serviceType: formData.serviceType,
+    onsubmit: handleSubmit(),
+    text: loading ? "Booking .....": "Paid and Booked",
+    onSuccess: ({ reference }) => {
+      
+      alert(
+        `Your purchase was successful! Transaction reference: ${reference}`
+      )},
+      onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+    currency: "NGN",
+    publicKey: PaystackKey,
+  //   meta: {
+  //     name: formData.fullName,
+  //     phone: formData.phoneNumber,
+  //     description: `Schedule Appointment Payment at ${amount} for ${serviceType} minutes`,
+  // },
+  }
+console.log(amount)
+
+
 
   return (
     <>
@@ -437,8 +476,8 @@ const Ambulance = () => {
                           <input
                             type="radio"
                             name="serviceType"
-                            value="advance"
-                            checked={formData.serviceType === "advance"}
+                            value="advanced"
+                            checked={formData.serviceType === "advanced"}
                             onChange={handleChange}
                             className="mr-2"
                           />
@@ -476,7 +515,7 @@ const Ambulance = () => {
                     />
                   </div>
                   <div className="text-center mt-8">
-                    <button
+                    {/* <button
                       type="submit"
                       disabled={loading}
                       className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
@@ -484,7 +523,13 @@ const Ambulance = () => {
                       }`}
                     >
                       {loading ? "Booking..." : "Book Ambulance"}
-                    </button>
+                    </button> */}
+                      <PaystackButton 
+                      // type="submit"
+                      className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
+                        loading ? "cursor-not-allowed opacity-70" : ""
+                      }`} 
+                      {...componentProps}/>
                   </div>
                 </form>
               </div>
@@ -500,31 +545,31 @@ const Ambulance = () => {
 </button> */}
 
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">
                 Card Payment
               </h5>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               <form>
                 <div></div>
               </form>
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
               {/* <button type="button" class="btn btn-primary">Pay</button> */}
               <div className="button-box">

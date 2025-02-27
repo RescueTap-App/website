@@ -1,0 +1,1 @@
+export const PaystackKey = "pk_test_86fa1e648f8527d9544ea51fbb2119bc2dd05c17"
