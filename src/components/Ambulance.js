@@ -523,7 +523,7 @@ console.log(amount)
                       }`}
                     >
                       {loading ? "Booking..." : "Book Ambulance"}
-                    </button> */}
+                    </buttonaa> */}
                       <PaystackButton 
                       // type="submit"
                       className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
