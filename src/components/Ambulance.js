@@ -11,10 +11,7 @@ import { PaystackKey } from "@/constants/paystackKey";
 
 const AMB = `${BASE_URL}/ambulance-booking`;
 
-// const [mail, setMail] = useState('')
-// const [amount, setA]
-
-
+let amount;
 
 const Ambulance = () => {
   const [formData, setFormData] = useState({
@@ -90,14 +87,24 @@ const Ambulance = () => {
     }
   };
 
+  if (formData.serviceType === "basic"){
+    amount = 18000000
+  }else if(formData.serviceType === "advanced") {
+    amount = 20000000
+  }else if(formData.serviceType === "vip"){
+    amount = 22000000
+  }else if(formData.serviceType === "vvip"){
+    amount = 25000000
+  }
 
   const componentProps = {
     email: formData.email,
-    amount: 1000,
+    amount: amount,
     serviceType: formData.serviceType,
     onsubmit: handleSubmit(),
     text: loading ? "Booking .....": "Paid and Booked",
     onSuccess: ({ reference }) => {
+      
       alert(
         `Your purchase was successful! Transaction reference: ${reference}`
       )},
@@ -110,7 +117,7 @@ const Ambulance = () => {
   //     description: `Schedule Appointment Payment at ${amount} for ${serviceType} minutes`,
   // },
   }
-
+console.log(amount)
 
 
 
@@ -518,6 +525,7 @@ const Ambulance = () => {
                       {loading ? "Booking..." : "Book Ambulance"}
                     </button> */}
                       <PaystackButton 
+                      // type="submit"
                       className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
                         loading ? "cursor-not-allowed opacity-70" : ""
                       }`} 
