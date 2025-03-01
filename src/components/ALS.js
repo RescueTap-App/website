@@ -7,7 +7,7 @@ import { BASE_URL } from "@/constants/api";
 import "react-toastify/dist/ReactToastify.css";
 import { PaystackButton } from "react-paystack";
 import { PaystackKey } from "@/constants/paystackKey";
-import React from "react";
+// import React from "react";
 
 
 
@@ -566,7 +566,7 @@ console.log(amount)
                     />
                   </div>
                   <div className="text-center mt-8">
-                    <button
+                    {/* <button
                       type="submit"
                       disabled={loading}
                       className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
@@ -574,7 +574,7 @@ console.log(amount)
                       }`}
                     >
                       {loading ? "Booking..." : "Book Ambulance"}
-                    </button>
+                    </button> */}
                     <PaystackButton 
                     // type="submit"
                     className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
