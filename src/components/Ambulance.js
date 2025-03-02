@@ -7,7 +7,7 @@ import { BASE_URL } from "@/constants/api";
 import "react-toastify/dist/ReactToastify.css";
 import { PaystackButton } from "react-paystack";
 import { PaystackKey } from "@/constants/paystackKey";
-// import { metadata } from "@/app/layout";
+
 
 const AMB = `${BASE_URL}/ambulance-booking`;
 

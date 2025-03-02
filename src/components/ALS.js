@@ -5,8 +5,15 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import { BASE_URL } from "@/constants/api";
 import "react-toastify/dist/ReactToastify.css";
+import { PaystackButton } from "react-paystack";
+import { PaystackKey } from "@/constants/paystackKey";
+
+
+
 
 const AMB = `${BASE_URL}/ambulance-booking`;
+let amount;
+
 const ALS = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -80,6 +87,36 @@ const ALS = () => {
       setLoading(false);
     }
   };
+
+  if (formData.serviceType === "basic"){
+    amount = 18000000
+  }else if(formData.serviceType === "advanced") {
+    amount = 20000000
+  }else if(formData.serviceType === "vip"){
+    amount = 22000000
+  }else if(formData.serviceType === "vvip"){
+    amount = 25000000
+  }
+
+
+    const componentProps = {
+    email: formData.email,
+    amount: amount,
+    serviceType: formData.serviceType,
+    onsubmit: handleSubmit(),
+    text: loading ? "Booking .....": "Paid and Booked",
+    onSuccess: ({ reference }) => {
+      
+      alert(
+        `Your purchase was successful! Transaction reference: ${reference}`
+      )},
+      onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+    currency: "NGN",
+    publicKey: PaystackKey,
+  }
+
+console.log(amount)
+
 
   return (
     <>
@@ -486,8 +523,8 @@ const ALS = () => {
                           <input
                             type="radio"
                             name="serviceType"
-                            value="advance"
-                            checked={formData.serviceType === "advance"}
+                            value="advanced"
+                            checked={formData.serviceType === "advanced"}
                             onChange={handleChange}
                             className="mr-2"
                           />
@@ -525,7 +562,7 @@ const ALS = () => {
                     />
                   </div>
                   <div className="text-center mt-8">
-                    <button
+                    {/* <button
                       type="submit"
                       disabled={loading}
                       className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
@@ -533,7 +570,12 @@ const ALS = () => {
                       }`}
                     >
                       {loading ? "Booking..." : "Book Ambulance"}
-                    </button>
+                    </button> */}
+                    <PaystackButton 
+                     className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${ 
+                       loading ? "cursor-not-allowed opacity-70" : "" 
+                     }`}  
+                    {...componentProps}/>
                   </div>
                 </form>
               </div>
