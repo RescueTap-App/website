@@ -7,7 +7,7 @@ import { BASE_URL } from "@/constants/api";
 import "react-toastify/dist/ReactToastify.css";
 import { PaystackButton } from "react-paystack";
 import { PaystackKey } from "@/constants/paystackKey";
-// import React from "react";
+
 
 
 
@@ -113,12 +113,8 @@ const ALS = () => {
       onClose: () => alert("Wait! You need this oil, don't go!!!!"),
     currency: "NGN",
     publicKey: PaystackKey,
-  //   meta: {
-  //     name: formData.fullName,
-  //     phone: formData.phoneNumber,
-  //     description: `Schedule Appointment Payment at ${amount} for ${serviceType} minutes`,
-  // },
   }
+
 console.log(amount)
 
 
@@ -527,8 +523,8 @@ console.log(amount)
                           <input
                             type="radio"
                             name="serviceType"
-                            value="advance"
-                            checked={formData.serviceType === "advance"}
+                            value="advanced"
+                            checked={formData.serviceType === "advanced"}
                             onChange={handleChange}
                             className="mr-2"
                           />
@@ -576,10 +572,9 @@ console.log(amount)
                       {loading ? "Booking..." : "Book Ambulance"}
                     </button> */}
                     <PaystackButton 
-                    // type="submit"
-                    className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
-                      loading ? "cursor-not-allowed opacity-70" : ""
-                    }`} 
+                     className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${ 
+                       loading ? "cursor-not-allowed opacity-70" : "" 
+                     }`}  
                     {...componentProps}/>
                   </div>
                 </form>
