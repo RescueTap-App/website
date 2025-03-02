@@ -1,4 +1,7 @@
-import ALS from "@/components/ALS";
+"use client";
+import dynamic from "next/dynamic";
+const ALS = dynamic(() => import("@/components/ALS"), { ssr: false });
+
 import Footer from "@/components/Footer";
 import Index from "@/components/Index";
 import Nav from "@/components/Nav";
