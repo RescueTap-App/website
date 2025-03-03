@@ -103,14 +103,21 @@ const ALS = () => {
     email: formData.email,
     amount: amount,
     serviceType: formData.serviceType,
-    onsubmit: handleSubmit(),
+    // onsubmit: handleSubmit(),
     text: loading ? "Booking .....": "Paid and Booked",
     onSuccess: ({ reference }) => {
       
       alert(
         `Your purchase was successful! Transaction reference: ${reference}`
       )},
-      onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+      onClose: ({reference}) => 
+        {
+          handleSubmit()
+          console.log(`Your reference is ${reference} `)
+
+          // alert("Wait! You need this oil, don't go!!!!")
+
+        },
     currency: "NGN",
     publicKey: PaystackKey,
   }
