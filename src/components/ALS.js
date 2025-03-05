@@ -454,7 +454,7 @@ console.log(amount)
                   </h2>
                 </div>
                 <form
-                  onSubmit={handleSubmit}
+                  // onSubmit={handleSubmit}
                   className="bg-white p-8 shadow-lg rounded-xl"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
