@@ -87,9 +87,7 @@ const Ambulance = () => {
     }
   };
 
-  // const payandsubmit = () =>{
-  //   handleSubmit()
-  // }
+
   if (formData.serviceType === "basic"){
     amount = 18000000
   }else if(formData.serviceType === "advanced") {

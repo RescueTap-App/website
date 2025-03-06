@@ -106,13 +106,13 @@ const ALS = () => {
     // onsubmit: handleSubmit(),
     text: loading ? "Booking .....": "Paid and Booked",
     onSuccess: ({ reference }) => {
-      
+      handleSubmit()
       alert(
         `Your purchase was successful! Transaction reference: ${reference}`
       )},
       onClose: ({reference}) => 
         {
-          handleSubmit()
+          
           console.log(`Your reference is ${reference} `)
 
           // alert("Wait! You need this oil, don't go!!!!")
@@ -453,7 +453,7 @@ console.log(amount)
                     Book an Ambulance
                   </h2>
                 </div>
-                <form
+                <div
                   // onSubmit={handleSubmit}
                   className="bg-white p-8 shadow-lg rounded-xl"
                 >
@@ -584,7 +584,7 @@ console.log(amount)
                      }`}  
                     {...componentProps}/>
                   </div>
-                </form>
+                </div>
               </div>
             </section>
           </div>
