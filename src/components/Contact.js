@@ -99,14 +99,17 @@ const Contact = () => {
     email: formData.email,
     amount: amount,
     serviceType: formData.serviceType,
-    onsubmit: handleSubmit(),
+    // onsubmit: handleSubmit(),
     text: loading ? "Booking .....": "Paid and Booked",
     onSuccess: ({ reference }) => {
-      
+      handleSubmit()
       alert(
         `Your purchase was successful! Transaction reference: ${reference}`
       )},
-      onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+      onClose: ({reference}) => { 
+        console.log(`Your reference is ${reference} `)
+
+      },
     currency: "NGN",
     publicKey: PaystackKey,
   }
@@ -244,8 +247,8 @@ const Contact = () => {
                 Book an Ambulance
               </h2>
             </div>
-            <form
-              onSubmit={handleSubmit}
+            <div
+              // onSubmit={handleSubmit}
               className="bg-white p-8 shadow-lg rounded-xl"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -373,9 +376,10 @@ const Contact = () => {
                   className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${ 
                     loading ? "cursor-not-allowed opacity-70" : "" 
                   }`}  
-                {...componentProps}/>
+                {...componentProps}
+                />
               </div>
-            </form>
+            </div>
           </div>
         </section>
         {/*End Main Contact Form Area*/}

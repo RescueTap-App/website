@@ -32,8 +32,8 @@ const Ambulance = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
+    // e.preventDefault();
 
     // Debug form data
     console.log("Submitting data:", formData);
@@ -87,6 +87,7 @@ const Ambulance = () => {
     }
   };
 
+
   if (formData.serviceType === "basic"){
     amount = 18000000
   }else if(formData.serviceType === "advanced") {
@@ -101,14 +102,18 @@ const Ambulance = () => {
     email: formData.email,
     amount: amount,
     serviceType: formData.serviceType,
-    onsubmit: handleSubmit(),
+    // onsubmit: handleSubmit(),
     text: loading ? "Booking .....": "Paid and Booked",
     onSuccess: ({ reference }) => {
-      
+      handleSubmit()
       alert(
         `Your purchase was successful! Transaction reference: ${reference}`
       )},
-      onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+      onClose: ({reference}) => {
+        // handleSubmit()
+        // alert("Wait! You need this oil, don't go!!!!")
+        console.log(`Your reference is ${reference} `)
+      },
     currency: "NGN",
     publicKey: PaystackKey,
   //   meta: {
@@ -117,7 +122,8 @@ const Ambulance = () => {
   //     description: `Schedule Appointment Payment at ${amount} for ${serviceType} minutes`,
   // },
   }
-console.log(amount)
+
+  console.log(amount)
 
 
 
@@ -399,8 +405,10 @@ console.log(amount)
                     Book an Ambulance
                   </h2>
                 </div>
-                <form
-                  onSubmit={handleSubmit}
+                <div
+                  // onSubmit={{...componentProps}}
+                      // onSubmit={handleSubmit()}
+                      // onSubmit={payandsubmit()}
                   className="bg-white p-8 shadow-lg rounded-xl"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -526,12 +534,15 @@ console.log(amount)
                     </buttonaa> */}
                       <PaystackButton 
                       // type="submit"
+                      
                       className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
                         loading ? "cursor-not-allowed opacity-70" : ""
                       }`} 
-                      {...componentProps}/>
+                      {...componentProps}
+                      // onSuccess={handleSubmit()}
+                      />
                   </div>
-                </form>
+                </div>
               </div>
             </section>
           </div>
