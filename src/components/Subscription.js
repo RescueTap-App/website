@@ -1,6 +1,14 @@
 import React from "react"
+import { useState } from "react";
+import { PaystackButton } from "react-paystack";
+
 
 const Subscription = ()=>{
+    
+    const userID = URLSearchParams.get(userId)
+    const compressedDate = {}
+
+    
     return(
         <>
             <div>
@@ -78,7 +86,8 @@ const Subscription = ()=>{
                                         </div>
 
                                         <div className="mt-10">
-                                            <button className="bg-red-600 text-white w-full p-1 border rounded-md">Confirm Plan</button>
+                                            {/* <button className="bg-red-600 text-white w-full p-1 border rounded-md">Confirm Plan</button> */}
+                                            <PaystackButton className="bg-red-600 text-white w-full p-1 border rounded-md"/>
                                         </div>
                                     </form>
                                 </div>
