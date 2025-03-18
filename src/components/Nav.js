@@ -104,6 +104,9 @@ const Nav = () => {
                               Driver Registration & Ride Safety Verification
                             </a>
                           </li>
+                          <li>
+                            <a href="/Subscription">Subscription</a>
+                          </li>
                         </ul>
                       </li>
                       {/* <li className="dropdown">
