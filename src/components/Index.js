@@ -13,7 +13,7 @@ const Index = () => {
       {/* preloader */}
       <section className="main-slider style1">
         <div className="slider-box">
-          <div
+          {/* <div
             className="slider-contact-info-box"
             data-aos="slide-left"
             data-aos-easing="linear"
@@ -35,7 +35,7 @@ const Index = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* Banner Carousel */}
           <div className="banner-carousel owl-theme owl-carousel">
             {/* Slide */}
@@ -49,21 +49,30 @@ const Index = () => {
               <div className="auto-container">
                 <div className="content">
                   <div className="sub-title">
-                    <h3>Emergency Help at Your Fingertips</h3>
+                  <p className = "font-light text-white underline">One tap could keep you safe.</p>
                   </div>
                   <div className="big-title">
-                    <h2>
-                      Instant, Reliable
-                      <br /> and Life-Saving!
-                    </h2>
+                    <p className="text-white text-lg font-bold">
+                    RescueTap lets you instantly share your location, send emergency alerts, <br/> and stay connected with the people who matter most because safety starts with awareness.
+                    </p>
                   </div>
-                  <div className="btns-box">
-                    <a className="btn-one" href="/Contact">
-                      <span className="txt">
-                        Book an Ambulance
-                        <i className="icon-refresh arrow" />
-                      </span>
-                    </a>
+                  <div className="flex flex-col md:flex-row md:w-[50%] w-[100%]">
+                    <div className="btns-box">
+                      <a className="btn-one" href="/About">
+                        <span className="txt">
+                          Download on iOS
+                          <i className="icon-refresh arrow" />
+                        </span>
+                      </a>
+                    </div>
+                    <div className="btns-box">
+                      <a className="btn-one" href="/About">
+                        <span className="txt">
+                          Download on Android
+                          <i className="icon-refresh arrow" />
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -79,13 +88,13 @@ const Index = () => {
               <div className="auto-container">
                 <div className="content">
                   <div className="sub-title">
-                    <h3>Emergencies Happen</h3>
+                    <p className = "font-light text-white underline">Stay Safe. Stay Alert.</p>
                   </div>
                   <div className="big-title">
-                    <h2>
+                    <p className="text-white text-lg font-bold">
                       {/* The Preferred Air */}
-                      Help is Just a Tap Away!
-                    </h2>
+                      If you’re on the move, at work, or out with friends, RescueTap lets your loved ones <br/> track your location in real-time and stay updated in case of emergencies — all in one tap.
+                    </p>
                   </div>
                   <div className="flex flex-col md:flex-row md:w-[50%] w-[100%]">
                     <div className="btns-box">
@@ -110,7 +119,7 @@ const Index = () => {
             </div>
 
             {/* Slide */}
-            <div className="slide">
+            {/* <div className="slide">
               <div
                 className="image-layer"
                 style={{
@@ -135,7 +144,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -158,7 +167,7 @@ const Index = () => {
                   </div>
                   <div className="text">
                     <p>Established in</p>
-                    <h2>2024</h2>
+                    <h2>2025</h2>
                   </div>
                 </div>
               </div>
@@ -170,7 +179,7 @@ const Index = () => {
                     <span className="icon-heartbeat" />
                   </div>
                   <div className="sub-title">
-                    <h3>Our Introductions</h3>
+                    <h3>Safety? Think RescueTap!</h3>
                   </div>
                   <h2>
                     {/* A Leading Medical Service
@@ -183,14 +192,11 @@ const Index = () => {
                       {/* Lorem ipsum is simply free text dolor sit am adipi we help
                       you ensure everyone is in the right jobs sicing elit, sed
                       do consulting firms Et leggings across the nation tempor. */}
-                      Welcome to RescueTap , your trusted emergency response
-                      platform designed to connect you to life-saving services
-                      when every second matters. With just one tap, access
-                      ambulances, paramedics, and emergency assistance anytime,
-                      anywhere.
-                    </p>
+                      Rescuetap is your trusted safety platform designed to provide swift support in critical moments. If you're in danger, need urgent assistance, or simply want your loved ones to know you're safe, we've got you covered. </p>
+                    <br/>
+                    <p>Welcome to RescueTap, your trusted emergency response platform. Designed to provide swift support when it matters most.</p>
                   </div>
-                  <div className="row">
+                  {/* <div className="row">
                     <div className="col-xl-6">
                       <div className="single-text-box">
                         <h3>
@@ -198,7 +204,7 @@ const Index = () => {
                           Help us Save a Life
                         </h3>
                         <p>
-                          {/* Nullam mollis elit quis dusto is lacinia efficitur */}
+                         
                         </p>
                       </div>
                     </div>
@@ -209,11 +215,11 @@ const Index = () => {
                           Join our Big Family
                         </h3>
                         <p>
-                          {/* Nullam mollis elit quis dusto is lacinia efficitur */}
+                        
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="flex md:flex-row flex-col gap-[20px]">
                     <div className="btns-box ">
                       <a className="btn-one" href="/About">
@@ -226,7 +232,7 @@ const Index = () => {
                     <div className="btns-box ">
                       <a className="btn-one" href="/Contact">
                         <span className="txt">
-                          Book an Ambulance
+                        Call our helpline
                           <i className="icon-refresh arrow" />
                         </span>
                       </a>
@@ -261,7 +267,7 @@ const Index = () => {
                             Quick Response Times
                           </a>
                         </h3>
-                        <p>Get help fast when every second counts.</p>
+                        <p>Our platform ensures your distress call reaches the right people instantly. Every second counts.</p>
                       </div>
                     </div>
                   </li>
@@ -275,7 +281,7 @@ const Index = () => {
                         <h3>
                           <a href="#">Real-Time Tracking</a>
                         </h3>
-                        <p>Monitor your emergency services in real time.</p>
+                        <p>Stay updated with your loved ones’ locations when they activate safety alerts.</p>
                       </div>
                     </div>
                   </li>
@@ -287,9 +293,9 @@ const Index = () => {
                       </div>
                       <div className="text-holder">
                         <h3>
-                          <a href="#">Available 24/7</a>
+                          <a href="#">Reliable & Secure</a>
                         </h3>
-                        <p>Emergency assistance, anytime, anywhere.</p>
+                        <p>We prioritize your privacy while delivering accurate and efficient support.</p>
                       </div>
                     </div>
                   </li>
@@ -308,44 +314,13 @@ const Index = () => {
               <span className="icon-heartbeat" />
             </div>
             <div className="sub-title">
-              <h3>What We’re Offering</h3>
+              <h2>Our Offerings</h2>
             </div>
-            <h2>About Our Services</h2>
+            <p>Your safety is our priority. We empower you to respond stay connected when it matters most through:</p>
           </div>
           <div className="row">
             {/*Start Single Service Style1*/}
-            <div className="col-xl-4 col-lg-4">
-              <div
-                className="single-service-style1 wow fadeInUp"
-                data-wow-delay="100ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="img-holder">
-                  <img src="assets/images/services/service-v1-1.svg" alt />
-                </div>
-                <div className="text-holder">
-                  <h3>
-                    <a href="services-single-1.html">
-                      Ambulance Dispatch Services
-                    </a>
-                  </h3>
-                  <p>
-                    Our ambulance fleet is not just for medical emergencies—it’s
-                    also a trusted ally for personal safety.
-                  </p>
-                  {/* <ul>
-                    <li className=""><span className="icon-right-arrow" /> Quick Dispatch</li>
-                    <li className=""><span className="icon-right-arrow" /> 24/7 Availability</li>
-                    <li className=""><span className="icon-right-arrow" /> Secure Transportation</li>
-                  </ul> */}
-                  <div className="btn-box">
-                    <a href="/Contact">
-                      Book an Ambulance <span className="icon-right-arrow" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
             {/*End Single Service Style1*/}
             {/*Start Single Service Style1*/}
             <div className="col-xl-4 col-lg-4">
@@ -359,24 +334,55 @@ const Index = () => {
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="/ALS">
-                      Driver Registration & Ride Safety Verification
+                    <a href="/App">
+                    Emergency Response App
                     </a>
                   </h3>
                   <p>
-                    Our drivers are verified, trusted, and trained to ensure
-                    safe and secure rides for all RescueTap users.
+                  Send instant alerts to your emergency contacts and access fast support during crises.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Immediate Medical Attention</li>
                     <li className=""><span className="icon-right-arrow" /> Certified Paramedics</li>
                     <li className=""><span className="icon-right-arrow" /> State-of-the-Art Equipment</li>
                   </ul> */}
-                  <div className="btn-box">
-                    <a href="/Drivers">
+                  {/* <div className="btn-box">
+                    <a href="/App">
                       Register as a driver <span className="icon-right-arrow" />
                     </a>
-                  </div>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-lg-4">
+              <div
+                className="single-service-style1 wow fadeInUp"
+                data-wow-delay="100ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="img-holder">
+                  <img src="assets/images/services/service-v1-1.svg" alt />
+                </div>
+                <div className="text-holder">
+                  <h3>
+                    <a href="services-single-1.html">
+                    Safety Verification
+                    </a>
+                  </h3>
+                  <p>
+                  Track the location of loved ones and receive real-time updates when they're in distress.
+                  </p>
+                  {/* <ul>
+                    <li className=""><span className="icon-right-arrow" /> Quick Dispatch</li>
+                    <li className=""><span className="icon-right-arrow" /> 24/7 Availability</li>
+                    <li className=""><span className="icon-right-arrow" /> Secure Transportation</li>
+                  </ul> */}
+                  {/* <div className="btn-box">
+                  <a href="/App">
+                      Download the App <span className="icon-right-arrow" />
+                    </a>
+                   
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -394,24 +400,22 @@ const Index = () => {
                 <div className="text-holder">
                   <h3>
                     <a href="/App">
-                      Emergency Response <br />
-                      App
+                      Talk to a Medical Expert
                     </a>
                   </h3>
                   <p>
-                    Our RescueTap App serves as a digital lifeline for anyone
-                    who feels unsafe during their journey.
+                  Need help understanding your symptoms or what to do next? Get guidance from certified professionals. 
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
                     <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
                     <li className=""><span className="icon-right-arrow" /> SOS Button</li>
                   </ul> */}
-                  <div className="btn-box">
-                    <a href="/App">
-                      Download the App <span className="icon-right-arrow" />
+                  {/* <div className="btn-box">
+                  <a href="/Contact">
+                    Call our helpline <span className="icon-right-arrow" />
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -475,17 +479,16 @@ const Index = () => {
                           <span className="icon-heartbeat" />
                         </div>
                         <div className="sub-title">
-                          <h3>Our Testimonials</h3>
+                          <h3>Real Stories, Real Impact</h3>
                         </div>
                         <h2>What They Say</h2>
                       </div>
                       <div className="text">
                         <p>
-                          RescueTap’s quick response saved my sister’s life
-                          during a medical emergency!
+                        “I was stranded one night with no one to call. RescueTap helped me notify my family immediately and get the support I needed. I can’t imagine life without it.”
                         </p>
                         <h3>
-                          Pamela Williams <span>- Customer</span>
+                        Uche <span>- Lagos</span>
                         </h3>
                       </div>
                     </div>
@@ -505,17 +508,16 @@ const Index = () => {
                           <span className="icon-heartbeat" />
                         </div>
                         <div className="sub-title">
-                          <h3>Our Testimonials</h3>
+                          <h3>Real Stories, Real Impact</h3>
                         </div>
                         <h2>What They Say</h2>
                       </div>
                       <div className="text">
                         <p>
-                          The app is so easy to use, and knowing help is just a
-                          tap away gives me peace of mind.
+                        “This app gave me peace of mind. I feel safer knowing help is just one tap away.”
                         </p>
                         <h3>
-                          Tochi Edoka <span>- Customer</span>
+                        Ada  <span>- Abuja</span>
                         </h3>
                       </div>
                     </div>
@@ -538,12 +540,10 @@ const Index = () => {
                   <div className="icon">
                     <span className="icon-heartbeat" />
                   </div>
-                  <div className="sub-title">
-                    <h3>Our Benefits List</h3>
-                  </div>
+                  
                   <h2>
-                    Our Company Formula
-                    <br /> for Success
+                  How We Help You 
+                    <br /> Stay Safe
                   </h2>
                 </div>
                 <div className="text">
@@ -740,8 +740,8 @@ const Index = () => {
             <div className="col-xl-5 col-lg-12">
               <div className="slogan-text-box">
                 <h2>
-                  Find out Why Patients Trust
-                  <br /> Our Ambulance
+                Call our helpline
+                 
                 </h2>
                 <h4>
                   Call anytime <a href="tel:123456789">+234 814 780 6378</a>
@@ -751,7 +751,7 @@ const Index = () => {
             <div className="col-xl-2 col-lg-12">
               <div className="slogan-btn-box">
                 <a className="btn-one" href="/Contact">
-                  <span className="txt">Book Ambulance</span>
+                  <span className="txt">Call our Helpline</span>
                 </a>
               </div>
             </div>

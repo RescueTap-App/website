@@ -175,7 +175,7 @@ const Contact = () => {
                       <h3>Contact us</h3>
                     </div>
                     <h3>
-                      Need an ambulance?
+                    Call our helpline
                       <br />
                       Reach Out to Us Anytime!
                     </h3>
@@ -233,7 +233,7 @@ const Contact = () => {
         </section>
         {/*End Contact Info Style2 Area*/}
         {/*Start Main Contact Form Area*/}
-        <section className="main-contact-form-area py-12">
+        {/* <section className="main-contact-form-area py-12">
           <div className="container mx-auto max-w-4xl">
             <div className="sec-title text-center mb-8">
               <div className="icon mb-4">
@@ -363,15 +363,7 @@ const Contact = () => {
                 />
               </div>
               <div className="text-center mt-8">
-                {/* <button
-                  type="submit"
-                  disabled={loading}
-                  className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${
-                    loading ? "cursor-not-allowed opacity-70" : ""
-                  }`}
-                >
-                  {loading ? "Booking..." : "Book Ambulance"}
-                </button> */}
+               
                 <PaystackButton 
                   className={`bg-[#FF3333] text-white py-2 px-6 rounded-lg hover:bg-black ${ 
                     loading ? "cursor-not-allowed opacity-70" : "" 
@@ -381,7 +373,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         {/*End Main Contact Form Area*/}
         {/*Start Google Map Style2 Area*/}
         <section className="google-map-area">

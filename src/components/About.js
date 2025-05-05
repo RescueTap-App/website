@@ -41,8 +41,123 @@ const About = () => {
         <div className="container">
           <div className="row text-right-rtl">
             <div className="col-xl-6">
+              <div className="about-style3__content">
+                <div className="sec-title">
+                  <div className="icon">
+                    <span className="icon-heartbeat" />
+                  </div>
+                  <div className="sub-title">
+                    {/* <h3>Read More About us</h3> */}
+                    <h2>Our Story</h2>
+                  </div>
+                  <h2>
+                    {/* Let’s Get to Know About
+                    <br /> Ambulance Services */}
+                  </h2>
+                </div>
+                <div className="inner-content">
+                  <div className="text">
+                    <p>
+                    In a world where emergencies can happen at any time, RescueTap was created to make fast, reliable, and accessible emergency support a reality for everyone in Nigeria. Our platform bridges the gap between urgent needs and quick help in just a tap.
+                    </p>
+                  </div>
+                  {/* <div className="row">
+                    <div className="col-xl-6">
+                      <div className="single-box">
+                        <ul>
+                          <li>
+                            <span className="icon-checked" />
+                            Quick Response Times
+                          </li>
+                          <li>
+                            <span className="icon-checked" />
+                            Real-Time Tracking
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="col-xl-6">
+                      <div className="single-box">
+                        <ul>
+                          <li>
+                            <span className="icon-checked" />
+                            24/7 Availability
+
+                          </li>
+                          <li>
+                            <span className="icon-checked" />
+                            Always Reliable
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> */}
+                  <div className="progress-levels">
+                    {/*Skill Box*/}
+                    {/* <div className="progress-box wow">
+                      <div className="inner count-box">
+                        <div className="text">Ambulance</div>
+                        <div className="bar">
+                          <div className="bar-innner">
+                            <div className="skill-percent">
+                              <span
+                                className="count-text"
+                                data-speed={3000}
+                                data-stop={95}
+                              >
+                                0
+                              </span>
+                              <span className="percent">%</span>
+                            </div>
+                            <div className="bar-fill" data-percent={95} />
+                          </div>
+                        </div>
+                      </div>
+                    </div> */}
+                    {/*Skill Box*/}
+                    {/* <div className="progress-box last-child wow">
+                      <div className="inner count-box">
+                        <div className="text">Response App</div>
+                        <div className="bar">
+                          <div className="bar-innner">
+                            <div className="skill-percent">
+                              <span
+                                className="count-text"
+                                data-speed={3000}
+                                data-stop={70}
+                              >
+                                0
+                              </span>
+                              <span className="percent">%</span>
+                            </div>
+                            <div className="bar-fill" data-percent={100} />
+                          </div>
+                        </div>
+                      </div>
+                    </div> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-6">
               <div className="about-style3__image">
-                <div className="inner">
+                <div className="inner w-full h-60">
+                  <img
+                    src="assets/images/about/about-style3__image-2.jpg"
+                    alt
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="about-style1-area">
+        <div className="container">
+          <div className="row text-right-rtl">
+            <div className="col-xl-6">
+              <div className="about-style3__image">
+                <div className="inner w-full h-60">
                   <img
                     src="assets/images/about/about-style2__image-1.jpg"
                     alt
@@ -108,48 +223,7 @@ const About = () => {
                     </div>
                   </div> */}
                   <div className="progress-levels">
-                    {/*Skill Box*/}
-                    {/* <div className="progress-box wow">
-                      <div className="inner count-box">
-                        <div className="text">Ambulance</div>
-                        <div className="bar">
-                          <div className="bar-innner">
-                            <div className="skill-percent">
-                              <span
-                                className="count-text"
-                                data-speed={3000}
-                                data-stop={95}
-                              >
-                                0
-                              </span>
-                              <span className="percent">%</span>
-                            </div>
-                            <div className="bar-fill" data-percent={95} />
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
-                    {/*Skill Box*/}
-                    {/* <div className="progress-box last-child wow">
-                      <div className="inner count-box">
-                        <div className="text">Response App</div>
-                        <div className="bar">
-                          <div className="bar-innner">
-                            <div className="skill-percent">
-                              <span
-                                className="count-text"
-                                data-speed={3000}
-                                data-stop={70}
-                              >
-                                0
-                              </span>
-                              <span className="percent">%</span>
-                            </div>
-                            <div className="bar-fill" data-percent={100} />
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
+                   
                   </div>
                 </div>
               </div>
@@ -192,92 +266,19 @@ const About = () => {
                       {/* Lorem ipsum is simply free text dolor sit am adipi we help
                       you ensure everyone is in the right jobs sicing elit, sed
                       do consulting firms Et leggings across the nation tempor.  */}
-                      Our mission is to provide fast, reliable, and accessible
-                      emergency medical services to save lives and curtail
-                      unwarranted loss of lives
+                      To provide fast, reliable, and accessible emergency medical services through innovative digital tools.
                     </p>
                   </div>
-                  {/* <div className="row">
-                    <div className="col-xl-6">
-                      <div className="single-box">
-                        <ul>
-                          <li>
-                            <span className="icon-checked" />
-                            Quick Response Times
-                          </li>
-                          <li>
-                            <span className="icon-checked" />
-                            Real-Time Tracking
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="col-xl-6">
-                      <div className="single-box">
-                        <ul>
-                          <li>
-                            <span className="icon-checked" />
-                            24/7 Availability
-
-                          </li>
-                          <li>
-                            <span className="icon-checked" />
-                            Always Reliable
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div> */}
+                 
                   <div className="progress-levels">
-                    {/*Skill Box*/}
-                    {/* <div className="progress-box wow">
-                      <div className="inner count-box">
-                        <div className="text">Ambulance</div>
-                        <div className="bar">
-                          <div className="bar-innner">
-                            <div className="skill-percent">
-                              <span
-                                className="count-text"
-                                data-speed={3000}
-                                data-stop={95}
-                              >
-                                0
-                              </span>
-                              <span className="percent">%</span>
-                            </div>
-                            <div className="bar-fill" data-percent={95} />
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
-                    {/*Skill Box*/}
-                    {/* <div className="progress-box last-child wow">
-                      <div className="inner count-box">
-                        <div className="text">Response App</div>
-                        <div className="bar">
-                          <div className="bar-innner">
-                            <div className="skill-percent">
-                              <span
-                                className="count-text"
-                                data-speed={3000}
-                                data-stop={70}
-                              >
-                                0
-                              </span>
-                              <span className="percent">%</span>
-                            </div>
-                            <div className="bar-fill" data-percent={100} />
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
+                    
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-xl-6">
               <div className="about-style3__image">
-                <div className="inner">
+                <div className="inner w-full h-60">
                   <img
                     src="assets/images/about/about-style3__image-2.jpg"
                     alt
@@ -440,7 +441,7 @@ const About = () => {
       </section>
 
       {/* Section About the CEO */}
-      <section className="testimonial-style1-area">
+      {/* <section className="testimonial-style1-area">
         <div className="container">
           <div className="row mt-5">
             <div className="col-xl-12">
@@ -457,7 +458,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* End CEO section  */}
 
       {/* Start Teams Section */}
@@ -466,7 +467,7 @@ const About = () => {
           <div className="row">
             <div className="col-xl-12">
               <div>
-                <h2 className="">Teams</h2>
+                <h2 className="">Meet the Team</h2>
                 <p>
                   {/* Lorem ipsum is simply free text dolor sit am adipi we help
                       you ensure everyone is in the right jobs sicing elit, sed
@@ -532,8 +533,7 @@ const About = () => {
                                 </h2>
                                 <h3>
                                   Chief Executive Officer (CEO) of RescueTap.
-                                  <br />
-                                  Country Director of Social Good Fund Africa.
+                                 
                                 </h3>
                               </div>
                             </div>
@@ -542,6 +542,53 @@ const About = () => {
                       </div>
                       {/*End Single Team Style1*/}
                       {/*Start Single Team Style1*/}
+                      <div className="col-xl-4 col-lg-4 col-md-6">
+                        <div
+                          className="single-team-style1 wow fadeInUp"
+                          data-wow-delay="300ms"
+                          data-wow-duration="1500ms"
+                        >
+                          <div className="img-holder">
+                            <div className="inner rounded-full">
+                              <img src="assets/images/team/ben.svg" alt />
+                            </div>
+                            <div className="title-holder text-center">
+                              <h2>
+                                <a href="#"> Pamela Williams</a>
+                              </h2>
+                              <h3>Chief Marketing Officer</h3>
+                              <div className="overlay-title">
+                                <h2>
+                                  <a href="#"> Pamela Williams</a>
+                                </h2>
+                                <h3>Chief Marketing Officer</h3>
+                                {/* <ul className="social-links">
+                          <li>
+                            <a href="#">
+                              <i className="icon-twitter" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i className="icon-facebook" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i className="icon-instagram" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i className="icon-pinterest" />
+                            </a>
+                          </li>
+                        </ul> */}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <div className="col-xl-4 col-lg-4 col-md-6">
                         <div
                           className="single-team-style1 wow fadeInDown"
@@ -616,6 +663,31 @@ const About = () => {
                           </div>
                         </div>
                       </div>
+                      <div className="col-xl-4 col-lg-4 col-md-6">
+                        <div
+                          className="single-team-style1 wow fadeInUp"
+                          data-wow-delay="100ms"
+                          data-wow-duration="1500ms"
+                        >
+                          <div className="img-holder">
+                            <div className="inner rounded-full">
+                              <img src="assets/images/team/princess.svg" alt />
+                            </div>
+                            <div className="title-holder text-center">
+                              <h2>
+                                <a href="#">Benjamin Bitrus</a>
+                              </h2>
+                              <h3>Product Designer  </h3>
+                              <div className="overlay-title">
+                                <h2>
+                                  <a href="#">Benjamin Bitrus</a>
+                                </h2>
+                                <h3>Product Designer </h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       {/*End Single Team Style1*/}
                       {/*Start Single Team Style1*/}
                       <div className="col-xl-4 col-lg-4 col-md-6">
@@ -632,12 +704,12 @@ const About = () => {
                               <h2>
                                 <a href="#">Princess Alugwe</a>
                               </h2>
-                              <h3>SHI Program Lead </h3>
+                              <h3>Partnership Lead </h3>
                               <div className="overlay-title">
                                 <h2>
                                   <a href="#">Princess Alugwe</a>
                                 </h2>
-                                <h3>SHI Program Lead </h3>
+                                <h3>Partnership Lead </h3>
                               </div>
                             </div>
                           </div>

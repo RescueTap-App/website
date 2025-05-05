@@ -179,7 +179,7 @@ const Ambulance = () => {
                     data-aos-duration={1000}
                   >
                     <ul className="service-pages">
-                      <li className="active">
+                      {/* <li className="active">
                         <a href="/Ambulance">
                           Ambulance Dispatch Services{" "}
                           <span className="icon-next-1" />
@@ -191,7 +191,7 @@ const Ambulance = () => {
                           Advanced Life Support (ALS){" "}
                           <span className="icon-next-1" />
                         </a>
-                      </li>
+                      </li> */}
                       <li>
                         <a href="/App">
                           Emergency App Services{" "}
