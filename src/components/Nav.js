@@ -49,7 +49,7 @@ const Nav = () => {
                 </ul>
               </div>
               <div className="header-button-style1">
-                <a className="btn-one" href="/Contact">
+                <a className="btn-one" href="https://apps.apple.com/ng/app/rescuetap/id6741719319">
                   <span className="txt">Download the App</span>
                 </a>
               </div>

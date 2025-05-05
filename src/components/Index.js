@@ -58,7 +58,7 @@ const Index = () => {
                   </div>
                   <div className="flex flex-col md:flex-row md:w-[50%] w-[100%]">
                     <div className="btns-box">
-                      <a className="btn-one" href="/About">
+                      <a className="btn-one" href="https://apps.apple.com/ng/app/rescuetap/id6741719319">
                         <span className="txt">
                           Download on iOS
                           <i className="icon-refresh arrow" />
@@ -66,7 +66,7 @@ const Index = () => {
                       </a>
                     </div>
                     <div className="btns-box">
-                      <a className="btn-one" href="/About">
+                      <a className="btn-one" href="#">
                         <span className="txt">
                           Download on Android
                           <i className="icon-refresh arrow" />
@@ -98,7 +98,7 @@ const Index = () => {
                   </div>
                   <div className="flex flex-col md:flex-row md:w-[50%] w-[100%]">
                     <div className="btns-box">
-                      <a className="btn-one" href="/About">
+                      <a className="btn-one" href="https://apps.apple.com/ng/app/rescuetap/id6741719319">
                         <span className="txt">
                           Download on iOS
                           <i className="icon-refresh arrow" />
@@ -106,7 +106,7 @@ const Index = () => {
                       </a>
                     </div>
                     <div className="btns-box">
-                      <a className="btn-one" href="/About">
+                      <a className="btn-one" href="#">
                         <span className="txt">
                           Download on Android
                           <i className="icon-refresh arrow" />
@@ -222,7 +222,7 @@ const Index = () => {
                   </div> */}
                   <div className="flex md:flex-row flex-col gap-[20px]">
                     <div className="btns-box ">
-                      <a className="btn-one" href="/About">
+                      <a className="btn-one" href="https://apps.apple.com/ng/app/rescuetap/id6741719319">
                         <span className="txt">
                           Download App
                           <i className="icon-refresh arrow" />
