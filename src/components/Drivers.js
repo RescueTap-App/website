@@ -78,7 +78,7 @@ function Drivers() {
                     data-aos-easing="linear"
                     data-aos-duration={1500}
                   >
-                    <h2>Driver Registration & Ride Safety Verification</h2>
+                    <h2>Transporter Registration/Verification</h2>
                   </div>
                   <div className="breadcrumb-menu">
                     <ul>
@@ -89,7 +89,7 @@ function Drivers() {
                         <a href="services.html">Services</a>
                       </li>
                       <li className="active">
-                        Driver Registration & Ride Safety Verification
+                      Transporter Registration/Verification
                       </li>
                     </ul>
                   </div>
@@ -153,13 +153,13 @@ function Drivers() {
                           "url(assets/images/sidebar/sidebar-info-box-bg2.jpg)",
                       }}
                     />
-                    <h3>Need an ambulance?</h3>
+                    <h3>Call our helpline</h3>
                     <p>
-                      Download our online Brochure to get detailed information
-                      on our vehicle registration and ambulance services.
+                      Download our online Brochure or call our helplie to get detailed information
+                      on our vehicle registration and app services.
                     </p>
                     <h2>
-                      <a href="tel:+2348147806378">+234 814 780 6378</a>
+                      <a href="tel:+2348078875322">+234 807 887 5322</a>
                     </h2>
                   </div>
                   <div
@@ -200,7 +200,7 @@ function Drivers() {
                     />
                   </div>
                   <div className="text-box1">
-                    <h2>Driver Registration & Ride Safety Verification</h2>
+                    <h2>Transporter Registration/Verification</h2>
                     <p>Safe Rides, Trusted Drivers—Your Safety Comes First!</p>
                     <p>
                       At RescueTap, we prioritize safety and reliability by
