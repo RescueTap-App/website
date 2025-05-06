@@ -194,7 +194,6 @@ const Index = () => {
                       do consulting firms Et leggings across the nation tempor. */}
                       Rescuetap is your trusted safety platform designed to provide swift support in critical moments. If you're in danger, need urgent assistance, or simply want your loved ones to know you're safe, we've got you covered. </p>
                     <br/>
-                    <p>Welcome to RescueTap, your trusted emergency response platform. Designed to provide swift support when it matters most.</p>
                   </div>
                   {/* <div className="row">
                     <div className="col-xl-6">
@@ -220,7 +219,7 @@ const Index = () => {
                       </div>
                     </div>
                   </div> */}
-                  <div className="flex md:flex-row flex-col gap-[20px]">
+                  <div className="flex md:flex-row mt-[-80px] flex-col gap-[20px]">
                     <div className="btns-box ">
                       <a className="btn-one" href="https://apps.apple.com/ng/app/rescuetap/id6741719319">
                         <span className="txt">
@@ -330,7 +329,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-2.svg" alt />
+                  <img src="assets/images/services/service-v1-4.jpg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -361,7 +360,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-1.svg" alt />
+                  <img src="assets/images/services/service-v1-1.jpg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -395,7 +394,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-3.svg" alt />
+                  <img src="assets/images/services/service-v1-3.jpg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -722,15 +721,15 @@ const Index = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-xl-5 col-lg-12">
+            <div className=" col-xl-5 col-lg-12">
               <div className="slogan-img-box">
                 <div
-                  className="inner wow slideInLeft"
+                  className="inner wow slideInLeft "
                   data-wow-delay="400ms"
                   data-wow-duration="3500ms"
                 >
                   <img
-                    className="float-bob-y"
+                    className="float-bob-y  md:ml-[-140px]"
                     src="assets/images/resources/ambulance.png"
                     alt
                   />

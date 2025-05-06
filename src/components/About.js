@@ -140,14 +140,15 @@ const About = () => {
               </div>
             </div>
             <div className="col-xl-6">
-              <div className="about-style3__image">
-                <div className="inner w-full h-60">
-                  <img
-                    src="assets/images/about/about-style3__image-2.jpg"
-                    alt
-                  />
-                </div>
-              </div>
+            <div className="about-style3__image">
+  <div className="inner w-full h-80 ">  {/* Negative margin-top */}
+    <img
+      src="assets/images/about/about-style3__image-2.jpg"
+      className="mt-[-70px]"
+      alt
+    />
+  </div>
+</div>
             </div>
           </div>
         </div>
@@ -157,7 +158,7 @@ const About = () => {
           <div className="row text-right-rtl">
             <div className="col-xl-6">
               <div className="about-style3__image">
-                <div className="inner w-full h-60">
+                <div className="inner w-full h-80">
                   <img
                     src="assets/images/about/about-style2__image-1.jpg"
                     alt
@@ -242,7 +243,7 @@ const About = () => {
         </div>
       </section>
       {/* Mission Section */}
-      <section className="about-style1-area">
+      <section className="about-style1-area pb-[30px]">
         <div className="container">
           <div className="row text-right-rtl">
             <div className="col-xl-6">
@@ -280,7 +281,7 @@ const About = () => {
               <div className="about-style3__image">
                 <div className="inner w-full h-60">
                   <img
-                    src="assets/images/about/about-style3__image-2.jpg"
+                    src="assets/images/about/about-style3__image-7.jpg"
                     alt
                   />
                 </div>
@@ -550,7 +551,7 @@ const About = () => {
                         >
                           <div className="img-holder">
                             <div className="inner rounded-full">
-                              <img src="assets/images/team/ben.svg" alt />
+                              <img src="assets/images/team/pamela.svg" alt />
                             </div>
                             <div className="title-holder text-center">
                               <h2>
@@ -671,7 +672,7 @@ const About = () => {
                         >
                           <div className="img-holder">
                             <div className="inner rounded-full">
-                              <img src="assets/images/team/princess.svg" alt />
+                              <img src="assets/images/team/benjamin.svg" alt />
                             </div>
                             <div className="title-holder text-center">
                               <h2>
