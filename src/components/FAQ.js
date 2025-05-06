@@ -53,10 +53,7 @@ const FAQ = () => {
                       </div>
                       <div className="acc-content current">
                         <p>
-                          RescueTap is a mobile app for real-time medical and
-                          security assistance. Users can request help with one
-                          tap, access vetted transport, notify next of kin and
-                          get optimized Ambulance Dispatch Servicese.
+                        Download the app, create your profile, and access our support tools anytime — with just one tap.
                         </p>
                       </div>
                     </li>
@@ -65,14 +62,11 @@ const FAQ = () => {
                         <div className="icon-outer">
                           <i className="flaticon-down-arrow-2" />
                         </div>
-                        <h3>Is RescueTap available nationwide?</h3>
+                        <h3>What is RescueTap?</h3>
                       </div>
                       <div className="acc-content">
                         <p>
-                          The app is currently expanding its reach and services
-                          to cover multiple regions across Nigeria. Coverage may
-                          vary depending on partnerships with service providers
-                          in different areas.
+                        RescueTap is a digital safety platform that offers fast and reliable emergency response services. From alerting your contacts to guiding you through critical moments, we help you stay safe and connected.
                         </p>
                       </div>
                     </li>
@@ -81,14 +75,11 @@ const FAQ = () => {
                         <div className="icon-outer">
                           <i className="flaticon-down-arrow-2" />
                         </div>
-                        <h3>How do I pay for services?</h3>
+                        <h3>Where is RescueTap available?</h3>
                       </div>
                       <div className="acc-content">
                         <p>
-                          Payment methods depend on the service requested and
-                          include secure online payment options. In-app payment
-                          solutions may support debit cards, bank transfers, and
-                          mobile wallet options.
+                        We are currently operating in key cities in Nigeria, with plans to expand nationwide.
                         </p>
                       </div>
                     </li>
@@ -98,6 +89,19 @@ const FAQ = () => {
               <div className="col-xl-6">
                 <div className="faq-style1-content faq-style1-content--margintop">
                   <ul className="accordion-box">
+                  <li className="accordion block">
+                      <div className="acc-btn">
+                        <div className="icon-outer">
+                          <i className="flaticon-down-arrow-2" />
+                        </div>
+                        <h3>Is there a fee?</h3>
+                      </div>
+                      <div className="acc-content">
+                        <p>
+                        Yes, there is! For any future premium plans, we’ll provide clear and transparent pricing.
+                        </p>
+                      </div>
+                    </li>
                     <li className="accordion block active-block">
                       <div className="acc-btn active">
                         <div className="icon-outer">
@@ -107,13 +111,11 @@ const FAQ = () => {
                       </div>
                       <div className="acc-content current">
                         <p>
-                          RescueTap is a technology-driven service platform that
-                          partners with healthcare and security organizations to
-                          deliver emergency response services.
+                        RescueTap is a safety platform designed to support users in medical, emotional, or physical distress by providing instant emergency response and support tools.
                         </p>
                       </div>
                     </li>
-                    <li className="accordion block">
+                    {/* <li className="accordion block">
                       <div className="acc-btn">
                         <div className="icon-outer">
                           <i className="flaticon-down-arrow-2" />
@@ -158,7 +160,7 @@ const FAQ = () => {
                           zone 3.
                         </p>
                       </div>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>

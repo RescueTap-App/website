@@ -178,7 +178,7 @@ console.log(amount)
                     data-aos-duration={1000}
                   >
                     <ul className="service-pages">
-                      <li>
+                      {/* <li>
                         <a href="/Ambulance">
                           Ambulance Dispatch Services{" "}
                           <span className="icon-next-1" />
@@ -190,7 +190,7 @@ console.log(amount)
                           Advanced Life Support (ALS){" "}
                           <span className="icon-next-1" />
                         </a>
-                      </li>
+                      </li> */}
                       <li>
                         <a href="/App">
                           Emergency App Services{" "}

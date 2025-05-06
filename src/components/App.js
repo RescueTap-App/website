@@ -54,7 +54,7 @@ const App = () => {
                     data-aos-duration={1000}
                   >
                     <ul className="service-pages">
-                      <li>
+                      {/* <li>
                         <a href="/Ambulance">
                           Ambulance Dispatch Services{" "}
                           <span className="icon-next-1" />
@@ -66,7 +66,7 @@ const App = () => {
                           Advanced Life Support (ALS){" "}
                           <span className="icon-next-1" />
                         </a>
-                      </li>
+                      </li> */}
                       <li className="active">
                         <a href="/App">
                           Emergency App Services{" "}
@@ -75,7 +75,7 @@ const App = () => {
                       </li>
                       <li>
                         <a href="/Drivers">
-                          Driver Registration & Ride Safety Verification
+                        Transporter Registration/Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>
@@ -94,7 +94,7 @@ const App = () => {
                           "url(assets/images/services/service-details-3.jpg)",
                       }}
                     />
-                    <h3>Need an ambulance?</h3>
+                    <h3>For more info</h3>
                     <p>
                       Download our online Brochure to get detailed information
                       on our vehicle registration and ambulance services.

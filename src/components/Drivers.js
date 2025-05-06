@@ -113,7 +113,7 @@ function Drivers() {
                     data-aos-duration={1000}
                   >
                     <ul className="service-pages">
-                      <li>
+                      {/* <li>
                         <a href="/Ambulance">
                           Ambulance Dispatch Services{" "}
                           <span className="icon-next-1" />
@@ -125,7 +125,7 @@ function Drivers() {
                           Advanced Life Support (ALS){" "}
                           <span className="icon-next-1" />
                         </a>
-                      </li>
+                      </li> */}
                       <li>
                         <a href="/App">
                           Emergency App Services{" "}
@@ -134,7 +134,7 @@ function Drivers() {
                       </li>
                       <li className="active">
                         <a href="/Drivers">
-                          Driver Registration & Ride Safety Verification
+                        Transporter Registration/Verification
                           <span className="icon-next-1" />
                         </a>
                       </li>

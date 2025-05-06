@@ -29,7 +29,7 @@ const Nav = () => {
                     <div className="text">
                       <p>Call anytime</p>
                       <h5>
-                        <a href="tel:123456789">+234 814 780 6378</a>
+                        <a href="tel:+2348078875322">+234 807 887 5322</a>
                       </h5>
                     </div>
                   </li>
@@ -49,7 +49,7 @@ const Nav = () => {
                 </ul>
               </div>
               <div className="header-button-style1">
-                <a className="btn-one" href="contact.html">
+                <a className="btn-one" href="https://apps.apple.com/ng/app/rescuetap/id6741719319">
                   <span className="txt">Download the App</span>
                 </a>
               </div>
@@ -89,24 +89,22 @@ const Nav = () => {
                       <li className="dropdown">
                         <a href="#">Services</a>
                         <ul>
-                          <li>
+                          {/* <li>
                             <a href="/Ambulance">Ambulance Dispatch Services</a>
                           </li>
 
                           <li>
                             <a href="/ALS">Advance Life Support</a>
-                          </li>
+                          </li> */}
                           <li>
                             <a href="/App">Emergency Response App</a>
                           </li>
                           <li>
                             <a href="/Drivers">
-                              Driver Registration & Ride Safety Verification
+                            Transporter Registration/Verification
                             </a>
                           </li>
-                          <li>
-                            <a href="/Subscription">Subscription</a>
-                          </li>
+                         
                         </ul>
                       </li>
                       {/* <li className="dropdown">

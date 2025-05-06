@@ -126,12 +126,15 @@ const Footer = () => {
                   </div>
                   <div className="footer-widget-links">
                     <ul>
-                      <li>
+                      {/* <li>
                         <a href="/Ambulance">Ambulance Dispatch Services</a>
                       </li>
 
                       <li>
                         <a href="/ALS">Advance Life Support</a>
+                      </li> */}
+                      <li>
+                        <a href="/Drivers">Safety Verification</a>
                       </li>
                       <li>
                         <a href="/App">Emergency App Services</a>
@@ -168,7 +171,7 @@ const Footer = () => {
             <div className="bottom-inner">
               <div className="copyright">
                 <p>
-                  Copyright © 2024 <a href="/">Rescuetap</a> All Rights
+                  Copyright © 2025 <a href="/">Rescuetap</a> All Rights
                   Reserved.
                 </p>
               </div>
