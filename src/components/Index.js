@@ -399,11 +399,11 @@ const Index = () => {
                 <div className="text-holder">
                   <h3>
                     <a href="/App">
-                      Talk to a Medical Expert
+                      Talk to our Helpline
                     </a>
                   </h3>
                   <p>
-                  Need help understanding your symptoms or what to do next? Get guidance from certified professionals. 
+                  Need help understanding our app or with an emergency, Reach out to our helpline.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
