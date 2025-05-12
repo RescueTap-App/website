@@ -38,79 +38,76 @@ const TC = () =>{
             </section>
         {/*End breadcrumb area*/}
         {/*Start Team Style1 Area*/}
-        <section className="team-style1-area">
-          <div className="container">
-            <div className="row">
-                <h2>TERMS AND CONDITIONS FOR THE RESCUETAP APP</h2>
-                <p>
-                Welcome to RescueTap!
-These Terms and Conditions ("Terms") govern your access to and use of the RescueTap mobile application
-("App") and any related services provided by RescueTap Ltd ("Company," "we," "our," or "us"). By using the
-App, you agree to comply with these Terms. If you disagree with any part, please do not use the App.
-1. User Eligibility
-- Age Requirement: You must be at least 18 years of age or the age of majority in your jurisdiction to use
-the App. Users under 18 may only use the App with parental or guardian consent.
-- Compliance with Laws: You agree to use the App in compliance with all applicable local, state, national,
-and international laws.
-2. Services Provided
-- RescueTap provides emergency response services, including but not limited to access to ambulances,
-doctors, paramedics, first aid responders, and lab test
-- Limitations: RescueTap strives to provide timely access to emergency assistance; however, response times,
-availability, and service efficacy depend on several factors outside of our control, such as location, netw
-coverage, and the availability of third-party responders.
-3. Account Registration
-- Accuracy of Information: You must provide accurate and complete information when creating an
-account on the App. You are responsible for all activities that occur under your account.
-- Security: The RescueTap App is designed to comply with the highest security protocols and standards.
-However, you are responsible for maintaining the confidentiality of your account information, includi
-your username and password.
-4. Emergency Contact Feature
-- Emergency Notifications: By using the emergency contact feature, you consent to share your location a
-other critical details with your designated emergency contacts in real-time.
-- Accuracy of Emergency Contact Information: Ensure that the contact information of individuals you
-designate is accurate and up-to-date.
-5. User Conduct
-- Prohibited Uses: You agree not to misuse the App, including (but not limited to) interfering with the
-App’s functioning, attempting unauthorized access, or using the App to engage in illegal activities.
-- Community Standards: Users are expected to behave respectfully towards emergency responders and
-healthcare professionals they interact with via the App.
-6. Third-Party Services
-- Service Providers: RescueTap may engage third-party service providers to offer emergency response a
-healthcare services. These third parties operate independently, and we are not liable for their actions or
-omissions.
-- Links to External Websites: Our App may contain links to other websites. We are not responsible for the
-content, privacy policies, or practices of such external websites.
-7. Intellectual Property Rights
-- Ownership: RescueTap retains all rights, title, and interest in the App, including trademarks, service
-marks, and copyrights.
-- License to Use: RescueTap grants you a limited, non-transferable, and revocable license to use the App for
-personal, non-commercial purposes.
-8. Limitation of Liability
-- Disclaimer of Warranties: The App and its services are provided on an "as-is" and "as-available" basis
-without any warranties of any kind.
-- Limitation of Liability: RescueTap shall not be liable for any indirect, incidental, special, or consequential
-damages resulting from your use of the App or inability to access emergency services.
-9. Indemnificati
-- You agree to indemnify and hold RescueTap harmless from any claims, losses, damages, or expenses
-arising from your breach of these Terms, your use of the App, or your violation of any third-party rights.
-10. Modifications to Terms and Servic
-- Changes to Terms: RescueTap reserves the right to modify these Terms at any time. Continued use of the
-App after modifications constitutes your acceptance of the updated Term
-- Service Updates: We may add, modify, or discontinue App features without notice or liability.
-11. Termination
-- Termination by User: You may stop using the App at any time by deleting your account.
-- Termination by RescueTap: We reserve the right to terminate or suspend your access to the App for any
-violation of these Terms or for any other reason deemed necessary.
-12. Governing Law and Dispute Resolution
-- These Terms shall be governed by and construed in accordance with the laws of [Insert Jurisdiction]. Any
-disputes arising from these Terms shall be resolved through arbitration in [Insert Location].
-13. Contact Information
-- For any questions or concerns about these Terms, please contact us at [Insert Contact Information].
+      <div class="max-w-4xl mx-auto px-6 py-10 text-gray-800">
+  <h1 class="text-3xl font-bold mb-6 text-center">RescueTap Terms of Use</h1>
+  
+  <section class="mb-8">
+    <h2 class="text-xl font-semibold mb-2">Contractual Relationship</h2>
+    <p class="mb-2">These Terms of Use ("Terms") outline the conditions for accessing and using the applications, websites, content, products, and services (collectively referred to as the "Services") provided by RescueTap, a private limited company registered in Nigeria, located at 22 Kigoma Street, Wuse Zone 7, Abuja.</p>
+    <p class="mb-2 font-medium">PLEASE READ THESE TERMS CAREFULLY BEFORE USING OUR SERVICES.</p>
+    <p class="mb-2">By accessing or using our Services, you agree to be bound by these Terms, forming a contractual agreement between you and RescueTap. If you do not agree, you are not permitted to use the Services. These Terms override any previous agreements between you and RescueTap.</p>
+    <p class="mb-2">RescueTap reserves the right to terminate these Terms, discontinue its Services, or restrict access at any time for any reason.</p>
+    <p class="mb-2">Supplementary terms may apply to specific Services. They will be communicated accordingly and considered part of these Terms. In the case of conflict, the supplementary terms will prevail.</p>
+    <p class="mb-2">We may update these Terms periodically. Continued use after updates signifies acceptance of the changes.</p>
+    <p>RescueTap uses your personal data in accordance with our <a href="#" class="text-blue-600 underline">Privacy Policy</a>.</p>
+  </section>
 
-                </p>
-            </div>
-          </div>
-        </section>
+  <section class="mb-8">
+    <h2 class="text-xl font-semibold mb-2">Technology Platform & License Terms</h2>
+    <p class="mb-2">RescueTap provides a technology platform that connects users to emergency service providers such as private ambulances, doctors, and medical staff ("Third-Party Providers").</p>
+    <p class="mb-2">These services are for personal, non-commercial use unless stated otherwise in a separate agreement.</p>
+
+    <h3 class="text-lg font-semibold mt-4 mb-1">License Grant</h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li>Access and use the app strictly for utilizing the Services.</li>
+      <li>Use content and information made available via the Services for personal, non-commercial purposes.</li>
+    </ul>
+    <p class="mt-2">All rights not granted remain with RescueTap or its licensors.</p>
+
+    <h3 class="text-lg font-semibold mt-4 mb-1">Restrictions</h3>
+    <ul class="list-disc list-inside space-y-1">
+      <li>Do not remove any copyright or proprietary notices.</li>
+      <li>No reverse engineering, distribution, or reselling without permission.</li>
+      <li>Do not access Services in unauthorized ways or disrupt functionality.</li>
+    </ul>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-semibold mb-2">Third-Party Services and Content</h2>
+    <p class="mb-2">The Services may integrate with third-party offerings. These are subject to their own terms and policies. RescueTap is not responsible for third-party services or products.</p>
+    <p>Platform-specific terms (e.g., Apple, Google, Microsoft) also apply.</p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-semibold mb-2">Ownership</h2>
+    <p class="mb-2">All intellectual property rights remain with RescueTap. You do not gain any ownership of the Services or trademarks.</p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-semibold mb-2">User Accounts</h2>
+    <p class="mb-2">Users must register an account to access most features. You must be 18+ and provide accurate, updated information. You are responsible for your account and its security.</p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-semibold mb-2">User-Generated Content</h2>
+    <p class="mb-2">You retain ownership of any content you share but grant RescueTap a global license to use and distribute it. You must have the rights to the content and ensure it doesn't violate any laws or rights.</p>
+    <p>RescueTap may remove content at its discretion.</p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-semibold mb-2">Network Access & Devices</h2>
+    <p class="mb-2">You are responsible for your device and data plan. Compatibility and performance may vary by device and internet connection.</p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-semibold mb-2">Payment and Charges</h2>
+    <p class="mb-2">Charges for third-party services may apply. Payments are processed by RescueTap on behalf of providers. All payments are non-refundable unless stated otherwise.</p>
+  </section>
+
+  <footer class="text-center text-sm text-gray-500">
+    <p class="mt-10">&copy; 2025 RescueTap. All rights reserved.</p>
+  </footer>
+</div>
         </>
     )
 }
