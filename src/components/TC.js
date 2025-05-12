@@ -3,7 +3,7 @@ import React from "react";
 const TC = () =>{
 
     return (
-        <>
+      <section className="breadcrumb-area">
              <section className="breadcrumb-area">
           <div
             className="breadcrumb-area-bg"
@@ -49,7 +49,7 @@ const TC = () =>{
     <p class="mb-2">RescueTap reserves the right to terminate these Terms, discontinue its Services, or restrict access at any time for any reason.</p>
     <p class="mb-2">Supplementary terms may apply to specific Services. They will be communicated accordingly and considered part of these Terms. In the case of conflict, the supplementary terms will prevail.</p>
     <p class="mb-2">We may update these Terms periodically. Continued use after updates signifies acceptance of the changes.</p>
-    <p>RescueTap uses your personal data in accordance with our <a href="#" class="text-blue-600 underline">Privacy Policy</a>.</p>
+    <p>RescueTap uses your personal data in accordance with our <a href="/Privacy" class="text-blue-600 underline">Privacy Policy</a>.</p>
   </section>
 
   <section class="mb-8">
@@ -108,7 +108,7 @@ const TC = () =>{
     <p class="mt-10">&copy; 2025 RescueTap. All rights reserved.</p>
   </footer>
 </div>
-        </>
+        </section>
     )
 }
 
