@@ -1,10 +1,296 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PaystackButton } from "react-paystack";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation, Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import { BASE_URL } from "../constants/api";
-import { BrowserRouter as Router } from "react-router-dom";
+
+const LoginForm = () => {
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setLoginError("");
+    setIsLoading(true);
+
+    try {
+      const authResponse = await fetch(`${BASE_URL}/auth/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ phoneNumber, password }),
+      });
+
+      const authData = await authResponse.json();
+
+      if (authResponse.ok) {
+        const userId = authData.user._id;
+        const email = authData.user.email;
+
+        // Check subscription status
+        const subscriptionResponse = await fetch(
+          `${BASE_URL}/subscriptions/active/${userId}`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${authData.token}`,
+            },
+          }
+        );
+
+        const subscriptionData = await subscriptionResponse.json();
+        
+        if (subscriptionData.isActive) {
+          // User has active subscription
+          navigate('/dashboard');
+        } else {
+          // Redirect to subscription page with user data
+          navigate('/subscription', {
+            state: {
+              userId,
+              email,
+              token: authData.token
+            }
+          });
+        }
+      } else {
+        setLoginError(authData?.message || "Invalid phone number or password.");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      setLoginError("An error occurred during login.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className="bg-white shadow-md rounded-lg p-6 md:p-8 md:w-[50%]">
+      <h2 className="text-2xl font-semibold mb-4 text-gray-800">Log In</h2>
+      {loginError && <p className="text-red-500 mb-4">{loginError}</p>}
+      <form onSubmit={handleLogin} className="space-y-4">
+        <div>
+          <label htmlFor="phoneNumber" className="block text-gray-700 text-sm font-bold mb-2">
+            Phone Number:
+          </label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
+            Password:
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          disabled={isLoading}
+          className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline w-full disabled:opacity-50"
+        >
+          {isLoading ? 'Logging in...' : 'Log In'}
+        </button>
+      </form>
+    </div>
+  );
+};
+
+const Subscription = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { userId, email, token } = location.state || {};
+  
+  const publicKey = "pk_live_ceaed3a309858b2da78c5f7c4dfddccb7863d268";
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [isSubscriptionSuccessful, setIsSubscriptionSuccessful] = useState(false);
+  const [subscriptionError, setSubscriptionError] = useState(null);
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  const handlePaystackSuccess = async (reference) => {
+    setIsProcessing(true);
+    try {
+      const response = await fetch(`${BASE_URL}/subscriptions/create-subscription`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          userId,
+          amount: String(selectedPlan === 'monthly' ? 60000 : 500000),
+          status: 'success',
+          reference: String(reference),
+          subscriptionPlan: selectedPlan,
+        }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setIsSubscriptionSuccessful(true);
+      } else {
+        setSubscriptionError(data?.message || "Failed to complete subscription");
+      }
+    } catch (error) {
+      console.error("Subscription error:", error);
+      setSubscriptionError("An error occurred during subscription");
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  const handlePaystackClose = () => {
+    alert("Payment was not completed. Please try again.");
+  };
+
+  const handleModalOkay = () => {
+    setIsSubscriptionSuccessful(false);
+    navigate('/dashboard');
+  };
+
+  const yearlyPaymentConfig = {
+    reference: `yearly_${new Date().getTime()}`,
+    email: email,
+    amount: "500000",
+    publicKey,
+    text: "Subscribe to Yearly Plan",
+    onSuccess: handlePaystackSuccess,
+    onClose: handlePaystackClose,
+  };
+
+  const monthlyPaymentConfig = {
+    reference: `monthly_${new Date().getTime()}`,
+    email: email,
+    amount: "60000",
+    publicKey,
+    text: "Subscribe to Monthly Plan",
+    onSuccess: handlePaystackSuccess,
+    onClose: handlePaystackClose,
+  };
+
+  const paymentConfig = selectedPlan === "yearly" 
+    ? yearlyPaymentConfig 
+    : selectedPlan === "monthly" 
+    ? monthlyPaymentConfig 
+    : null;
+
+  if (!userId || !email) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <p>Redirecting to login...</p>
+      </div>
+    );
+  }
+
+  return (
+    <section className="team-style1-area">
+      <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+          <div className="bg-red-600 py-6 px-8 text-center text-white">
+            <h2 className="text-2xl font-semibold">Choose Your Subscription</h2>
+            <p className="mt-2">Please subscribe to continue using our service</p>
+          </div>
+          
+          <div className="p-8">
+            <div className="space-y-6">
+              <div>
+                <button
+                  onClick={() => setSelectedPlan("yearly")}
+                  className={`w-full text-left ${selectedPlan === "yearly" ? "bg-red-100 text-red-700" : "bg-gray-100 text-gray-700"} font-semibold py-4 px-6 rounded-md`}
+                >
+                  <div className="flex justify-between items-center">
+                    <span>Yearly Plan</span>
+                    <span>₦5,000</span>
+                  </div>
+                  <p className="text-sm mt-1 text-gray-600">Save 20% compared to monthly</p>
+                </button>
+              </div>
+
+              <div>
+                <button
+                  onClick={() => setSelectedPlan("monthly")}
+                  className={`w-full text-left ${selectedPlan === "monthly" ? "bg-red-100 text-red-700" : "bg-gray-100 text-gray-700"} font-semibold py-4 px-6 rounded-md`}
+                >
+                  <div className="flex justify-between items-center">
+                    <span>Monthly Plan</span>
+                    <span>₦600</span>
+                  </div>
+                  <p className="text-sm mt-1 text-gray-600">Flexible monthly subscription</p>
+                </button>
+              </div>
+
+              {paymentConfig ? (
+                <PaystackButton
+                  className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md w-full disabled:opacity-50"
+                  disabled={isProcessing}
+                  {...paymentConfig}
+                />
+              ) : (
+                <button
+                  disabled
+                  className="bg-gray-300 text-gray-500 font-bold py-3 px-6 rounded-md w-full cursor-not-allowed"
+                >
+                  Please select a plan
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Success Modal */}
+        {isSubscriptionSuccessful && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-lg p-6 max-w-sm w-full">
+              <h3 className="text-xl font-semibold mb-4">Subscription Successful!</h3>
+              <p className="mb-6">Thank you for subscribing. You now have full access to our services.</p>
+              <button
+                onClick={handleModalOkay}
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Continue to Dashboard
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Error Message */}
+        {subscriptionError && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-lg p-6 max-w-sm w-full">
+              <h3 className="text-xl font-semibold mb-4 text-red-600">Subscription Error</h3>
+              <p className="mb-6">{subscriptionError}</p>
+              <button
+                onClick={() => setSubscriptionError(null)}
+                className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded"
+              >
+                Try Again
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
 
 const SignupForm = ({ onSignupSuccess }) => {
   const [formData, setFormData] = useState({
@@ -32,9 +318,8 @@ const SignupForm = ({ onSignupSuccess }) => {
 
       const data = await response.json();
       if (response.ok) {
-        onSignupSuccess(data._id, formData.email); // Pass the user ID and email
+        onSignupSuccess(data._id, formData.email);
       } else {
-        // Handle signup error
         console.error("Signup failed:", data);
         alert(`Signup failed: ${data?.message || "Something went wrong."}`);
       }
@@ -45,7 +330,7 @@ const SignupForm = ({ onSignupSuccess }) => {
   };
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-6 md:p-8 w-full max-w-md">
+    <div className="bg-white shadow-md rounded-lg p-6 md:p-8 md:w-[50%]">
       <h2 className="text-2xl font-semibold mb-4 text-gray-800">Sign Up</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -146,7 +431,6 @@ const SignupForm = ({ onSignupSuccess }) => {
 
 const OtpVerification = ({ userId, onVerificationSuccess, onResend }) => {
   const [otp, setOtp] = useState("");
-  const navigate = useNavigate();
 
   const handleVerify = async () => {
     try {
@@ -158,9 +442,8 @@ const OtpVerification = ({ userId, onVerificationSuccess, onResend }) => {
       );
       const data = await response.json();
       if (response.ok) {
-        onVerificationSuccess();
+        onVerificationSuccess(data.token);
       } else {
-        // Handle verification failure (e.g., display error message)
         console.error("OTP verification failed:", data);
         alert(`OTP verification failed: ${data?.message || "Invalid OTP."}`);
       }
@@ -195,7 +478,7 @@ const OtpVerification = ({ userId, onVerificationSuccess, onResend }) => {
         <div className="flex space-x-2">
           <button
             onClick={handleVerify}
-            className="bg-red-600  text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline w-1/2"
+            className="bg-red-600 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline w-1/2"
           >
             Verify OTP
           </button>
@@ -207,184 +490,6 @@ const OtpVerification = ({ userId, onVerificationSuccess, onResend }) => {
           </button>
         </div>
       </div>
-    </section>
-  );
-};
-
-const Subscription = ({ userEmail, userId }) => {
-  const navigate = useNavigate();
-  const publicKey = "pk_live_ceaed3a309858b2da78c5f7c4dfddccb7863d268"; // Replace with your actual key
-  const [selectedPlan, setSelectedPlan] = useState(null);
-  const [isSubscriptionSuccessful, setIsSubscriptionSuccessful] = useState(false);
-  const [subscriptionError, setSubscriptionError] = useState(null);
-
-  const handlePaystackSuccess = async (reference) => {
-    console.log("Payment successful:", reference);
-
-    if (userId && selectedPlan) {
-      try {
-        const response = await fetch(`${BASE_URL}/subscriptions/create-subscription`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams({
-            userId: userId, // Use the userId prop directly
-            amount: selectedPlan === 'monthly' ? 60000 : 500000,
-            status: 'success',
-            reference: reference,
-            subscriptionPlan: selectedPlan, // Ensure selectedPlan is "monthly" or "yearly"
-          }).toString(),
-        });
-
-        const data = await response.json();
-        if (response.ok) {
-          console.log("Subscription data sent to server:", data);
-          setIsSubscriptionSuccessful(true); // Show success modal
-        } else {
-          console.error("Failed to update subscription on server:", data);
-          setSubscriptionError(`Failed to finalize subscription: ${data?.message || "Something went wrong."}`);
-        }
-      } catch (error) {
-        console.error("Error sending subscription data to server:", error);
-        setSubscriptionError("An error occurred while finalizing subscription.");
-      }
-    } else {
-      console.warn("User ID or selected plan not available after successful payment.");
-      setSubscriptionError("Could not finalize subscription. Please try again.");
-    }
-  };
-
-  const handlePaystackClose = () => {
-    console.log("Payment closed.");
-    alert("Payment was not completed.");
-  };
-
-  const handleModalOkay = () => {
-    setIsSubscriptionSuccessful(false);
-    navigate("/Subscription"); // Or wherever you want to redirect after successful subscription
-  };
-
-  const yearlyPaymentConfig = {
-    reference: `yearly_${new Date().getTime()}`,
-    email: userEmail,
-    amount: 500000,
-    publicKey,
-    text: "Confirm yearly Plan",
-    onSuccess: handlePaystackSuccess,
-    onClose: handlePaystackClose,
-    metadata: {
-      custom_fields: []
-    }
-  };
-
-  const monthlyPaymentConfig = {
-    reference: `monthly_${new Date().getTime()}`,
-    email: userEmail,
-    amount: 60000,
-    publicKey,
-    text: "Confirm Monthly Plan",
-    onSuccess: handlePaystackSuccess,
-    onClose: handlePaystackClose,
-    metadata: {
-      custom_fields: []
-    }
-  };
-
-  const getPaymentConfig = () => {
-    if (selectedPlan === "yearly") return yearlyPaymentConfig;
-    if (selectedPlan === "monthly") return monthlyPaymentConfig;
-    return null;
-  };
-
-  const paymentConfig = getPaymentConfig();
-
-  return (
-    <section className="team-style1-area">
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto">
-          <div className="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
-            <div className="bg-red-600 py-6 px-8 text-center text-white">
-              <h2 className="text-2xl font-semibold">Choose Your Subscription</h2>
-            </div>
-            <div className="p-8">
-              <div className="space-y-6">
-                <button
-                  type="button"
-                  className={`w-full ${selectedPlan === "yearly" ? "bg-red-100 text-red-700" : "bg-gray-100 text-gray-700"} font-semibold py-4 px-6 rounded-md`}
-                  onClick={() => setSelectedPlan("yearly")} // Corrected to "yearly"
-                >
-                  yearly Plan - ₦5,000
-                </button>
-
-                <button
-                  type="button"
-                  className={`w-full ${selectedPlan === "monthly" ? "bg-red-100 text-red-700" : "bg-gray-100 text-gray-700"} font-semibold py-4 px-6 rounded-md`}
-                  onClick={() => setSelectedPlan("monthly")}
-                >
-                  Monthly Plan - ₦600
-                </button>
-
-                {paymentConfig ? (
-                  <PaystackButton
-                    className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md w-full"
-                    {...paymentConfig}
-                  />
-                ) : (
-                  <button
-                    disabled
-                    className="bg-gray-300 text-gray-500 font-bold py-3 px-6 rounded-md w-full cursor-not-allowed"
-                  >
-                    Please select a plan
-                  </button>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Success Modal */}
-      {isSubscriptionSuccessful && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center">
-          <div className="relative bg-white rounded-lg shadow-xl w-96">
-            <div className="p-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Subscription Successful!</h3>
-              <p className="text-gray-700 mb-4">
-                Your subscription was successful. You can now log in to the app.
-              </p>
-              <div className="text-right">
-                <button
-                  onClick={handleModalOkay}
-                  className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Okay
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Error Message */}
-      {subscriptionError && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center">
-          <div className="relative bg-white rounded-lg shadow-xl w-96">
-            <div className="p-6">
-              <h3 className="text-lg font-semibold text-red-800 mb-2">Subscription Error</h3>
-              <p className="text-red-700 mb-4">{subscriptionError}</p>
-              <div className="text-right">
-                <button
-                  onClick={() => setSubscriptionError(null)}
-                  className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Okay
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
@@ -412,31 +517,117 @@ const ResendOtp = async (userId) => {
   }
 };
 
+const AuthChoice = ({ onShowSignup, onShowLogin }) => (
+  <section className="team-style1-area">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-6">
+        <div>
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+            Sign up or Log in
+          </h2>
+        </div>
+        <div className="space-y-4">
+          <button
+            onClick={onShowSignup}
+            className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+          >
+            Sign Up
+          </button>
+          <button
+            onClick={onShowLogin}
+            className="group relative w-full flex justify-center py-3 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            Log In
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const SignupFlow = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [showAuthChoice, setShowAuthChoice] = useState(true);
+  const [showSignup, setShowSignup] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
   const [userId, setUserId] = useState(null);
-  const [isVerified, setIsVerified] = useState(false);
-  const [userEmail, setUserEmail] = useState(null); // Add state for user email
+  const [userEmail, setUserEmail] = useState(null);
 
-  const handleSignupSuccess = (newUserId, email) => { // Modify to receive email
+  const handleShowSignup = () => {
+    setShowAuthChoice(false);
+    setShowSignup(true);
+    setShowLogin(false);
+    setUserId(null);
+    setUserEmail(null);
+  };
+
+  const handleShowLogin = () => {
+    setShowAuthChoice(false);
+    setShowLogin(true);
+    setShowSignup(false);
+    setUserId(null);
+    setUserEmail(null);
+  };
+
+  const handleSignupSuccess = (newUserId, email) => {
     setUserId(newUserId);
-    setUserEmail(email); // Store the email
+    setUserEmail(email);
+    setShowSignup(false);
   };
 
-  const handleVerificationSuccess = () => {
-    setIsVerified(true);
+  const handleVerificationSuccess = (token) => {
+    navigate('/subscription', {
+      state: {
+        userId: userId,
+        email: userEmail,
+        token: token
+      }
+    });
   };
 
-  if (!userId) {
+  const handleGoBack = () => {
+    setShowAuthChoice(true);
+    setShowSignup(false);
+    setShowLogin(false);
+    setUserId(null);
+    setUserEmail(null);
+  };
+
+  // Check if we're coming from login with subscription required
+  useEffect(() => {
+    if (location.pathname === '/subscription') {
+      setShowAuthChoice(false);
+      setShowSignup(false);
+      setShowLogin(false);
+    }
+  }, [location]);
+
+  if (showAuthChoice) {
+    return <AuthChoice onShowSignup={handleShowSignup} onShowLogin={handleShowLogin} />;
+  }
+
+  if (showSignup) {
     return (
       <section className="team-style1-area">
-        <div className="flex items-center justify-center min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-          <SignupForm onSignupSuccess={handleSignupSuccess} /> {/* Ensure SignupForm now calls handleSignupSuccess with the email */}
+        <div className="flex items-center justify-center min-h-screen bg-gray-50 py-12 px-4 sm:px-16 lg:px-8">
+          <SignupForm onSignupSuccess={handleSignupSuccess} />
         </div>
       </section>
     );
   }
 
-  if (userId && !isVerified) {
+  if (showLogin) {
+    return (
+      <section className="team-style1-area">
+        <div className="flex items-center justify-center min-h-screen bg-gray-50 py-12 px-4 sm:px-16 lg:px-8">
+          <LoginForm />
+        </div>
+      </section>
+    );
+  }
+
+  if (userId && !location.pathname.includes('subscription')) {
     return (
       <section className="team-style1-area">
         <div className="flex items-center justify-center min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -449,17 +640,17 @@ const SignupFlow = () => {
       </section>
     );
   }
-  if (isVerified && userEmail && userId) { // Ensure userId is also available
-    return <Subscription userEmail={userEmail} userId={userId} />;
-  }
 
-  return null; // Should not reach here
+  return null;
 };
 
 const App = () => {
   return (
     <Router>
-      <SignupFlow />
+      <Routes>
+        <Route path="/subscription" element={<Subscription />} />
+        <Route path="*" element={<SignupFlow />} />
+      </Routes>
     </Router>
   );
 };
