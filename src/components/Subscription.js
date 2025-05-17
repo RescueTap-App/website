@@ -261,13 +261,8 @@ const Subscription = () => {
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
             <div className="bg-white rounded-lg p-6 max-w-sm w-full">
               <h3 className="text-xl font-semibold mb-4">Subscription Successful!</h3>
-              <p className="mb-6">Thank you for subscribing. You now have full access to our services.</p>
-              <button
-                onClick={handleModalOkay}
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Continue to Dashboard
-              </button>
+              <p className="mb-6">Thank you for subscribing. You now have full access to our services,Proceed to the App to Login</p>
+             
             </div>
           </div>
         )}
