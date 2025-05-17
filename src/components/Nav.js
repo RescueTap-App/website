@@ -121,6 +121,9 @@ const Nav = () => {
                           </li>
                         </ul>
                       </li> */}
+                         <li>
+                        <a href="/Subscription">Subscription</a>
+                      </li>
                       <li>
                         <a href="/Blog">Blog</a>
                       </li>
