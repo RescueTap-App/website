@@ -122,7 +122,7 @@ const Nav = () => {
                         </ul>
                       </li> */}
                          <li>
-                        <a href="/Subscription">Subscription</a>
+                        <a href="/AppSubscription">Subscription</a>
                       </li>
                       <li>
                         <a href="/Blog">Blog</a>
