@@ -66,7 +66,7 @@ const Index = () => {
                       </a>
                     </div>
                     <div className="btns-box">
-                      <a className="btn-one" href="#">
+                      <a className="btn-one" href="https://play.google.com/store/apps/details?id=com.rescuetapltd">
                         <span className="txt">
                           Download on Android
                           <i className="icon-refresh arrow" />
@@ -106,7 +106,7 @@ const Index = () => {
                       </a>
                     </div>
                     <div className="btns-box">
-                      <a className="btn-one" href="#">
+                      <a className="btn-one" href="https://play.google.com/store/apps/details?id=com.rescuetapltd">
                         <span className="txt">
                           Download on Android
                           <i className="icon-refresh arrow" />
