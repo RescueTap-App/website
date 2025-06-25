@@ -1,6 +1,10 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 const Nav = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
+
   return (
     <header className="main-header header-style-one">
       {/*Start Header Top*/}
@@ -48,10 +52,14 @@ const Nav = () => {
                   </li>
                 </ul>
               </div>
-              <div className="header-button-style1">
-                <a className="btn-one" href="https://apps.apple.com/ng/app/rescuetap/id6741719319">
+
+              <div className="relative header-button-style1">
+                <button
+                  onClick={() => setShowDropdown((prev) => !prev)}
+                  className="btn-one"
+                >
                   <span className="txt">Download the App</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -65,7 +73,6 @@ const Nav = () => {
             {/*Start Header Left*/}
             <div className="header-left">
               <div className="nav-outer style1 clearfix">
-                {/*Mobile Navigation Toggler*/}
                 <div className="mobile-nav-toggler">
                   <div className="inner">
                     <span className="icon-bar" />
@@ -79,6 +86,26 @@ const Nav = () => {
                     className=" navbar-collapse show clearfix"
                     id="navbarSupportedContent"
                   >
+                    <div className="md:hidden flex-col gap-4 py-4 flex">
+                      <div className="relative header-button-style1">
+                        <a
+                          href="https://apps.apple.com/ng/app/rescuetap/id6741719319"
+                          className="btn-one"
+                        >
+                          <span className="text-[11px]">Download on Apple</span>
+                        </a>
+                      </div>
+                      <div className="relative header-button-style1">
+                        <a
+                          href="https://play.google.com/store/apps/details?id=com.rescuetap.app"
+                          className="btn-one"
+                        >
+                          <span className="text-[11px]">
+                            Download on Android
+                          </span>
+                        </a>
+                      </div>
+                    </div>
                     <ul className="navigation clearfix">
                       <li>
                         <a href="/">Home</a>
@@ -101,10 +128,9 @@ const Nav = () => {
                           </li>
                           <li>
                             <a href="/Drivers">
-                            Transporter Registration/Verification
+                              Transporter Registration/Verification
                             </a>
                           </li>
-                         
                         </ul>
                       </li>
                       {/* <li className="dropdown">
@@ -121,7 +147,7 @@ const Nav = () => {
                           </li>
                         </ul>
                       </li> */}
-                         <li>
+                      <li>
                         <a href="/AppSubscription">Subscription</a>
                       </li>
                       <li>
@@ -139,6 +165,22 @@ const Nav = () => {
                 {/* Main Menu End*/}
               </div>
             </div>
+            {showDropdown && (
+              <div className="absolute top-full  mt-2 right-0 bg-white shadow-lg rounded-lg p-2 z-100">
+                <a
+                  href="https://apps.apple.com/ng/app/rescuetap/id6741719319"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >
+                  Download on iOS
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.rescuetap.app"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >
+                  Download on Android
+                </a>
+              </div>
+            )}
             {/*End Header Left*/}
             {/*Start Header Right*/}
             <div className="header-right">
@@ -201,8 +243,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
-      {/*End header*/}
-      {/*Sticky Header*/}
+
       <div className="sticky-header">
         <div className="container">
           <div className="clearfix">
@@ -227,6 +268,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
+
       {/*End Sticky Header*/}
       {/* Mobile Menu  */}
       <div className="mobile-menu">
@@ -235,7 +277,7 @@ const Nav = () => {
           <span className="icon fa fa-times-circle" />
         </div>
         <nav className="menu-box">
-          <div className="nav-logo">
+          <div className="nav-logo w-[80%]">
             <a href="/">
               <img
                 src="/assets/images/resources/mobilemenu-logo.svg"
@@ -248,14 +290,14 @@ const Nav = () => {
             {/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}
           </div>
           {/*Social Links*/}
-          <div className="social-links">
-            <ul className="clearfix">
+          <div className="social-links ">
+            <ul className="clearfix gap-4">
               <li>
                 <a
                   href="https://www.facebook.com/share/1AvuLxWwaS/?mibextid=qi2Omg"
                   target="_blank"
                 >
-                  <span className="fab fa fa-facebook-square" />f
+                  <span className="fab fa fa-facebook-square" />
                 </a>
               </li>
 
@@ -265,6 +307,23 @@ const Nav = () => {
                   target="_blank"
                 >
                   <span className="fab fa fa-linkedin-square" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/rescuetap/"
+                  target="_blank"
+                  className="flex justify-center mt-[20px]"
+                >
+                  <span className="fab fa fa-instagram" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/rescuetap/"
+                  target="_blank"
+                >
+                  <span className="fab fa fa-twitter" />
                 </a>
               </li>
             </ul>
