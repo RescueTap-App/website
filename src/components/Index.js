@@ -528,7 +528,7 @@ const Index = () => {
                     </a>
                   </h3>
                   <p>
-                  Choose a Student or Family plan for shared emergency coverage and linked accounts.
+                  Choose a Solo or Family plan for shared emergency coverage and linked accounts.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
