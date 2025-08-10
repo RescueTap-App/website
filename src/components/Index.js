@@ -419,6 +419,192 @@ const Index = () => {
               </div>
             </div>
             {/*End Single Service Style1*/}
+            <div className="col-xl-4 col-lg-4">
+              <div
+                className="single-service-style1 wow fadeInUp"
+                data-wow-delay="100ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="img-holder">
+                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                </div>
+                <div className="text-holder">
+                  <h3>
+                    <a href="#">
+                      Bulk User Onboarding
+                    </a>
+                  </h3>
+                  <p>
+                  Easily add hundreds of users at once under your organization to gain access to safety features
+                  </p>
+                  {/* <ul>
+                    <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
+                    <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
+                    <li className=""><span className="icon-right-arrow" /> SOS Button</li>
+                  </ul> */}
+                  {/* <div className="btn-box">
+                  <a href="/Contact">
+                    Call our helpline <span className="icon-right-arrow" />
+                    </a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-lg-4">
+              <div
+                className="single-service-style1 wow fadeInUp"
+                data-wow-delay="100ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="img-holder">
+                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                </div>
+                <div className="text-holder">
+                  <h3>
+                    <a href="#">
+                     Smart Voice Recording 
+                    </a>
+                  </h3>
+                  <p>
+                 Press a button for 3+ seconds to record and notify your emergency contacts with audio recordings in real time..
+                  </p>
+                  {/* <ul>
+                    <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
+                    <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
+                    <li className=""><span className="icon-right-arrow" /> SOS Button</li>
+                  </ul> */}
+                  {/* <div className="btn-box">
+                  <a href="/Contact">
+                    Call our helpline <span className="icon-right-arrow" />
+                    </a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-lg-4">
+              <div
+                className="single-service-style1 wow fadeInUp"
+                data-wow-delay="100ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="img-holder">
+                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                </div>
+                <div className="text-holder">
+                  <h3>
+                    <a href="#">
+                      Daily First Aid Tips
+                    </a>
+                  </h3>
+                  <p>
+                 Receive scheduled daily push notifications with life-saving tips in video or text format.
+                  </p>
+                  {/* <ul>
+                    <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
+                    <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
+                    <li className=""><span className="icon-right-arrow" /> SOS Button</li>
+                  </ul> */}
+                  {/* <div className="btn-box">
+                  <a href="/Contact">
+                    Call our helpline <span className="icon-right-arrow" />
+                    </a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-lg-4">
+              <div
+                className="single-service-style1 wow fadeInUp"
+                data-wow-delay="100ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="img-holder">
+                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                </div>
+                <div className="text-holder">
+                  <h3>
+                    <a href="#">
+                      Subscription Plans
+                    </a>
+                  </h3>
+                  <p>
+                  Choose a Student or Family plan for shared emergency coverage and linked accounts.
+                  </p>
+                  {/* <ul>
+                    <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
+                    <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
+                    <li className=""><span className="icon-right-arrow" /> SOS Button</li>
+                  </ul> */}
+                  {/* <div className="btn-box">
+                  <a href="/Contact">
+                    Call our helpline <span className="icon-right-arrow" />
+                    </a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-lg-4">
+              <div
+                className="single-service-style1 wow fadeInUp"
+                data-wow-delay="100ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="img-holder">
+                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                </div>
+                <div className="text-holder">
+                  <h3>
+                    <a href="#">
+                     Sticky In-App Notifications
+                    </a>
+                  </h3>
+                  <p>
+                 Get critical alerts that stay visible until your emergency is resolved or canceled.
+                  </p>
+                  {/* <ul>
+                    <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
+                    <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
+                    <li className=""><span className="icon-right-arrow" /> SOS Button</li>
+                  </ul> */}
+                  {/* <div className="btn-box">
+                  <a href="/Contact">
+                    Call our helpline <span className="icon-right-arrow" />
+                    </a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-lg-4">
+              <div
+                className="single-service-style1 wow fadeInUp"
+                data-wow-delay="100ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="img-holder">
+                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                </div>
+                <div className="text-holder">
+                  <h3>
+                    <a href="#">
+                      Blog & Safety Resources
+                    </a>
+                  </h3>
+                  <p>
+                Access expert articles, safety guides, and community stories anytime.
+                  </p>
+                  {/* <ul>
+                    <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
+                    <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
+                    <li className=""><span className="icon-right-arrow" /> SOS Button</li>
+                  </ul> */}
+                  {/* <div className="btn-box">
+                  <a href="/Contact">
+                    Call our helpline <span className="icon-right-arrow" />
+                    </a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
