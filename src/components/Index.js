@@ -530,7 +530,7 @@ const Index = () => {
                   <p>
                   Choose a Solo or Family plan for shared emergency coverage and linked accounts.
                   </p>
-                  {/* <ul>
+                  {/* <ul> <ul> <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
                     <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
                     <li className=""><span className="icon-right-arrow" /> SOS Button</li>
