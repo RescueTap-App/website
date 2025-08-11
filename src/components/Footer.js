@@ -53,7 +53,7 @@ const Footer = () => {
                             <div className="text">
                               <p>
                                 <a href="tel:+2348078875322">
-                                +234 807 887 5322
+                                  +234 807 887 5322
                                 </a>
                               </p>
                             </div>
@@ -89,7 +89,7 @@ const Footer = () => {
                       <li>
                         <a href="/About">About</a>
                       </li>
-                     
+
                       {/* <li>
                         <a href="/Testimonials">Testimonials</a>
                       </li> */}
@@ -169,7 +169,7 @@ const Footer = () => {
             <div className="bottom-inner">
               <div className="copyright">
                 <p>
-                  Copyright © 2025 <a href="/">Rescuetap</a> All Rights
+                  Copyright © 2024 <a href="/">Rescuetap</a> All Rights
                   Reserved.
                 </p>
               </div>
