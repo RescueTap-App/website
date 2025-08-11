@@ -49,16 +49,24 @@ const Index = () => {
               <div className="auto-container">
                 <div className="content">
                   <div className="sub-title">
-                  <p className = "font-light text-white underline">One tap could keep you safe.</p>
+                    <p className="font-light text-white underline">
+                      One tap could keep you safe.
+                    </p>
                   </div>
                   <div className="big-title">
                     <p className="text-white text-lg font-bold">
-                    RescueTap lets you instantly share your location, send emergency alerts, <br/> and stay connected with the people who matter most because safety starts with awareness.
+                      RescueTap lets you instantly share your location, send
+                      emergency alerts, <br /> and stay connected with the
+                      people who matter most because safety starts with
+                      awareness.
                     </p>
                   </div>
                   <div className="flex flex-col md:flex-row md:w-[50%] w-[100%]">
                     <div className="btns-box">
-                      <a className="btn-one" href="https://apps.apple.com/ng/app/rescuetap/id6741719319">
+                      <a
+                        className="btn-one"
+                        href="https://apps.apple.com/ng/app/rescuetap/id6741719319"
+                      >
                         <span className="txt">
                           Download on iOS
                           <i className="icon-refresh arrow" />
@@ -66,7 +74,10 @@ const Index = () => {
                       </a>
                     </div>
                     <div className="btns-box">
-                      <a className="btn-one" href="https://play.google.com/store/apps/details?id=com.rescuetapltd">
+                      <a
+                        className="btn-one"
+                        href="https://play.google.com/store/apps/details?id=com.rescuetapltd"
+                      >
                         <span className="txt">
                           Download on Android
                           <i className="icon-refresh arrow" />
@@ -88,17 +99,25 @@ const Index = () => {
               <div className="auto-container">
                 <div className="content">
                   <div className="sub-title">
-                    <p className = "font-light text-white underline">Stay Safe. Stay Alert.</p>
+                    <p className="font-light text-white underline">
+                      Stay Safe. Stay Alert.
+                    </p>
                   </div>
                   <div className="big-title">
                     <p className="text-white text-lg font-bold">
                       {/* The Preferred Air */}
-                      If you’re on the move, at work, or out with friends, RescueTap lets your loved ones <br/> track your location in real-time and stay updated in case of emergencies — all in one tap.
+                      If you’re on the move, at work, or out with friends,
+                      RescueTap lets your loved ones <br /> track your location
+                      in real-time and stay updated in case of emergencies — all
+                      in one tap.
                     </p>
                   </div>
                   <div className="flex flex-col md:flex-row md:w-[50%] w-[100%]">
                     <div className="btns-box">
-                      <a className="btn-one" href="https://apps.apple.com/ng/app/rescuetap/id6741719319">
+                      <a
+                        className="btn-one"
+                        href="https://apps.apple.com/ng/app/rescuetap/id6741719319"
+                      >
                         <span className="txt">
                           Download on iOS
                           <i className="icon-refresh arrow" />
@@ -106,7 +125,10 @@ const Index = () => {
                       </a>
                     </div>
                     <div className="btns-box">
-                      <a className="btn-one" href="https://play.google.com/store/apps/details?id=com.rescuetapltd">
+                      <a
+                        className="btn-one"
+                        href="https://play.google.com/store/apps/details?id=com.rescuetapltd"
+                      >
                         <span className="txt">
                           Download on Android
                           <i className="icon-refresh arrow" />
@@ -167,7 +189,7 @@ const Index = () => {
                   </div>
                   <div className="text">
                     <p>Established in</p>
-                    <h2>2025</h2>
+                    <h2>2024</h2>
                   </div>
                 </div>
               </div>
@@ -192,8 +214,12 @@ const Index = () => {
                       {/* Lorem ipsum is simply free text dolor sit am adipi we help
                       you ensure everyone is in the right jobs sicing elit, sed
                       do consulting firms Et leggings across the nation tempor. */}
-                      Rescuetap is your trusted safety platform designed to provide swift support in critical moments. If you're in danger, need urgent assistance, or simply want your loved ones to know you're safe, we've got you covered. </p>
-                    <br/>
+                      Rescuetap is your trusted safety platform designed to
+                      provide swift support in critical moments. If you're in
+                      danger, need urgent assistance, or simply want your loved
+                      ones to know you're safe, we've got you covered.{" "}
+                    </p>
+                    <br />
                   </div>
                   {/* <div className="row">
                     <div className="col-xl-6">
@@ -221,7 +247,10 @@ const Index = () => {
                   </div> */}
                   <div className="flex md:flex-row mt-[-80px] flex-col gap-[20px]">
                     <div className="btns-box ">
-                      <a className="btn-one" href="https://apps.apple.com/ng/app/rescuetap/id6741719319">
+                      <a
+                        className="btn-one"
+                        href="https://apps.apple.com/ng/app/rescuetap/id6741719319"
+                      >
                         <span className="txt">
                           Download App
                           <i className="icon-refresh arrow" />
@@ -231,7 +260,7 @@ const Index = () => {
                     <div className="btns-box ">
                       <a className="btn-one" href="/Contact">
                         <span className="txt">
-                        Call our helpline
+                          Call our helpline
                           <i className="icon-refresh arrow" />
                         </span>
                       </a>
@@ -266,7 +295,10 @@ const Index = () => {
                             Quick Response Times
                           </a>
                         </h3>
-                        <p>Our platform ensures your distress call reaches the right people instantly. Every second counts.</p>
+                        <p>
+                          Our platform ensures your distress call reaches the
+                          right people instantly. Every second counts.
+                        </p>
                       </div>
                     </div>
                   </li>
@@ -280,7 +312,10 @@ const Index = () => {
                         <h3>
                           <a href="#">Real-Time Tracking</a>
                         </h3>
-                        <p>Stay updated with your loved ones’ locations when they activate safety alerts.</p>
+                        <p>
+                          Stay updated with your loved ones’ locations when they
+                          activate safety alerts.
+                        </p>
                       </div>
                     </div>
                   </li>
@@ -294,7 +329,10 @@ const Index = () => {
                         <h3>
                           <a href="#">Reliable & Secure</a>
                         </h3>
-                        <p>We prioritize your privacy while delivering accurate and efficient support.</p>
+                        <p>
+                          We prioritize your privacy while delivering accurate
+                          and efficient support.
+                        </p>
                       </div>
                     </div>
                   </li>
@@ -315,11 +353,14 @@ const Index = () => {
             <div className="sub-title">
               <h2>Our Offerings</h2>
             </div>
-            <p>Your safety is our priority. We empower you to respond stay connected when it matters most through:</p>
+            <p>
+              Your safety is our priority. We empower you to respond stay
+              connected when it matters most through:
+            </p>
           </div>
           <div className="row">
             {/*Start Single Service Style1*/}
-            
+
             {/*End Single Service Style1*/}
             {/*Start Single Service Style1*/}
             <div className="col-xl-4 col-lg-4">
@@ -333,12 +374,11 @@ const Index = () => {
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="/App">
-                    Emergency Response App
-                    </a>
+                    <a href="/App">Emergency Response App</a>
                   </h3>
                   <p>
-                  Send instant alerts to your emergency contacts and access fast support during crises.
+                    Send instant alerts to your emergency contacts and access
+                    fast support during crises.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Immediate Medical Attention</li>
@@ -364,12 +404,11 @@ const Index = () => {
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="services-single-1.html">
-                    Safety Verification
-                    </a>
+                    <a href="services-single-1.html">Safety Verification</a>
                   </h3>
                   <p>
-                  Track the location of loved ones and receive real-time updates when they're in distress.
+                    Track the location of loved ones and receive real-time
+                    updates when they're in distress.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Quick Dispatch</li>
@@ -398,12 +437,11 @@ const Index = () => {
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="/App">
-                      Talk to our Helpline
-                    </a>
+                    <a href="/App">Talk to our Helpline</a>
                   </h3>
                   <p>
-                  Need help understanding our app or with an emergency, Reach out to our helpline.
+                    Need help understanding our app or with an emergency, Reach
+                    out to our helpline.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
@@ -426,16 +464,15 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                  <img src="assets/images/offering/bulk.png" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="#">
-                      Bulk User Onboarding
-                    </a>
+                    <a href="#">Bulk User Onboarding</a>
                   </h3>
                   <p>
-                  Easily add hundreds of users at once under your organization to gain access to safety features
+                    Easily add hundreds of users at once under your organization
+                    to gain access to safety features
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
@@ -457,16 +494,15 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                  <img src="assets/images/offering/voice.png" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="#">
-                     Smart Voice Recording 
-                    </a>
+                    <a href="#">Smart Voice Recording</a>
                   </h3>
                   <p>
-                 Press a button for 3+ seconds to record and notify your emergency contacts with audio recordings in real time..
+                    Press a button for 3+ seconds to record and notify your
+                    emergency contacts with audio recordings in real time..
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
@@ -488,16 +524,15 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                  <img src="assets/images/offering/tips.png" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="#">
-                      Daily First Aid Tips
-                    </a>
+                    <a href="#">Daily First Aid Tips</a>
                   </h3>
                   <p>
-                 Receive scheduled daily push notifications with life-saving tips in video or text format.
+                    Receive scheduled daily push notifications with life-saving
+                    tips in video or text format.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
@@ -519,16 +554,15 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                  <img src="assets/images/offering/subscription.png" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="#">
-                      Subscription Plans
-                    </a>
+                    <a href="#">Subscription Plans</a>
                   </h3>
                   <p>
-                  Choose a Solo or Family plan for shared emergency coverage and linked accounts.
+                    Choose a Solo or Family plan for shared emergency coverage
+                    and linked accounts.
                   </p>
                   {/* <ul> <ul> <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
@@ -550,16 +584,15 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                  <img src="assets/images/offering/emergency.png" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="#">
-                     Sticky In-App Notifications
-                    </a>
+                    <a href="#">Sticky In-App Notifications</a>
                   </h3>
                   <p>
-                 Get critical alerts that stay visible until your emergency is resolved or canceled.
+                    Get critical alerts that stay visible until your emergency
+                    is resolved or canceled.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
@@ -581,16 +614,15 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                  <img src="assets/images/offering/articles.png" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
-                    <a href="#">
-                      Blog & Safety Resources
-                    </a>
+                    <a href="#">Blog & Safety Resources</a>
                   </h3>
                   <p>
-                Access expert articles, safety guides, and community stories anytime.
+                    Access expert articles, safety guides, and community stories
+                    anytime.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
@@ -670,10 +702,13 @@ const Index = () => {
                       </div>
                       <div className="text">
                         <p>
-                        “I was stranded one night with no one to call. RescueTap helped me notify my family immediately and get the support I needed. I can’t imagine life without it.”
+                          “I was stranded one night with no one to call.
+                          RescueTap helped me notify my family immediately and
+                          get the support I needed. I can’t imagine life without
+                          it.”
                         </p>
                         <h3>
-                        Uche <span>- Lagos</span>
+                          Uche <span>- Lagos</span>
                         </h3>
                       </div>
                     </div>
@@ -699,10 +734,11 @@ const Index = () => {
                       </div>
                       <div className="text">
                         <p>
-                        “This app gave me peace of mind. I feel safer knowing help is just one tap away.”
+                          “This app gave me peace of mind. I feel safer knowing
+                          help is just one tap away.”
                         </p>
                         <h3>
-                        Ada  <span>- Abuja</span>
+                          Ada <span>- Abuja</span>
                         </h3>
                       </div>
                     </div>
@@ -725,9 +761,9 @@ const Index = () => {
                   <div className="icon">
                     <span className="icon-heartbeat" />
                   </div>
-                  
+
                   <h2>
-                  How We Help You 
+                    How We Help You
                     <br /> Stay Safe
                   </h2>
                 </div>
@@ -924,10 +960,7 @@ const Index = () => {
             </div>
             <div className="col-xl-5 col-lg-12">
               <div className="slogan-text-box">
-                <h2>
-                Call our helpline
-                 
-                </h2>
+                <h2>Call our helpline</h2>
                 <h4>
                   Call anytime <a href="tel:123456789">+234 814 780 6378</a>
                 </h4>
