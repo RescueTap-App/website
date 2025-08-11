@@ -584,7 +584,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/emergency.png" alt />
+                  <img src="assets/images/offering/Emergency.png" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
