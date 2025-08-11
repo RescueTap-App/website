@@ -464,7 +464,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/bulk.png" alt />
+                  <img src="assets/images/offering/bulk.jpeg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -494,7 +494,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/voice.png" alt />
+                  <img src="assets/images/offering/voice.jpeg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -524,7 +524,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/tips.png" alt />
+                  <img src="assets/images/offering/tips.jpeg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -554,7 +554,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/subscription.png" alt />
+                  <img src="assets/images/offering/subscription.jpeg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -584,7 +584,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/Emergency.png" alt />
+                  <img src="assets/images/offering/Emergency.jpeg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -614,7 +614,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/articles.png" alt />
+                  <img src="assets/images/offering/articles.jpeg" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
