@@ -169,7 +169,7 @@ const Footer = () => {
             <div className="bottom-inner">
               <div className="copyright">
                 <p>
-                  Copyright © 2024 <a href="/">Rescuetap</a> All Rights
+                  Copyright © 2025 <a href="/">Rescuetap</a> All Rights
                   Reserved.
                 </p>
               </div>
