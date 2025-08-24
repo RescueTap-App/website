@@ -189,7 +189,7 @@ const Index = () => {
                   </div>
                   <div className="text">
                     <p>Established in</p>
-                    <h2>2025</h2>
+                    <h2>2024</h2>
                   </div>
                 </div>
               </div>
