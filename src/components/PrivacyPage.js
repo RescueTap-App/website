@@ -146,8 +146,8 @@ const Privacy = ()=>{
 <p>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current billing period. Charges will be applied to your iTunes/Google Play account upon confirmation of purchase. You may manage or cancel your subscription anytime in your account settings.</p>
 
 <p>
-  <strong>Privacy Policy:</strong> <a href="https://rescuetap.org/Privacy">https://rescuetap.org/Privacy</a><br/>
-  <strong>Terms of Use:</strong> <a href="https://rescuetap.org/TC">https://rescuetap.org/TC</a>
+  <strong>Privacy Policy:</strong> <a href="https://rescuetap.com/Privacy">https://rescuetap.com/Privacy</a><br/>
+  <strong>Terms of Use:</strong> <a href="https://rescuetap.com/TC">https://rescuetap.com/TC</a>
 </p>
 
                     <h3>11. Contact Information</h3>
