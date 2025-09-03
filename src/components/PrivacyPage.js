@@ -137,8 +137,20 @@ const Privacy = ()=>{
                     <h3>9. Policy Updates and Notification</h3>
                     <p>We reserve the right to update this Privacy Policy periodically to reflect changes in regulatory requirements, technology, or business operations.</p>
                     <p>Users will be notified of material changes via email, platform notifications, or in-app alerts. Continued use of our services after updates constitutes your acknowledgement and acceptance of the revised policy.</p>
+<h3>10. Subscription Terms & Conditions</h3>
+<p>RescueTap offers auto-renewing subscription plans for continued access to premium features:</p>
+<ul>
+  <li><strong>Solo Plan:</strong> ₦500 per month or ₦5,000 per year</li>
+  <li><strong>Family Plan:</strong> ₦2,500 per month or ₦20,000 per year</li>
+</ul>
+<p>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current billing period. Charges will be applied to your iTunes/Google Play account upon confirmation of purchase. You may manage or cancel your subscription anytime in your account settings.</p>
 
-                    <h3>10. Contact Information</h3>
+<p>
+  <strong>Privacy Policy:</strong> <a href="https://rescuetap.org/Privacy">https://rescuetap.org/Privacy</a><br/>
+  <strong>Terms of Use:</strong> <a href="https://rescuetap.org/TC">https://rescuetap.org/TC</a>
+</p>
+
+                    <h3>11. Contact Information</h3>
                     <p>For questions, concerns, or requests related to this policy, please contact:</p>
                     <p><strong>RescueTap LTD</strong><br />
                     Data Protection Officer<br />
