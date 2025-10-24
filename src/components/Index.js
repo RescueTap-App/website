@@ -637,6 +637,97 @@ const Index = () => {
                 </div>
               </div>
             </div>
+            <div className="col-xl-4 col-lg-4">
+              <div
+                className="single-service-style1 wow fadeInUp"
+                data-wow-delay="100ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="img-holder">
+                  <img src="assets/images/offering/bulk.jpeg" alt />
+                </div>
+                <div className="text-holder">
+                  <h3>
+                    <a href="#">International User Support</a>
+                  </h3>
+                  <p>
+                    Verify users globally with country code
+                    selection.
+                    Designed for students abroad and international partners.
+                  </p>
+                  {/* <ul>
+                    <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
+                    <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
+                    <li className=""><span className="icon-right-arrow" /> SOS Button</li>
+                  </ul> */}
+                  {/* <div className="btn-box">
+                  <a href="/Contact">
+                    Call our helpline <span className="icon-right-arrow" />
+                    </a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-lg-4">
+              <div
+                className="single-service-style1 wow fadeInUp"
+                data-wow-delay="100ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="img-holder">
+                  <img src="assets/images/offering/bulk.jpeg" alt />
+                </div>
+                <div className="text-holder">
+                  <h3>
+                    <a href="#">Estate Admin</a>
+                  </h3>
+                  <p>
+                    Generate a personalized admin for estates,
+                    generate QR codes and bulk onboard tenants.
+                  </p>
+                  {/* <ul>
+                    <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
+                    <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
+                    <li className=""><span className="icon-right-arrow" /> SOS Button</li>
+                  </ul> */}
+                  {/* <div className="btn-box">
+                  <a href="/Contact">
+                    Call our helpline <span className="icon-right-arrow" />
+                    </a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-lg-4">
+              <div
+                className="single-service-style1 wow fadeInUp"
+                data-wow-delay="100ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="img-holder">
+                  <img src="assets/images/offering/bulk.jpeg" alt />
+                </div>
+                <div className="text-holder">
+                  <h3>
+                    <a href="#">Visitor Registration</a>
+                  </h3>
+                  <p>
+                    Register and generate QR codes visitor verification, check
+                    in and check out.
+                  </p>
+                  {/* <ul>
+                    <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
+                    <li className=""><span className="icon-right-arrow" /> Real-Time Tracking</li>
+                    <li className=""><span className="icon-right-arrow" /> SOS Button</li>
+                  </ul> */}
+                  {/* <div className="btn-box">
+                  <a href="/Contact">
+                    Call our helpline <span className="icon-right-arrow" />
+                    </a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

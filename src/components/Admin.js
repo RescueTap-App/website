@@ -1,6 +1,6 @@
 import React from "react";
 
-const App = () => {
+const Admin = () => {
   return (
     <>
       <div>
@@ -31,7 +31,7 @@ const App = () => {
                       <li>
                         <a href="services.html">Services</a>
                       </li>
-                      <li className="active">Emergency App</li>
+                      <li className="active">Organization Admin</li>
                     </ul>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ const App = () => {
                       </li> */}
                       <li className="active">
                         <a href="/App">
-                          Emergency App Services{" "}
+                          Organization Admin{" "}
                           <span className="icon-next-1" />
                         </a>
                       </li>
@@ -141,13 +141,10 @@ const App = () => {
                     />
                   </div>
                   <div className="text-box1">
-                    <h2>Emergency Help Is Just a Tap Away!</h2>
+                    <h2>About the Admin Panel</h2>
 
                     <p>
-                      The RescueTap App transforms your smartphone into a
-                      personal emergency assistant. From requesting medical
-                      support to sending instant alerts to your loved ones, we
-                      are here to ensure your safety during critical moments.
+                      The RescueTap Organization Admin Portal empowers institutions, estates, and transport providers to manage safety operations seamlessly. From verifying staff and visitors to monitoring vehicles and activity logs — everything happens in one secure dashboard.
                     </p>
                   </div>
 
@@ -159,37 +156,20 @@ const App = () => {
 
                           <ul>
                             <li>
-                              <span className="icon-checked" /> User-Friendly
-                              Interface: Simple navigation designed for all age
-                              groups.
+                              <span className="icon-checked" /> Centralized Control: Manage multiple branches, users, and estates in one place.
                             </li>
                             <li>
                               <span className="icon-checked" />
-                              Real-Time Tracking: Monitor your location or track
-                              loved ones during emergencies.
+                            Visitor Registration: Generate and verify QR codes for visitors and vehicles.
                             </li>
                             <li>
-                              <span className="icon-checked" /> Emergency
-                              Alerts: Instantly notify family members or your
-                              emergency contacts.
+                              <span className="icon-checked" /> Bulk User Management: Add, edit, or remove users efficiently across departments.
                             </li>
                             <li>
                               <span className="icon-checked" />
-                              Push Notifications: Receive timely updates and
-                              reminders to stay prepared and informed.
+                              Vehicle Registration: Enroll and verify company, estate, or transporter vehicles with QR-enabled stickers for easy identification.
                             </li>
-                            <li>
-                              <span className="icon-checked" />
-                             Smart Voice Recording: Press and hold to record and send audio alerts in real time.
-                            </li>
-                            <li>
-                              <span className="icon-checked" />
-                             International Phone Number Support: Verify users globally with Twilio OTPs and country code selection.
-                            </li>
-                            <li>
-                              <span className="icon-checked" />
-                             Visitor Registration: Register estates, generate QR codes, and log verified visitors.
-                            </li>
+                            
                           </ul>
                         </div>
                       </div>
@@ -263,4 +243,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Admin;
