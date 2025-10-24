@@ -136,7 +136,7 @@ const Admin = () => {
                 <div className="service-details__content">
                   <div className="img-box1">
                     <img
-                      src="assets/images/services/service-details-3.jpg"
+                      src="assets/images/visitor.png"
                       alt
                     />
                   </div>

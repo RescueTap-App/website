@@ -644,16 +644,15 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/bulk.jpeg" alt />
+                  <img src="assets/images/country_code.png" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
                     <a href="#">International User Support</a>
                   </h3>
                   <p>
-                    Verify users globally with country code
-                    selection.
-                    Designed for students abroad and international partners.
+                    Verify users globally with country code selection. Designed
+                    for students abroad and international partners.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
@@ -675,15 +674,15 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/bulk.jpeg" alt />
+                  <img src="assets/images/statistics.png" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
                     <a href="#">Estate Admin</a>
                   </h3>
                   <p>
-                    Generate a personalized admin for estates,
-                    generate QR codes and bulk onboard tenants.
+                    Generate a personalized admin for estates, generate QR codes
+                    and bulk onboard tenants.
                   </p>
                   {/* <ul>
                     <li className=""><span className="icon-right-arrow" /> Emergency Alerts</li>
@@ -705,7 +704,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/bulk.jpeg" alt />
+                  <img src="assets/images/visitor.png" alt />
                 </div>
                 <div className="text-holder">
                   <h3>
