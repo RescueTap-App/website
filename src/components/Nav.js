@@ -127,6 +127,9 @@ const Nav = () => {
                             <a href="/App">Emergency Response App</a>
                           </li>
                           <li>
+                            <a href="/Admin">Organization Admin</a>
+                          </li>
+                          <li>
                             <a href="/Drivers">
                               Transporter Registration/Verification
                             </a>
