@@ -1,16 +1,56 @@
-import React from "react";
-import Form from "./Form";
+"use client";
 
-// import Form from "./form";
-import Nav from "./Nav";
-import Footer from "./Footer";
-import Blog from "./Blog";
+import React, { useState, useEffect } from "react";
+
 import News from "./News";
 
 const Index = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    if (showVideo) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showVideo]);
+
   return (
     <>
-      {/* preloader */}
+      {showVideo && (
+        <div className="video-overlay">
+          <div className="video-container">
+            <video controls autoPlay>
+              <source src="/assets/images/0205.mp4" type="video/mp4" />
+            </video>
+            <button
+              style={{
+                position: "absolute",
+                top: "10px",
+                right: "10px",
+                backgroundColor: "white",
+                border: "none",
+                borderRadius: "50%",
+                width: "30px",
+                height: "30px",
+                fontSize: "20px",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow: "0 0 5px rgba(0,0,0,0.3)",
+              }}
+              onClick={() => setShowVideo(false)}
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
       <section className="main-slider style1">
         <div className="slider-box">
           {/* <div
@@ -211,9 +251,6 @@ const Index = () => {
                 <div className="inner-content">
                   <div className="text">
                     <p>
-                      {/* Lorem ipsum is simply free text dolor sit am adipi we help
-                      you ensure everyone is in the right jobs sicing elit, sed
-                      do consulting firms Et leggings across the nation tempor. */}
                       Rescuetap is your trusted safety platform designed to
                       provide swift support in critical moments. If you're in
                       danger, need urgent assistance, or simply want your loved
@@ -221,42 +258,18 @@ const Index = () => {
                     </p>
                     <br />
                   </div>
-                  {/* <div className="row">
-                    <div className="col-xl-6">
-                      <div className="single-text-box">
-                        <h3>
-                          <span className="icon-right-arrow" />
-                          Help us Save a Life
-                        </h3>
-                        <p>
-                         
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-xl-6">
-                      <div className="single-text-box">
-                        <h3>
-                          <span className="icon-right-arrow" />
-                          Join our Big Family
-                        </h3>
-                        <p>
-                        
-                        </p>
-                      </div>
-                    </div>
-                  </div> */}
+
                   <div className="flex md:flex-row mt-[-80px] flex-col gap-[20px]">
-                    <div className="btns-box ">
-                      <a
-                        className="btn-one"
-                        href="https://apps.apple.com/ng/app/rescuetap/id6741719319"
-                      >
-                        <span className="txt">
-                          Download App
-                          <i className="icon-refresh arrow" />
-                        </span>
-                      </a>
-                    </div>
+                    <>
+                      <div className="btns-box">
+                        <button
+                          className="btn-one text"
+                          onClick={() => setShowVideo(true)}
+                        >
+                          <span className="txt"> Organization Admin Demo</span>
+                        </button>
+                      </div>
+                    </>
                     <div className="btns-box ">
                       <a className="btn-one" href="/Contact">
                         <span className="txt">
@@ -370,7 +383,10 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-4.jpg" alt />
+                  <img
+                    src="assets/images/services/service-v1-4.jpg"
+                    alt="true"
+                  />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -400,7 +416,10 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-1.jpg" alt />
+                  <img
+                    src="assets/images/services/service-v1-1.jpg"
+                    alt="true"
+                  />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -433,7 +452,10 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/services/service-v1-3.jpg" alt />
+                  <img
+                    src="assets/images/services/service-v1-3.jpg"
+                    alt="true"
+                  />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -464,7 +486,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/bulk.jpeg" alt />
+                  <img src="assets/images/offering/bulk.jpeg" alt="true" />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -494,7 +516,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/voice.jpeg" alt />
+                  <img src="assets/images/offering/voice.jpeg" alt="true" />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -524,7 +546,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/tips.jpeg" alt />
+                  <img src="assets/images/offering/tips.jpeg" alt="true" />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -554,7 +576,10 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/subscription.jpeg" alt />
+                  <img
+                    src="assets/images/offering/subscription.jpeg"
+                    alt="true"
+                  />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -584,7 +609,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/Emergency.jpeg" alt />
+                  <img src="assets/images/offering/Emergency.jpeg" alt="true" />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -614,7 +639,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/offering/articles.jpeg" alt />
+                  <img src="assets/images/offering/articles.jpeg" alt="true" />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -644,7 +669,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/country_code.png" alt />
+                  <img src="assets/images/country_code.png" alt="true" />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -674,7 +699,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/statistics.png" alt />
+                  <img src="assets/images/statistics.png" alt="true" />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -704,7 +729,7 @@ const Index = () => {
                 data-wow-duration="1500ms"
               >
                 <div className="img-holder">
-                  <img src="assets/images/visitor.png" alt />
+                  <img src="assets/images/visitor.png" alt="true" />
                 </div>
                 <div className="text-holder">
                   <h3>
@@ -741,7 +766,7 @@ const Index = () => {
           <img
             className="zoom-fade"
             src="assets/images/shape/shape-1.png"
-            alt
+            alt="true"
           />
         </div>
         <div className="container">
@@ -777,7 +802,7 @@ const Index = () => {
                     <div className="img-holder">
                       <img
                         src="assets/images/testimonial/testimonial-v1-1.jpg"
-                        alt
+                        alt="true"
                       />
                     </div>
                     <div className="text-holder">
@@ -809,7 +834,7 @@ const Index = () => {
                     <div className="img-holder">
                       <img
                         src="assets/images/testimonial/testimonial-v2-2.jpg"
-                        alt
+                        alt="true"
                       />
                     </div>
                     <div className="text-holder">
@@ -1029,7 +1054,11 @@ const Index = () => {
           data-wow-delay="1400ms"
           data-wow-duration="5500ms"
         >
-          <img className="float-bob" src="assets/images/shape/map.png" alt />
+          <img
+            className="float-bob"
+            src="assets/images/shape/map.png"
+            alt="true"
+          />
         </div>
         <div className="container">
           <div className="row">
@@ -1043,7 +1072,7 @@ const Index = () => {
                   <img
                     className="float-bob-y  md:ml-[-140px]"
                     src="assets/images/resources/ambulance.png"
-                    alt
+                    alt="true"
                   />
                 </div>
               </div>
