@@ -25,7 +25,7 @@ const Index = () => {
         <div className="video-overlay">
           <div className="video-container">
             <video controls autoPlay>
-              <source src="/assets/images/0205.mp4" type="video/mp4" />
+              <source src="https://res.cloudinary.com/duwdj02og/video/upload/v1771617146/0205_xnnvm4.mp4" type="video/mp4" />
             </video>
             <button
               style={{
