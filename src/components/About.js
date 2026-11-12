@@ -664,31 +664,6 @@ const About = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="col-xl-4 col-lg-4 col-md-6">
-                        <div
-                          className="single-team-style1 wow fadeInUp"
-                          data-wow-delay="100ms"
-                          data-wow-duration="1500ms"
-                        >
-                          <div className="img-holder">
-                            <div className="inner rounded-full">
-                              <img src="assets/images/team/benjamin.svg" alt />
-                            </div>
-                            <div className="title-holder text-center">
-                              <h2>
-                                <a href="#">Benjamin Bitrus</a>
-                              </h2>
-                              <h3>Product Designer  </h3>
-                              <div className="overlay-title">
-                                <h2>
-                                  <a href="#">Benjamin Bitrus</a>
-                                </h2>
-                                <h3>Product Designer </h3>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                       {/*End Single Team Style1*/}
                       {/*Start Single Team Style1*/}
                       <div className="col-xl-4 col-lg-4 col-md-6">
@@ -753,16 +728,16 @@ const About = () => {
                         >
                           <div className="img-holder rounded-full">
                             <div className="inner rounded-full">
-                              <img src="assets/images/team/victor.svg" alt />
+                              <img src="assets/images/team/ephraim.svg" alt />
                             </div>
                             <div className="title-holder text-center">
                               <h2>
-                                <a href="#"> Victor Okon </a>
+                                <a href="#"> Ephraim Umunnakwe </a>
                               </h2>
                               <h3>Frontend Developer</h3>
                               <div className="overlay-title">
                                 <h2>
-                                  <a href="#"> Victor Okon </a>
+                                  <a href="#"> Ephraim Umunnakwe </a>
                                 </h2>
                                 <h3>Frontend Developer</h3>
                               </div>
