@@ -44,7 +44,7 @@ const TC = () => {
                         
                         <div className="mb-8">
                             <h2 className="text-xl font-semibold mb-2">Contractual Relationship</h2>
-                            <p className="mb-2">These Terms of Use ("Terms") outline the conditions for accessing and using the applications, websites, content, products, and services (collectively referred to as the "Services") provided by RescueTap, a private limited company registered in Nigeria, with its offices located at 22 Kigoma Street, Wuse Zone 7, Abuja.</p>
+                            <p className="mb-2">These Terms of Use ("Terms") outline the conditions for accessing and using the applications, websites, content, products, and services (collectively referred to as the "Services") provided by RescueTap, a private limited company registered in Nigeria, with its offices located at 3 Olugbesoye Olujimi St, Kado, Mobushipe 900108, Federal Capital Territory.</p>
                             <p className="mb-2 font-medium">PLEASE READ THESE TERMS CAREFULLY BEFORE USING OUR SERVICES.</p>
                             <p className="mb-2">By accessing or using our Services, you agree to be bound by these Terms, forming a contractual agreement between you and RescueTap. If you do not agree with these Terms, you are not permitted to access or use the Services. These Terms override any previous agreements or arrangements between you and RescueTap.</p>
                             <p className="mb-2">RescueTap reserves the right to terminate these Terms, discontinue its Services, or restrict access to them—whether in whole or in part—at any time and for any reason.</p>
@@ -179,7 +179,7 @@ const TC = () => {
 
                         <div className="mb-8">
                             <h2 className="text-xl font-semibold mb-2">Notice</h2>
-                            <p className="mb-2">Rescuetap may provide notifications through a general announcement on the services, by sending an email to the address registered in your account, or by mailing a written notice to your provided account address. You may send notices to Rescuetap by written communication addressed to No. 22 Kigoma Street, Use Zone 7, Abuja.</p>
+                            <p className="mb-2">Rescuetap may provide notifications through a general announcement on the services, by sending an email to the address registered in your account, or by mailing a written notice to your provided account address. You may send notices to Rescuetap by written communication addressed to 3 Olugbesoye Olujimi St, Kado, Mobushipe 900108, Federal Capital Territory.</p>
                         </div>
 
                         <div className="mb-8">

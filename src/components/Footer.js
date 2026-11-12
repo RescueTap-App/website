@@ -66,8 +66,7 @@ const Footer = () => {
                             </div>
                             <div className="text">
                               <p>
-                                zone 7, Fairtrade Complex, 22 Bambari Cres,
-                                Wuse, Abuja 900287, Federal Capital Territory
+                                3 Olugbesoye Olujimi St, Kado, Mobushipe 900108, Federal Capital Territory
                               </p>
                             </div>
                           </div>
