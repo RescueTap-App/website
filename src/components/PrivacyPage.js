@@ -155,7 +155,7 @@ const Privacy = ()=>{
                     <p><strong>RescueTap LTD</strong><br />
                     Data Protection Officer<br />
                     Email: admin@rescuetap.org<br />
-                    Phone: +2348078875322<br />
+                    Phone: +2347039004690<br />
                     Address: 22 Bambari Crescent, Wuse Zone 7, Abuja</p>
 
                     <p>By using our services, you consent to the collection, use, and disclosure of your information as described in this Privacy Policy.</p>

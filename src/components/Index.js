@@ -67,7 +67,7 @@ const Index = () => {
               </div>
               <div className="text">
                 <h2>
-                  <a href="tel:+2348147806378">+234 814 780 6378</a>
+                  <a href="tel:+2348052095541">+234 805 209 5541</a>
                 </h2>
                 <p>
                   Need an ambulance? Call anytime for
@@ -1081,7 +1081,7 @@ const Index = () => {
               <div className="slogan-text-box">
                 <h2>Call our helpline</h2>
                 <h4>
-                  Call anytime <a href="tel:123456789">+234 814 780 6378</a>
+                  Call anytime <a href="tel:+2348052095541">+234 805 209 5541</a>
                 </h4>
               </div>
             </div>

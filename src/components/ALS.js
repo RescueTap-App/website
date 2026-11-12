@@ -224,7 +224,7 @@ console.log(amount)
                       on our vehicle registration and ambulance services.
                     </p>
                     <h2>
-                      <a href="tel:+2348147806378">+234 814 780 6378</a>
+                      <a href="tel:+2348052095541">+234 805 209 5541</a>
                     </h2>
                   </div>
                   <div

@@ -218,10 +218,10 @@ const Contact = () => {
                     </h3>
                     <div className="text">
                       <p>
-                        Abuja: <a href="tel:+2348078875322">+2348078875322</a>
+                        Abuja: <a href="tel:+2347039004690">+2347039004690</a>
                       </p>
                       <p>
-                        Lagos: <a href="tel:+2348147806378">+2348147806378</a>
+                        Lagos: <a href="tel:+2348052095541">+2348052095541</a>
                       </p>
                     </div>
                     Office Hours: 24/7

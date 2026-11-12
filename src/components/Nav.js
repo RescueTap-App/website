@@ -33,7 +33,7 @@ const Nav = () => {
                     <div className="text">
                       <p>Call anytime</p>
                       <h5>
-                        <a href="tel:+2348078875322">+234 807 887 5322</a>
+                        <a href="tel:+234805209554">+234 805 209 5541</a>
                       </h5>
                     </div>
                   </li>
